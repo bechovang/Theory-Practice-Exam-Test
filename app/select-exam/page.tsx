@@ -3,35 +3,37 @@
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
+import { motion, Variants } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { FileText, BookOpen, Clock, Target, AlertTriangle, Info, Loader2 } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card"
+import { BookCopy, AlertTriangle, Loader2 } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 
-// Interface for the data structure expected from deX.json files
+// Cấu trúc dữ liệu mong đợi từ file deX.json
 interface FetchedExamData {
-  examId: string;
+  examId: string; // ID định danh, ví dụ: "CS101"
   title: string;
   description: string;
-  // questions: any[]; // We might use questions.length later if needed
+  tags: string[]; // Thêm tags để hiển thị, ví dụ: ["Computer Science", "Easy"]
 }
 
-// Interface for the data structure used to render exam cards
+// Cấu trúc dữ liệu để hiển thị thẻ đề thi
 interface ExamCardDisplayData {
-  id: number; // Numeric ID, e.g., 1 for de1.json
-  examIdToDisplay: string; // examId from JSON, or a placeholder
-  titleToDisplay: string; // title from JSON, or a placeholder
-  descriptionToDisplay: string; // description from JSON, or a placeholder
-  isLoading: boolean; // True while attempting to fetch this specific exam
-  isAvailable: boolean; // True if successfully loaded, false otherwise
+  id: number; // ID số, ví dụ: 1 cho de1.json
+  examIdToDisplay: string;
+  titleToDisplay: string;
+  descriptionToDisplay: string;
+  tagsToDisplay: string[];
+  isLoading: boolean;
+  isAvailable: boolean;
 }
 
-const MAX_EXAMS_TO_CHECK = 10; // Check for de1.json up to de10.json
+const MAX_EXAMS_TO_CHECK = 12; // Kiểm tra từ de1.json đến de12.json
 
-export default function SelectPracticePage() {
+export default function SelectExamPage() { // Đổi tên component cho phù hợp
   const router = useRouter()
   const [studentName, setStudentName] = useState("")
-  const [practiceSets, setPracticeSets] = useState<ExamCardDisplayData[]>([])
+  const [examSets, setExamSets] = useState<ExamCardDisplayData[]>([]) // Đổi tên state
 
   useEffect(() => {
     const name = localStorage.getItem("studentName")
@@ -41,28 +43,30 @@ export default function SelectPracticePage() {
     }
     setStudentName(name)
 
-    const loadAllExamData = async () => {
+    const loadAllExams = async () => { // Đổi tên hàm
       const examIdsToTry = Array.from({ length: MAX_EXAMS_TO_CHECK }, (_, i) => i + 1);
 
-      // Initial placeholder state
       const initialPlaceholderSets: ExamCardDisplayData[] = examIdsToTry.map(id => ({
         id,
         examIdToDisplay: `de${id}`,
-        titleToDisplay: `Đề ${id}`,
-        descriptionToDisplay: "Đang kiểm tra trạng thái...",
+        titleToDisplay: `Đề thi ${id}`,
+        descriptionToDisplay: "Đang tải thông tin...",
+        tagsToDisplay: [],
         isLoading: true,
         isAvailable: false,
       }));
-      setPracticeSets(initialPlaceholderSets);
+      setExamSets(initialPlaceholderSets);
 
+      // --- SỬA LẠI ĐÚNG ĐƯỜNG DẪN FETCH FILE JSON ---
       const settledPromises = await Promise.allSettled(
         examIdsToTry.map(async (id) => {
-          const response = await fetch(`/data/de${id}.json`);
+          // Đã đổi lại đường dẫn thành /data/de${id}.json
+          const response = await fetch(`/data/de${id}.json`); 
           if (!response.ok) {
-            throw new Error(`File de${id}.json not found or not accessible`);
+            throw new Error(`File de${id}.json không tồn tại hoặc lỗi.`);
           }
           const data: FetchedExamData = await response.json();
-          return { id, ...data }; // Return id along with fetched data
+          return { id, ...data };
         })
       );
 
@@ -71,148 +75,150 @@ export default function SelectPracticePage() {
         if (result.status === "fulfilled") {
           const loadedData = result.value;
           return {
-            id: placeholderSet.id, // Ensure 'id' is the numeric id
+            id: placeholderSet.id,
             examIdToDisplay: loadedData.examId,
             titleToDisplay: loadedData.title,
             descriptionToDisplay: loadedData.description,
+            tagsToDisplay: loadedData.tags || [],
             isLoading: false,
             isAvailable: true,
           };
         } else {
-          // Fetch failed for this ID (e.g., file not found)
           return {
             ...placeholderSet,
-            descriptionToDisplay: "Dữ liệu đề thi không tồn tại.",
+            descriptionToDisplay: "Đề thi này hiện không có sẵn.",
             isLoading: false,
             isAvailable: false,
           };
         }
       });
-      setPracticeSets(updatedSets);
+      setExamSets(updatedSets);
     };
 
-    loadAllExamData();
+    loadAllExams();
   }, [router]);
 
-  const handleSelectPractice = (practice: ExamCardDisplayData) => {
-    if (!practice.isAvailable || practice.isLoading) {
-      // This case should ideally not be met if button is properly disabled
-      alert("Đề luyện tập này hiện không có sẵn hoặc đang tải.");
-      return;
-    }
-    localStorage.setItem("selectedPractice", practice.id.toString()) // Use numeric id
-    router.push(`/practice/${practice.id}`)
+  const handleSelectExam = (exam: ExamCardDisplayData) => { // Đổi tên hàm
+    if (!exam.isAvailable || exam.isLoading) return;
+    localStorage.setItem("selectedExamId", exam.id.toString()) // Đổi key localStorage
+    router.push(`/practice/${exam.id}`) // Giữ nguyên hoặc đổi thành /exam/${exam.id} tùy ý
   }
+  
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1 }
+    }
+  };
 
-  // getDifficultyColor is no longer used as difficulty is not displayed per card
-  // const getDifficultyColor = (difficulty: string) => { ... }
+  const itemVariants: Variants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { type: 'spring', stiffness: 100 } }
+  };
 
   return (
-    <div className="flex min-h-screen flex-col bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-950 p-4">
-      <div className="mx-auto w-full max-w-6xl">
-        <Card className="mb-6 shadow-lg bg-white dark:bg-gray-800/30">
-          <CardHeader className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white relative">
-            <CardTitle className="text-center text-2xl flex items-center justify-center gap-2">
-              <Image src="/bechovang.webp" alt="Logo" width={32} height={32} className="rounded-full" />
-              Nền tảng luyện tập toán học
-            </CardTitle>
-            <div className="absolute top-1/2 right-4 -translate-y-1/2">
-              <ThemeToggle />
-            </div>
-          </CardHeader>
-          <CardContent className="pt-6">
-            <div className="text-center">
-              <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">
-                Xin chào, {studentName}! 👋
-              </h2>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Chọn một bộ đề luyện tập để bắt đầu hành trình học toán của bạn
-              </p>
-              <div className="flex justify-center items-center gap-6 text-sm text-gray-500 dark:text-gray-400">
-                <div className="flex items-center gap-1">
-                  <Target className="h-4 w-4" />
-                  <span>Feedback tức thì</span>
+    <div className="flex min-h-screen flex-col bg-slate-50 dark:bg-gray-950 p-4 sm:p-6">
+      <div className="mx-auto w-full max-w-7xl">
+        <motion.div 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+        >
+            <header className="mb-8 rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 p-6 text-white shadow-lg relative">
+                <div className="flex justify-between items-center">
+                    <div className="flex items-center gap-3">
+                        <Image src="/logo-it.svg" alt="Logo" width={40} height={40} className="bg-white p-1 rounded-full" />
+                        <h1 className="text-2xl font-bold">TechLearn Platform</h1>
+                    </div>
+                    <ThemeToggle />
                 </div>
-                <div className="flex items-center gap-1">
-                  <Clock className="h-4 w-4" />
-                  <span>Không giới hạn thời gian</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <BookOpen className="h-4 w-4" />
-                  <span>Giải thích chi tiết</span>
-                </div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {practiceSets.map((practice) => (
-            <Card
-              key={practice.id}
-              className={`transition-all duration-300 border-2 flex flex-col ${
-                practice.isAvailable && !practice.isLoading
-                  ? 'bg-white dark:bg-gray-800/50 hover:shadow-xl hover:scale-105 hover:bg-blue-50 dark:hover:bg-gray-800 hover:border-blue-200 dark:hover:border-blue-600 cursor-pointer'
-                  : 'opacity-70 bg-gray-100 dark:bg-gray-800/50 cursor-not-allowed'
-              }`}
-              onClick={() => practice.isAvailable && !practice.isLoading && handleSelectPractice(practice)}
-            >
-              <CardContent className="flex flex-col h-full p-6">
-                <div className="flex items-start justify-between mb-4">
-                  {practice.isAvailable ? 
-                    <FileText className="h-8 w-8 text-blue-500 flex-shrink-0" /> : 
-                    <AlertTriangle className="h-8 w-8 text-orange-400 flex-shrink-0" />
-                  }
-                </div>
-                
-                {practice.isLoading ? (
-                  <div className="flex-grow flex flex-col items-center justify-center">
-                    <Loader2 className="h-8 w-8 animate-spin text-blue-500" />
-                    <p className="text-sm text-gray-500 mt-2">{practice.titleToDisplay}</p>
-                    <p className="text-xs text-gray-400 mt-1">{practice.descriptionToDisplay}</p>
-                  </div>
-                ) : (
-                  <>
-                    <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-1">
-                      {practice.titleToDisplay}
-                    </h3>
-                    {practice.isAvailable && (
-                      <p className="text-xs text-gray-500 dark:text-gray-400 mb-2 flex items-center">
-                        <Info size={12} className="mr-1 text-gray-400"/> ID: {practice.examIdToDisplay}
-                      </p>
-                    )}
-                    <p className={`text-gray-600 dark:text-gray-400 mb-3 flex-grow text-sm ${!practice.isAvailable ? 'italic' : ''}`}>
-                      {practice.descriptionToDisplay}
+                <div className="mt-4 text-center">
+                    <h2 className="text-xl font-semibold opacity-90">
+                        Xin chào, {studentName}! 👋
+                    </h2>
+                    <p className="opacity-80 mt-1">
+                        Hãy chọn một đề thi để bắt đầu hành trình chinh phục kiến thức nhé!
                     </p>
-                  </>
-                )}
-                
-                <Button 
-                  className={`mt-auto w-full ${
-                  practice.isAvailable && !practice.isLoading
-                    ? 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700'
-                    : 'bg-gray-300 dark:bg-gray-700 cursor-not-allowed'
-                  }`}
-                  disabled={!practice.isAvailable || practice.isLoading}
-                >
-                  {practice.isLoading ? (
-                    <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Đang tải...</>
-                  ) : practice.isAvailable ? (
-                    'Bắt đầu luyện tập'
-                  ) : (
-                    'Không có sẵn'
-                  )}
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+                </div>
+            </header>
+        </motion.div>
 
-        <div className="mt-8 text-center">
+        <motion.div 
+            className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+        >
+          {examSets.map((exam) => (
+            <motion.div
+              key={exam.id}
+              variants={itemVariants}
+              onClick={() => handleSelectExam(exam)}
+            >
+              <Card className={`transition-all duration-300 border-2 flex flex-col h-full group ${
+                  exam.isAvailable && !exam.isLoading
+                    ? 'bg-white dark:bg-gray-900/60 hover:shadow-2xl hover:scale-105 hover:border-blue-500 dark:hover:border-blue-500 cursor-pointer'
+                    : 'bg-gray-100 dark:bg-gray-800/50 opacity-80 cursor-not-allowed'
+                }`}
+              >
+                <CardContent className="flex flex-col h-full p-5">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className={`p-2 rounded-lg bg-opacity-10 ${exam.isAvailable ? 'bg-blue-500 text-blue-500' : 'bg-orange-400 text-orange-400'}`}>
+                      {exam.isAvailable ? <BookCopy className="h-7 w-7" /> : <AlertTriangle className="h-7 w-7" />}
+                    </div>
+                  </div>
+                  
+                  {exam.isLoading ? (
+                    <div className="flex-grow flex flex-col items-center justify-center py-8">
+                      <Loader2 className="h-10 w-10 animate-spin text-blue-500" />
+                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-3">{exam.titleToDisplay}</p>
+                    </div>
+                  ) : (
+                    <>
+                      <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100 mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                        {exam.titleToDisplay}
+                      </h3>
+                      <p className={`text-gray-500 dark:text-gray-400 mb-4 flex-grow text-sm ${!exam.isAvailable ? 'italic' : ''}`}>
+                        {exam.descriptionToDisplay}
+                      </p>
+                      
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {exam.tagsToDisplay.map(tag => (
+                          <span key={tag} className="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </>
+                  )}
+                  
+                  <Button 
+                    className={`mt-auto w-full font-semibold ${
+                    exam.isAvailable && !exam.isLoading
+                      ? 'bg-blue-600 hover:bg-blue-700 text-white'
+                      : 'bg-gray-300 dark:bg-gray-700 cursor-not-allowed'
+                    }`}
+                    disabled={!exam.isAvailable || exam.isLoading}
+                  >
+                    {exam.isLoading ? 'Đang tải...' : (exam.isAvailable ? 'Bắt đầu làm bài' : 'Không có sẵn')}
+                  </Button>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <motion.div 
+          className="mt-12 text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        >
           <p className="text-sm text-gray-500 dark:text-gray-400">
-            💡 Mẹo: Hãy thực hành thường xuyên để cải thiện kỹ năng toán học của bạn!
+            💡 "Học, học nữa, học mãi." - V.I. Lenin
           </p>
-        </div>
+        </motion.div>
       </div>
     </div>
   )

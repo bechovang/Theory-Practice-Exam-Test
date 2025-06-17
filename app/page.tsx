@@ -19,7 +19,7 @@ export default function LoginPage() {
     // Nếu không nhập tên, sẽ lấy tên mặc định. Sau đó chuyển trang.
     const studentName = name.trim() || "Người dùng ẩn danh"
     localStorage.setItem("studentName", studentName)
-    router.push("/select-topic")
+    router.push("/select-exam")
   }
 
   // Cấu hình cho animation container
@@ -112,7 +112,7 @@ export default function LoginPage() {
             <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-full flex items-center justify-center mx-auto mb-2">
               <BarChart3 className="w-6 h-6 text-purple-600 dark:text-purple-400" />
             </div>
-            <p className="text-xs text-gray-600 dark:text-gray-400">Thống kê tiến độ</p>
+            <p className="text-xs text-gray-600 dark:text-gray-400">Có lời giải chi tiết</p>
           </motion.div>
         </motion.div>
 
@@ -165,7 +165,7 @@ export default function LoginPage() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 1 }}
         >
-          <p>💡 Củng cố kiến thức IT một cách hiệu quả và tương tác.</p>
+          <p>💡 Giúp việc luyện đề thi một cách hiệu quả.</p>
         </motion.div>
       </motion.div>
     </div>
