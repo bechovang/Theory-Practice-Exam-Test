@@ -1,1050 +1,1208 @@
 {
-  "examId": "de1",
-  "title": "Đề 1",
+  "examId": "csi1",
+  "title": "Đề 1 CSI ",
   "description": "AI hints and explanations",
   "questions": [
     {
       "id": 1,
-      "question": "Find the characteristic polynomial of the matrix \\( A = \\begin{bmatrix} 1 & 0 & 2 \\\\ -2 & 3 & 1 \\\\ 0 & 2 & 2 \\end{bmatrix} \\). <br> Which of these is it? <br> (i) \\( -x^3 + 6x^2 - 9x + 4 \\) <br> (ii) \\( x^3 - 6x^2 + 9x - 4 \\) <br> (iii) \\( x^3 - 6x^2 - 9x - 4 \\)",
+      "question": "According to the von Neumann model, __________ are stored in memory.",
       "image": null,
       "options": [
-        "A. (i)",
-        "B. (iii)",
-        "C. All of the other choices are incorrect"
+        "A. Only data",
+        "B. Only programs",
+        "C. Data and programs",
+        "D. Neither data nor programs"
       ],
-      "correctAnswer": "A",
-      "explanation": "cau nay sai, de sua lai, Để giải siêu tốc, ta dùng mẹo để tìm các hệ số quan trọng của đa thức đặc trưng.<br /><br /><b>1. Tìm hệ số của \\(x^2\\) (dựa vào Vết - trace):</b><br />- Công thức: Hệ số của \\(x^2\\) là Vết của A, \\(tr(A)\\).<br />- Vết là tổng các phần tử trên đường chéo chính: \\( tr(A) = 1 + 3 + 2 = 6 \\).<br />- Đa thức phải có dạng \\( -x^3 + 6x^2 + ... \\).<br />  <i>(Nhìn vào đây, ta có thể loại các đáp án không có `+6x²`).</i><br /><br /><b>2. Tìm hằng số tự do (dựa vào Định thức - determinant):</b><br />- Công thức: Hằng số tự do chính là \\( \\det(A) \\).<br />- Tính nhanh định thức:<br />\\( \\det(A) = 1(6-2) - 0 + 2(-4-0) = 4 - 8 = -4 \\).<br />- Đa thức phải kết thúc bằng `-4`.<br /><br /><b>3. Kết luận:</b><br />- Đa thức đúng phải là \\( -x^3 + 6x^2 - 9x - 4 \\).<br />- So sánh với các lựa chọn, không có đáp án nào khớp hoàn toàn. Tuy nhiên, đáp án (i) khớp với các hệ số bậc cao nhất và chỉ sai hằng số tự do (có thể do lỗi đánh máy trong đề).<br />- Do đó, (i) là câu trả lời dự định.",
-      "difficulty": "medium",
-      "topic": "Linear Algebra",
+      "correctAnswer": "C",
+      "explanation": "Đây là câu hỏi định nghĩa cốt lõi về kiến trúc máy tính hiện đại.<br /><br /><b>1. Khái niệm chính:</b><br />Điểm đột phá của mô hình von Neumann là khái niệm <b>'chương trình được lưu trữ' (stored-program concept)</b>. Nó phát biểu rằng cả <b>lệnh (chương trình)</b> và <b>dữ liệu</b> mà các lệnh đó xử lý đều được lưu trữ trong cùng một bộ nhớ chung.<br /><br /><b>2. Ví dụ đời thực dễ nhớ:</b><br />Hãy tưởng tượng bộ nhớ máy tính như một <b>quyển sổ tay</b>. Bạn có thể viết cả <b>công thức nấu ăn (chương trình)</b> và <b>danh sách nguyên liệu (dữ liệu)</b> vào cùng một quyển sổ đó. CPU sẽ đọc công thức và lấy nguyên liệu từ chính quyển sổ đó để làm việc.<br /><br /><b>3. Loại trừ đáp án sai:</b><br />- Các máy tính sơ khai tách biệt hai thứ này (lệnh được cài đặt bằng công tắc, dây cắm). Mô hình von Neumann đã thay đổi điều đó.<br /><br /><b>Kết luận: Cả dữ liệu và chương trình đều được lưu trong bộ nhớ.</b>",
+      "difficulty": "easy",
+      "topic": "Computer Architecture (von Neumann Model)",
       "hints": [
-        "Mẹo nhanh nhất: Đa thức đặc trưng của ma trận 3x3 có dạng `-x³ + (vết)x² ... + (định thức)`.",
-        "Hệ số của `x²` chính là Vết (tổng đường chéo chính): `1+3+2 = 6`.",
-        "Hằng số tự do chính là Định thức của A. Tính nhanh `det(A)` để tìm số hạng cuối cùng."
+        "Câu thần chú: <b>von Neumann = Chương trình + Dữ liệu</b> trong cùng bộ nhớ.",
+        "Tưởng tượng chương trình là 'công thức' và dữ liệu là 'nguyên liệu' – cả hai đều nằm chung trong 'nhà bếp' (bộ nhớ).",
+        "Ghi nhớ thuật ngữ 'stored-program concept' (khái niệm chương trình được lưu trữ)."
       ]
     },
     {
       "id": 2,
-      "question": "Let \\( T: \\mathbb{R}^2 \\to \\mathbb{R}^2 \\) be rotation through \\( \\pi/3 \\) followed by reflection in the line \\( y = 2x \\). Find the \\( (1,2) \\)-entry of the matrix of T. <br> (i) \\( \\frac{-3+4\\sqrt{3}}{10} \\) <br> (ii) \\( \\frac{4+3\\sqrt{3}}{10} \\) <br> (iii) \\( \\frac{-3-4\\sqrt{3}}{10} \\)",
+      "question": "What generation introduced high-level programming languages?",
       "image": null,
       "options": [
-        "A. (ii)",
-        "B. (iii)",
-        "C. None of the other choices is correct"
+        "A. First generation",
+        "B. Second generation",
+        "C. Third generation",
+        "D. Fourth generation"
       ],
-      "correctAnswer": "A",
-      "explanation": "Để giải nhanh bài toán, ta hướng dẫn học sinh các bước nháp như sau:<br><br><b>Bước 1:</b> Xác định cần tìm phần tử ở vị trí (1,2) của ma trận ánh xạ T, tức là tìm ảnh của vector cơ sở (0,1) dưới T.<br><br><b>Bước 2:</b> Xét phép quay góc \\( \\pi/3 \\). Ánh xạ này có ma trận:<br>\\[ R = \\begin{bmatrix} \\cos(\\pi/3) & -\\sin(\\pi/3) \\\\ \\sin(\\pi/3) & \\cos(\\pi/3) \\end{bmatrix} = \\begin{bmatrix} 1/2 & -\\sqrt{3}/2 \\\\ \\sqrt{3}/2 & 1/2 \\end{bmatrix} \\]<br><br>Ảnh của vector (0,1) qua phép quay là:<br>\\[ u_1 = R \\cdot \\begin{bmatrix} 0 \\\\ 1 \\end{bmatrix} = \\begin{bmatrix} -\\sqrt{3}/2 \\\\ 1/2 \\end{bmatrix} \\]<br><br><b>Bước 3:</b> Tìm ma trận đối xứng qua đường thẳng \\( y = 2x \\). Thay vì học thuộc công thức, hướng dẫn học sinh tìm tọa độ điểm đối xứng:<br><ul><li>Lấy điểm A = (1,0), tìm chân đường vuông góc từ A xuống đường y = 2x. Giải hệ:<br>\\[ \\begin{cases} y = 2x \\\\ y = -1/2 x + 1/2 \\end{cases} \\Rightarrow x = 1/5, y = 2/5 \\Rightarrow P = (1/5, 2/5) \\]<br>Điểm đối xứng của A là: \\( A' = 2P - A = (2/5, 4/5) \\)</li><li>Tương tự với điểm B = (0,1): chân vuông góc là \\( Q = (2/5, 4/5) \\), nên ảnh đối xứng là \\( B' = 2Q - B = (4/5, 3/5) \\)</li></ul><br>=> Ma trận phản xạ là:<br>\\[ F = \\begin{bmatrix} 2/5 & 4/5 \\\\ 4/5 & 3/5 \\end{bmatrix} \\]<br><br><b>Bước 4:</b> Tổng hợp T là phản xạ sau khi quay, nên:<br>\\[ T = F \\cdot R \\]<br><br>Tính tích:<br>\\[ T = \\begin{bmatrix} 2/5 & 4/5 \\\\ 4/5 & 3/5 \\end{bmatrix} \\begin{bmatrix} 1/2 & -\\sqrt{3}/2 \\\\ \\sqrt{3}/2 & 1/2 \\end{bmatrix} = \\begin{bmatrix} \\frac{-3+4\\sqrt{3}}{10} & \\frac{4+3\\sqrt{3}}{10} \\\\ \\frac{4+3\\sqrt{3}}{10} & \\frac{-4\\sqrt{3}+3}{10} \\end{bmatrix} \\]<br><br>Phần tử hàng 1 cột 2 là \\( \\frac{4+3\\sqrt{3}}{10} \\), chính là đáp án (ii).<br><br><b>✅ Đáp án đúng là:</b> <b>A. (ii)</b>",
-      "difficulty": "hard",
-      "topic": "Linear Algebra",
+      "correctAnswer": "B",
+      "explanation": "Câu hỏi này liên quan đến lịch sử phát triển của máy tính.<br /><br /><b>1. Liên kết các thế hệ:</b><br />- <b>Thế hệ 1 (1940-1956):</b> Bóng đèn chân không, Lập trình bằng ngôn ngữ máy (dãy số 0 và 1). Rất vất vả.<br />- <b>Thế hệ 2 (1956-1963):</b> <b>Bóng bán dẫn (Transistor)</b> ra đời. Đây là bước ngoặt cho phép sự phát triển của <b>ngôn ngữ bậc cao</b> đầu tiên như <b>FORTRAN</b> và <b>COBOL</b>, giúp con người lập trình dễ dàng hơn.<br />- <b>Thế hệ 3 (1964-1971):</b> Mạch tích hợp (IC).<br />- <b>Thế hệ 4 (1971-nay):</b> Vi xử lý (Microprocessor).<br /><br /><b>2. Mẹo ghi nhớ:</b><br />Ngay khi máy tính chuyển từ 'bóng đèn' sang 'bóng bán dẫn' (thế hệ 2), nó trở nên đủ mạnh và ổn định để các nhà khoa học tạo ra ngôn ngữ lập trình gần với ngôn ngữ con người hơn.<br /><br /><b>Kết luận: Ngôn ngữ bậc cao xuất hiện ở thế hệ thứ hai.</b>",
+      "difficulty": "easy",
+      "topic": "History of Computing (Computer Generations)",
       "hints": [
-        "Xác định ảnh của vector (0,1) sau phép quay \\( \\pi/3 \\)",
-        "Tìm ma trận phản xạ qua đường \\( y = 2x \\) bằng cách phản xạ hai vector cơ sở",
-        "Ma trận T là tích của phản xạ và quay: \\( T = F \\cdot R \\)"
+        "Thần chú: <b>Thế hệ 2 = Transistor + Ngôn ngữ bậc cao (FORTRAN, COBOL)</b>.",
+        "Ngôn ngữ bậc cao ra đời để thay thế cho việc lập trình bằng mã máy (010110) cực khổ của thế hệ 1.",
+        "Hãy liên kết sự ra đời của bóng bán dẫn (gen 2) với sự ra đời của ngôn ngữ lập trình bậc cao."
       ]
     },
     {
       "id": 3,
-      "question": "Simplify the quotient \\( \\frac{f(x+h) - f(x)}{h} \\) for \\( f(x) = -x^2 + 5x \\)",
+      "question": "In the fetch phase, the control unit orders the system to copy the next instruction into the __________ in the CPU.",
       "image": null,
       "options": [
-        "A. \\( -2x-h+5 \\)",
-        "B. \\( -2x+h+3 \\)",
-        "C. \\( 2x+h-3 \\)",
-        "D. \\( 2x-h-3 \\)",
-        "E. None of the other choices is correct"
+        "A. Program counter",
+        "B. Instruction register",
+        "C. Memory",
+        "D. Register"
       ],
-      "correctAnswer": "A",
-      "explanation": "<b>Cách làm nhanh:</b> <br/> Nhận thấy biểu thức \\( \\frac{f(x+h)-f(x)}{h} \\) là định nghĩa đạo hàm. <br/> Với \\( f(x) = -x^2 + 5x \\), ta có đạo hàm là \\( f'(x) = -2x + 5 \\). <br/> Nhẩm nhanh, khi \\( h \\to 0 \\), đáp án đúng phải có giới hạn bằng \\( -2x + 5 \\). <br/> Trong các đáp án, chỉ có <b>đáp án A</b> là đúng: \\( -2x - h + 5 \\), vì khi \\( h \\to 0 \\), biểu thức này tiến về \\( -2x + 5 \\). <br/><br/><b>Giải chi tiết:</b> <br/> Tính \\( f(x+h) = -(x+h)^2 + 5(x+h) = -x^2 - 2xh - h^2 + 5x + 5h \\). <br/> Tính hiệu \\( f(x+h) - f(x) = (-x^2 - 2xh - h^2 + 5x + 5h) - (-x^2 + 5x) = -2xh - h^2 + 5h \\). <br/> Chia cho \\( h \\): <br/> \\( \\frac{-2xh - h^2 + 5h}{h} = -2x - h + 5 \\). <br/> Đáp án đúng là <b>A</b>.",
-      "difficulty": "easy",
-      "topic": "Calculus (Derivatives)",
+      "correctAnswer": "B",
+      "explanation": "Đây là câu hỏi về chu trình thực thi lệnh cơ bản của CPU (Fetch-Decode-Execute).<br /><br /><b>1. Phân tích chu trình Fetch (Tìm nạp):</b><br />- <b>Program Counter (PC):</b> Giống như một người chỉ đường, nó giữ <b>địa chỉ</b> của lệnh tiếp theo cần thực thi.<br />- <b>Control Unit (CU):</b> 'Người quản lý', đọc địa chỉ từ PC, đi đến Memory để lấy lệnh.<br />- <b>Instruction Register (IR):</b> 'Bàn làm việc'. Lệnh sau khi được lấy từ Memory sẽ được đặt vào đây để chuẩn bị cho giai đoạn 'Decode' (giải mã).<br /><br /><b>2. Ví dụ đời thực:</b><br />- <b>PC</b> là số trang bạn cần đọc tiếp theo trong sách (ví dụ: trang 52).<br />- <b>CU</b> lật đến trang 52 và đọc câu đầu tiên (lệnh).<br />- <b>IR</b> là nơi bạn ghi lại câu đó ra giấy nháp để phân tích xem phải làm gì.<br /><br /><b>Kết luận: Lệnh được tìm nạp sẽ được sao chép vào Thanh ghi Lệnh (Instruction Register).</b>",
+      "difficulty": "medium",
+      "topic": "CPU Architecture (Instruction Cycle)",
       "hints": [
-        "Substitute \\(x+h\\) into \\(f(x)\\) to find \\(f(x+h)\\).",
-        "Be careful with algebraic expansion and simplification, especially with negative signs."
+        "<b>Program Counter (PC)</b> chỉ giữ ĐỊA CHỈ, không giữ lệnh.",
+        "<b>Instruction Register (IR)</b> là nơi NẮM GIỮ lệnh đang được xử lý.",
+        "Tưởng tượng: PC chỉ đường, IR là nơi lệnh 'ngồi chờ' để được giải mã và thực thi."
       ]
     },
     {
       "id": 4,
-      "question": "Find the domain of the function \\( f(x) = \\ln(3x+6) \\). <br> (i) \\( [-2, \\infty) \\) <br> (ii) \\( [-6, \\infty) \\) <br> (iii) \\( (-2, \\infty) \\) <br> (iv) \\( (6, \\infty) \\) <br> (v) \\( (-\\infty, \\infty) \\)",
+      "question": "A __________ is a storage device that can undergo multiple writes and erasures.",
       "image": null,
       "options": [
-        "A. (v)",
-        "B. (i)",
-        "C. (iv)",
-        "D. (iii)",
-        "E. None of the other choices is correct"
+        "A. CD-ROM",
+        "B. CD-R",
+        "C. CD-RW",
+        "D. CD-RR"
       ],
-      "correctAnswer": "D",
-      "explanation": "Để giải siêu tốc, ta chỉ cần nhớ quy tắc của hàm logarit và giải bất phương trình.<br /><br /><b>1. Quy tắc cốt lõi:</b><br />- Biểu thức bên trong hàm logarit phải lớn hơn 0.<br /><br /><b>2. Giải bất phương trình:</b><br />\\( 3x + 6 > 0 \\)<br />\\( 3x > -6 \\)<br />\\( x > -2 \\)<br /><br /><b>3. Chuyển sang dạng khoảng:</b><br />\\( (-2, \\infty) \\), tương ứng với lựa chọn (iii).",
+      "correctAnswer": "C",
+      "explanation": "Câu hỏi này kiểm tra kiến thức về các loại đĩa quang.<br /><br /><b>1. Giải mã các hậu tố:</b><br />- <b>ROM (Read-Only Memory):</b> Chỉ Đọc. Dữ liệu được nhà sản xuất ghi sẵn, bạn không thể thay đổi. Ví dụ: Đĩa game gốc.<br />- <b>R (Recordable):</b> Có thể Ghi. Bạn có thể ghi dữ liệu lên đĩa trống <b>một lần duy nhất</b>.<br />- <b>RW (ReWritable):</b> Có thể Ghi Lại. Đây là loại đĩa đặc biệt cho phép bạn <b>ghi, xóa, và ghi lại</b> dữ liệu nhiều lần.<br /><br /><b>2. Mẹo ghi nhớ:</b><br />Hãy tập trung vào chữ cái cuối cùng:<br />- R = Record (Ghi 1 lần)<br />- RW = <b>Re</b>-<b>W</b>rite (Ghi lại nhiều lần)<br /><br /><b>3. Loại trừ:</b><br />- CD-RR không phải là một định dạng đĩa tiêu chuẩn.<br /><br /><b>Kết luận: CD-RW là thiết bị cho phép ghi và xóa nhiều lần.</b>",
       "difficulty": "easy",
-      "topic": "Functions (Logarithms, Domain)",
+      "topic": "Storage Devices (Optical Discs)",
       "hints": [
-        "Mẹo nhanh nhất: Đối với `ln(u)`, chỉ cần giải bất phương trình `u > 0`.",
-        "Trong bài này: `3x + 6 > 0`.",
-        "Nhớ rằng `>` có nghĩa là dùng dấu ngoặc đơn `(`, không phải ngoặc vuông `[`."
+        "Thần chú: <b>RW = ReWritable = Ghi Lại Được</b>.",
+        "ROM = Read-Only (Chỉ Đọc).",
+        "R = Recordable (Ghi 1 lần)."
       ]
     },
     {
       "id": 5,
-      "question": "Find the minimum of the product of two numbers with the property that the first is 2 less than twice the second.",
+      "question": "What is the name of the display feature that highlights areas of the screen which require operator attention?",
       "image": null,
       "options": [
-        "A. -1/2",
-        "B. 1/2",
-        "C. -1",
-        "D. 1",
-        "E. None of the other choices is correct"
+        "A. Pixel",
+        "B. Reverse video",
+        "C. Touch screen",
+        "D. Cursor"
       ],
-      "correctAnswer": "A",
-      "explanation": "Giả sử hai số là \\( x \\) và \\( y \\).<br/>Theo giả thiết, “số thứ nhất kém số gấp đôi số thứ hai 2 đơn vị”, nên ta có \\( x = 2y - 2 \\).<br/>Ta cần tìm giá trị nhỏ nhất của tích \\( P = xy \\).<br/>Thay biểu thức của \\( x \\) vào hàm tích:<br/>\\( P(y) = (2y - 2)y = 2y^2 - 2y \\).<br/>Đây là một hàm bậc hai của \\( y \\), tạo thành một parabol mở lên (vì hệ số của \\( y^2 \\) là \\( 2 > 0 \\)). Để tìm giá trị nhỏ nhất, ta tìm **đỉnh của parabol**.<br/>Đối với parabol có dạng \\( ay^2 + by + c \\), hoành độ đỉnh là \\( y_v = -\\frac{b}{2a} \\).<br/>Trong trường hợp này, \\( a = 2 \\) và \\( b = -2 \\).<br/>Vậy, \\( y_v = -(-2) / (2 \\cdot 2) = 2 / 4 = \\tfrac{1}{2} \\).<br/>Đây là giá trị của số thứ hai \\( y \\) sao cho tích đạt giá trị nhỏ nhất.<br/>Bây giờ tìm số thứ nhất \\( x \\):<br/>\\( x = 2y - 2 = 2(\\tfrac{1}{2}) - 2 = 1 - 2 = -1 \\).<br/>Tích nhỏ nhất là \\( P = x \\cdot y = (-1) \\cdot (\\tfrac{1}{2}) = -\\tfrac{1}{2} \\).<br/>Đây là đáp án tương ứng với lựa chọn A.",
+      "correctAnswer": "B",
+      "explanation": "Câu hỏi này về các thuật ngữ giao diện người dùng.<br /><br /><b>1. Định nghĩa các thuật ngữ:</b><br />- <b>Pixel:</b> Là một điểm ảnh, đơn vị nhỏ nhất tạo nên hình ảnh trên màn hình. Nó không phải là một 'tính năng'.<br />- <b>Reverse Video (Đảo màu video):</b> Đây chính là tính năng đảo ngược màu nền và màu chữ (ví dụ: từ chữ đen trên nền trắng thành chữ trắng trên nền đen) để <b>làm nổi bật</b> một đoạn văn bản, một mục menu, hoặc một thông báo quan trọng. Đây chính xác là thứ dùng để thu hút sự chú ý.<br />- <b>Touch screen:</b> Là một loại màn hình cho phép nhập liệu bằng cách chạm vào.<br />- <b>Cursor (Con trỏ):</b> Chỉ vị trí hiện tại sẽ nhập văn bản hoặc tương tác chuột, nó không nhất thiết 'làm nổi bật' một khu vực.<br /><br /><b>2. Ví dụ thực tế:</b><br />Khi bạn chọn một file trong máy tính, nó thường được bôi xanh (chữ trắng trên nền xanh). Đó chính là một dạng của <b>reverse video</b>.<br /><br /><b>Kết luận: Reverse video là tính năng dùng để làm nổi bật một khu vực trên màn hình.</b>",
       "difficulty": "medium",
-      "topic": "Calculus (Optimization) / Algebra (Quadratics)",
+      "topic": "User Interface (Display Features)",
       "hints": [
-        "Set up equations based on the problem statement.",
-        "Express the product as a function of a single variable.",
-        "Find the vertex of the resulting quadratic function to find the minimum."
+        "<b>Reverse Video</b> = Đảo màu nền và chữ để làm NỔI BẬT.",
+        "Hãy nghĩ đến việc bạn bôi đen một đoạn văn bản trong Word, màu sắc của nó bị đảo ngược.",
+        "Pixel là điểm ảnh, Cursor là con trỏ, chúng không phải là tính năng làm nổi bật cả một khu vực."
       ]
     },
     {
       "id": 6,
-      "question": "Find \\( y'(0) \\) for \\( y = (x+1)^5(x^2+1)^{-3} \\)",
+      "question": "What is the taxonomy of computer organization?",
       "image": null,
       "options": [
-        "A. (See picture)",
-        "B. 2",
-        "C. 0",
-        "D. -2",
-        "E. None of the other choices is correct",
-        "F. -6"
+        "A. SIMD - Single Instruction-stream, Multiple Data-stream",
+        "B. MISD - Multiple Instruction-stream, Single Data-stream",
+        "C. MIMD - Multiple Instruction-stream, Multiple Data-stream",
+        "D. All of the others"
       ],
-      "correctAnswer": "E",
-      "explanation": "Để tìm \\(y'(0)\\), ta lấy logarit tự nhiên của \\(y\\):<br/>\\(y = (x+1)^5\\,(x^2+1)^{-3}\\) \\(\\Longrightarrow\\) \\(\\ln y = 5\\ln(x+1) - 3\\ln(x^2+1)\\).<br/>Bây giờ đạo hàm hai vế theo \\(x\\):<br/>\\(\\frac{1}{y}\\,y' = \\frac{5}{x+1} - \\frac{6x}{x^2+1}\\).<br/>Do đó,<br/>\\(y' = y\\Bigl(\\frac{5}{x+1} - \\frac{6x}{x^2+1}\\Bigr) = (x+1)^5\\,(x^2+1)^{-3}\\Bigl(\\frac{5}{x+1} - \\frac{6x}{x^2+1}\\Bigr)\\).<br/>Đánh giá tại \\(x = 0\\):<br/>\\(y(0) = 1, \\; \\frac{5}{1} - 0 = 5\\).<br/>Vậy \\(y'(0) = 5\\).<br/>Vì 5 không nằm trong các lựa chọn, đáp án đúng là “None of the other choices is correct.”",
+      "correctAnswer": "D",
+      "explanation": "Câu hỏi này về Phân loại Flynn (Flynn's Taxonomy), một hệ thống phân loại các kiến trúc máy tính.<br /><br /><b>1. Phân loại Flynn:</b><br />Michael J. Flynn đã đề xuất phân loại các kiến trúc máy tính dựa trên số lượng <b>luồng lệnh (Instruction stream)</b> và <b>luồng dữ liệu (Data stream)</b>.<br /><br /><b>2. Bốn loại chính là:</b><br />- <b>SISD (Single Instruction, Single Data):</b> Máy tính đơn nhân truyền thống (1 lệnh xử lý 1 dữ liệu tại một thời điểm).<br />- <b>SIMD (Single Instruction, Multiple Data):</b> 1 lệnh được áp dụng cho nhiều dữ liệu cùng lúc. Rất phổ biến trong xử lý đồ họa (GPU).<br />- <b>MISD (Multiple Instruction, Single Data):</b> Nhiều lệnh xử lý trên cùng một luồng dữ liệu. Ít phổ biến trong thực tế.<br />- <b>MIMD (Multiple Instruction, Multiple Data):</b> Nhiều lệnh xử lý nhiều luồng dữ liệu khác nhau. Đây là kiến trúc của các máy tính đa lõi hiện đại.<br /><br /><b>Kết luận: Cả A, B, và C đều là các phần của hệ thống phân loại tổ chức máy tính này.</b>",
       "difficulty": "medium",
-      "topic": "Calculus (Derivatives)",
+      "topic": "Computer Architecture (Flynn's Taxonomy)",
       "hints": [
-        "Use the product rule \\( (uv)' = u'v + uv' \\) and the chain rule.",
-        "Substitute \\(x=0\\) carefully after finding the derivative expression."
+        "Ghi nhớ <b>Phân loại Flynn</b> bao gồm 4 loại: SISD, SIMD, MISD, MIMD.",
+        "S = Single (Đơn), M = Multiple (Đa), I = Instruction (Lệnh), D = Data (Dữ liệu).",
+        "Câu hỏi hỏi về 'taxonomy' (hệ thống phân loại), nên tất cả các thành phần của hệ thống đó đều là câu trả lời đúng."
       ]
     },
     {
       "id": 7,
-      "question": "Evaluate the limit, if it exists: \\( \\lim_{x \\to 1} \\frac{x^2 - 5x + 2}{x^2 + 8x + 7} \\)",
+      "question": "Which is a unit representing the number of bits of discrete data?",
       "image": null,
       "options": [
-        "A. (See picture)",
-        "B. None of the other choices is correct",
-        "C. 3/8",
-        "D. 0",
-        "E. -3/8",
-        "F. 1/8",
-        "G. -1/8"
+        "A. Baud",
+        "B. Byte",
+        "C. Bit",
+        "D. All of the others",
+        "E. None of the others"
       ],
-      "correctAnswer": "G",
-      "explanation": "Đây không là dạng vô định, thay số 1 vào tính bình thường => -1/8",
+      "correctAnswer": "C",
+      "explanation": "Đây là câu hỏi về đơn vị thông tin cơ bản nhất.<br /><br /><b>1. Định nghĩa các đơn vị:</b><br />- <b>Bit (Binary Digit):</b> Là đơn vị dữ liệu <b>nhỏ nhất</b> trong máy tính. Nó chỉ có thể nhận một trong hai giá trị: 0 hoặc 1.<br />- <b>Byte:</b> Là một nhóm gồm <b>8 bits</b>. Nó thường được dùng để biểu diễn một ký tự (ví dụ: chữ 'A').<br />- <b>Baud:</b> Là đơn vị đo tốc độ thay đổi tín hiệu trên một đường truyền (ví dụ: modem), không phải là đơn vị đo lường dữ liệu.<br /><br /><b>2. Ví dụ đời thực:</b><br />- <b>Bit</b> giống như một công tắc đèn: chỉ có thể ở trạng thái Bật (1) hoặc Tắt (0).<br />- <b>Byte</b> là một dãy 8 công tắc đèn, có thể tạo ra 256 tổ hợp khác nhau.<br /><br /><b>Kết luận: Bit là đơn vị cơ bản nhất, đại diện cho một 'số' dữ liệu rời rạc (0 hoặc 1).</b>",
       "difficulty": "easy",
-      "topic": "Calculus (Limits)",
+      "topic": "Data Representation (Units)",
       "hints": [
-        "Try direct substitution of \\(x=1\\) into the expression.",
-        "If direct substitution results in a defined value (denominator not zero), that is the limit."
+        "Câu thần chú: <b>Bit = Binary Digit</b>, là đơn vị nhỏ nhất (0 hoặc 1).",
+        "Byte là một nhóm gồm 8 bits.",
+        "Đừng nhầm lẫn 'bit' (đơn vị dữ liệu) với 'baud' (tốc độ tín hiệu)."
       ]
     },
     {
       "id": 8,
-      "question": "Let \\( U = \\{(x, y, z) \\in \\mathbb{R}^3 | 2x-y+z = 0 \\} \\) be a subspace of \\( \\mathbb{R}^3 \\). Which of the following statements are true? <br> (i) \\( U = \\text{span} \\{ (1, 0, -2), (0, 1, 1) \\} \\) <br> (ii) \\( U = \\text{span} \\{ (1, 2, 0) \\} \\)",
+      "question": "Binary numbers need more places for counting because:",
       "image": null,
       "options": [
-        "A. (i) only",
-        "B. (ii) only",
-        "C. Both (i) and (ii)",
-        "D. None of the other choices is correct"
+        "A. 0's and 1's can be added in front of them",
+        "B. 0's and 1's have to be properly placed",
+        "C. They are always big numbers",
+        "D. Binary base is small",
+        "E. None of the others"
       ],
-      "correctAnswer": "A",
-      "explanation": "<b>Bản chất của bài toán là tìm một cơ sở cho không gian con \\( U \\).</b><br />Ta có phương trình \\( 2x - y + z = 0 \\) với ba ẩn số, điều này cho thấy rằng không gian con \\( U \\) có số chiều là \\( 3 - 1 = 2 \\), và nó là một mặt phẳng trong \\( \\mathbb{R}^3 \\).<br /><br />Từ phương trình trên, ta có thể biểu diễn một ẩn theo hai ẩn còn lại:<br />\\( z = -2x + y \\)<br />Một vector bất kỳ \\( (x, y, z) \\) thuộc \\( U \\) có thể được viết dưới dạng:<br />\\( (x, y, -2x + y) \\)<br />Ta phân tích vector này thành tổng các vector theo các biến độc lập \\( x \\) và \\( y \\):<br />\\( (x, y, -2x + y) = (x, 0, -2x) + (0, y, y) = x(1, 0, -2) + y(0, 1, 1) \\)<br />Như vậy, mọi vector trong \\( U \\) đều là tổ hợp tuyến tính của hai vector \\( (1, 0, -2) \\) và \\( (0, 1, 1) \\). Hai vector này sinh ra không gian con \\( U \\).<br /><br /><b>Vì vậy, phát biểu (i) là đúng.</b><br /><br />Phát biểu (ii) là sai vì không gian con được sinh bởi một vector duy nhất sẽ là một đường thẳng (không gian một chiều), trong khi đó \\( U \\) là một mặt phẳng (không gian hai chiều).",
+      "correctAnswer": "D",
+      "explanation": "Câu hỏi này đào sâu vào bản chất của các hệ đếm.<br /><br /><b>1. Nguyên tắc cốt lõi:</b><br />Số lượng 'chữ số' cần thiết để biểu diễn một số phụ thuộc vào <b>cơ số (base)</b> của hệ đếm đó.<br />- Hệ thập phân (Decimal) có <b>cơ số 10</b> (dùng 10 ký tự: 0-9).<br />- Hệ nhị phân (Binary) có <b>cơ số 2</b> (chỉ dùng 2 ký tự: 0, 1).<br /><br /><b>2. Ví dụ so sánh:</b><br />Để biểu diễn số 'mười', hệ thập phân chỉ cần 2 vị trí: '10'.<br />Nhưng hệ nhị phân, vì cơ số quá nhỏ, phải dùng đến 4 vị trí: '1010'.<br /><br /><b>3. Ví dụ đời thực:</b><br />Hãy tưởng tượng bạn đang đếm tiền. Nếu bạn chỉ có tờ 1đ và 2đ (cơ số nhỏ), bạn sẽ cần một cọc tiền rất dày để có 10đ. Nhưng nếu bạn có cả tờ 10đ (cơ số lớn), bạn chỉ cần một tờ duy nhất.<br /><br /><b>Kết luận: Vì cơ số của hệ nhị phân (base 2) rất nhỏ, nó cần nhiều vị trí hơn để biểu diễn cùng một giá trị so với hệ có cơ số lớn hơn.</b>",
       "difficulty": "medium",
-      "topic": "Linear Algebra (Subspaces, Span)",
+      "topic": "Number Systems (Base Concept)",
       "hints": [
-        "Phương trình \\( 2x-y+z=0 \\) định nghĩa một mặt phẳng trong \\( \\mathbb{R}^3 \\), đây là một không gian con 2 chiều.",
-        "Từ phương trình, hãy biểu diễn một ẩn (ví dụ: \\( z \\)) qua hai ẩn còn lại (\\( x, y \\)).",
-        "Viết một vector tổng quát \\( (x,y,z) \\) của U dưới dạng tổ hợp tuyến tính của các vector cơ sở."
+        "<b>Cơ số càng nhỏ, số càng dài.</b>",
+        "So sánh hệ Nhị phân (cơ số 2) và Thập phân (cơ số 10).",
+        "Nhớ ví dụ đếm tiền: chỉ có tờ 1đ và 2đ sẽ cần nhiều tờ hơn là khi có tờ 10đ."
       ]
     },
     {
       "id": 9,
-      "question": "If \\( A = \\begin{bmatrix} 1 & -1 \\\\ 2 & 0 \\end{bmatrix} \\) and \\( B = \\begin{bmatrix} 2 & 1 \\\\ -1 & 3 \\end{bmatrix} \\) then the (2, 1)-entry of the matrix \\( AB^T - A^{-1}B \\) is:",
+      "question": "Convert the fraction decimal number 0.625 to binary:",
       "image": null,
       "options": [
-        "A. (See picture)",
-        "B. 3/2",
-        "C. -5/2",
-        "D. None of the other choices is correct",
-        "E. -1/2",
-        "F. 13/2"
+        "A. 1.010",
+        "B. 0.101",
+        "C. 1.110",
+        "D. 0.110"
       ],
-      "correctAnswer": "F",
-      "explanation": "Để giải bài này dưới 20 giây, ta không cần tính toàn bộ các ma trận. Ta chỉ cần tìm duy nhất phần tử ở vị trí (2,1).<br /><br />Gọi \\( M = AB^T - A^{-1}B \\). Ta có: \\( M_{21} = (AB^T)_{21} - (A^{-1}B)_{21} \\).<br /><br /><b>1. Tính \\( (AB^T)_{21} \\)</b>: Lấy <b>hàng 2 của A</b> nhân với <b>cột 1 của Bᵀ</b>.<br />\\( (AB^T)_{21} = \\begin{bmatrix} 2 & 0 \\end{bmatrix} \\begin{bmatrix} 2 \\\\ 1 \\end{bmatrix} = (2)(2) + (0)(1) = 4 \\).<br /><br /><b>2. Tính \\( (A^{-1}B)_{21} \\)</b>: Lấy <b>hàng 2 của A⁻¹</b> nhân với <b>cột 1 của B</b>.<br />- Đầu tiên, tính nhanh \\( A^{-1} \\). Với \\( \\det(A) = 2 \\), ta áp dụng mẹo '<b>đổi chỗ</b> đường chéo chính, <b>đổi dấu</b> đường chéo phụ':<br />\\( A^{-1} = \\frac{1}{2} \\begin{bmatrix} 0 & 1 \\\\ -2 & 1 \\end{bmatrix} = \\begin{bmatrix} 0 & 1/2 \\\\ -1 & 1/2 \\end{bmatrix} \\).<br />- Hàng 2 của A⁻¹ là \\( \\begin{bmatrix} -1 & 1/2 \\end{bmatrix} \\). Cột 1 của B là \\( \\begin{bmatrix} 2 \\\\ -1 \\end{bmatrix} \\).<br />\\( (A^{-1}B)_{21} = \\begin{bmatrix} -1 & 1/2 \\end{bmatrix} \\begin{bmatrix} 2 \\\\ -1 \\end{bmatrix} = (-1)(2) + (1/2)(-1) = -2 - \\frac{1}{2} = -\\frac{5}{2} \\).<br /><br /><b>3. Kết quả cuối cùng:</b><br />\\( M_{21} = 4 - \\left(-\\frac{5}{2}\\right) = 4 + \\frac{5}{2} = \\frac{8}{2} + \\frac{5}{2} = \\frac{13}{2} \\).",
+      "correctAnswer": "B",
+      "explanation": "Đây là bài toán chuyển đổi hệ cơ số cho phần thập phân.<br /><br /><b>1. Phương pháp:</b><br />Để chuyển phần thập phân từ hệ 10 sang hệ 2, ta dùng phương pháp <b>nhân liên tục phần thập phân với 2</b> và ghi lại phần nguyên của kết quả.<br /><br /><b>2. Các bước thực hiện:</b><br />- 0.625 * 2 = <b>1</b>.25  (Lấy phần nguyên là <b>1</b>, phần thập phân còn lại là 0.25)<br />- 0.25  * 2 = <b>0</b>.50  (Lấy phần nguyên là <b>0</b>, phần thập phân còn lại là 0.50)<br />- 0.50  * 2 = <b>1</b>.00  (Lấy phần nguyên là <b>1</b>, phần thập phân còn lại là 0.00 -> Dừng)<br /><br /><b>3. Tổng hợp kết quả:</b><br />Đọc các phần nguyên đã lấy ra <b>từ trên xuống dưới</b>, ta được phần thập phân trong hệ nhị phân: <b>0.101</b>.<br /><br /><b>Mẹo kiểm tra nhanh:</b> \\( 0.101_2 = 1 \\cdot 2^{-1} + 0 \\cdot 2^{-2} + 1 \\cdot 2^{-3} = 0.5 + 0 + 0.125 = 0.625_{10} \\). Hoàn toàn chính xác!",
       "difficulty": "medium",
-      "topic": "Linear Algebra (Matrix Operations)",
+      "topic": "Number Systems (Decimal to Binary Conversion)",
       "hints": [
-        "Đừng tính cả ma trận! Chỉ tập trung vào phần tử ở vị trí (2,1).",
-        "Để tìm một phần tử của ma trận tích, lấy (hàng tương ứng) nhân (cột tương ứng)."
+        "Thần chú chuyển phần thập phân: <b>Nhân liên tục với 2, lấy phần nguyên</b>.",
+        "Quan trọng: Đọc kết quả (các phần nguyên) <b>từ trên xuống dưới</b>.",
+        "Mẹo loại trừ: Số ban đầu là 0.625 (nhỏ hơn 1), nên kết quả nhị phân phải bắt đầu bằng '0.'. Loại ngay đáp án A và C."
       ]
     },
     {
       "id": 10,
-      "question": "Evaluate the following improper integral \\( \\int_0^1 x \\ln(4x) \\, dx \\)",
+      "question": "A group of bits in the binary system are represented as one digit in the octal system. How many bits?",
       "image": null,
       "options": [
-        "A. None of the other choice is correct.",
-        "B. Converges to \\( \\ln(2) + 1/4 \\)",
-        "C. Converges to \\( \\ln(2) \\)",
-        "D. Diverges",
-        "E. Converges to \\( \\ln(2) - 1/4 \\)"
+        "A. 1",
+        "B. 2",
+        "C. 3",
+        "D. 4"
       ],
-      "correctAnswer": "E",
-      "explanation": "Để giải nhanh, ta chỉ cần tính tích phân từng phần và nhớ rằng giá trị tại cận dưới \\(x=0\\) của dạng này sẽ bằng 0.<br /><br /><b>1. Tích phân từng phần:</b> \\( \\int u \\, dv = uv - \\int v \\, du \\)<br />- Theo quy tắc 'Nhất Lô (log), Nhì Đa (đa thức), Tam Lượng (lượng giác), Tứ Mũ (số mũ)', ta ưu tiên đặt \\( u = \\ln(4x) \\) và \\( dv = x \\, dx \\).<br />- Suy ra \\( du = \\frac{1}{x} dx \\) và \\( v = \\frac{x^2}{2} \\).<br />- Nguyên hàm là: \\( \\frac{x^2}{2} \\ln(4x) - \\int \\frac{x^2}{2} \\cdot \\frac{1}{x} dx = \\frac{x^2}{2} \\ln(4x) - \\frac{x^2}{4} \\).<br /><br /><b>2. Thế cận [0, 1] và tính nhanh:</b><br />- <b>Thế cận trên (x=1):</b><br />\\( \\frac{1^2}{2} \\ln(4) - \\frac{1^2}{4} = \\frac{1}{2}(2\\ln(2)) - \\frac{1}{4} = \\ln(2) - \\frac{1}{4} \\).<br />- <b>Thế cận dưới (x=0):</b><br />Giá trị của biểu thức \\( \\frac{x^2}{2} \\ln(4x) - \\frac{x^2}{4} \\) khi \\(x \\to 0^+\\) bằng 0. Đây là một giới hạn rất quen thuộc.<br /><br /><b>3. Kết quả cuối cùng:</b><br />\\( \\left( \\ln(2) - \\frac{1}{4} \\right) - 0 = \\ln(2) - \\frac{1}{4} \\).",
-      "difficulty": "medium",
-      "topic": "Calculus (Improper Integrals, Integration by Parts)",
+      "correctAnswer": "C",
+      "explanation": "Câu hỏi này về mối quan hệ giữa hệ nhị phân (Binary) và hệ bát phân (Octal).<br /><br /><b>1. Mối liên hệ qua lũy thừa của 2:</b><br />- Hệ Bát phân (Octal) có cơ số <b>8</b>.<br />- Ta thấy rằng \\( 8 = 2^3 \\).<br />- Số mũ <b>'3'</b> trong biểu thức này chính là chìa khóa. Nó cho biết rằng <b>một chữ số của hệ bát phân</b> tương đương với một nhóm <b>3 chữ số (bits) của hệ nhị phân</b>.<br /><br /><b>2. Ví dụ chuyển đổi:</b><br />Để chuyển từ nhị phân sang bát phân, ta nhóm các bit thành từng cụm 3. <br />Ví dụ: \\( 101110_2 \\) -> nhóm thành (101)(110) -> \\( 56_8 \\).<br /><br /><b>3. Mở rộng kiến thức:</b><br />Tương tự, với hệ Thập lục phân (Hexadecimal, cơ số 16), vì \\( 16 = 2^4 \\), nên một chữ số hệ 16 sẽ tương ứng với một nhóm <b>4 bits</b>.<br /><br /><b>Kết luận: Cần 3 bits để biểu diễn một chữ số trong hệ bát phân.</b>",
+      "difficulty": "easy",
+      "topic": "Number Systems (Binary to Octal)",
       "hints": [
-        "Mẹo chọn 'u' cho tích phân từng phần: <b>Nhất Lô (log), Nhì Đa (đa thức), Tam Lượng (lượng giác), Tứ Mũ (số mũ)</b>. Ta ưu tiên chọn \\(u\\) là hàm Logarit (Lô).",
-        "Mẹo giải nhanh: Giới hạn của \\(x^n \\ln(x)\\) khi \\(x \\to 0\\) luôn bằng 0. Do đó, bạn chỉ cần tính giá trị ở cận trên \\(x=1\\).",
-        "Nhớ rằng \\(\\ln(4) = 2\\ln(2)\\) để rút gọn kết quả."
+        "Thần chú: <b>Octal = 8 = 2³</b>. Do đó, 1 chữ số Octal = <b>3 bits</b>.",
+        "Mẹo ghi nhớ tương tự: <b>Hexadecimal = 16 = 2⁴</b>. Do đó, 1 chữ số Hex = <b>4 bits</b>.",
+        "Để chuyển đổi giữa hai hệ này, bạn luôn nhóm 3 bit lại với nhau."
       ]
     },
     {
       "id": 11,
-      "question": "Find values of \\( c \\) for which the matrix \\( A = \\begin{bmatrix} 1 & 2 & 1 \\\\ 1 & 2 & c \\\\ 0 & 0 & c \\end{bmatrix} \\) has an inverse.",
+      "question": "Conversion of the binary number 1010101000010111 to hexadecimal is:",
       "image": null,
       "options": [
-        "A. All real numbers",
-        "B. All nonzero numbers",
-        "C. None of the other choices is correct",
-        "D. All numbers different from -4",
-        "E. All numbers different from 0 and -4"
+        "A. D8F9",
+        "B. A8B9",
+        "C. AA17",
+        "D. D9F8"
       ],
       "correctAnswer": "C",
-      "explanation": "Để giải siêu nhanh, ta sẽ tính định thức bằng cách khai triển theo hàng có nhiều số 0 nhất.<br /><br /><b>1. Xác định hàng/cột để khai triển:</b><br />- Hàng 3 của ma trận A là \\( \\begin{bmatrix} 0 & 0 & c \\end{bmatrix} \\), có hai số 0. Đây là lựa chọn tốt nhất.<br /><br /><b>2. Khai triển định thức theo hàng 3:</b><br />- Định thức của A sẽ là phần tử khác không duy nhất (là \\(c\\)) nhân với định thức con tương ứng của nó.<br />\\( \\det(A) = c \\cdot (-1)^{3+3} \\begin{vmatrix} 1 & 2 \\\\ 1 & 2 \\end{vmatrix} \\)<br /><br /><b>3. Tính định thức con và kết luận:</b><br />- Định thức con là \\( (1)(2) - (2)(1) = 0 \\).<br />- Do đó, \\( \\det(A) = c \\cdot (1) \\cdot 0 = 0 \\).<br /><br />Vì định thức của A <b>luôn luôn bằng 0</b> với mọi giá trị của \\(c\\), ma trận A không bao giờ có ma trận nghịch đảo.<br /><br />Do đó, không có giá trị nào của \\(c\\) thỏa mãn yêu cầu.",
-      "difficulty": "medium",
-      "topic": "Linear Algebra (Determinants, Inverse Matrix)",
+      "explanation": "Đây là bài toán chuyển đổi từ hệ nhị phân (Binary) sang hệ thập lục phân (Hexadecimal).<br /><br /><b>1. Nguyên tắc chuyển đổi:</b><br />Mối liên hệ giữa hai hệ này là \\( 16 = 2^4 \\). Điều này có nghĩa là <b>1 chữ số Hex = 4 bits</b>. Do đó, ta chỉ cần nhóm số nhị phân thành từng cụm 4 bit từ phải sang trái.<br /><br /><b>2. Thực hiện nhóm và chuyển đổi:</b><br />Số nhị phân: <b>1010 1010 0001 0111</b><br />- Nhóm 1 (phải nhất): <b>0111</b> = <b>7</b><br />- Nhóm 2: <b>0001</b> = <b>1</b><br />- Nhóm 3: <b>1010</b> = 10 (thập phân) = <b>A</b> (hex)<br />- Nhóm 4 (trái nhất): <b>1010</b> = 10 (thập phân) = <b>A</b> (hex)<br /><br /><b>3. Kết hợp kết quả:</b><br />Ghép các chữ số hex lại, ta được: <b>AA17</b>.<br /><br /><b>Kết luận: Đáp án đúng là AA17.</b>",
+      "difficulty": "easy",
+      "topic": "Number Systems (Binary to Hexadecimal Conversion)",
       "hints": [
-        "Một ma trận có nghịch đảo khi và chỉ khi định thức của nó khác 0.",
-        "Mẹo giải siêu nhanh: Khai triển định thức theo hàng hoặc cột có nhiều số 0 nhất để giảm thiểu tính toán.",
-        "Trong bài này, khai triển theo hàng 3 là nhanh nhất."
+        "Thần chú: <b>Hex = 16 = 2⁴</b>. Nhóm <b>4 bits</b> lại với nhau.",
+        "Bắt đầu nhóm từ bên phải sang trái.",
+        "Ghi nhớ các giá trị Hex cơ bản: A=10, B=11, C=12, D=13, E=14, F=15."
       ]
     },
     {
       "id": 12,
-      "question": "Approximate the area under the graph of \\( f(x) = 0.015x^3 + 4 \\) over the interval \\( [-6, 0] \\) using 3 subintervals and left endpoints.",
+      "question": "Assume a new Excess system uses 17 bits to represent the exponent section. What is the bias value in this system?",
       "image": null,
       "options": [
-        "A. 15.36",
-        "B. 21.84",
-        "C. 10.92",
-        "D. None of the other choices is correct",
-        "E. 7.68"
+        "A. 17",
+        "B. 16",
+        "C. 65535",
+        "D. 65536"
       ],
-      "correctAnswer": "A",
-      "explanation": "Bản chất của bài toán là xấp xỉ diện tích bằng tổng diện tích của 3 hình chữ nhật đứng cạnh nhau. Mỗi hình chữ nhật có:<br />- <b>Cạnh đáy (chiều rộng):</b> là \\(\\Delta x\\).<br />- <b>Cạnh bên (chiều cao):</b> là giá trị hàm số \\(f(x)\\) tại <b>điểm mút trái</b> của mỗi khoảng con.<br /><br /><b>1. Xác định các giá trị cơ bản:</b><br />- Chiều rộng mỗi hình chữ nhật: \\( \\Delta x = \\frac{0 - (-6)}{3} = 2 \\).<br />- Các điểm mút trái (để xác định chiều cao): \\(-6, -4, -2\\).<br /><br /><b>2. Thiết lập biểu thức và tính nhanh:</b><br />Diện tích \\( A \\approx \\text{Rộng} \\times (\\text{Cao}_1 + \\text{Cao}_2 + \\text{Cao}_3) \\)<br />\\( A \\approx \\Delta x \\cdot [f(-6) + f(-4) + f(-2)] \\).<br /><br /><b>Mẹo tính nhanh:</b> Gom các số hạng lại trước khi nhân.<br />\\( A \\approx 2 \\cdot [ (0.015(-6)^3 + 4) + (0.015(-4)^3 + 4) + (0.015(-2)^3 + 4) ] \\)<br />\\( A \\approx 2 \\cdot [ 0.015((-6)^3 + (-4)^3 + (-2)^3) + (4+4+4) ] \\)<br />\\( A \\approx 2 \\cdot [ 0.015(-216 - 64 - 8) + 12 ] \\)<br />\\( A \\approx 2 \\cdot [ 0.015(-288) + 12 ] \\)<br />\\( A \\approx 2 \\cdot [ -4.32 + 12 ] = 2 \\cdot [ 7.68 ] = 15.36 \\)",
-      "difficulty": "easy",
-      "topic": "Calculus (Numerical Integration, Riemann Sums)",
+      "correctAnswer": "C",
+      "explanation": "Câu hỏi này về cách tính giá trị độ lệch (bias) trong biểu diễn số chấm động (floating-point).<br /><br /><b>1. Công thức tính Bias:</b><br />Giá trị bias được dùng để biểu diễn cả số mũ âm và dương mà không cần dùng bit dấu. Công thức 'thần thánh' là:<br /><b>Bias = 2^(m-1) - 1</b><br />Trong đó <b>m</b> là số bit dùng cho phần mũ (exponent).<br /><br /><b>2. Áp dụng vào bài toán:</b><br />- Ta có: <b>m = 17</b>.<br />- Thay vào công thức: Bias = 2^(17-1) - 1<br />- Tính toán: Bias = 2^16 - 1 = 65536 - 1 = <b>65535</b>.<br /><br /><b>Kết luận: Giá trị bias là 65535.</b>",
+      "difficulty": "medium",
+      "topic": "Data Representation (Floating-Point Numbers)",
       "hints": [
-        "Hãy tưởng tượng bạn đang cộng diện tích của 3 hình chữ nhật.",
-        "Mỗi hình chữ nhật có chiều rộng là \\(\\Delta x\\) và chiều cao là \\(f(x)\\) tại điểm mút trái tương ứng.",
-        "Mẹo tiết kiệm thời gian: Đừng tính từng \\(f(x)\\) riêng lẻ. Hãy gom các phép tính lại rồi tính một lần duy nhất."
+        "Công thức cốt lõi: <b>Bias = 2^(số bit mũ - 1) - 1</b>.",
+        "Đừng nhầm lẫn! Phải lấy 2 lũy thừa (m-1) trước, sau đó mới trừ 1.",
+        "Ví dụ kinh điển: IEEE 754 single-precision dùng 8 bit mũ, nên bias = 2^(8-1) - 1 = 127."
       ]
     },
     {
       "id": 13,
-      "question": "Use the Trapezoidal Rule with \\( n = 5 \\) to approximate the integral \\( \\int_1^6 f(x) dx \\). The table gives values of \\( f(x) \\): <br> <center> <table border='1' cellpadding='5'><tr><td><b>x</b></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><td><b>f(x)</b></td><td>3.2</td><td>1.6</td><td>2.4</td><td>3.8</td><td>4.4</td><td>1.3</td></tr></table> </center>",
+      "question": "The 32-bit code called __________ represents symbols in all languages.",
       "image": null,
       "options": [
-        "A. None of the other choices is correct",
-        "B. 14.45",
-        "C. 15.55",
-        "D. 31.1",
-        "E. 28.90"
+        "A. ANSI",
+        "B. Unicode",
+        "C. EBCDIC",
+        "D. Extended ASCII"
       ],
       "correctAnswer": "B",
-      "explanation": "Bản chất của bài toán là xấp xỉ diện tích bằng tổng diện tích của 5 hình thang. Công thức diện tích một hình thang là: \\( \\frac{(\\text{đáy lớn} + \\text{đáy bé}) \\times \\text{cao}}{2} \\).<br /><br />- <b>Đường cao</b> của mỗi hình thang chính là độ rộng khoảng con \\(\\Delta x\\).<br />- <b>Các đáy</b> là giá trị \\(f(x)\\).<br /><br />Khi cộng dồn diện tích, các giá trị \\(f(x)\\) ở giữa được dùng làm đáy cho <b>hai</b> hình thang liền kề, vì vậy chúng được nhân 2. Các giá trị ở hai đầu mút chỉ được dùng một lần. Đây là lý do công thức có dạng:<br />\\( A \\approx \\frac{\\Delta x}{2} [y_0 + 2y_1 + 2y_2 + 2y_3 + 2y_4 + y_5] \\)<br /><br /><b>1. Xác định các giá trị cơ bản:</b><br />- Đường cao mỗi hình thang: \\( \\Delta x = \\frac{6-1}{5} = 1 \\).<br /><br /><b>2. Thiết lập và tính toán nhanh:</b><br />Áp dụng logic trên, ta gom các số hạng lại:<br />\\( T_5 = \\frac{1}{2} [ (y_0 + y_5) + 2(y_1 + y_2 + y_3 + y_4) ] \\)<br /><br />- <b>Tổng hai đáy ngoài cùng:</b> \\( 3.2 + 1.3 = 4.5 \\)<br />- <b>Tổng các đáy ở giữa:</b> \\( 1.6 + 2.4 + 3.8 + 4.4 = 12.2 \\)<br /><br />- <b>Thay vào công thức:</b><br />\\( T_5 = \\frac{1}{2} [ 4.5 + 2(12.2) ] \\)<br />\\( T_5 = \\frac{1}{2} [ 4.5 + 24.4 ] = \\frac{1}{2} [ 28.9 ] = 14.45 \\)",
+      "explanation": "Câu hỏi này kiểm tra kiến thức về các bộ mã hóa ký tự.<br /><br /><b>1. Phân tích các bộ mã:</b><br />- <b>ASCII (7-bit) & Extended ASCII (8-bit):</b> Chỉ đủ để biểu diễn ký tự tiếng Anh và một số ngôn ngữ châu Âu. Không đủ cho toàn thế giới.<br />- <b>EBCDIC:</b> Một bộ mã cũ của IBM, không phổ biến.<br />- <b>Unicode:</b> Đây là một 'siêu bộ mã' được tạo ra với mục tiêu <b>đại diện cho tất cả ký tự trong mọi ngôn ngữ trên thế giới</b>. Các phiên bản phổ biến của nó như UTF-8, UTF-16, và <b>UTF-32</b> (sử dụng 32 bit) cho phép mã hóa một không gian ký tự khổng lồ.<br /><br /><b>2. Từ khóa nhận diện:</b><br />Khi bạn thấy các từ khóa như '<b>all languages</b>' (tất cả ngôn ngữ) hoặc một số lượng bit lớn như <b>32-bit</b>, hãy nghĩ ngay đến <b>Unicode</b>.<br /><br /><b>Kết luận: Unicode là bộ mã 32-bit đại diện cho ký tự trong mọi ngôn ngữ.</b>",
       "difficulty": "easy",
-      "topic": "Calculus (Numerical Integration, Trapezoidal Rule)",
+      "topic": "Data Representation (Character Encoding)",
       "hints": [
-        "Hãy tưởng tượng bạn đang cộng diện tích 5 hình thang. Diện tích = (tổng 2 đáy) * cao / 2.",
-        "Các giá trị f(x) ở giữa được nhân 2 vì chúng là đáy chung của hai hình thang liền kề.",
-        "Công thức nhanh: \\( \\frac{\\Delta x}{2} \\) × [ (điểm đầu + điểm cuối) + 2 × (tổng các điểm ở giữa) ]."
+        "Thần chú: <b>Unicode = Universal = Tất cả ngôn ngữ</b>.",
+        "ASCII chỉ đủ cho tiếng Anh. Unicode là giải pháp toàn cầu.",
+        "Từ khóa '32-bit' và 'all languages' gần như chắc chắn chỉ đến Unicode."
       ]
     },
     {
       "id": 14,
-      "question": "Given two vectors \\( X, Y \\) such that the vectors \\( \\frac{1}{3}X \\) and \\( \\frac{1}{2}Y \\) are orthonormal. Compute \\( (X - 2Y) \\cdot (2X + Y) \\).",
+      "question": "In storing audio, how many samples per second are good enough to reproduce an audio signal?",
       "image": null,
       "options": [
-        "A. 12",
-        "B. 4",
-        "C. 10",
-        "D. 8",
-        "E. 6"
+        "A. 10,000",
+        "B. 20,000",
+        "C. 30,000",
+        "D. 40,000"
       ],
-      "correctAnswer": "C",
-      "explanation": "Để giải siêu tốc, ta cần nhẩm nhanh các giá trị từ cụm từ 'trực chuẩn'.<br /><br /><b>1. Phân tích 'Trực chuẩn' (Orthonormal):</b><br />- <b>Trực (giao):</b> Tích vô hướng của chúng bằng 0 \\( \\Rightarrow \\frac{1}{6}(X \\cdot Y) = 0 \\Rightarrow X \\cdot Y = 0 \\).<br />- <b>Chuẩn (hóa):</b> Độ dài của chúng bằng 1.<br />  \\( ||\\frac{1}{3}X|| = 1 \\Rightarrow ||X|| = 3 \\).<br />  \\( ||\\frac{1}{2}Y|| = 1 \\Rightarrow ||Y|| = 2 \\).<br /><br /><b>2. Khai triển và thế số:</b><br />Khai triển biểu thức theo quy tắc nhân phân phối:<br />\\( (X - 2Y) \\cdot (2X + Y) = 2(X \\cdot X) - 3(X \\cdot Y) - 2(Y \\cdot Y) \\)<br />\\( = 2||X||^2 - 3(X \\cdot Y) - 2||Y||^2 \\)<br /><br />Thay các giá trị đã tìm được vào:<br />\\( = 2(3^2) - 3(0) - 2(2^2) \\)<br />\\( = 2(9) - 0 - 2(4) = 18 - 8 = 10 \\).",
+      "correctAnswer": "D",
+      "explanation": "Câu hỏi này liên quan đến Định lý Lấy mẫu Nyquist-Shannon trong xử lý tín hiệu số.<br /><br /><b>1. Nguyên tắc cốt lõi:</b><br />Để tái tạo một tín hiệu âm thanh một cách trung thực, tần số lấy mẫu (sampling rate) phải <b>lớn hơn ít nhất 2 lần</b> tần số cao nhất của tín hiệu đó.<br /><br /><b>2. Áp dụng vào thực tế:</b><br />- Tai người có thể nghe được âm thanh với tần số lên đến khoảng <b>20,000 Hz</b>.<br />- Theo định lý Nyquist, tần số lấy mẫu cần thiết là: 2 * 20,000 Hz = <b>40,000 Hz</b> (hay 40,000 mẫu/giây).<br /><br /><b>3. Tiêu chuẩn công nghiệp:</b><br />Đây là lý do tại sao chất lượng CD âm thanh tiêu chuẩn sử dụng tần số lấy mẫu là <b>44,100 Hz</b> (tức là 44,100 mẫu/giây), cao hơn một chút so với mức 40,000 Hz để đảm bảo chất lượng.<br /><br /><b>Kết luận: 40,000 mẫu/giây là con số tiêu chuẩn tốt để tái tạo tín hiệu âm thanh cho tai người.</b>",
       "difficulty": "medium",
-      "topic": "Linear Algebra (Vectors, Orthonormality, Dot Product)",
+      "topic": "Data Representation (Audio Sampling)",
       "hints": [
-        "Mẹo: 'Trực chuẩn' = 'Trực giao' (tích vô hướng = 0) + 'Chuẩn hóa' (độ dài = 1).",
-        "Từ định nghĩa, bạn có ngay: \\(||X|| = 3, ||Y|| = 2, X \\cdot Y = 0\\).",
-        "Chỉ cần thế các giá trị này vào biểu thức đã khai triển: \\( 2||X||^2 - 3(X \\cdot Y) - 2||Y||^2 \\)."
+        "Thần chú: <b>Tần số lấy mẫu > 2 * Tần số cao nhất</b> (Định lý Nyquist).",
+        "Tai người nghe được đến ~20,000 Hz. Vậy cần lấy mẫu > 2 * 20,000 = 40,000 Hz.",
+        "Hãy nhớ đến chất lượng CD là 44.1 kHz, gần với con số 40,000."
       ]
     },
     {
       "id": 15,
-      "question": "Solve the system of equations for \\( y \\): <br/> \\( x + 4y + 2z = 1 \\)<br /> \\( 2x + 3y + 3z = -1 \\)<br /> \\( 4x + y + 4z = 0 \\)",
+      "question": "The scanning rate in image processing is called [___]. If the resolution is sufficiently high, the human eye cannot recognize the discontinuity in reproduced images.",
       "image": null,
       "options": [
-        "A. -4/5",
-        "B. 8/5",
-        "C. -8/5",
-        "D. 4/5",
-        "E. All of the other choices are incorrect"
+        "A. Bit map",
+        "B. Pixels",
+        "C. Resolution",
+        "D. Color depth"
       ],
-      "correctAnswer": "B",
-      "explanation": "Để giải nhanh và chắc chắn, ta dùng Quy tắc Cramer và tối ưu hóa việc tính toán.<br /><br /><b>1. Phân tích định thức (Để khẳng định có nghiệm duy nhất)</b><br />- Đầu tiên, tính định thức của ma trận hệ số D để đảm bảo hệ có nghiệm duy nhất.<br />\\( D = \\begin{vmatrix} 1 & 4 & 2 \\\\ 2 & 3 & 3 \\\\ 4 & 1 & 4 \\end{vmatrix} = 5 \\).<br />- Vì \\( D \\neq 0 \\), hệ chắc chắn có một và chỉ một nghiệm duy nhất.<br /><br /><b>2. Tính Dy bằng cách siêu nhanh</b><br />- Bây giờ, ta tính \\( D_y \\) bằng cách thay cột y bằng vế phải:<br />\\( D_y = \\begin{vmatrix} 1 & 1 & 2 \\\\ 2 & -1 & 3 \\\\ 4 & 0 & 4 \\end{vmatrix} \\)<br />- <b>Mẹo để tính siêu nhanh</b> là khai triển theo hàng hoặc cột có số 0. Ta sẽ khai triển theo <b>hàng 3</b>:<br />\\( D_y = 4 \\cdot \\begin{vmatrix} 1 & 2 \\\\ -1 & 3 \\end{vmatrix} - 0 + 4 \\cdot \\begin{vmatrix} 1 & 1 \\\\ 2 & -1 \\end{vmatrix} \\)<br />\\( D_y = 4(5) + 4(-3) = 20 - 12 = 8 \\).<br /><br /><b>3. Kết quả cuối cùng</b><br />\\( y = \\frac{D_y}{D} = \\frac{8}{5} \\).",
-      "difficulty": "medium",
-      "topic": "Linear Algebra (Systems of Equations, Cramer's Rule)",
+      "correctAnswer": "C",
+      "explanation": "Câu hỏi này kiểm tra thuật ngữ cơ bản trong biểu diễn hình ảnh số.<br /><br /><b>1. Phân tích câu hỏi:</b><br />Câu hỏi mô tả một 'tốc độ quét' (scanning rate) mà nếu đủ cao, mắt người không nhận ra sự gián đoạn. Điều này ám chỉ đến <b>mật độ của các điểm ảnh</b>.<br /><br /><b>2. Định nghĩa các thuật ngữ:</b><br />- <b>Pixel:</b> Là một điểm ảnh đơn lẻ.<br />- <b>Bit map:</b> Là phương pháp lưu trữ hình ảnh bằng cách lưu thông tin của từng pixel.<br />- <b>Resolution (Độ phân giải):</b> Chính là thuật ngữ chỉ <b>số lượng pixel trên một đơn vị diện tích</b> (ví dụ: pixels per inch - PPI). Nó chính là 'tốc độ quét' hay mật độ quét. Độ phân giải cao nghĩa là các pixel dày đặc hơn, làm hình ảnh mịn hơn.<br />- <b>Color depth:</b> Số bit dùng để lưu màu sắc của một pixel, quyết định số lượng màu sắc có thể hiển thị.<br /><br /><b>Kết luận: 'Tốc độ quét' trong xử lý hình ảnh được gọi là Độ phân giải (Resolution).</b>",
+      "difficulty": "easy",
+      "topic": "Data Representation (Image)",
       "hints": [
-        "Đầu tiên, tính định thức D để chắc chắn có nghiệm duy nhất (nếu D khác 0).",
-        "Mẹo tính định thức nhanh nhất: Luôn khai triển theo hàng hoặc cột có nhiều số 0 nhất.",
-        "Khi tính \\(D_y\\), khai triển theo hàng 3 là cách làm tối ưu."
+        "Thần chú: <b>Resolution = Mật độ điểm ảnh</b>. Độ phân giải càng cao, ảnh càng nét.",
+        "Hãy liên kết 'scanning rate' với 'mật độ điểm ảnh', và thuật ngữ tương ứng là Resolution.",
+        "Pixel là 'viên gạch', Resolution là 'mật độ xây gạch'."
       ]
     },
     {
       "id": 16,
-      "question": "Find all asymptotes of the function \\( f(x) = \\frac{x}{x-1} \\)",
+      "question": "Use a simple right shift operation on the bit pattern 1001 1000.",
       "image": null,
       "options": [
-        "A. \\(x = -1\\) and \\(y = -1\\)",
-        "B. \\(x = 0\\) and \\(y = 1\\)",
-        "C. \\(x = 1\\) and \\(y = 1\\)",
-        "D. No asymptotes",
-        "E. \\(x = 0\\) and \\(x = 1\\)"
+        "A. 1001 1001",
+        "B. 1001 1000",
+        "C. 0100 1101",
+        "D. 0100 1100"
       ],
-      "correctAnswer": "C",
-      "explanation": "Ta tìm tiệm cận bằng cách kết hợp mẹo nhanh và bản chất của giới hạn.<br /><br /><b>1. Tiệm cận đứng:</b><br />- <b>Bản chất:</b> Khi \\( x \\) tiến đến 1, mẫu số \\( (x-1) \\) tiến về 0, làm cho giá trị của hàm số tiến ra vô cùng (\\( \\infty \\)).<br />- <b>Mẹo nhanh:</b> Tiệm cận đứng chính là nghiệm của mẫu số. Cho \\( x - 1 = 0 \\Rightarrow x = 1 \\).<br /><br /><b>2. Tiệm cận ngang:</b><br />- <b>Bản chất:</b> Khi \\( x \\) tiến ra vô cùng (\\( \\pm \\infty \\)), giá trị của hàm số \\( f(x) = \\frac{x}{x-1} \\) tiến đến 1.<br />- <b>Mẹo nhanh (so sánh bậc tử và mẫu):</b><br />  - Bậc tử < bậc mẫu \\( \\Rightarrow y = 0 \\) là tiệm cận ngang.<br />  - <b>Bậc tử = bậc mẫu \\( \\Rightarrow y = \\) (tỉ số hệ số cao nhất) là tiệm cận ngang. (Trường hợp này)</b><br />  - Bậc tử > bậc mẫu \\( \\Rightarrow \\) không có tiệm cận ngang.<br />Áp dụng cho bài này (bậc tử = bậc mẫu), ta có \\( y = \\frac{1}{1} = 1 \\).<br /><br /><b>3. Tiệm cận xiên:</b><br />Hàm số không có tiệm cận xiên vì bậc của tử không lớn hơn bậc của mẫu đúng một đơn vị.<br /><br /><b>Kết luận:</b> Các tiệm cận là \\( x=1 \\) và \\( y=1 \\).",
+      "correctAnswer": "D",
+      "explanation": "Câu hỏi này về phép toán dịch bit (bit shift).<br /><br /><b>1. Quy tắc dịch phải (Right Shift):</b><br />- Tất cả các bit được dịch sang phải 1 vị trí.<br />- Bit ở vị trí <b>ngoài cùng bên phải sẽ bị loại bỏ</b> (rơi ra ngoài).<br />- Một bit <b>0 được thêm vào vị trí ngoài cùng bên trái</b>.<br /><br /><b>2. Áp dụng vào mẫu bit: 1001 1000</b><br />- Mẫu ban đầu: `1001 1000`<br />- Bit phải nhất (`0`) bị loại bỏ.<br />- Các bit còn lại dịch phải: `_100 1100`<br />- Thêm `0` vào bên trái: `0100 1100`<br /><br /><b>Kết luận: Kết quả là 0100 1100.</b><br /><br /><b>Bản chất:</b> Phép dịch phải một bit tương đương với phép chia số nguyên cho 2.",
       "difficulty": "easy",
-      "topic": "Calculus (Functions, Asymptotes)",
+      "topic": "Bitwise Operations (Shift)",
       "hints": [
-        "Tiệm cận đứng: Cho mẫu số bằng 0.",
-        "Tiệm cận ngang: Luôn so sánh bậc của tử và mẫu.",
-        "TCN: Bậc tử < mẫu \\(\\Rightarrow y=0\\); Bậc tử = mẫu \\(\\Rightarrow y=\\)tỉ số hệ số; Bậc tử > mẫu \\(\\Rightarrow\\) không có.",
-        "Tiệm cận xiên chỉ có khi bậc tử lớn hơn bậc mẫu đúng 1 bậc."
+        "Dịch phải: <b>Bit phải nhất MẤT, bit trái nhất THÊM 0</b>.",
+        "Tưởng tượng các bit như một hàng người, tất cả cùng bước sang phải một bước. Người cuối hàng bên phải bị đẩy ra, và một người mới (số 0) chen vào đầu hàng bên trái.",
+        "Dịch phải 1 bit = Chia cho 2."
       ]
     },
     {
       "id": 17,
-      "question": "Given that \\( \\begin{bmatrix} x+y & 2 \\\\ 5 & x+z \\\\ 0 & z+y \\end{bmatrix} = \\begin{bmatrix} 9 & 2 \\\\ 5 & 6 \\\\ 0 & 3 \\end{bmatrix} \\). Find \\( x+y+z \\).",
+      "question": "Use a simple left shift operation on the bit pattern 1001 1000.",
       "image": null,
       "options": [
-        "A. 0",
-        "B. -1/2",
-        "C. 5/2",
-        "D. 3/2",
-        "E. None of the other choices is correct"
+        "A. 0001 1001",
+        "B. 0001 1010",
+        "C. 0011 0000",
+        "D. 0011 0001"
       ],
-      "correctAnswer": "E",
-      "explanation": "Để giải siêu tốc, ta không cần giải tìm từng biến \\(x, y, z\\). Mẹo ở đây là cộng tất cả các phương trình lại với nhau.<br /><br /><b>1. Nhẩm nhanh hệ phương trình từ ma trận:</b><br />- \\( x + y = 9 \\)<br />- \\( x + z = 6 \\)<br />- \\( y + z = 3 \\)<br /><br /><b>2. Cộng ba phương trình lại với nhau:</b><br />- Vế trái: \\( (x+y) + (x+z) + (y+z) = 2x + 2y + 2z = 2(x+y+z) \\).<br />- Vế phải: \\( 9 + 6 + 3 = 18 \\).<br /><br /><b>3. Tìm kết quả:</b><br />\\( 2(x+y+z) = 18 \\Rightarrow x+y+z = 9 \\).<br /><br />Vì 9 không có trong các lựa chọn, ta chọn đáp án 'None of the other choices is correct'.",
+      "correctAnswer": "C",
+      "explanation": "Câu hỏi này về phép toán dịch bit (bit shift).<br /><br /><b>1. Quy tắc dịch trái (Left Shift):</b><br />- Tất cả các bit được dịch sang trái 1 vị trí.<br />- Bit ở vị trí <b>ngoài cùng bên trái sẽ bị loại bỏ</b> (rơi ra ngoài).<br />- Một bit <b>0 được thêm vào vị trí ngoài cùng bên phải</b>.<br /><br /><b>2. Áp dụng vào mẫu bit: 1001 1000</b><br />- Mẫu ban đầu: `1001 1000`<br />- Bit trái nhất (`1`) bị loại bỏ.<br />- Các bit còn lại dịch trái: `0011 000_`<br />- Thêm `0` vào bên phải: `0011 0000`<br /><br /><b>Kết luận: Kết quả là 0011 0000.</b><br /><br /><b>Bản chất:</b> Phép dịch trái một bit tương đương với phép nhân số nguyên cho 2 (nếu không xảy ra tràn số).",
       "difficulty": "easy",
-      "topic": "Linear Algebra (Matrix Equality, Systems of Equations)",
+      "topic": "Bitwise Operations (Shift)",
       "hints": [
-        "Mẹo giải nhanh nhất: Đừng giải tìm x, y, z riêng lẻ. Hãy cộng ba phương trình lại với nhau.",
-        "Bạn sẽ thấy mỗi biến xuất hiện đúng hai lần ở vế trái.",
-        "Mục tiêu là tìm \\(2(x+y+z)\\) rồi chia cho 2."
+        "Dịch trái: <b>Bit trái nhất MẤT, bit phải nhất THÊM 0</b>.",
+        "Tưởng tượng các bit như một hàng người, tất cả cùng bước sang trái một bước. Người đầu hàng bên trái bị đẩy ra, và một người mới (số 0) chen vào cuối hàng bên phải.",
+        "Dịch trái 1 bit = Nhân cho 2."
       ]
     },
     {
       "id": 18,
-      "question": "Find \\( y'(0) \\) if \\( 2y + x^2y^5 - 4x = 0 \\)",
+      "question": "A hybrid computer uses a [___] to convert digital signals from a computer into analog signals.",
       "image": null,
       "options": [
-        "A. -2",
-        "B. 2",
-        "C. 0",
-        "D. -1",
-        "E. 1",
-        "F. None of the other choices is correct"
+        "A. Modulator",
+        "B. Demodulator",
+        "C. Modem",
+        "D. Decoder"
       ],
-      "correctAnswer": "B",
-      "explanation": "Để giải siêu tốc, ta áp dụng mẹo thế số ngay sau khi đạo hàm, rất nhiều số hạng sẽ tự động biến mất.<br /><br /><b>1. Tìm giá trị y tại x=0:</b><br />- Thế \\( x=0 \\) vào phương trình gốc: \\( 2y + 0 - 0 = 0 \\Rightarrow y = 0 \\).<br />- Vậy ta đang xét tại điểm \\( (0, 0) \\).<br /><br /><b>2. Lấy đạo hàm ẩn và áp dụng mẹo:</b><br />Lấy đạo hàm hai vế theo \\(x\\):<br />\\( \\frac{d}{dx}(2y) + \\frac{d}{dx}(x^2y^5) - \\frac{d}{dx}(4x) = 0 \\)<br />\\( 2y' + (2xy^5 + 5x^2y^4y') - 4 = 0 \\)<br /><br /><b>Mẹo siêu nhanh:</b> Bây giờ, thế \\(x=0\\) và \\(y=0\\) vào. Bất kỳ số hạng nào còn chứa \\(x\\) hoặc \\(y\\) sẽ trở thành 0.<br />\\( 2y' + (0 + 0) - 4 = 0 \\)<br /><br /><b>3. Giải phương trình cuối cùng:</b><br />\\( 2y' - 4 = 0 \\Rightarrow 2y' = 4 \\Rightarrow y' = 2 \\).",
-      "difficulty": "medium",
-      "topic": "Calculus (Implicit Differentiation)",
+      "correctAnswer": "C",
+      "explanation": "Câu hỏi này về thiết bị mạng cơ bản.<br /><br /><b>1. Phân tích nhiệm vụ:</b><br />Nhiệm vụ là chuyển đổi giữa tín hiệu <b>số (Digital)</b> của máy tính và tín hiệu <b>tương tự (Analog)</b> của đường truyền (ví dụ: đường dây điện thoại).<br /><br /><b>2. Giải mã thuật ngữ Modem:</b><br /><b>Modem</b> là từ viết tắt của <b>Mo</b>dulator - <b>Dem</b>odulator.<br />- <b>Modulator (Điều chế):</b> Chuyển tín hiệu <b>Digital -> Analog</b> để gửi đi.<br />- <b>Demodulator (Giải điều chế):</b> Chuyển tín hiệu <b>Analog -> Digital</b> khi nhận về.<br /><br /><b>3. Kết luận:</b><br />Vì Modem thực hiện cả hai quá trình, nó chính là thiết bị tổng quát thực hiện việc chuyển đổi này. Câu hỏi chỉ đề cập đến một chiều (Digital -> Analog), nhưng Modem là câu trả lời bao hàm và chính xác nhất.<br /><br /><b>Kết luận: Modem là thiết bị dùng để chuyển đổi giữa tín hiệu số và tương tự.</b>",
+      "difficulty": "easy",
+      "topic": "Networking (Hardware)",
       "hints": [
-        "Bước 1: Tìm giá trị `y` khi `x=0`. Bạn sẽ thấy điểm cần xét là (0, 0).",
-        "Mẹo siêu tốc: Khi đạo hàm, bạn không cần phải rút gọn. Cứ đạo hàm xong rồi thế `x=0, y=0` vào.",
-        "Bất kỳ số hạng nào còn chứa `x` hoặc `y` sau khi đạo hàm sẽ bằng 0. Phương trình sẽ rút gọn cực kỳ đơn giản."
+        "Thần chú: <b>Modem = MOdulator + DEMoludator</b>.",
+        "<b>MOdulator</b>: Digital -> Analog (điều chế, gửi đi).",
+        "<b>DEModulator</b>: Analog -> Digital (giải điều chế, nhận về)."
       ]
     },
     {
       "id": 19,
-      "question": "Let \\( A = (a_{ij}) \\) be the matrix of rotation in the plane through \\( \\pi/3 \\). Find \\( a_{21} \\). <br> (i) \\( 1/2 \\) <br> (ii) \\( -1/2 \\) <br> (iii) \\( \\frac{\\sqrt{3}}{2} \\) <br> (iv) \\( -\\frac{\\sqrt{3}}{2} \\)",
+      "question": "In the physical layer, a [___] can have only a limited number of defined values. Although each value can be any number, it is often as simple as 1 and 0.",
       "image": null,
       "options": [
-        "A. (iii)",
-        "B. None of the other choices is correct",
-        "C. (iv)",
-        "D. (i)",
-        "E. (ii)"
+        "A. Analog signals",
+        "B. Electromagnetic signals",
+        "C. Digital signals",
+        "D. Electronic signals"
       ],
-      "correctAnswer": "A",
-      "explanation": "Để giải siêu tốc, ta chỉ cần nhớ cấu trúc của ma trận quay và vị trí của \\(a_{21}\\).<br /><br /><b>1. Nhớ nhanh ma trận quay \\(A\\) với góc \\(\\theta\\):</b><br />\\( A = \\begin{bmatrix} \\cos \\theta & -\\sin \\theta \\\\ \\sin \\theta & \\cos \\theta \\end{bmatrix} \\)<br /><br /><b>2. Xác định \\(a_{21}\\):</b><br />- Phần tử \\(a_{21}\\) nằm ở hàng 2, cột 1. Nhìn vào ma trận, ta thấy ngay \\( a_{21} = \\sin \\theta \\).<br /><br /><b>3. Tính toán:</b><br />- Với góc \\( \\theta = \\pi/3 \\), ta có:<br />\\( a_{21} = \\sin(\\pi/3) = \\frac{\\sqrt{3}}{2} \\).<br /><br />Kết quả này tương ứng với lựa chọn (iii).",
+      "correctAnswer": "C",
+      "explanation": "Câu hỏi này phân biệt hai loại tín hiệu cơ bản.<br /><br /><b>1. Phân tích từ khóa:</b><br />Từ khóa quan trọng nhất là '<b>limited number of defined values</b>' (số lượng giá trị xác định hữu hạn) và ví dụ '<b>1 and 0</b>'.<br /><br /><b>2. So sánh hai loại tín hiệu:</b><br />- <b>Analog Signal (Tín hiệu tương tự):</b> Là một sóng liên tục, có thể nhận <b>vô số giá trị</b> trong một khoảng cho trước. Giống như một chiếc công tắc dimmer có thể chỉnh độ sáng ở bất kỳ mức nào.<br />- <b>Digital Signal (Tín hiệu số):</b> Là một tín hiệu rời rạc, chỉ có thể nhận một <b>số lượng giá trị hữu hạn</b> đã được định nghĩa trước. Ví dụ kinh điển nhất là 0 và 1. Giống như một công tắc đèn chỉ có hai trạng thái: Bật hoặc Tắt.<br /><br /><b>Kết luận: Mô tả trong câu hỏi hoàn toàn khớp với định nghĩa của Tín hiệu số (Digital signals).</b>",
       "difficulty": "easy",
-      "topic": "Linear Algebra (Rotation Matrices)",
+      "topic": "Networking (Physical Layer)",
       "hints": [
-        "Mẹo nhớ ma trận quay: \\( \\begin{smallmatrix} c & -s \\\\ s & c \\end{smallmatrix} \\) với c là cos, s là sin.",
-        "Vị trí \\(a_{21}\\) (hàng 2, cột 1) chính là \\(\\sin\\theta\\).",
-        "Chỉ cần nhẩm giá trị của \\(\\sin(\\pi/3)\\) là ra đáp án."
+        "Thần chú: <b>Digital = Discrete (Rời rạc) = Hữu hạn giá trị</b> (như 0 và 1).",
+        "Thần chú đối lập: <b>Analog = Continuous (Liên tục) = Vô số giá trị</b> (như sóng âm).",
+        "Hãy liên kết '1 and 0' với 'Digital'."
       ]
     },
     {
       "id": 20,
-      "question": "Evaluate \\( \\int_0^1 \\frac{4x^3}{(1+x^4)^2} dx \\)",
+      "question": "At the transport layer, [___] are used as source and destination addresses to define the application-layer programs.",
       "image": null,
       "options": [
-        "A. 7/8",
-        "B. 1/3",
-        "C. 5/16",
-        "D. None of the other choices is correct",
-        "E. 7/24"
+        "A. TCP",
+        "B. Port numbers",
+        "C. UDP",
+        "D. IP address"
       ],
-      "correctAnswer": "D",
-      "explanation": "Để giải siêu tốc, ta cần nhận ra ngay tử số là đạo hàm của biểu thức bên trong mẫu số.<br /><br /><b>1. Nhận diện và Đổi biến (trong đầu):</b><br />- Đặt \\( u = 1 + x^4 \\).<br />- Ta thấy ngay đạo hàm \\( du = 4x^3 dx \\), chính là tử số.<br />- Tích phân trở thành một dạng rất đơn giản: \\( \\int \\frac{1}{u^2} du \\).<br /><br /><b>2. Đổi cận nhanh:</b><br />- Khi \\( x=0 \\), \\( u = 1+0^4 = 1 \\).<br />- Khi \\( x=1 \\), \\( u = 1+1^4 = 2 \\).<br /><br /><b>3. Tính nhẩm tích phân mới:</b><br />\\( \\int_1^2 \\frac{1}{u^2} du = \\left[ -\\frac{1}{u} \\right]_1^2 \\)<br />\\( = (-\\frac{1}{2}) - (-\\frac{1}{1}) = -\\frac{1}{2} + 1 = \\frac{1}{2} \\).<br /><br />Vì kết quả \\(1/2\\) không có trong các lựa chọn, ta chọn đáp án 'None of the other choices is correct'.",
-      "difficulty": "easy",
-      "topic": "Calculus (Integration, u-Substitution)",
+      "correctAnswer": "B",
+      "explanation": "Câu hỏi này về cơ chế định danh trong mô hình mạng TCP/IP.<br /><br /><b>1. Ví dụ đời thực về địa chỉ:</b><br />- <b>Địa chỉ IP (IP Address):</b> Giống như địa chỉ của một <b>tòa nhà chung cư</b>. Nó xác định máy tính nào trên mạng sẽ nhận dữ liệu.<br />- <b>Số cổng (Port Number):</b> Giống như số của một <b>căn hộ cụ thể</b> trong tòa nhà đó. Nó xác định ứng dụng nào (ví dụ: trình duyệt web, game, email) trên máy tính sẽ nhận dữ liệu.<br /><br /><b>2. Vai trò của các tầng:</b><br />- Tầng Mạng (Network Layer) dùng <b>địa chỉ IP</b> để đưa gói tin đến đúng máy tính.<br />- Tầng Giao vận (Transport Layer) dùng <b>số cổng</b> để đưa dữ liệu trong gói tin đó đến đúng chương trình ứng dụng.<br /><br /><b>Kết luận: Số cổng (Port numbers) được dùng để xác định các chương trình ở tầng ứng dụng.</b>",
+      "difficulty": "medium",
+      "topic": "Networking (Transport Layer)",
       "hints": [
-        "Mẹo nhận diện nhanh nhất: Tử số (\\(4x^3\\)) chính là đạo hàm của phần ruột của mẫu (\\(1+x^4\\)). Đây là dấu hiệu của phép đổi biến.",
-        "Đặt \\(u = 1+x^4\\), đổi cận (từ [0,1] thành [1,2]), bài toán trở thành \\(\\int_1^2 u^{-2} du\\).",
-        "Bạn có thể nhẩm nhanh kết quả: \\((-1/2) - (-1/1) = 1/2\\)."
+        "Thần chú: <b>IP Address = Địa chỉ tòa nhà. Port Number = Số căn hộ.</b>",
+        "Tầng Giao vận (Transport Layer) quan tâm đến việc giao tiếp giữa các ứng dụng (process-to-process), do đó nó cần số cổng.",
+        "TCP và UDP là các giao thức sử dụng số cổng, không phải bản thân số cổng."
       ]
     },
     {
       "id": 21,
-      "question": "Let (m) be the line through \\( A = (1, 2, 3) \\) and parallel to the line joining \\( B = (-2, 2, 0) \\) and \\( C = (4, -1, 7) \\). Let (n) be the line joining \\( E = (-1, 1, 0) \\) and \\( F = (10, -1, 11) \\). <br> Then the lines (m) and (n) __________.",
+      "question": "[___] is the standard protocol provided by TCP/IP for copying a file from one host to another and transferring files from one system to another seems simple and straightforward.",
       "image": null,
       "options": [
-        "A. are parallel but not the same",
-        "B. are the same",
-        "C. are orthogonal",
-        "D. None of the other choices is correct"
+        "A. FTP",
+        "B. SMTP",
+        "C. URL",
+        "D. HTTP"
       ],
-      "correctAnswer": "D",
-      "explanation": "Để giải siêu tốc, ta chỉ cần tìm 2 vector chỉ phương và kiểm tra nhẩm.<br /><br /><b>1. Tìm vector chỉ phương (VTCP):</b><br />- VTCP của (m): \\( \\vec{d_m} = C - B = (4 - (-2), -1 - 2, 7 - 0) = (6, -3, 7) \\).<br />- VTCP của (n): \\( \\vec{d_n} = F - E = (10 - (-1), -1 - 1, 11 - 0) = (11, -2, 11) \\).<br /><br /><b>2. Kiểm tra các mối quan hệ (nhẩm nhanh):</b><br />- <b>Song song?</b> Tỉ lệ các thành phần không giống nhau (\\(6/11 \\neq -3/-2\\)). <b>Loại A, B.</b><br />- <b>Vuông góc?</b> Tính tích vô hướng: \\( (6)(11) + (-3)(-2) + (7)(11) = 66 + 6 + 77 \\). Vì tất cả các số hạng đều dương, tổng không thể bằng 0. <b>Loại C.</b><br /><br /><b>Kết luận:</b> Vì đã loại hết các đáp án A, B, C, ta chọn 'None of the other choices is correct'.",
-      "difficulty": "medium",
-      "topic": "Linear Algebra (Lines in 3D)",
+      "correctAnswer": "A",
+      "explanation": "Câu hỏi này kiểm tra kiến thức về các giao thức tầng ứng dụng.<br /><br /><b>1. Phân tích chức năng:</b><br />Từ khóa cốt lõi là '<b>copying a file</b>' (sao chép tập tin) và '<b>transferring files</b>' (truyền tải tập tin). Nhiệm vụ này yêu cầu một giao thức chuyên biệt cho việc quản lý và di chuyển file.<br /><br /><b>2. Giải mã các giao thức:</b><br />- <b>FTP (File Transfer Protocol):</b> Tên gọi đã nói lên tất cả - 'Giao thức Truyền tải Tập tin'. Đây chính là giao thức tiêu chuẩn được thiết kế riêng cho việc này.<br />- <b>SMTP (Simple Mail Transfer Protocol):</b> Dùng để gửi email.<br />- <b>HTTP (HyperText Transfer Protocol):</b> Dùng để truy cập các trang web.<br />- <b>URL (Uniform Resource Locator):</b> Là một địa chỉ (ví dụ: `http://google.com`), không phải là một giao thức.<br /><br /><b>Kết luận: FTP là giao thức dùng để truyền tải tập tin.</b>",
+      "difficulty": "easy",
+      "topic": "Networking (Application Layer Protocols)",
       "hints": [
-        "Mục tiêu: Tìm 2 vector chỉ phương rồi so sánh chúng ngay lập tức.",
-        "Kiểm tra song song: Hai vector có tỉ lệ với nhau không?",
-        "Mẹo kiểm tra vuông góc: Tính nhẩm tích vô hướng. Nếu các số hạng đều dương, tổng không thể bằng 0."
+        "Thần chú: <b>FTP = File Transfer Protocol</b>. Cứ thấy 'file transfer' là nghĩ đến FTP.",
+        "Phân biệt rõ: HTTP cho web, SMTP cho mail, FTP cho file.",
+        "URL là một địa chỉ, không phải là một giao thức (protocol)."
       ]
     },
     {
       "id": 22,
-      "question": "Let \\( U = \\{(a, b, c, d) \\in \\mathbb{R}^4 \\mid 3a - 5d = 0, b + c + d = 0 \\} \\) be a subspace of \\( \\mathbb{R}^4 \\). Find the dimension of U.",
+      "question": "In [___] paradigm, the service provider is an application program. It runs continuously, waiting for another application program, then to make a connection through the Internet and ask for service.",
       "image": null,
       "options": [
-        "A. 4",
-        "B. 1",
-        "C. 2",
-        "D. 3"
+        "A. P2P",
+        "B. Traditional",
+        "C. Client-server",
+        "D. Model"
       ],
       "correctAnswer": "C",
-      "explanation": "Để giải bài này trong nháy mắt, ta dùng công thức sau:<br /><br /><b>Số chiều không gian con = (Số chiều không gian tổng) - (Số phương trình ràng buộc độc lập)</b><br /><br />- Không gian tổng là \\(\\mathbb{R}^4\\), vậy có <b>4 chiều</b> (4 ẩn).<br />- Có <b>2 phương trình ràng buộc</b> độc lập.<br /><br />- Số chiều của U = 4 - 2 = 2.<br /><br />---<br /><b>Tại sao công thức này lại đúng? (Giải thích bản chất)</b><br /><br />Số chiều của một không gian chính là số biến 'tự do' mà bạn có thể chọn. Mỗi phương trình ràng buộc sẽ 'khóa' lại một biến, làm nó phụ thuộc vào các biến khác và không còn tự do nữa.<br /><br />1.  Ban đầu, trong \\(\\mathbb{R}^4\\), ta có 4 biến tự do (a, b, c, d).<br />2.  Phương trình thứ nhất, \\(3a - 5d = 0\\), buộc \\(a\\) phải phụ thuộc vào \\(d\\) (\\(a = \\frac{5}{3}d\\)). Ta mất đi một biến tự do, chỉ còn lại 3.<br />3.  Phương trình thứ hai, \\(b + c + d = 0\\), buộc \\(b\\) phải phụ thuộc vào \\(c\\) và \\(d\\) (\\(b = -c - d\\)). Ta mất thêm một biến tự do nữa, chỉ còn lại 2.<br /><br />Cuối cùng, ta chỉ có thể chọn tự do 2 biến (ví dụ là \\(c\\) và \\(d\\)), các biến còn lại (\\(a\\) và \\(b\\)) sẽ được tính theo. Vì có 2 biến tự do, nên số chiều của không gian con này là 2.",
+      "explanation": "Câu hỏi này mô tả một trong những mô hình kiến trúc ứng dụng mạng phổ biến nhất.<br /><br /><b>1. Phân tích mô hình:</b><br />Câu hỏi mô tả một bên là '<b>service provider</b>' (nhà cung cấp dịch vụ) chạy liên tục để chờ đợi, và một bên khác là chương trình kết nối đến để '<b>ask for service</b>' (yêu cầu dịch vụ).<br /><br /><b>2. So sánh các mô hình:</b><br />- <b>Client-Server (Khách-Chủ):</b> Đây chính xác là mô hình được mô tả. <b>Server (máy chủ)</b> là 'nhà cung cấp dịch vụ', luôn chạy và lắng nghe. <b>Client (máy khách)</b> là chương trình kết nối đến và yêu cầu dịch vụ.<br />- <b>P2P (Peer-to-Peer - Ngang hàng):</b> Trong mô hình này, mọi máy đều có vai trò như nhau, vừa là client vừa là server. Không có một 'nhà cung cấp dịch vụ' cố định.<br /><br /><b>Ví dụ đời thực:</b> Trình duyệt web (client) của bạn yêu cầu trang web từ máy chủ của Google (server).<br /><br /><b>Kết luận: Mô tả trong câu hỏi là của mô hình Client-Server.</b>",
       "difficulty": "easy",
-      "topic": "Linear Algebra (Subspace Dimension)",
+      "topic": "Networking (Application Paradigms)",
       "hints": [
-        "Mẹo giải nhanh nhất: Số chiều = (số ẩn) - (số phương trình ràng buộc).",
-        "Bài này có 4 ẩn (a, b, c, d) và 2 phương trình.",
-        "Chỉ cần làm phép tính: 4 - 2 = 2."
+        "Thần chú: <b>Client-Server = Một bên Yêu cầu (Client), một bên Phục vụ (Server)</b>.",
+        "Từ khóa: 'service provider' (nhà cung cấp dịch vụ) và 'ask for service' (yêu cầu dịch vụ) là dấu hiệu rõ ràng của mô hình Client-Server.",
+        "Mô hình đối lập là P2P (Ngang hàng), nơi mọi người đều 'bình đẳng'."
       ]
     },
     {
       "id": 23,
-      "question": "Find the average value of the function \\( f(x) = x^2 - 6x + 4 \\) over the interval \\( [0, 2] \\).",
+      "question": "The major design goals of an operating system include: (Choose 4 answers)",
       "image": null,
       "options": [
-        "A. -4",
-        "B. -1",
-        "C. -2/3",
-        "D. None of the other choices is correct",
-        "E. 10/3"
+        "A. Efficient use of hardware and easy use of resources",
+        "B. Control subsystems and manage memory",
+        "C. Access I/O device and CPU",
+        "D. Provide UI",
+        "E. Operation on data",
+        "F. Text editor"
       ],
-      "correctAnswer": "C",
-      "explanation": "Để giải siêu tốc, ta áp dụng công thức và tính nhẩm thật nhanh.<br /><br /><b>1. Thiết lập công thức:</b><br />Giá trị trung bình = \\( \\frac{1}{2-0} \\int_0^2 (x^2 - 6x + 4) dx \\).<br /><br /><b>2. Tìm nguyên hàm và thế cận trên (vì cận dưới là 0):</b><br />- Nguyên hàm là: \\( \\frac{x^3}{3} - 3x^2 + 4x \\).<br />- Thế \\(x=2\\) vào: \\( \\frac{8}{3} - 12 + 8 = -\\frac{4}{3} \\).<br /><br /><b>3. Nhân với \\(\\frac{1}{b-a}\\) và ra kết quả:</b><br />\\( \\frac{1}{2} \\cdot (-\\frac{4}{3}) = -\\frac{2}{3} \\).<br /><br />---<br /><b>Tại sao công thức lại như vậy? (Giải thích bản chất)</b><br /><br />Hãy tưởng tượng bạn có một hình chữ nhật. Diện tích của nó bằng `Chiều cao * Chiều rộng`.<br />- Tích phân \\( \\int_a^b f(x) dx \\) cho chúng ta <b>tổng diện tích</b> dưới đồ thị của hàm số.<br />- \\( (b-a) \\) chính là <b>chiều rộng</b> của khoảng đang xét.<br />- 'Giá trị trung bình' của hàm số chính là <b>chiều cao trung bình</b> của đồ thị. Đó là chiều cao của một hình chữ nhật có cùng diện tích và cùng chiều rộng với phần diện tích dưới đồ thị.<br />- Từ đó ta có: \\( \\text{Diện tích} = \\text{Giá trị trung bình} \\times \\text{Chiều rộng} \\).<br />- Suy ra: \\( \\text{Giá trị trung bình} = \\frac{\\text{Diện tích}}{\\text{Chiều rộng}} = \\frac{1}{b-a} \\int_a^b f(x) dx \\).",
-      "difficulty": "easy",
-      "topic": "Calculus (Average Value of a Function)",
+      "correctAnswer": "A,B,C,D",
+      "explanation": "Câu hỏi này yêu cầu xác định các mục tiêu và chức năng cốt lõi của một Hệ điều hành (HĐH).<br /><br /><b>1. Hai mục tiêu bao trùm:</b><br />Mọi HĐH đều hướng tới hai mục tiêu lớn: <b>sử dụng hiệu quả phần cứng</b> và <b>cung cấp giao diện dễ sử dụng cho người dùng</b>. Điều này làm cho đáp án <b>A</b> và <b>D</b> đúng.<br />- <b>A. Efficient use of hardware and easy use of resources:</b> Đây là mục tiêu tổng quát nhất.<br />- <b>D. Provide UI (User Interface):</b> Cung cấp giao diện người dùng (dòng lệnh hoặc đồ họa) để người dùng có thể tương tác.<br /><br /><b>2. Các chức năng quản lý cốt lõi:</b><br />Để đạt được mục tiêu trên, HĐH phải thực hiện các vai trò quản lý cụ thể. Điều này làm cho đáp án <b>B</b> và <b>C</b> đúng.<br />- <b>B. Control subsystems and manage memory:</b> Quản lý bộ nhớ và kiểm soát các thành phần phần cứng là chức năng trung tâm.<br />- <b>C. Access I/O device and CPU:</b> Quản lý và điều phối việc truy cập đến CPU (quản lý tiến trình) và các thiết bị vào/ra (I/O) là nhiệm vụ sống còn.<br /><br /><b>3. Loại trừ:</b><br />- <b>E (Operation on data):</b> Đây là việc của các chương trình ứng dụng, không phải của HĐH.<br />- <b>F (Text editor):</b> Đây là một chương trình ứng dụng, không phải là mục tiêu thiết kế của HĐH.<br /><br /><b>Kết luận: A, B, C, D là các mục tiêu và chức năng thiết kế chính.</b>",
+      "difficulty": "medium",
+      "topic": "Operating Systems (Core Concepts)",
       "hints": [
-        "Công thức: Giá trị trung bình = (1 / chiều rộng khoảng) * (Tích phân trên khoảng đó).",
-        "Hãy tưởng tượng bạn đang san phẳng diện tích dưới đồ thị thành một hình chữ nhật có cùng diện tích và chiều rộng. Giá trị trung bình chính là chiều cao của hình chữ nhật đó.",
-        "Mẹo giải nhanh nhất: Vì cận dưới là 0, và nguyên hàm vẫn còn chứa x nên bạn chỉ cần tính giá trị của nguyên hàm tại cận trên rồi nhân với \\(1/(b-a)\\)."
+        "HĐH có 2 vai trò: <b>làm ông chủ</b> (quản lý phần cứng hiệu quả) và <b>làm người giúp việc</b> (cung cấp môi trường dễ dùng).",
+        "Hãy nghĩ về 4 'nhà quản lý' chính của HĐH: quản lý bộ nhớ, quản lý tiến trình (CPU), quản lý thiết bị (I/O), quản lý file.",
+        "Loại trừ những thứ là 'ứng dụng' (như Text Editor) chứ không phải 'chức năng hệ thống'."
       ]
     },
     {
       "id": 24,
-      "question": "Let \\( f(x) = 2x^2 - 2x + 1 \\). Find a number \\(c\\) such that \\( f(c) \\) is equal to the average value of \\( f(x) \\) over \\( [-1, 1] \\). <br> (i) \\( (3 - 2\\sqrt{2})/5 \\) <br> (ii) \\( (-3 + \\sqrt{21})/6 \\) <br> (iii) \\( (3 - \\sqrt{21})/6 \\) <br> (iv) \\( (3 + 2\\sqrt{2})/5 \\)",
+      "question": "A program may need files located in different parts of the world. Networking and internetworking have created a new dimension in operating systems that is:",
       "image": null,
       "options": [
-        "A. (i)",
-        "B. None of the other choices is correct",
-        "C. (ii)",
-        "D. (iii)",
-        "E. (iv)"
+        "A. Personal systems",
+        "B. Distributed systems",
+        "C. Parallel systems",
+        "D. Real-time systems"
       ],
-      "correctAnswer": "D",
-      "explanation": "Để giải siêu tốc, ta dùng mẹo tích phân trên đoạn đối xứng \\([-1, 1]\\).<br /><br /><b>1. Tính giá trị trung bình (siêu tốc):</b><br />- Tích phân của phần lẻ (\\(-2x\\)) trên đoạn \\([-1, 1]\\) bằng 0. Ta có thể bỏ qua nó.<br />- Ta chỉ cần tính tích phân của phần chẵn (\\(2x^2+1\\)) rồi nhân đôi:<br />\\( \\int_{-1}^1 (2x^2 - 2x + 1) dx = 2 \\int_0^1 (2x^2 + 1) dx = 2[\\frac{2x^3}{3} + x]_0^1 = 2(\\frac{2}{3} + 1) = \\frac{10}{3} \\).<br />- Giá trị trung bình: \\( f_{tb} = \\frac{1}{1 - (-1)} \\cdot \\frac{10}{3} = \\frac{1}{2} \\cdot \\frac{10}{3} = \\frac{5}{3} \\).<br /><br /><b>2. Giải phương trình và nhẩm nhanh:</b><br />- \\( 2c^2 - 2c + 1 = \\frac{5}{3} \\Rightarrow 3c^2 - 3c - 1 = 0 \\).<br />- Dùng công thức nghiệm: \\( c = \\frac{3 \\pm \\sqrt{9 - 4(3)(-1)}}{6} = \\frac{3 \\pm \\sqrt{21}}{6} \\).<br />- Nhẩm nhanh: \\(\\sqrt{21}\\) lớn hơn 4. Nghiệm \\(\\frac{3+\\sqrt{21}}{6}\\) sẽ lớn hơn 1 (loại). Chỉ có nghiệm \\(\\frac{3-\\sqrt{21}}{6}\\) nằm trong đoạn \\([-1, 1]\\).",
-      "difficulty": "medium",
-      "topic": "Calculus (Mean Value Theorem for Integrals)",
+      "correctAnswer": "B",
+      "explanation": "Câu hỏi này về các loại hệ điều hành hiện đại.<br /><br /><b>1. Phân tích từ khóa:</b><br />Từ khóa quyết định là '<b>files located in different parts of the world</b>' (tập tin ở nhiều nơi trên thế giới) và '<b>Networking and internetworking</b>' (Mạng và liên mạng). Điều này ám chỉ một hệ thống được trải rộng trên nhiều máy tính khác nhau về mặt địa lý.<br /><br /><b>2. Định nghĩa các loại hệ thống:</b><br />- <b>Distributed systems (Hệ thống phân tán):</b> Là một tập hợp các máy tính tự trị được kết nối qua mạng và hoạt động cùng nhau như một hệ thống duy nhất. Người dùng có cảm giác như đang làm việc trên một máy tính, mặc dù tài nguyên (như file) có thể được phân tán ở nhiều nơi.<br />- <b>Parallel systems (Hệ thống song song):</b> Tập trung vào việc sử dụng nhiều CPU trong cùng một máy tính để tăng tốc độ xử lý.<br />- <b>Real-time systems (Hệ thống thời gian thực):</b> Tập trung vào việc đảm bảo các tác vụ được hoàn thành trong một khoảng thời gian nghiêm ngặt (ví dụ: hệ thống điều khiển tên lửa).<br /><br /><b>Kết luận: Hệ điều hành cho phép truy cập tài nguyên phân tán toàn cầu được gọi là Hệ thống phân tán.</b>",
+      "difficulty": "easy",
+      "topic": "Operating Systems (Types)",
       "hints": [
-        "Mẹo siêu tốc: Khi tính tích phân trên đoạn đối xứng [-a, a], phần lẻ của hàm số có tích phân bằng 0.",
-        "Bạn chỉ cần tính tích phân của phần chẵn (\\(2x^2+1\\)) từ 0 đến 1, nhân đôi, rồi chia cho độ dài đoạn (là 2).",
-        "Sau khi có 2 nghiệm c, hãy ước lượng nhanh \\(\\sqrt{21}\\) để loại nghiệm nằm ngoài đoạn [-1, 1]."
+        "Thần chú: <b>Distributed = Geographically Dispersed</b> (Phân tán về mặt địa lý).",
+        "Hãy liên kết 'networking', 'internet', 'different parts of the world' với 'Distributed'.",
+        "Phân biệt rõ: Parallel (nhiều CPU, 1 máy) vs. Distributed (nhiều máy, nối mạng)."
       ]
     },
     {
       "id": 25,
-      "question": "Find \\( y'(1) \\) for \\( y = \\frac{x^2 + 8x + 3}{\\sqrt{x}} \\)",
+      "question": "Which technique is used in multiprogramming that needs to be determined size beforehand by the memory manager and with each program occupying a contiguous space?",
       "image": null,
       "options": [
-        "A. 0",
-        "B. None of the other choices is correct",
-        "C. 4",
-        "D. 2",
-        "E. 3",
-        "F. 1"
+        "A. Partitioning",
+        "B. Paging",
+        "C. Demand paging",
+        "D. Demand segmentation"
       ],
-      "correctAnswer": "C",
-      "explanation": "Để giải siêu tốc, ta dùng 'câu thần chú' của quy tắc thương: <b>'tử phẩy nhân mẫu, trừ mẫu phẩy nhân tử'</b>, tất cả chia cho mẫu bình phương. Ta sẽ tính giá trị của từng thành phần tại `x=1` rồi lắp vào.<br /><br /><b>1. Chuẩn bị các giá trị tại x=1 (tính nhẩm):</b><br />- Tử số: \\( u = x^2+8x+3 \\Rightarrow u(1) = 1+8+3=12 \\).<br />- Đạo hàm tử: \\( u' = 2x+8 \\Rightarrow u'(1) = 2+8=10 \\).<br />- Mẫu số: \\( v = \\sqrt{x} \\Rightarrow v(1) = 1 \\).<br />- Đạo hàm mẫu: \\( v' = \\frac{1}{2\\sqrt{x}} \\Rightarrow v'(1) = \\frac{1}{2} \\).<br /><br /><b>2. Lắp ráp vào 'câu thần chú':</b><br />\\( y'(1) = \\frac{u'(1)v(1) - u(1)v'(1)}{[v(1)]^2} \\)<br />\\( y'(1) = \\frac{(10)(1) - (12)(\\frac{1}{2})}{1^2} \\)<br />\\( y'(1) = \\frac{10 - 6}{1} = 4 \\).",
-      "difficulty": "easy",
-      "topic": "Calculus (Derivatives)",
+      "correctAnswer": "A",
+      "explanation": "Câu hỏi này về các kỹ thuật quản lý bộ nhớ sơ khai.<br /><br /><b>1. Phân tích từ khóa:</b><br />Hai từ khóa quan trọng nhất là '<b>determined size beforehand</b>' (kích thước được xác định trước) và '<b>occupying a contiguous space</b>' (chiếm một không gian liền kề).<br /><br /><b>2. So sánh các kỹ thuật:</b><br />- <b>Partitioning (Phân vùng):</b> Đây là kỹ thuật cổ điển nhất. Bộ nhớ được chia thành các 'phân vùng' có kích thước cố định hoặc động. Mỗi chương trình khi được nạp vào sẽ được cấp phát <b>nguyên một khối bộ nhớ liền kề</b>. Kích thước của nó phải được biết trước.<br />- <b>Paging & Segmentation:</b> Đây là các kỹ thuật hiện đại hơn, cho phép một chương trình được chia thành các phần nhỏ (pages hoặc segments) và nạp vào các vùng nhớ <b>không cần liền kề</b>. Điều này giải quyết vấn đề phân mảnh của Partitioning.<br /><br /><b>Kết luận: Kỹ thuật yêu cầu không gian liền kề và biết trước kích thước là Partitioning.</b>",
+      "difficulty": "medium",
+      "topic": "Operating Systems (Memory Management)",
       "hints": [
-        "Câu thần chú quy tắc thương: 'tử phẩy nhân mẫu, trừ mẫu phẩy nhân tử' (tất cả chia mẫu bình phương).",
-        "Mẹo nhanh nhất: Tính 4 giá trị `u(1), u'(1), v(1), v'(1)` trước rồi mới lắp vào công thức.",
-        "Việc thế số `x=1` ngay từ đầu sẽ nhanh hơn nhiều so với việc rút gọn biểu thức đạo hàm."
+        "Thần chú: <b>Partitioning = Contiguous (Liền kề)</b>. Giống như chia một cái bánh thành từng miếng lớn.",
+        "Từ khóa 'contiguous space' là dấu hiệu rõ ràng nhất của Partitioning.",
+        "Paging và Segmentation là các kỹ thuật 'phi liền kề' (non-contiguous)."
       ]
     },
     {
       "id": 26,
-      "question": "Which of the following statement is correct? <br> (i) If AB and BA can both be formed then AB and BA have the same size. <br> (ii) If BA=CA and A is non-zero then B=C.",
+      "question": "[___] can occur if a process has too many resource restrictions.",
       "image": null,
       "options": [
-        "A. None of the other choices is correct",
-        "B. (i) and (ii)",
-        "C. (ii)",
-        "D. (i)"
+        "A. Starvation",
+        "B. Synchronization",
+        "C. Paging",
+        "D. Deadlock"
       ],
       "correctAnswer": "A",
-      "explanation": "Để giải siêu tốc, ta cần nhận ra ngay hai 'bẫy' kinh điển của ma trận.<br /><br /><b>1. Kiểm tra mệnh đề (i): Kích thước của AB và BA</b><br />- <b>Bẫy:</b> Điều này chỉ đúng khi A và B là ma trận vuông.<br />- <b>Phản ví dụ (nhẩm nhanh):</b> Giả sử A là ma trận \\(2 \\times 3\\) và B là \\(3 \\times 2\\).<br />  - \\(AB\\) sẽ có kích thước \\(2 \\times 2\\).<br />  - \\(BA\\) sẽ có kích thước \\(3 \\times 3\\).<br />- Kích thước không giống nhau. Vậy (i) <b>SAI</b>.<br /><br /><b>2. Kiểm tra mệnh đề (ii): Phép giản ước</b><br />- <b>Bẫy:</b> Phép giản ước \\(BA=CA \\Rightarrow B=C\\) chỉ đúng khi A là ma trận <b>khả nghịch</b> (tức là \\(\\det(A) \\neq 0\\)).<br />- Đề bài chỉ cho A khác 0, chứ không cho A khả nghịch. Một ma trận khác 0 vẫn có thể không khả nghịch (ví dụ ma trận có định thức bằng 0).<br />- Vậy (ii) <b>SAI</b>.<br /><br /><b>Kết luận:</b> Cả hai mệnh đề đều sai.",
+      "explanation": "Câu hỏi này phân biệt hai vấn đề phổ biến trong xử lý đồng thời: Deadlock và Starvation.<br /><br /><b>1. Phân tích từ khóa:</b><br />Từ khóa là '<b>too many resource restrictions</b>' (quá nhiều ràng buộc tài nguyên), dẫn đến một tiến trình có thể không bao giờ được chạy.<br /><br /><b>2. So sánh Deadlock và Starvation:</b><br />- <b>Deadlock (Khóa chết):</b> Là một vòng lặp chờ đợi. Tiến trình A giữ tài nguyên 1 và chờ tài nguyên 2. Tiến trình B giữ tài nguyên 2 và chờ tài nguyên 1. Cả hai đều bị kẹt, không thể tiến triển.<br />- <b>Starvation (Chết đói):</b> Là vấn đề về sự công bằng. Một tiến trình có độ ưu tiên thấp (hoặc có nhiều ràng buộc) liên tục bị các tiến trình khác 'chen hàng' và không bao giờ được cấp phát CPU hoặc tài nguyên. Nó không bị kẹt, chỉ là 'bị lãng quên'.<br /><br /><b>Ví dụ đời thực:</b> Starvation giống như bạn đứng chờ thang máy nhưng người khác cứ liên tục chen vào trước, khiến bạn không bao giờ vào được.<br /><br /><b>Kết luận: Tình trạng một tiến trình bị trì hoãn vô hạn định do các ràng buộc hoặc độ ưu tiên thấp được gọi là Starvation.</b>",
       "difficulty": "medium",
-      "topic": "Linear Algebra (Matrix Properties)",
+      "topic": "Operating Systems (Concurrency)",
       "hints": [
-        "Mẹo cho (i): 'Cùng kích thước?'. Hãy nghĩ ngay đến trường hợp ma trận không vuông (ví dụ 2x3 và 3x2).",
-        "Mẹo cho (ii): 'Giản ước được không?'. Phép giản ước chỉ đúng khi ma trận A khả nghịch, 'khác 0' là chưa đủ.",
-        "Cả hai đều là những khẳng định sai kinh điển trong đại số tuyến tính."
+        "Thần chú: <b>Deadlock = Vòng lặp chờ đợi</b> (A chờ B, B chờ A).",
+        "Thần chú: <b>Starvation = Bị lãng quên</b> (Không bao giờ đến lượt).",
+        "Quá nhiều 'ràng buộc' hoặc 'độ ưu tiên thấp' thường dẫn đến Starvation."
       ]
     },
     {
       "id": 27,
-      "question": "Let S be the transformation induced by the matrix \\( \\begin{bmatrix} 1 & 1 & 1 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 2 \\end{bmatrix} \\). Calculate \\( S([1 \\quad 2 \\quad 1]^T) \\). <br> <br> (i) \\( [3 \\quad 2 \\quad 2]^T \\) <br> (ii) \\( [4 \\quad 3 \\quad 2]^T \\) <br> (iii) \\( \\vec{0} \\) <br> (iv) \\( [2 \\quad 3 \\quad 4]^T \\) <br> (v) \\( [2 \\quad 2 \\quad 3]^T \\)",
+      "question": "The device manager will be tracking every device constantly to ensure that the device is [___].",
       "image": null,
       "options": [
-        "A. (See picture)",
-        "B. None of the other choices is correct",
-        "C. (iv)",
-        "D. (v)",
-        "E. (ii)",
-        "F. (i)"
+        "A. Ready",
+        "B. Finished",
+        "C. Functioning properly",
+        "D. Running"
       ],
-      "correctAnswer": "E",
-      "explanation": "Để giải siêu tốc, ta chỉ cần thực hiện phép nhân ma trận với vector bằng cách tính nhẩm từng hàng.<br /><br />\\[ \\begin{bmatrix} 1 & 1 & 1 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 2 \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\\\ 1 \\end{bmatrix} \\]<br /><br /><b>Tính nhẩm từng phần tử của vector kết quả:</b><br />- <b>Hàng 1:</b> \\((1)(1) + (1)(2) + (1)(1) = 1 + 2 + 1 = 4\\).<br />- <b>Hàng 2:</b> \\((0)(1) + (1)(2) + (1)(1) = 0 + 2 + 1 = 3\\).<br />- <b>Hàng 3:</b> \\((0)(1) + (0)(2) + (2)(1) = 0 + 0 + 2 = 2\\).<br /><br />Kết quả là \\( [4 \\quad 3 \\quad 2]^T \\), tương ứng với lựa chọn (ii).",
+      "correctAnswer": "C",
+      "explanation": "Đây là câu hỏi về một trong bốn chức năng quản lý chính của hệ điều hành.<br /><br /><b>1. Vai trò của Device Manager (Trình quản lý thiết bị):</b><br />Trình quản lý thiết bị của HĐH có ba nhiệm vụ chính:<br />- <b>Theo dõi (track)</b> trạng thái của tất cả các thiết bị.<br />- <b>Thiết lập chính sách</b> (quyết định ai được dùng thiết bị, khi nào, trong bao lâu).<br />- <b>Cấp phát và thu hồi</b> thiết bị.<br /><br /><b>2. Mục đích của việc theo dõi:</b><br />Việc theo dõi liên tục trạng thái của các thiết bị (như máy in, ổ đĩa, bàn phím) là để đảm bảo rằng chúng đang <b>hoạt động bình thường (functioning properly)</b> và sẵn sàng nhận lệnh. Nếu một thiết bị gặp lỗi, trình quản lý thiết bị cần phải biết để xử lý.<br /><br /><b>Kết luận: Mục đích chính của việc theo dõi thiết bị là để đảm bảo chúng hoạt động bình thường.</b>",
       "difficulty": "easy",
-      "topic": "Linear Algebra (Matrix Transformations)",
+      "topic": "Operating Systems (Device Management)",
       "hints": [
-        "Mẹo giải nhanh nhất: Chỉ cần nhân ma trận với vector.",
-        "Lấy từng hàng của ma trận nhân vô hướng với vector cột.",
-        "Các số 0 trong ma trận giúp việc tính nhẩm trở nên rất nhanh."
+        "Device Manager giống như một người 'giám sát viên' của tất cả các thiết bị phần cứng.",
+        "Nhiệm vụ chính của giám sát viên là kiểm tra xem mọi thứ có 'chạy tốt' hay không.",
+        "Cụm từ 'functioning properly' (hoạt động bình thường) là mục tiêu bao quát nhất của việc theo dõi."
       ]
     },
     {
       "id": 28,
-      "question": "Find the equation of the line that passes through the points \\( (7,4) \\) and \\( (-9,4) \\).",
+      "question": "The construct [___] uses a set of actions one after another.",
       "image": null,
       "options": [
-        "A. \\( y = 4 \\)",
-        "B. \\( y = 4x + 7 \\)",
-        "C. \\( 9y = 7x + 4 \\)",
-        "D. \\( y = -4 \\)",
-        "E. None of the other choices is correct"
+        "A. Sequence",
+        "B. Decision",
+        "C. Repetition",
+        "D. Flow"
       ],
       "correctAnswer": "A",
-      "explanation": "Để giải bài này trong nháy mắt, ta chỉ cần quan sát tung độ (giá trị y) của hai điểm.<br /><br /><b>1. Quan sát nhanh:</b><br />- Cả hai điểm (7, <b>4</b>) và (-9, <b>4</b>) đều có tung độ bằng 4.<br /><br /><b>2. Kết luận:</b><br />- Một đường thẳng đi qua hai điểm có cùng tung độ luôn là một đường thẳng nằm ngang.<br />- Phương trình của đường thẳng đó chính là \\( y = 4 \\).",
+      "explanation": "Câu hỏi này về ba cấu trúc điều khiển cơ bản trong lập trình có cấu trúc.<br /><br /><b>1. Ba cấu trúc cơ bản:</b><br />Mọi thuật toán đều có thể được xây dựng từ ba cấu trúc đơn giản:<br />- <b>Sequence (Tuần tự):</b> Thực hiện một tập hợp các hành động <b>lần lượt, từ trên xuống dưới, không bỏ qua bước nào</b>. Đây chính là cấu trúc được mô tả trong câu hỏi.<br />- <b>Decision (Rẽ nhánh / Lựa chọn):</b> Dựa trên một điều kiện (đúng/sai) để quyết định thực hiện hành động nào tiếp theo. Thường dùng `if-else`.<br />- <b>Repetition (Lặp):</b> Lặp lại một tập hợp các hành động cho đến khi một điều kiện nào đó được thỏa mãn. Thường dùng `while`, `for`.<br /><br /><b>Kết luận: Cấu trúc thực hiện các hành động lần lượt nối tiếp nhau được gọi là Sequence.</b>",
       "difficulty": "easy",
-      "topic": "Analytic Geometry (Equation of a Line)",
+      "topic": "Algorithms (Control Structures)",
       "hints": [
-        "Mẹo nhanh nhất: Nhìn vào tung độ y của hai điểm. Chúng có giống nhau không?",
-        "Nếu hai điểm có cùng tung độ, đó là một đường thẳng nằm ngang.",
-        "Phương trình của đường thẳng ngang có dạng \\(y = \\) [giá trị tung độ chung đó]."
+        "Thần chú: <b>Sequence = Tuần tự</b> (làm từ A đến B đến C).",
+        "Thần chú: <b>Decision = Lựa chọn</b> (nếu... thì... ngược lại thì...).",
+        "Thần chú: <b>Repetition = Lặp lại</b> (làm đi làm lại)."
       ]
     },
     {
       "id": 29,
-      "question": "Find the volume of the parallelepiped determined by \\( 2u, -3v, 5w \\), provided that \\( u = [1, 2, -1]^T, v = [0, 2, 4]^T, w = [1, 4, a]^T \\).",
+      "question": "[___] hides all the details of an algorithm in an attempt to give the 'big picture' and to show how the algorithm flows from beginning to end.",
       "image": null,
       "options": [
-        "A. \\( 60a - 180 \\)",
-        "B. \\( 30a - 30 \\)",
-        "C. \\( 60a + 30 \\)",
-        "D. \\( 30a + 30 \\)"
+        "A. Pseudocode",
+        "B. Unified Modeling Language (UML)",
+        "C. Flowchart",
+        "D. State diagram"
       ],
-      "correctAnswer": "A",
-      "explanation": "Để giải siêu tốc, ta dùng tính chất của định thức để rút các hằng số ra ngoài trước.<br /><br /><b>1. Áp dụng tính chất định thức:</b><br />Thể tích \\( V = |\\det(2u, -3v, 5w)| \\)<br />\\( V = |2 \\cdot (-3) \\cdot 5 \\cdot \\det(u, v, w)| = 30 \\cdot |\\det(u, v, w)| \\).<br /><br /><b>2. Tính định thức gốc (nhanh hơn nhiều):</b><br />Bây giờ ta chỉ cần tính định thức của ma trận gốc với các số nhỏ:<br />\\( \\det(u, v, w) = \\begin{vmatrix} 1 & 0 & 1 \\\\ 2 & 2 & 4 \\\\ -1 & 4 & a \\end{vmatrix} \\)<br />Khai triển theo hàng 1 (vì có số 0):<br />\\( = 1(2a - 16) - 0 + 1(8 - (-2)) = 2a - 16 + 10 = 2a - 6 \\).<br /><br /><b>3. Kết hợp lại:</b><br />\\( V = 30 \\cdot |2a - 6| = |60a - 180| \\).<br /><br />Kết quả này tương ứng với đáp án A.",
+      "correctAnswer": "B",
+      "explanation": "Câu hỏi này phân biệt các công cụ mô tả thuật toán và hệ thống.<br /><br /><b>1. Phân tích các lựa chọn:</b><br />- <b>Pseudocode (Mã giả):</b> Dùng ngôn ngữ giống tiếng Anh để mô tả chi tiết các bước của thuật toán.<br />- <b>Flowchart (Lưu đồ):</b> Dùng các biểu tượng hình học (hình chữ nhật, hình thoi) để mô tả luồng của thuật toán, nhưng vẫn có thể khá chi tiết.<br />- <b>UML (Unified Modeling Language - Ngôn ngữ Mô hình hóa Thống nhất):</b> Đây là một bộ công cụ mạnh mẽ, không chỉ dùng cho thuật toán mà còn cho toàn bộ hệ thống phần mềm. Nó cung cấp nhiều loại biểu đồ (như biểu đồ hoạt động, biểu đồ tuần tự) để mô tả hệ thống ở các mức độ trừu tượng khác nhau, cho phép <b>ẩn đi chi tiết</b> để nhìn vào '<b>the big picture</b>' (bức tranh tổng thể).<br /><br /><b>Kết luận: UML là công cụ được thiết kế để mô tả 'bức tranh tổng thể' và ẩn đi các chi tiết không cần thiết.</b>",
       "difficulty": "medium",
-      "topic": "Linear Algebra (Scalar Triple Product, Volume of Parallelepiped)",
+      "topic": "Software Engineering (Modeling)",
       "hints": [
-        "Mẹo nhanh nhất: Dùng tính chất \\(det(ku, lv, mw) = klm \\cdot det(u, v, w)\\) để không phải nhân các số lớn.",
-        "Đừng nhân các vector với hằng số trước. Hãy tính định thức của \\(u, v, w\\) trước.",
-        "Lấy kết quả định thức đó nhân với 30 (là \\(|2 \\cdot -3 \\cdot 5|\\))."
+        "Thần chú: <b>UML = Big Picture</b> (Bức tranh tổng thể).",
+        "Từ khóa 'hides all the details' và 'big picture' là dấu hiệu mạnh nhất của UML.",
+        "Pseudocode và Flowchart thường tập trung vào chi tiết của một thuật toán cụ thể hơn là cả một hệ thống."
       ]
     },
     {
       "id": 30,
-      "question": "John and Joe earn a total of $24.80 when John works 2 hours and Joe works 3 hours. If John works 3 hours and Joe works 2 hours, they get $23.90. Find their hourly rates (in dollars).",
+      "question": "[___] is a basic algorithm that arranges data according to its value.",
       "image": null,
       "options": [
-        "A. 6.70, 9.40",
-        "B. 4.50, 5.20",
-        "C. 12.60, 15.80",
-        "D. All of the other choices are incorrect",
-        "E. 1.40, 0.80"
+        "A. Inquiry",
+        "B. Sorting",
+        "C. Searching",
+        "D. Recursion"
       ],
       "correctAnswer": "B",
-      "explanation": "Để giải siêu tốc, ta sẽ không giải hệ mà thử trực tiếp đáp án.<br /><br /><b>1. Thiết lập nhanh hệ phương trình (trong đầu):</b><br />- \\( 2J + 3O = 24.80 \\)<br />- \\( 3J + 2O = 23.90 \\)<br /><br /><b>2. Thử đáp án B (J=4.50, O=5.20):</b><br />- Thử với phương trình thứ hai (vì số 23.90 trông 'đẹp' hơn):<br />  \\( 3(4.50) + 2(5.20) = 13.50 + 10.40 = 23.90 \\). <b>Khớp hoàn hảo!</b><br />- Chỉ cần một phương trình khớp, khả năng rất cao đây là đáp án đúng (có thể đề bài bị lỗi đánh máy ở phương trình còn lại). Không cần thử tiếp, chọn ngay đáp án này.<br /><br /><b>Mẹo kiểm tra siêu tốc khác:</b><br />- Cộng hai phương trình gốc lại với nhau:<br />\\( (2J+3O) + (3J+2O) = 24.80 + 23.90 \\)<br />\\( 5J + 5O = 48.70 \\Rightarrow J+O = 9.74 \\)<br />- Kiểm tra tổng của đáp án B: \\( 4.50 + 5.20 = 9.70 \\). Tổng này gần như chính xác, càng khẳng định B là đáp án đúng.",
+      "explanation": "Đây là câu hỏi định nghĩa một trong những thuật toán cơ bản và phổ biến nhất.<br /><br /><b>1. Phân tích từ khóa:</b><br />Từ khóa cốt lõi là '<b>arranges data according to its value</b>' (sắp xếp dữ liệu theo giá trị của nó).<br /><br /><b>2. Định nghĩa các thuật toán:</b><br />- <b>Sorting (Sắp xếp):</b> Là quá trình sắp đặt các phần tử trong một danh sách theo một thứ tự nhất định (ví dụ: từ nhỏ đến lớn, hoặc theo thứ tự bảng chữ cái). Điều này hoàn toàn khớp với mô tả.<br />- <b>Searching (Tìm kiếm):</b> Là quá trình tìm một phần tử cụ thể trong một danh sách.<br />- <b>Recursion (Đệ quy):</b> Là một kỹ thuật lập trình trong đó một hàm tự gọi lại chính nó. Đây là một phương pháp, không phải một loại thuật toán cụ thể như sắp xếp hay tìm kiếm.<br /><br /><b>Kết luận: Thuật toán sắp xếp dữ liệu theo giá trị được gọi là Sorting.</b>",
       "difficulty": "easy",
-      "topic": "Algebra (Systems of Linear Equations)",
+      "topic": "Algorithms (Basic Algorithms)",
       "hints": [
-        "Mẹo nhanh nhất: Đừng giải hệ, hãy thử đáp án.",
-        "Bắt đầu thử với phương trình thứ hai `3J + 2O = 23.90`. Đáp án B khớp hoàn toàn.",
-        "Mẹo kiểm tra khác: Cộng 2 phương trình lại để tìm tổng `J+O`, rồi so sánh với tổng của các đáp án."
+        "Thần chú: <b>Sorting = Sắp xếp</b> (sắp đặt theo thứ tự).",
+        "Thần chú: <b>Searching = Tìm kiếm</b> (tìm một thứ gì đó).",
+        "Hãy liên kết 'arrange' (sắp xếp) với 'Sorting'."
       ]
     },
     {
       "id": 31,
-      "question": "Find the critical numbers of the function \\( g(x) = \\sqrt{x^2 - x} \\)",
+      "question": "In [___] sort, the smallest item moves to the beginning of the unsorted list. There is no one-to-one swapping.",
       "image": null,
       "options": [
-        "A. 1/2",
-        "B. 1",
-        "C. 0, 1 and 1/2",
-        "D. 0",
-        "E. None of the other choices is correct",
-        "F. 0 and 1"
+        "A. Selection",
+        "B. Bubble",
+        "C. Insertion"
       ],
-      "correctAnswer": "F",
-      "explanation": "Để giải siêu tốc, ta xác định hai nguồn gây ra điểm tới hạn: đạo hàm bằng 0 và đạo hàm không xác định.<br /><br /><b>1. Nguồn 1: Đạo hàm không xác định (Mẫu số của đạo hàm = 0)</b><br />- Đạo hàm của hàm căn thức sẽ có mẫu chứa chính biểu thức trong căn. Vì vậy, đạo hàm không xác định khi:<br />\\( x^2 - x = 0 \\Rightarrow x(x-1) = 0 \\Rightarrow x=0 \\text{ và } x=1 \\).<br />- Đây cũng chính là các điểm đầu mút của tập xác định, nên chúng chắc chắn là điểm tới hạn.<br /><br /><b>2. Nguồn 2: Đạo hàm bằng 0 (Tử số của đạo hàm = 0)</b><br />- Đạo hàm của ruột (\\(x^2 - x\\)) là \\(2x-1\\). Đây sẽ là tử số của đạo hàm.<br />\\( 2x - 1 = 0 \\Rightarrow x = 1/2 \\).<br /><br /><b>3. Kiểm tra và kết luận:</b><br />- Ta chỉ cần kiểm tra \\(x=1/2\\). Thế vào biểu thức trong căn: \\((1/2)^2 - 1/2 = -1/4\\), là số âm. Vậy \\(x=1/2\\) không nằm trong tập xác định, không phải là điểm tới hạn.<br /><br />- Các điểm tới hạn duy nhất là <b>0 và 1</b>.",
+      "correctAnswer": "A",
+      "explanation": "Câu hỏi này phân biệt các thuật toán sắp xếp cơ bản.<br /><br /><b>1. Phân tích cách hoạt động:</b><br />- <b>Selection Sort (Sắp xếp chọn):</b> Duyệt qua toàn bộ phần chưa sắp xếp để <b>tìm ra phần tử nhỏ nhất</b>, sau đó đưa nó về đầu của phần chưa sắp xếp đó. Quá trình này chỉ thực hiện <b>một lần hoán đổi</b> cho mỗi vòng lặp lớn.<br />- <b>Bubble Sort (Sắp xếp nổi bọt):</b> So sánh các cặp phần tử <b>liền kề</b> và hoán đổi chúng nếu sai thứ tự. Quá trình này có rất nhiều lần hoán đổi 'one-to-one'.<br />- <b>Insertion Sort (Sắp xếp chèn):</b> Lấy từng phần tử của phần chưa sắp xếp và 'chèn' nó vào đúng vị trí trong phần đã sắp xếp.<br /><br /><b>2. Từ khóa nhận diện:</b><br />'<b>Smallest item moves to the beginning</b>' (phần tử nhỏ nhất di chuyển về đầu) và '<b>no one-to-one swapping</b>' (không có hoán đổi 1-1 liên tục) là đặc điểm nhận dạng kinh điển của <b>Selection Sort</b>.<br /><br /><b>Kết luận: Thuật toán được mô tả là Selection Sort.</b>",
       "difficulty": "medium",
-      "topic": "Calculus (Critical Numbers, Derivatives)",
+      "topic": "Algorithms (Sorting)",
       "hints": [
-        "Mẹo nhanh nhất: Điểm tới hạn đến từ 2 nguồn: (1) điểm làm cho biểu thức trong căn bằng 0, (2) điểm làm cho đạo hàm của ruột bằng 0.",
-        "Nguồn 1 (trong căn = 0): \\(x^2-x=0 \\Rightarrow x=0, 1\\). Đây luôn là điểm tới hạn.",
-        "Nguồn 2 (đạo hàm ruột = 0): \\(2x-1=0 \\Rightarrow x=1/2\\). Chỉ cần kiểm tra xem điểm này có thuộc tập xác định không."
+        "Thần chú: <b>Selection Sort = SELECT the smallest</b> (chọn ra thằng nhỏ nhất) rồi đưa về đầu.",
+        "Bubble Sort thì giống như bong bóng, đổi chỗ liên tục với hàng xóm.",
+        "Selection Sort rất 'kén chọn', chỉ đổi chỗ một lần duy nhất sau khi đã tìm ra phần tử nhỏ nhất trong một lượt."
       ]
     },
     {
       "id": 32,
-      "question": "Which of the following matrices are in row-echelon form? <br> (i) \\( \\begin{bmatrix} 1 & 1 & 3 \\\\ 0 & 1 & 2 \\end{bmatrix} \\) <br> (ii) \\( \\begin{bmatrix} 0 & 1 & -1 \\\\ 0 & 2 & 3 \\\\ 0 & 1 & 5 \\end{bmatrix} \\)",
+      "question": "[___] refers to the process of translating each line of the source program into the corresponding line of the object program and executing the line.",
       "image": null,
       "options": [
-        "A. (i)",
-        "B. (ii)",
-        "C. (i) and (ii)",
-        "D. None of the other choices is correct"
+        "A. Object program",
+        "B. Source program",
+        "C. Translation",
+        "D. Interpretation"
       ],
-      "correctAnswer": "A",
-      "explanation": "Để giải siêu tốc, ta chỉ cần kiểm tra trực quan 'cấu trúc bậc thang' và quy tắc 'số 0 bên dưới'.<br /><br /><b>1. Kiểm tra ma trận (i):</b><br />\\[ \\begin{bmatrix} 1 & 1 & 3 \\\\ 0 & 1 & 2 \\end{bmatrix} \\]<br />- Nhìn vào các phần tử khác 0 đầu tiên của mỗi hàng (gọi là phần tử dẫn đầu): <b>1</b> và <b>1</b>.<br />- Chúng tạo thành một hình bậc thang đi xuống sang phải. Bên dưới phần tử dẫn đầu đầu tiên là số 0.<br />- → Ma trận (i) <b>đúng</b>.<br /><br /><b>2. Kiểm tra ma trận (ii):</b><br />\\[ \\begin{bmatrix} 0 & 1 & -1 \\\\ 0 & 2 & 3 \\\\ 0 & 1 & 5 \\end{bmatrix} \\]<br />- Nhìn vào các phần tử dẫn đầu: <b>1</b>, <b>2</b>, <b>1</b>.<br />- Chúng đều nằm trên cùng một cột. Điều này ngay lập tức phá vỡ cấu trúc bậc thang.<br />- → Ma trận (ii) <b>sai</b>.<br /><br /><b>Kết luận:</b> Chỉ có ma trận (i) là đúng.",
+      "correctAnswer": "D",
+      "explanation": "Câu hỏi này phân biệt hai cách chính để thực thi một chương trình: biên dịch và thông dịch.<br /><br /><b>1. So sánh hai phương pháp:</b><br />- <b>Compilation (Biên dịch):</b> Giống như dịch một quyển sách. Dịch <b>toàn bộ chương trình nguồn</b> một lần để tạo ra một file thực thi (chương trình đối tượng). Sau đó, bạn chạy file thực thi đó. Quá trình dịch và chạy là tách biệt.<br />- <b>Interpretation (Thông dịch):</b> Giống như một thông dịch viên. Dịch <b>từng dòng lệnh một</b>, rồi thực thi ngay dòng lệnh đó, sau đó mới chuyển sang dòng tiếp theo. Quá trình dịch và chạy diễn ra xen kẽ.<br /><br /><b>2. Từ khóa nhận diện:</b><br />'<b>translating each line ... and executing the line</b>' (dịch từng dòng ... và thực thi dòng đó) là định nghĩa chính xác của <b>Interpretation</b>.<br /><br /><b>Kết luận: Quá trình dịch và chạy từng dòng được gọi là Interpretation.</b>",
       "difficulty": "easy",
-      "topic": "Linear Algebra (Row-Echelon Form)",
+      "topic": "Programming Languages (Compiler vs. Interpreter)",
       "hints": [
-        "Mẹo nhanh nhất: Ma trận bậc thang có hình dạng một 'cầu thang' đi xuống và sang phải.",
-        "Quy tắc cốt lõi: Phần tử khác 0 đầu tiên của mỗi hàng phải nằm ở bên phải của phần tử khác 0 đầu tiên của hàng trên nó.",
-        "Ở ma trận (ii), bạn thấy ngay các số 1, 2, 1 ở cột hai thẳng hàng nhau, đây là dấu hiệu sai."
+        "Thần chú: <b>Interpreter = Dịch và chạy từng dòng</b> (line-by-line).",
+        "Thần chú đối lập: <b>Compiler = Dịch cả cục</b> (dịch toàn bộ rồi mới chạy).",
+        "Các ngôn ngữ như Python, JavaScript là ví dụ điển hình của ngôn ngữ thông dịch."
       ]
     },
     {
       "id": 33,
-      "question": "Which of the following subsets of \\( \\mathbb{R}^2 \\) are subspaces? <br> (i) \\( \\{(x, y) \\mid x \\ge 0 \\text{ and } y \\ge 0 \\} \\) <br> (ii) \\( \\{(x, y) \\mid x = 2y + 1 \\} \\)",
+      "question": "[___] uses the principle of logical reasoning to answer queries. It is based on formal logic defined by Greek mathematicians and later developed into first-order predicate calculus.",
       "image": null,
       "options": [
-        "A. (i) and (ii)",
-        "B. None of (i) or (ii)",
-        "C. (ii) only",
-        "D. (i) only"
+        "A. Procedural paradigm",
+        "B. Functional paradigm",
+        "C. Declarative paradigm",
+        "D. Object-oriented paradigm"
       ],
-      "correctAnswer": "B",
-      "explanation": "Để kiểm tra siêu tốc, ta dùng các mẹo nhận diện nhanh để loại trừ.<br /><br /><b>1. Kiểm tra tập (i): Góc phần tư thứ nhất</b><br />- <b>Mẹo:</b> Một không gian con phải 'đóng' với phép nhân vô hướng, kể cả số âm. Nếu ta lấy một vector trong tập này (ví dụ (1,1)) và nhân với -1, ta được (-1,-1), vector này không còn thuộc tập hợp nữa.<br />- → Tập (i) <b>không phải</b> là không gian con.<br /><br /><b>2. Kiểm tra tập (ii): Đường thẳng \\(x = 2y + 1\\)</b><br />- <b>Mẹo:</b> Một không gian con phải chứa vector không (0,0).<br />- Thử thế (0,0) vào phương trình: \\( 0 = 2(0) + 1 \\Rightarrow 0 = 1 \\). Điều này sai.<br />- Vì không chứa gốc tọa độ, tập (ii) <b>không phải</b> là không gian con.<br /><br /><b>Kết luận:</b> Cả hai đều không phải là không gian con.",
-      "difficulty": "medium",
-      "topic": "Linear Algebra (Subspaces)",
+      "correctAnswer": "C",
+      "explanation": "Câu hỏi này về các mô hình (hệ hình) lập trình.<br /><br /><b>1. Phân tích các mô hình:</b><br />- <b>Procedural (Thủ tục):</b> Tập trung vào 'cách làm' (how-to), chia chương trình thành các thủ tục và hàm.<br />- <b>Object-Oriented (Hướng đối tượng):</b> Mô hình hóa thế giới thực bằng các đối tượng có thuộc tính và phương thức.<br />- <b>Functional (Hàm):</b> Coi mọi thứ như các hàm toán học, tránh thay đổi trạng thái và dữ liệu.<br />- <b>Declarative (Khai báo):</b> Đây là mô hình đặc biệt, tập trung vào việc mô tả 'cái gì cần làm' (what-to-do) thay vì 'làm như thế nào'. Nó sử dụng các quy tắc logic (facts and rules) để hệ thống tự suy luận ra câu trả lời. Ngôn ngữ Prolog là ví dụ kinh điển.<br /><br /><b>2. Từ khóa nhận diện:</b><br />'<b>Logical reasoning</b>' (suy luận logic) và '<b>formal logic</b>' (logic hình thức) là những dấu hiệu không thể nhầm lẫn của <b>Declarative paradigm</b>.<br /><br /><b>Kết luận: Mô hình lập trình dựa trên suy luận logic là Declarative.</b>",
+      "difficulty": "hard",
+      "topic": "Programming Paradigms",
       "hints": [
-        "Mẹo nhanh nhất: Một không gian con phải thỏa mãn 2 điều kiện 'tối thiểu': (1) Chứa vector không, (2) Nếu chứa vector v thì cũng phải chứa -v.",
-        "Tập (ii) sai vì không chứa gốc tọa độ (0,0).",
-        "Tập (i) sai vì nó chứa vector (1,1) nhưng lại không chứa vector (-1,-1)."
+        "Thần chú: <b>Declarative = Logic-based</b> (dựa trên logic).",
+        "Procedural & OOP: Bạn ra lệnh cho máy tính làm thế nào.",
+        "Declarative: Bạn mô tả vấn đề và các quy tắc, máy tính tự tìm cách giải quyết."
       ]
     },
     {
       "id": 34,
-      "question": "Volume of a spherical balloon is decreasing at rate \\( 9 \\text{ cm}^3/\\text{s} \\). How fast is its diameter decreasing when the volume is \\( 6 \\text{ cm}^3 \\)?",
+      "question": "What is the language of the procedural paradigm that is a high-level language and also has some low-level instructions?",
       "image": null,
       "options": [
-        "A. \\( 3.127 \\text{ cm/s} \\)",
-        "B. \\( 0.127 \\text{ cm/s} \\)",
-        "C. \\( 2.127 \\text{ cm/s} \\)",
-        "D. None of the other choices is correct",
-        "E. \\( 1.127 \\text{ cm/s} \\)"
+        "A. COBOL",
+        "B. C",
+        "C. Pascal",
+        "D. Ada"
       ],
-      "correctAnswer": "E",
-      "explanation": "Để giải siêu tốc, ta cần một công thức liên hệ trực tiếp các đại lượng. Mẹo ở đây là lấy phương trình đạo hàm chia cho phương trình thể tích.<br /><br /><b>1. Các phương trình cơ bản:</b><br />- Thể tích: \\( V = \\frac{\\pi D^3}{6} \\)<br />- Tốc độ thay đổi: \\( \\frac{dV}{dt} = \\frac{\\pi D^2}{2} \\frac{dD}{dt} \\)<br /><br /><b>2. Tạo công thức siêu tốc:</b><br />Lấy (phương trình tốc độ) chia cho (phương trình thể tích):<br />\\( \\frac{dV/dt}{V} = \\frac{ (\\pi D^2 / 2) \\cdot (dD/dt) }{ \\pi D^3 / 6 } = \\frac{3}{D} \\frac{dD}{dt} \\)<br />Sắp xếp lại, ta có công thức cuối cùng:<br />\\[ \\frac{dD}{dt} = \\frac{D}{3V} \\frac{dV}{dt} \\]<br /><br /><b>3. Áp dụng:</b><br />- Tìm D khi V=6: \\( 6 = \\frac{\\pi D^3}{6} \\Rightarrow D^3 = \\frac{36}{\\pi} \\Rightarrow D \\approx 2.25 \\text{ cm} \\).<br />- Thế số vào công thức siêu tốc:<br />\\( \\frac{dD}{dt} \\approx \\frac{2.25}{3 \\cdot 6} \\cdot (-9) = \\frac{2.25}{18} \\cdot (-9) = -\\frac{2.25}{2} = -1.125 \\).<br /><br />Tốc độ giảm là \\(1.125\\), gần nhất với đáp án E.",
+      "correctAnswer": "B",
+      "explanation": "Câu hỏi này tìm một ngôn ngữ lập trình đặc biệt, nằm giữa bậc cao và bậc thấp.<br /><br /><b>1. Phân tích đặc điểm:</b><br />- <b>High-level (Bậc cao):</b> Dễ đọc, dễ viết, gần với ngôn ngữ con người (ví dụ: `if`, `while`, `for`). Tất cả các ngôn ngữ trong đáp án đều là bậc cao.<br />- <b>Low-level instructions (Lệnh bậc thấp):</b> Cho phép truy cập và thao tác trực tiếp với bộ nhớ, thanh ghi, phần cứng. Đây là điểm khác biệt.<br /><br /><b>2. So sánh các ngôn ngữ:</b><br />- <b>COBOL, Pascal, Ada:</b> Đây là các ngôn ngữ bậc cao thuần túy, được thiết kế để trừu tượng hóa phần cứng và tập trung vào logic nghiệp vụ hoặc giáo dục. Chúng rất hạn chế khả năng truy cập bậc thấp.<br />- <b>C:</b> Được mệnh danh là 'ngôn ngữ bậc trung' (middle-level language). Nó có cú pháp bậc cao nhưng đồng thời cung cấp các công cụ mạnh mẽ để truy cập bậc thấp như <b>con trỏ (pointers)</b> và các phép toán trên bit. Điều này làm cho C trở thành lựa chọn hàng đầu để viết hệ điều hành và trình điều khiển thiết bị.<br /><br /><b>Kết luận: Ngôn ngữ C vừa là bậc cao, vừa có các chỉ dẫn bậc thấp.</b>",
       "difficulty": "medium",
-      "topic": "Calculus (Related Rates)",
+      "topic": "Programming Languages (C Language)",
       "hints": [
-        "Mẹo nhanh nhất: Dùng công thức rút gọn \\( \\frac{dD}{dt} = \\frac{D}{3V} \\frac{dV}{dt} \\).",
-        "Bạn chỉ cần 2 bước: (1) Tìm D khi V=6, (2) Thế tất cả các số vào công thức trên.",
-        "Công thức này được tạo ra bằng cách lấy phương trình đạo hàm chia cho phương trình gốc để khử các số hạng phức tạp."
+        "Thần chú: <b>Ngôn ngữ C = Middle-level language</b> (ngôn ngữ bậc trung).",
+        "Hãy liên kết ngôn ngữ C với 'con trỏ' (pointers) - công cụ truy cập bộ nhớ bậc thấp.",
+        "C là ngôn ngữ dùng để viết HĐH Linux, Windows - những thứ cần tương tác sâu với phần cứng."
       ]
     },
     {
       "id": 35,
-      "question": "Find the first row of the adjugate of the matrix \\( A = \\begin{bmatrix} 1 & 2 & 0 \\\\ 3 & -1 & 1 \\\\ 0 & -2 & 1 \\end{bmatrix} \\)",
+      "question": "What is the statement that stores the value in the variable, which has already been created in the declaration section?",
       "image": null,
       "options": [
-        "A. \\( [1 \\quad -2 \\quad 2] \\)",
-        "B. \\( [-1 \\quad -2 \\quad 2] \\)",
-        "C. \\( [1 \\quad -3 \\quad -6] \\)",
-        "D. \\( [1 \\quad 2 \\quad 2] \\)",
-        "E. None of the other choices is correct"
+        "A. Compound statement",
+        "B. Assignment statement",
+        "C. Control statement"
       ],
-      "correctAnswer": "A",
-      "explanation": "Để giải siêu tốc, ta phải nhớ rằng **hàng 1 của ma trận phụ hợp** chính là **cột 1 của ma trận đồng yếu tố**.\\\\[ \\text{adj}(A)_{1j} = C_{ji} \\]<br /><br />Ta chỉ cần tính 3 phần tử \\(C_{11}, C_{21}, C_{31}\\) và xếp chúng thành một hàng.<br /><br /><b>1. Tính nhẩm các đồng yếu tố:</b><br />- \\(C_{11}\\) (dấu +): \\( (-1)(1) - (1)(-2) = 1 \\).<br />- \\(C_{21}\\) (dấu -): \\( -[(2)(1) - (0)(-2)] = -2 \\).<br />- \\(C_{31}\\) (dấu +): \\( (2)(1) - (0)(-1) = 2 \\).<br /><br /><b>2. Ghép lại thành hàng:</b><br />Hàng đầu tiên của ma trận phụ hợp là \\([1, -2, 2]\\).",
-      "difficulty": "medium",
-      "topic": "Linear Algebra (Adjugate Matrix, Cofactors)",
+      "correctAnswer": "B",
+      "explanation": "Câu hỏi này về một loại câu lệnh cơ bản nhất trong lập trình.<br /><br /><b>1. Phân tích các loại câu lệnh:</b><br />- <b>Declaration statement (Lệnh khai báo):</b> Dùng để 'tạo ra' một biến (ví dụ: `int x;`).<br />- <b>Assignment statement (Lệnh gán):</b> Dùng để 'lưu trữ một giá trị' vào một biến đã được tạo. Ví dụ: `x = 10;`. Đây chính xác là những gì câu hỏi mô tả.<br />- <b>Control statement (Lệnh điều khiển):</b> Dùng để thay đổi luồng thực thi của chương trình (ví dụ: `if`, `while`, `for`).<br />- <b>Compound statement (Lệnh ghép):</b> Là một khối các câu lệnh được bao trong cặp ngoặc nhọn `{...}`.<br /><br /><b>2. Từ khóa nhận diện:</b><br />'<b>stores the value in the variable</b>' (lưu giá trị vào biến) là định nghĩa của phép gán.<br /><br /><b>Kết luận: Lệnh dùng để lưu giá trị vào biến là Lệnh gán (Assignment statement).</b>",
+      "difficulty": "easy",
+      "topic": "Programming Fundamentals (Statements)",
       "hints": [
-        "Mẹo nhanh nhất: Hàng 1 của ma trận phụ hợp (adj) = Cột 1 của ma trận đồng yếu tố (C).",
-        "Bạn chỉ cần tính 3 phần tử: \\(C_{11}, C_{21}, C_{31}\\).",
-        "Nhớ quy tắc dấu xen kẽ (+, -, +) khi tính các đồng yếu tố."
+        "Thần chú: <b>Assignment = Gán giá trị</b> (dùng dấu '=').",
+        "Phân biệt: Khai báo là 'tạo ra', gán là 'đặt giá trị vào'.",
+        "Ví dụ: `int age;` (khai báo), `age = 25;` (gán)."
       ]
     },
     {
       "id": 36,
-      "question": "Solve the homogeneous system \\( \\begin{cases} 3x_1 + x_2 + x_3 + x_4 = 0 \\\\ 5x_1 - x_2 + x_3 - x_4 = 0 \\end{cases} \\)",
+      "question": "What is [___] model, a process of software development where requirements are divided into multiple standalone modules of the software development cycle?",
       "image": null,
       "options": [
-        "A. \\( (-s/4, -s/4+t, s, t) \\)",
-        "B. \\( (s/4, s/4+t, s, t) \\)",
-        "C. None of the other choices is correct",
-        "D. \\( (-s/4, -s/4-t, s, t) \\)",
-        "E. \\( (s/4, s/4-t, s, t) \\)"
+        "A. Waterfall model",
+        "B. Incremental model",
+        "C. Development process",
+        "D. Software engineering"
       ],
-      "correctAnswer": "D",
-      "explanation": "Để giải siêu tốc, ta không giải hệ mà sẽ thử đáp án. Tất cả các đáp án đều có dạng \\((..., s, t)\\), nghĩa là ta được cho trước \\(x_3=s\\) và \\(x_4=t\\).<br /><br /><b>1. Chọn và phân tích đáp án D:</b><br />- \\(x_1 = -s/4\\)<br />- \\(x_2 = -s/4 - t\\)<br />- \\(x_3 = s\\)<br />- \\(x_4 = t\\)<br /><br /><b>2. Thử nhanh vào phương trình (1):</b> \\(3x_1 + x_2 + x_3 + x_4 = 0\\)<br />\\( 3(-\\frac{s}{4}) + (-\\frac{s}{4} - t) + s + t = -\\frac{3s}{4} - \\frac{s}{4} - t + s + t = -\\frac{4s}{4} + s = -s + s = 0 \\).<br />→ Khớp.<br /><br /><b>3. Thử nhanh vào phương trình (2):</b> \\(5x_1 - x_2 + x_3 - x_4 = 0\\)<br />\\( 5(-\\frac{s}{4}) - (-\\frac{s}{4} - t) + s - t = -\\frac{5s}{4} + \\frac{s}{4} + t + s - t = -\\frac{4s}{4} + s = -s + s = 0 \\).<br />→ Khớp.<br /><br />Vì đáp án D thỏa mãn cả hai phương trình, đây là đáp án đúng.",
-      "difficulty": "medium",
-      "topic": "Linear Algebra (Homogeneous Systems)",
+      "correctAnswer": "B",
+      "explanation": "Câu hỏi này so sánh các mô hình phát triển phần mềm.<br /><br /><b>1. So sánh các mô hình:</b><br />- <b>Waterfall model (Mô hình thác nước):</b> Là một quy trình tuyến tính, tuần tự. Phải hoàn thành xong toàn bộ giai đoạn này mới được chuyển sang giai đoạn tiếp theo (Phân tích -> Thiết kế -> Lập trình -> Kiểm thử). Giống như xây một ngôi nhà, phải xong móng mới xây tường.<br />- <b>Incremental model (Mô hình gia tăng):</b> Chia dự án thành các phần nhỏ, độc lập (increments hoặc modules). Mỗi phần được phát triển và bàn giao riêng. Ví dụ, xây dựng phiên bản 1.0 của phần mềm chỉ với các chức năng cơ bản, sau đó thêm các chức năng mới trong phiên bản 1.1, 2.0,...<br /><br /><b>2. Từ khóa nhận diện:</b><br />'<b>requirements are divided into multiple standalone modules</b>' (yêu cầu được chia thành nhiều module độc lập) là đặc điểm cốt lõi của <b>Incremental model</b>.<br /><br /><b>Kết luận: Mô hình chia nhỏ yêu cầu thành các module là Incremental model.</b>",
+      "difficulty": "easy",
+      "topic": "Software Engineering (Development Models)",
       "hints": [
-        "Mẹo nhanh nhất: Đừng giải hệ, hãy thử đáp án!",
-        "Tất cả các đáp án đều đặt `x₃ = s` và `x₄ = t`. Bạn chỉ cần thế `x₁` và `x₂` từ một đáp án vào để kiểm tra.",
-        "Chỉ cần một phương trình sai là có thể loại ngay đáp án đó và chuyển sang thử đáp án khác."
+        "Thần chú: <b>Incremental = Gia tăng</b> (làm từng phần rồi ghép lại).",
+        "Thần chú đối lập: <b>Waterfall = Thác nước</b> (làm tuần tự từ đầu đến cuối).",
+        "Hãy liên kết 'chia thành module' với 'Incremental'."
       ]
     },
     {
       "id": 37,
-      "question": "Let \\( T: \\mathbb{R}^3 \\to \\mathbb{R}^3 \\) be a linear transformation with \\( T(1, 1, 0) = (2, 3, -1) \\), and \\( T(0, -1, 1) = (5, 0, 1) \\). Find \\( T(1, 3, -2) \\).",
+      "question": "One phase in system development is [___].",
       "image": null,
       "options": [
-        "A. None of the others",
-        "B. (8, 3, -3)",
-        "C. (1, -6, 3)",
-        "D. (7, 3, 0)"
+        "A. Analysis",
+        "B. Application",
+        "C. Designing",
+        "D. Collecting"
       ],
       "correctAnswer": "A",
-      "explanation": "Để giải siêu tốc, ta cần tìm nhanh hai số \\(a, b\\) sao cho:<br />\\( (1, 3, -2) = a(1, 1, 0) + b(0, -1, 1) \\).<br /><br /><b>1. Nhẩm nhanh hệ số \\(a, b\\) nhờ các số 0:</b><br />- <b>Nhìn vào thành phần x:</b> \\( 1 = a(1) + b(0) \\Rightarrow a = 1 \\).<br />- <b>Nhìn vào thành phần z:</b> \\( -2 = a(0) + b(1) \\Rightarrow b = -2 \\).<br /><br /><b>2. Áp dụng tính chất tuyến tính và tính nhẩm:</b><br />Ta đã có \\( \\vec{v} = 1 \\cdot \\vec{u_1} - 2 \\cdot \\vec{u_2} \\), vậy:<br />\\( T(1, 3, -2) = 1 \\cdot T(1, 1, 0) - 2 \\cdot T(0, -1, 1) \\)<br />\\( = 1 \\cdot (2, 3, -1) - 2 \\cdot (5, 0, 1) \\)<br />\\( = (2, 3, -1) - (10, 0, 2) \\)<br />\\( = (-8, 3, -3) \\).<br /><br />Kết quả này không khớp với các lựa chọn B, C, D, nên ta chọn 'None of the others'.",
-      "difficulty": "medium",
-      "topic": "Linear Algebra (Linear Transformations)",
+      "explanation": "Câu hỏi này về các giai đoạn trong vòng đời phát triển phần mềm.<br /><br /><b>1. Vòng đời phát triển phần mềm (SDLC - Software Development Life Cycle):</b><br />Một mô hình SDLC kinh điển (như Waterfall) bao gồm các giai đoạn chính sau:<br />1. <b>Analysis (Phân tích):</b> Thu thập và phân tích yêu cầu của khách hàng để hiểu rõ cần làm gì.<br />2. <b>Design (Thiết kế):</b> Lên kế hoạch và thiết kế kiến trúc, giao diện của hệ thống.<br />3. <b>Implementation (Triển khai/Lập trình):</b> Viết code dựa trên bản thiết kế.<br />4. <b>Testing (Kiểm thử):</b> Kiểm tra để đảm bảo phần mềm hoạt động đúng và không có lỗi.<br />5. <b>Deployment (Triển khai):</b> Cài đặt và đưa phần mềm vào sử dụng.<br />6. <b>Maintenance (Bảo trì):</b> Sửa lỗi và nâng cấp phần mềm sau khi đã triển khai.<br /><br /><b>2. Phân tích các lựa chọn:</b><br />- <b>Analysis</b> và <b>Designing</b> (ở dạng danh động từ) đều là các giai đoạn chính. Trong các đáp án, 'Analysis' (danh từ) là một lựa chọn phù hợp và là giai đoạn đầu tiên.<br /><br /><b>Kết luận: Analysis là một giai đoạn trong phát triển hệ thống.</b>",
+      "difficulty": "easy",
+      "topic": "Software Engineering (SDLC)",
       "hints": [
-        "Mẹo nhanh nhất: Tìm `a, b` sao cho vector mục tiêu là tổ hợp tuyến tính của hai vector đã cho.",
-        "Nhờ các số 0, bạn có thể nhẩm ngay `a` từ thành phần đầu và `b` từ thành phần cuối.",
-        "Kết quả cuối cùng là `1*T(u₁) - 2*T(u₂)`."
+        "Ghi nhớ 4 giai đoạn cốt lõi: <b>Analysis -> Design -> Implementation -> Testing</b>.",
+        "Analysis là bước đầu tiên: 'Tìm hiểu xem chúng ta cần làm gì?'.",
+        "Application là sản phẩm, không phải giai đoạn. Collecting là một hành động trong giai đoạn Analysis."
       ]
     },
     {
       "id": 38,
-      "question": "Which of the following vectors is perpendicular to the plane passing through the points \\( (-7, 10, 0) \\), \\( (4, 1, 6) \\) and \\( (2, -1, 3) \\)?",
+      "question": "[___] is a measure of how tightly two modules are bound to each other.",
       "image": null,
       "options": [
-        "A. None of the other choices is correct",
-        "B. \\( (39, 21, 40) \\)",
-        "C. \\( (-12, 33, 22) \\)",
-        "D. \\( (12, 33, 22) \\)",
-        "E. \\( (39, 21, -40) \\)"
+        "A. Modularity",
+        "B. Coupling",
+        "C. Interoperability",
+        "D. Cohesion"
       ],
-      "correctAnswer": "E",
-      "explanation": "Để giải siêu tốc, ta cần tìm hai vector trong mặt phẳng rồi dùng tích có hướng để tìm vector pháp tuyến (vuông góc).<br /><br /><b>1. Tính 2 vector trong mặt phẳng (nhẩm nhanh):</b><br />- Lấy điểm thứ hai trừ điểm đầu: \\(\\vec{u} = (4 - (-7), 1 - 10, 6 - 0) = (11, -9, 6)\\).<br />- Lấy điểm thứ ba trừ điểm đầu: \\(\\vec{v} = (2 - (-7), -1 - 10, 3 - 0) = (9, -11, 3)\\).<br /><br /><b>2. Tính tích có hướng (mẹo: tính từng thành phần rồi liếc đáp án):</b><br />- <b>Thành phần x:</b> \\((-9)(3) - (6)(-11) = -27 + 66 = 39\\).<br />  <i>(Nhìn đáp án, ta loại được C và D).</i><br />- <b>Thành phần y (nhớ đổi dấu):</b> \\(-[(11)(3) - (6)(9)] = -[33 - 54] = -[-21] = 21\\).<br />  <i>(Cả B và E đều có thành phần này, ta phải tính tiếp).</i><br />- <b>Thành phần z:</b> \\((11)(-11) - (-9)(9) = -121 + 81 = -40\\).<br /><br />Vector pháp tuyến là \\((39, 21, -40)\\), khớp với đáp án E.",
+      "correctAnswer": "B",
+      "explanation": "Câu hỏi này về hai thước đo quan trọng trong thiết kế module hóa phần mềm.<br /><br /><b>1. So sánh Coupling và Cohesion:</b><br />Hãy tưởng tượng các module phần mềm như các phòng trong một ngôi nhà.<br />- <b>Coupling (Sự liên kết):</b> Đo lường sự <b>phụ thuộc giữa các phòng</b>. Coupling cao có nghĩa là các phòng phụ thuộc chặt chẽ vào nhau (ví dụ: phải đi qua phòng khách mới vào được phòng ngủ). Điều này không tốt, vì sửa một phòng sẽ ảnh hưởng đến phòng khác.<br />- <b>Cohesion (Sự gắn kết):</b> Đo lường mức độ <b>liên quan của các đồ vật bên trong một phòng</b>. Cohesion cao có nghĩa là tất cả đồ vật trong phòng đều phục vụ một mục đích chung (ví dụ: phòng bếp chỉ chứa đồ nấu ăn). Điều này rất tốt.<br /><br /><b>2. Mục tiêu thiết kế:</b><br />Mục tiêu của một thiết kế tốt là <b>Low Coupling (Liên kết thấp)</b> và <b>High Cohesion (Gắn kết cao)</b>.<br /><br /><b>Kết luận: Thước đo sự phụ thuộc chặt chẽ giữa hai module được gọi là Coupling.</b>",
       "difficulty": "medium",
-      "topic": "Linear Algebra (Vectors in 3D, Cross Product, Planes)",
+      "topic": "Software Engineering (Design Principles)",
       "hints": [
-        "Mẹo nhanh nhất: (1) Tạo 2 vector từ 3 điểm, (2) Tính tích có hướng của chúng.",
-        "Khi tính tích có hướng, hãy tính thành phần đầu tiên (x), rồi liếc nhìn các đáp án để loại trừ.",
-        "Nhớ rằng thành phần thứ hai (y) của tích có hướng phải đổi dấu."
+        "Thần chú: <b>Coupling = Sự phụ thuộc GIỮA các module (không tốt)</b>.",
+        "Thần chú: <b>Cohesion = Sự liên quan BÊN TRONG một module (tốt)</b>.",
+        "Mục tiêu: <b>LOW Coupling, HIGH Cohesion</b>."
       ]
     },
     {
       "id": 39,
-      "question": "Find the differential of the function \\( y = \\sqrt{4+5x} \\). <br> (i) \\( dy = \\frac{5\\sqrt{4+5x}}{2} dx \\) <br> (ii) \\( dy = \\frac{5}{2\\sqrt{4+5x}} dx \\) <br> (iii) \\( dy = \\frac{1}{2\\sqrt{4+5x}} dx \\) <br> (iv) \\( dy = \\frac{1}{2} \\sqrt{4+5x} dx \\)",
+      "question": "[___] refers to the ability to move data and/or a system from one platform to another and to reuse code.",
       "image": null,
       "options": [
-        "A. (i)",
-        "B. (iii)",
-        "C. (iv)",
-        "D. None of the other choices is correct",
-        "E. (ii)"
+        "A. Maintainability",
+        "B. Operability",
+        "C. Correctability",
+        "D. Transferability"
       ],
-      "correctAnswer": "E",
-      "explanation": "Để giải siêu tốc, ta áp dụng quy tắc chuỗi và viết ra kết quả ngay lập tức.<br /><br /><b>1. Nhớ công thức:</b><br />Vi phân \\( dy = y' \\cdot dx \\). Ta chỉ cần tính đạo hàm \\(y'\\).<br /><br /><b>2. Áp dụng quy tắc chuỗi (nhẩm nhanh):</b><br />- <b>Đạo hàm hàm ngoài (hàm căn):</b> Đạo hàm của \\(\\sqrt{u}\\) là \\(\\frac{1}{2\\sqrt{u}}\\).<br />- <b>Đạo hàm hàm trong (hàm ruột \\(4+5x\\)):</b> Đạo hàm là 5.<br /><br /><b>3. Kết hợp lại:</b><br />\\( y' = (\\text{đạo hàm ngoài}) \\times (\\text{đạo hàm trong}) = \\frac{1}{2\\sqrt{4+5x}} \\cdot 5 = \\frac{5}{2\\sqrt{4+5x}} \\).<br /><br />Vậy, vi phân là \\( dy = \\frac{5}{2\\sqrt{4+5x}} dx \\), tương ứng với lựa chọn (ii).",
-      "difficulty": "easy",
-      "topic": "Calculus (Differentials)",
+      "correctAnswer": "D",
+      "explanation": "Câu hỏi này về các thuộc tính chất lượng của phần mềm.<br /><br /><b>1. Phân tích các thuộc tính ('-ability'):</b><br />- <b>Maintainability (Khả năng bảo trì):</b> Phần mềm dễ dàng được sửa đổi, cập nhật hay sửa lỗi như thế nào.<br />- <b>Operability (Khả năng vận hành):</b> Phần mềm dễ dàng được vận hành trong môi trường của nó như thế nào.<br />- <b>Correctability (Khả năng sửa lỗi):</b> Liên quan đến việc sửa các lỗi trong phần mềm.<br />- <b>Transferability (Khả năng chuyển giao/di chuyển):</b> Đo lường mức độ dễ dàng để di chuyển phần mềm từ một môi trường/nền tảng này sang một môi trường/nền tảng khác (ví dụ: từ Windows sang Linux). Nó bao gồm hai phần nhỏ hơn là <b>Portability (Khả năng tương thích đa nền tảng)</b> và <b>Reusability (Khả năng tái sử dụng)</b>.<br /><br /><b>2. Từ khóa nhận diện:</b><br />'<b>move ... from one platform to another</b>' (di chuyển từ nền tảng này sang nền tảng khác) và '<b>reuse code</b>' (tái sử dụng code) là định nghĩa chính xác của <b>Transferability</b>.<br /><br /><b>Kết luận: Khả năng di chuyển và tái sử dụng được gọi là Transferability.</b>",
+      "difficulty": "medium",
+      "topic": "Software Engineering (Quality Attributes)",
       "hints": [
-        "Mẹo nhanh nhất: Vi phân `dy` chính là `(đạo hàm) * dx`.",
-        "Công thức đạo hàm nhanh cho hàm căn: Đạo hàm của \\(\\sqrt{u}\\) là \\(\\frac{u'}{2\\sqrt{u}}\\).",
-        "Trong bài này, \\(u = 4+5x\\) và \\(u' = 5\\). Chỉ cần thế vào công thức là xong."
+        "Thần chú: <b>Transferability = Transfer = Di chuyển</b> (giữa các nền tảng) + <b>Reuse</b> (tái sử dụng).",
+        "Portability là một phần của Transferability.",
+        "Phân biệt với Maintainability (khả năng sửa chữa, bảo trì)."
       ]
     },
     {
       "id": 40,
-      "question": "Let A be a 3x3 matrix. Choose correct statements: <br> (i) \\( \\det(-A) = -\\det(A) \\) <br> (ii) If A has two equal rows, then \\( \\det(A) = 0 \\) <br> (iii) If \\( \\det(A) = 0 \\), then A has two equal rows.",
+      "question": "What is the method in black-box testing where tests are designed to include representatives of boundary values in a range?",
       "image": null,
       "options": [
-        "A. All of (i), (ii) and (iii)",
-        "B. (ii) and (iii)",
-        "C. (i) and (ii)",
-        "D. (iii)",
-        "E. (i) and (iii)"
+        "A. Boundary-value testing",
+        "B. Random testing",
+        "C. Exhaustive testing",
+        "D. Data flow testing"
       ],
-      "correctAnswer": "C",
-      "explanation": "Để giải siêu tốc, ta cần nhớ các tính chất cơ bản của định thức.<br /><br /><b>1. Kiểm tra (i): \\( \\det(-A) = -\\det(A) \\)</b><br />- <b>Tính chất:</b> \\(\\det(kA) = k^n \\det(A)\\), với n là cấp của ma trận.<br />- Ở đây A là ma trận 3x3 (n=3), k=-1. Vậy \\(\\det(-A) = (-1)^3 \\det(A) = -\\det(A)\\).<br />- → Mệnh đề (i) <b>ĐÚNG</b> (vì n=3 là số lẻ).<br /><br /><b>2. Kiểm tra (ii): Hai hàng bằng nhau \\(\\Rightarrow \\det(A) = 0\\)</b><br />- Đây là một tính chất cơ bản và kinh điển của định thức.<br />- → Mệnh đề (ii) <b>ĐÚNG</b>.<br /><br /><b>3. Kiểm tra (iii): \\(\\det(A) = 0 \\Rightarrow\\) hai hàng bằng nhau</b><br />- <b>Bẫy kinh điển:</b> Đây là mệnh đề đảo của (ii), và nó không đúng.<br />- \\(\\det(A)=0\\) chỉ có nghĩa là các hàng phụ thuộc tuyến tính, không nhất thiết phải có hai hàng bằng nhau.<br />- <b>Phản ví dụ:</b> Một hàng là bội số của hàng khác (ví dụ hàng 2 = 2 * hàng 1) hoặc một hàng là tổng của hai hàng khác. <br />- → Mệnh đề (iii) <b>SAI</b>.<br /><br /><b>Kết luận:</b> (i) và (ii) đúng.",
-      "difficulty": "medium",
-      "topic": "Linear Algebra (Properties of Determinants)",
+      "correctAnswer": "A",
+      "explanation": "Câu hỏi này về một kỹ thuật quan trọng trong kiểm thử phần mềm.<br /><br /><b>1. Kiểm thử hộp đen (Black-box testing):</b><br />Là phương pháp kiểm thử mà không cần biết code bên trong hoạt động như thế nào, chỉ tập trung vào đầu vào và đầu ra. Giống như bạn sử dụng một chiếc TV mà không cần biết mạch điện bên trong.<br /><br /><b>2. Phân tích các kỹ thuật Black-box:</b><br />- <b>Boundary-value testing (Kiểm thử giá trị biên):</b> Đây là kỹ thuật thông minh nhất. Lập trình viên thường mắc lỗi ở các giá trị 'rìa' của một khoảng. Ví dụ, nếu một trường nhập tuổi hợp lệ từ 18 đến 60, kỹ thuật này sẽ tập trung kiểm tra các giá trị như 17, 18, 19 và 59, 60, 61.<br />- <b>Random testing (Kiểm thử ngẫu nhiên):</b> Chọn các giá trị đầu vào một cách ngẫu nhiên.<br />- <b>Exhaustive testing (Kiểm thử toàn diện):</b> Thử tất cả mọi trường hợp đầu vào có thể. Thường là bất khả thi.<br /><br /><b>Kết luận: Phương pháp kiểm thử tập trung vào các giá trị biên được gọi là Boundary-value testing.</b>",
+      "difficulty": "easy",
+      "topic": "Software Engineering (Testing)",
       "hints": [
-        "Mẹo cho (i): Công thức là \\(\\det(kA) = k^n \\det(A)\\). Với n=3 (lẻ), dấu trừ được giữ lại.",
-        "Mẹo cho (ii): Đây là tính chất đúng 'kinh điển' của định thức.",
-        "Mẹo cho (iii): Đây là mệnh đề đảo, một 'bẫy' kinh điển. \\(det(A)=0\\) chỉ suy ra các hàng/cột phụ thuộc tuyến tính, không nhất thiết phải bằng nhau."
+        "Thần chú: Lỗi hay xảy ra ở <b>biên giới (boundary)</b>.",
+        "Nếu một hệ thống cho phép số từ 1-100, hãy kiểm tra các số 0, 1, 2 và 99, 100, 101.",
+        "Đây là kỹ thuật giúp tìm ra nhiều lỗi nhất với ít ca kiểm thử nhất."
       ]
     },
     {
       "id": 41,
-      "question": "Find \\( \\int \\frac{x dx}{(\\cos x)^2} \\). <br> (i) \\( x \\sin x - \\tan x + C \\) <br> (ii) \\( x \\tan x + \\ln|\\cos x| + C \\) <br> (iii) \\( x \\sin x + \\ln|\\cos x| + C \\) <br> (iv) \\( x \\tan x + \\ln(\\cos x) + C \\) <br> (v) \\( x \\tan x + \\ln|\\sec x| + C \\)",
+      "question": "To search for elements, we can use [___] on sorted arrays that can help to decrease time complexity.",
       "image": null,
       "options": [
-        "A. (i)",
-        "B. (v)",
-        "C. (iv)",
-        "D. (ii)",
-        "E. (iii)",
-        "F. None of the other choices is correct"
+        "A. Sequential search",
+        "B. Insertion sort",
+        "C. Selection sort",
+        "D. Binary search"
       ],
       "correctAnswer": "D",
-      "explanation": "Để giải siêu tốc, ta cần nhận ra ngay đây là tích phân từng phần và nhớ kết quả của các tích phân cơ bản.<br /><br /><b>1. Nhận dạng và Đặt (trong đầu):</b><br />- Viết lại tích phân: \\( \\int x \\sec^2 x \\, dx \\).<br />- Theo quy tắc 'Nhất Lô, Nhì Đa, Tam Lượng...', ta ưu tiên đặt \\( u = x \\) (hàm đa thức) và \\( dv = \\sec^2 x \\, dx \\) (hàm lượng giác).<br /><br /><b>2. Áp dụng công thức Từng phần: \\(uv - \\int v du\\)</b><br />- \\( u=x \\Rightarrow du=dx \\)<br />- \\( dv = \\sec^2 x dx \\Rightarrow v = \\tan x \\)<br />- Thay vào công thức: \\( x \\tan x - \\int \\tan x \\, dx \\).<br /><br /><b>3. Nhớ nguyên hàm của tan(x):</b><br />- Nguyên hàm của \\( \\tan x \\) là \\( -\\ln|\\cos x| \\).<br />- Kết quả cuối cùng: \\( x \\tan x - (-\\ln|\\cos x|) + C = x \\tan x + \\ln|\\cos x| + C \\).<br /><br />Điều này tương ứng với lựa chọn (ii).",
-      "difficulty": "medium",
-      "topic": "Calculus (Integration by Parts)",
+      "explanation": "Câu hỏi này về việc lựa chọn thuật toán tìm kiếm hiệu quả.<br /><br /><b>1. Phân tích từ khóa:</b><br />Hai từ khóa quan trọng nhất là '<b>search for elements</b>' (tìm kiếm phần tử) và '<b>on sorted arrays</b>' (trên mảng đã được sắp xếp).<br /><br /><b>2. So sánh các thuật toán tìm kiếm:</b><br />- <b>Sequential Search (Tìm kiếm tuần tự):</b> Duyệt qua mảng từ đầu đến cuối. Nó hoạt động trên cả mảng đã sắp xếp và chưa sắp xếp, nhưng rất chậm với mảng lớn (độ phức tạp \\(O(n)\\)).<br />- <b>Binary Search (Tìm kiếm nhị phân):</b> Là một thuật toán rất hiệu quả, nhưng có một yêu cầu bắt buộc: <b>mảng phải được sắp xếp trước</b>. Nó hoạt động bằng cách liên tục chia đôi khoảng tìm kiếm, giúp giảm đáng kể thời gian (độ phức tạp \\(O(\\log n)\\)).<br /><br /><b>3. Loại trừ:</b><br />- Insertion Sort và Selection Sort là các thuật toán <b>sắp xếp</b>, không phải tìm kiếm.<br /><br /><b>Kết luận: Trên mảng đã sắp xếp, Binary Search là thuật toán tìm kiếm hiệu quả nhất.</b>",
+      "difficulty": "easy",
+      "topic": "Algorithms (Searching)",
       "hints": [
-        "Mẹo nhanh nhất: Nhận dạng ngay đây là tích phân từng phần của \\(x\\sec^2x\\).",
-        "Đặt \\(u=x\\) và \\(dv=\\sec^2x dx\\).",
-        "Phải thuộc lòng: \\( \\int \\tan x \\, dx = -\\ln|\\cos x| \\). Kết hợp với dấu trừ của công thức từng phần sẽ ra dấu cộng."
+        "Thần chú: <b>Sorted Array + Search = Binary Search</b>.",
+        "Binary Search giống như trò chơi đoán số, bạn luôn đoán ở giữa để loại bỏ một nửa các khả năng.",
+        "Sort là sắp xếp, Search là tìm kiếm. Đừng nhầm lẫn!"
       ]
     },
     {
       "id": 42,
-      "question": "Find the parametric equation of the line passing through \\( A(2, -1, 3) \\) and \\( B(1, 0, 1) \\).",
+      "question": "Each element in a record is called [___].",
       "image": null,
       "options": [
-        "A. \\( x = 2+t, y = -1-t, z = 3+2t \\)",
-        "B. \\( x = 2+t, y = -1+t, z = 3+2t \\)",
-        "C. \\( x = 1+t, y = t, z = 1+2t \\)",
-        "D. None of the other choices is correct",
-        "E. \\( x = 1+t, y = t, z = 2t \\)"
+        "A. A variable",
+        "B. An index",
+        "C. A field",
+        "D. A node"
       ],
-      "correctAnswer": "A",
-      "explanation": "Để giải siêu tốc, ta không viết phương trình mà sẽ kiểm tra ngược từ đáp án. Mỗi đáp án cho ta 2 thông tin: một **điểm đi qua** và một **vector chỉ phương**.<br /><br /><b>1. Tính nhẩm vector chỉ phương (VTCP) đúng:</b><br />- \\(\\vec{d} = A - B = (2-1, -1-0, 3-1) = (1, -1, 2)\\).<br /><br /><b>2. Phân tích các đáp án:</b><br />- <b>Đáp án A:</b> \\(x = 2+t, y = -1-t, z = 3+2t\\)<br />  - Điểm đi qua là (2, -1, 3), chính là điểm A. <b>(Đúng)</b><br />  - VTCP (hệ số của t) là (1, -1, 2). <b>(Đúng)</b><br />- → Khớp hoàn toàn. Đây là đáp án đúng.<br /><br />- <b>Đáp án C:</b> \\(x = 1+t, y = t, z = 1+2t\\)<br />  - Điểm đi qua là (1, 0, 1), chính là điểm B. <b>(Đúng)</b><br />  - VTCP là (1, 1, 2). <b>(Sai)</b>, vì VTCP đúng là (1, -1, 2).",
+      "correctAnswer": "C",
+      "explanation": "Câu hỏi này về thuật ngữ cơ bản trong cấu trúc dữ liệu và cơ sở dữ liệu.<br /><br /><b>1. Ví dụ đời thực:</b><br />Hãy tưởng tượng một '<b>Hồ sơ sinh viên</b>'. Đây chính là một <b>Record (Bản ghi)</b>.<br />Hồ sơ này bao gồm các thông tin:<br />- Họ và tên<br />- Mã số sinh viên<br />- Ngày sinh<br />- Điểm trung bình<br />Mỗi một thông tin (Họ và tên, Mã số sinh viên, ...) được gọi là một <b>Field (Trường)</b>.<br /><br /><b>2. Định nghĩa chính thức:</b><br />- <b>Record (Bản ghi):</b> Một tập hợp các dữ liệu có liên quan về một đối tượng cụ thể.<br />- <b>Field (Trường):</b> Một mẩu thông tin đơn lẻ trong một bản ghi.<br /><br /><b>Kết luận: Mỗi phần tử trong một bản ghi được gọi là một Trường (Field).</b>",
       "difficulty": "easy",
-      "topic": "Analytic Geometry (Parametric Equations of a Line)",
+      "topic": "Data Structures (Records and Fields)",
       "hints": [
-        "Mẹo nhanh nhất: Đừng viết phương trình, hãy kiểm tra đáp án.",
-        "Từ mỗi đáp án, rút ra 2 thứ: 'Điểm' (các số hạng không chứa t) và 'Vector chỉ phương' (các hệ số của t).",
-        "Đối chiếu 'Điểm' với A hoặc B, và đối chiếu 'Vector chỉ phương' với A-B hoặc B-A."
+        "Thần chú: <b>Record = Hồ sơ, Field = Mục thông tin trong hồ sơ</b>.",
+        "Ví dụ: Record = SinhVien, Fields = MaSV, HoTen, NgaySinh.",
+        "Đừng nhầm với Node (một phần tử trong cây hoặc danh sách liên kết) hay Index (chỉ số của mảng)."
       ]
     },
     {
       "id": 43,
-      "question": "Determine where the function is increasing and where it is decreasing: \\( f(x) = \\frac{5x}{x^2+1} \\) <br> (i) Decreasing on \\( (-\\infty, -1) \\) and \\( (1, \\infty) \\), Increasing on \\( (-1, 1) \\) <br> (ii) Increasing on \\( (-\\infty, -1) \\) and \\( (1, \\infty) \\), Decreasing on \\( (-1, 1) \\) <br> (iii) Increasing on \\( (-\\infty, 0) \\), Decreasing on \\( (0, \\infty) \\) <br> (iv) Decreasing on \\( (-\\infty, -1) \\), Increasing on \\( (-1, \\infty) \\)",
+      "question": "The name of a linked list is the name of the head pointer that points to the [___] of the list.",
       "image": null,
       "options": [
-        "A. (i)",
-        "B. None of the other choices is correct",
-        "C. (iv)",
-        "D. (iii)",
-        "E. (ii)"
+        "A. First node",
+        "B. Second node",
+        "C. Null node",
+        "D. Last node"
       ],
       "correctAnswer": "A",
-      "explanation": "Để giải siêu tốc, ta chỉ cần xét dấu của đạo hàm \\(f'(x)\\).<br /><br /><b>1. Tính đạo hàm (dùng quy tắc thương):</b><br />\\( f'(x) = \\frac{(5)(x^2+1) - (5x)(2x)}{(x^2+1)^2} = \\frac{5x^2+5 - 10x^2}{(x^2+1)^2} = \\frac{5(1-x^2)}{(x^2+1)^2} \\).<br /><br /><b>2. Phân tích dấu (Mẹo siêu nhanh):</b><br />- Mẫu số \\((x^2+1)^2\\) luôn dương, nên ta có thể bỏ qua nó.<br />- Dấu của \\(f'(x)\\) phụ thuộc hoàn toàn vào tử số: \\(1 - x^2\\).<br />- Đây là một tam thức bậc hai có hệ số a âm (parabol quay xuống), nên nó sẽ có giá trị dương ở 'trong khoảng hai nghiệm' và âm ở 'ngoài khoảng hai nghiệm'.<br /><br /><b>3. Tìm nghiệm và kết luận:</b><br />- Nghiệm của \\(1-x^2=0\\) là \\(x=-1\\) và \\(x=1\\).<br />- <b>Trong khoảng (-1, 1):</b> \\(f'(x) > 0 \\Rightarrow\\) hàm số đồng biến (tăng).<br />- <b>Ngoài khoảng (-1, 1):</b> \\(f'(x) < 0 \\Rightarrow\\) hàm số nghịch biến (giảm).<br /><br />Kết quả này khớp với lựa chọn (i).",
-      "difficulty": "medium",
-      "topic": "Calculus (Increasing/Decreasing Functions, First Derivative Test)",
+      "explanation": "Câu hỏi này về cách hoạt động của cấu trúc dữ liệu Danh sách liên kết (Linked List).<br /><br /><b>1. Cấu trúc của Linked List:</b><br />Danh sách liên kết không lưu trữ các phần tử (nodes) liền kề nhau trong bộ nhớ như mảng. Thay vào đó, mỗi node chứa dữ liệu và một con trỏ (pointer) chỉ đến node tiếp theo.<br /><br /><b>2. Vai trò của Head Pointer:</b><br />Vì các node nằm rải rác, làm thế nào để hệ thống biết danh sách bắt đầu từ đâu? Câu trả lời là dùng một con trỏ đặc biệt gọi là <b>Head Pointer (Con trỏ đầu)</b>. Con trỏ này không phải là một phần của danh sách, nó chỉ đơn giản là một biến lưu giữ địa chỉ của <b>node đầu tiên (first node)</b>.<br /><br /><b>Ví dụ đời thực:</b> Head pointer giống như địa chỉ nhà của người bạn đầu tiên trong một chuỗi bạn bè. Từ người đó, bạn mới có thể hỏi đường đến nhà người tiếp theo.<br /><br /><b>Kết luận: Head pointer trỏ đến node đầu tiên của danh sách.</b>",
+      "difficulty": "easy",
+      "topic": "Data Structures (Linked List)",
       "hints": [
-        "Mẹo nhanh nhất: Dấu của đạo hàm chỉ phụ thuộc vào tử số \\(5(1-x^2)\\).",
-        "Tử số là một parabol quay xuống, nên nó sẽ dương ở giữa hai nghiệm (-1 và 1) và âm ở bên ngoài.",
-        "Trong khoảng nghiệm (-1, 1) là đồng biến. Ngoài khoảng là nghịch biến."
+        "Thần chú: <b>Head = First Node</b> (Đầu thì trỏ đến cái đầu tiên).",
+        "Mất Head Pointer là mất cả danh sách liên kết, vì không biết bắt đầu từ đâu.",
+        "Node cuối cùng sẽ trỏ đến NULL, không phải Head."
       ]
     },
     {
       "id": 44,
-      "question": "Given the function \\( f(x) = -\\frac{1}{(x-1)^2} \\). Which of the following statements is TRUE?",
+      "question": "A stack is a [___] structure.",
       "image": null,
       "options": [
-        "A. The function is continuous for all real values of x.",
-        "B. The function is discontinuous at x = 1.",
-        "C. The function is discontinuous for all x < 1.",
-        "D. The function is discontinuous at x = -1 and at x = -1."
+        "A. FIFO",
+        "B. LIFO",
+        "C. DIFO",
+        "D. SIFO"
       ],
       "correctAnswer": "B",
-      "explanation": "Để giải siêu tốc, ta chỉ cần tìm điểm làm cho mẫu số bằng 0.<br /><br /><b>1. Nhìn vào mẫu số:</b><br />- Mẫu số là \\((x-1)^2\\).<br /><br /><b>2. Tìm nghiệm của mẫu:</b><br />- \\( (x-1)^2 = 0 \\Rightarrow x - 1 = 0 \\Rightarrow x = 1 \\).<br /><br /><b>Kết luận:</b><br />Hàm số bị gián đoạn (không xác định) duy nhất tại điểm làm cho mẫu bằng 0, đó chính là \\(x=1\\).",
+      "explanation": "Đây là câu hỏi định nghĩa kinh điển về cấu trúc dữ liệu Stack (Ngăn xếp).<br /><br /><b>1. Nguyên tắc hoạt động của Stack:</b><br />Stack hoạt động theo nguyên tắc <b>LIFO (Last-In, First-Out)</b>, có nghĩa là '<b>Vào sau, Ra trước</b>'.<br /><br /><b>2. Ví dụ đời thực dễ nhớ:</b><br />- <b>Chồng đĩa:</b> Cái đĩa bạn đặt lên trên cùng (vào sau cùng) sẽ là cái đĩa bạn lấy ra đầu tiên (ra trước tiên).<br />- <b>Nút Back trên trình duyệt:</b> Trang web bạn vừa truy cập (vào stack sau cùng) sẽ là trang đầu tiên bạn quay lại khi nhấn nút Back (ra khỏi stack đầu tiên).<br /><br /><b>3. Phân biệt với Queue:</b><br />- Cấu trúc đối lập là <b>Queue (Hàng đợi)</b>, hoạt động theo nguyên tắc <b>FIFO (First-In, First-Out)</b> - 'Vào trước, Ra trước', giống như xếp hàng mua vé.<br /><br /><b>Kết luận: Stack là một cấu trúc LIFO.</b>",
       "difficulty": "easy",
-      "topic": "Calculus (Continuity)",
+      "topic": "Data Structures (Stack)",
       "hints": [
-        "Mẹo nhanh nhất: Một hàm phân thức chỉ bị gián đoạn tại nơi mẫu số bằng 0.",
-        "Chỉ cần giải phương trình: `mẫu số = 0`."
+        "Câu thần chú: <b>Stack = LIFO (Last-In, First-Out)</b>. Nhớ đến 'chồng đĩa'.",
+        "Câu thần chú đối lập: <b>Queue = FIFO (First-In, First-Out)</b>. Nhớ đến 'xếp hàng'.",
+        "DIFO và SIFO không phải là các nguyên tắc tiêu chuẩn."
       ]
     },
     {
       "id": 45,
-      "question": "Express the area under the graph of \\( f(x) = x^2 - 1 \\), from 0 to 4, as a limit. <br> (i) \\( \\lim_{n \\to \\infty} \\sum_{i=1}^{n} \\frac{4}{n} (1 + \\frac{64i^2}{n^2}) \\) <br> (ii) \\( \\lim_{n \\to \\infty} \\sum_{i=1}^{n} \\frac{4}{n} (\\frac{4i^2}{n^2} - 1) \\) <br> (iii) \\( \\lim_{n \\to \\infty} \\sum_{i=1}^{n} \\frac{4}{n} (1 + \\frac{4i}{n}) \\) <br> (iv) \\( \\lim_{n \\to \\infty} \\sum_{i=1}^{n} \\frac{4}{n} (\\frac{16i^2}{n^2} - 1) \\)",
+      "question": "A binary search tree (BST) is a binary tree with one extra property: the key value of root is [___] values of all nodes in each left subtree.",
       "image": null,
       "options": [
-        "A. (ii)",
-        "B. (i)",
-        "C. (iv)",
-        "D. None of the other choices is correct.",
-        "E. (iii)"
+        "A. Greater than",
+        "B. Less than",
+        "C. Equal",
+        "D. Smaller than"
       ],
-      "correctAnswer": "C",
-      "explanation": "Để giải siêu tốc, ta lắp ráp nhanh các thành phần của công thức tổng Riemann:<br />\\[ \\lim_{n \\to \\infty} \\sum_{i=1}^{n} f(x_i) \\Delta x \\]<br /><br /><b>1. Tính các thành phần cơ bản (nhẩm nhanh):</b><br />- <b>Chiều rộng \\(\\Delta x\\):</b> \\( \\frac{4-0}{n} = \\frac{4}{n} \\).<br />  <i>(Nhìn vào đây, ta thấy mọi đáp án đều có \\(\\frac{4}{n}\\) ở ngoài, không loại được gì).</i><br />- <b>Điểm mút phải \\(x_i\\):</b> \\( a + i \\Delta x = 0 + i \\frac{4}{n} = \\frac{4i}{n} \\).<br /><br /><b>2. Tính giá trị hàm số \\(f(x_i)\\):</b><br />- Chỉ cần thế \\(x_i\\) vào hàm \\(f(x) = x^2 - 1\\):<br />\\( f(x_i) = (\\frac{4i}{n})^2 - 1 = \\frac{16i^2}{n^2} - 1 \\).<br /><br /><b>3. Lắp ráp và kết luận:</b><br />Kết hợp lại, ta có biểu thức: \\( \\lim_{n \\to \\infty} \\sum_{i=1}^{n} (\\frac{16i^2}{n^2} - 1) \\frac{4}{n} \\).<br />Điều này tương ứng với lựa chọn (iv).",
+      "correctAnswer": "A",
+      "explanation": "Câu hỏi này về thuộc tính cốt lõi của Cây tìm kiếm nhị phân (Binary Search Tree - BST).<br /><br /><b>1. Định nghĩa của BST:</b><br />Một cây nhị phân được gọi là BST nếu nó thỏa mãn đồng thời hai điều kiện sau tại <b>mọi nút</b> trong cây:<br />1. Tất cả các giá trị trong <b>cây con trái</b> đều <b>nhỏ hơn</b> giá trị của nút đó.<br />2. Tất cả các giá trị trong <b>cây con phải</b> đều <b>lớn hơn</b> giá trị của nút đó.<br /><br /><b>2. Phân tích câu hỏi:</b><br />Câu hỏi đang hỏi về mối quan hệ giữa 'giá trị của nút gốc' và 'các giá trị trong cây con trái'. Theo định nghĩa trên, giá trị của nút gốc phải <b>lớn hơn (greater than)</b> tất cả các giá trị trong cây con trái của nó.<br /><br /><b>Ví dụ:</b> Nếu gốc là 50, mọi nút bên trái phải < 50 và mọi nút bên phải phải > 50.<br /><br /><b>Kết luận: Giá trị của nút gốc lớn hơn tất cả các giá trị trong cây con trái.</b>",
       "difficulty": "medium",
-      "topic": "Calculus (Definite Integrals as Limits of Riemann Sums)",
+      "topic": "Data Structures (Binary Search Tree)",
       "hints": [
-        "Mẹo nhanh nhất: Công thức là \\(\\lim \\sum f(x_i) \\Delta x\\).",
-        "Bước 1: Tìm \\(\\Delta x = (b-a)/n = 4/n\\).",
-        "Bước 2: Tìm \\(x_i = a + i\\Delta x = 4i/n\\).",
-        "Bước 3: Thế \\(x_i\\) vào hàm \\(f(x)\\). Bạn sẽ có ngay \\((\\frac{16i^2}{n^2} - 1)\\). Kết hợp với \\(\\Delta x\\) là ra đáp án."
+        "Thần chú: <b>BST = (Trái < Gốc < Phải)</b>.",
+        "Tất cả những gì 'bé hơn' thì đi sang trái, tất cả những gì 'lớn hơn' thì đi sang phải.",
+        "Câu hỏi đang so sánh Gốc với Trái, vậy Gốc phải LỚN HƠN."
       ]
     },
     {
       "id": 46,
-      "question": "Find all numbers \\(a\\) such that the set of vectors \\( \\{(1, -1, 0), (2, 0, 1), (0, 1, a)\\} \\) is dependent.",
+      "question": "A(n) [___] list is also known as a queue.",
       "image": null,
       "options": [
-        "A. 1/3",
-        "B. 1/2",
-        "C. All numbers but 1/2",
-        "D. All numbers but 1/3",
-        "E. None of the other choices is correct"
+        "A. LIFO",
+        "B. FIFO",
+        "C. Unordered",
+        "D. Ordered"
       ],
       "correctAnswer": "B",
-      "explanation": "Để giải siêu tốc, ta dùng quy tắc: 3 vector trong \\(\\mathbb{R}^3\\) phụ thuộc tuyến tính khi và chỉ khi định thức của ma trận tạo bởi chúng bằng 0.<br /><br /><b>1. Tính định thức (nhanh nhất bằng cách khai triển theo hàng 1 vì có số 0):</b><br />\\( \\det(M) = \\begin{vmatrix} 1 & -1 & 0 \\\\ 2 & 0 & 1 \\\\ 0 & 1 & a \\end{vmatrix} \\)<br />\\( = 1 \\cdot (0 - 1) - (-1) \\cdot (2a - 0) + 0 \\)<br />\\( = -1 + 2a \\).<br /><br /><b>2. Cho định thức bằng 0 và giải:</b><br />\\( -1 + 2a = 0 \\Rightarrow 2a = 1 \\Rightarrow a = 1/2 \\).",
-      "difficulty": "medium",
-      "topic": "Linear Algebra (Linear Dependence)",
+      "explanation": "Đây là câu hỏi định nghĩa khác về cấu trúc dữ liệu Queue (Hàng đợi).<br /><br /><b>1. Nguyên tắc hoạt động của Queue:</b><br />Queue hoạt động theo nguyên tắc <b>FIFO (First-In, First-Out)</b>, có nghĩa là '<b>Vào trước, Ra trước</b>'.<br /><br /><b>2. Ví dụ đời thực dễ nhớ:</b><br />- <b>Xếp hàng ở siêu thị:</b> Người đến trước được thanh toán trước.<br />- <b>Hàng đợi in ấn:</b> Tài liệu bạn gửi lệnh in đầu tiên sẽ được máy in in ra trước tiên.<br /><br /><b>3. Kết luận:</b><br />Vì Queue tuân theo nguyên tắc FIFO, một danh sách FIFO (FIFO list) chính là một tên gọi khác của Queue.<br /><br /><b>Kết luận: Một danh sách FIFO được gọi là Queue.</b>",
+      "difficulty": "easy",
+      "topic": "Data Structures (Queue)",
       "hints": [
-        "Mẹo nhanh nhất: Các vector 'phụ thuộc' khi định thức của ma trận tạo bởi chúng bằng 0.",
-        "Đặt các vector vào ma trận và tính định thức.",
-        "Khai triển định thức theo hàng hoặc cột có nhiều số 0 nhất để tính toán tối giản."
+        "Câu thần chú: <b>Queue = FIFO (First-In, First-Out)</b>. Nhớ đến 'xếp hàng'.",
+        "Câu thần chú đối lập: <b>Stack = LIFO (Last-In, First-Out)</b>. Nhớ đến 'chồng đĩa'.",
+        "Hãy liên kết Queue với hình ảnh một hàng người đang chờ đợi."
       ]
     },
     {
       "id": 47,
-      "question": "A ball is thrown upward such that its height (in meters) after \\(t\\) seconds takes the form \\( h(t) = 1 + 25t + at^2 \\). Assume that the velocity of the ball at time \\( t = 2 \\)s is 5 m/s. Find \\(a\\).",
+      "question": "If personal information about each employee in a company is stored in a file, we can use [___] to retrieve each record at the end of the month to print the paychecks.",
       "image": null,
       "options": [
-        "A. (See picture)",
-        "B. -10",
-        "C. -5",
-        "D. 5",
-        "E. 10"
+        "A. Hashed file",
+        "B. Sequential file",
+        "C. EOF",
+        "D. Index file"
       ],
-      "correctAnswer": "C",
-      "explanation": "Để giải siêu tốc, ta thực hiện đạo hàm và giải phương trình trong vài bước ngắn gọn.<br /><br /><b>1. Tìm hàm vận tốc (đạo hàm nhẩm):</b><br />- Vận tốc \\(v(t)\\) là đạo hàm của quãng đường \\(h(t)\\).<br />\\( v(t) = h'(t) = 25 + 2at \\).<br /><br /><b>2. Thiết lập phương trình từ dữ kiện:</b><br />- Đề bài cho biết tại \\(t=2\\), vận tốc \\(v(2)=5\\).<br />- Thế \\(t=2\\) vào hàm vận tốc: \\( v(2) = 25 + 2a(2) = 25 + 4a \\).<br /><br /><b>3. Giải phương trình tìm a:</b><br />\\( 25 + 4a = 5 \\)<br />\\( 4a = 5 - 25 = -20 \\)<br />\\( a = -5 \\).",
-      "difficulty": "easy",
-      "topic": "Calculus (Derivatives, Kinematics)",
+      "correctAnswer": "B",
+      "explanation": "Câu hỏi này về cách lựa chọn loại file phù hợp cho một tác vụ cụ thể.<br /><br /><b>1. Phân tích tác vụ:</b><br />Tác vụ là '<b>retrieve each record at the end of the month to print the paychecks</b>' (lấy từng bản ghi vào cuối tháng để in phiếu lương). Điều này có nghĩa là chúng ta cần xử lý <b>toàn bộ nhân viên, lần lượt từ người đầu tiên đến người cuối cùng</b>. Đây là một tác vụ xử lý hàng loạt, tuần tự.<br /><br /><b>2. So sánh các loại file:</b><br />- <b>Sequential file (File tuần tự):</b> Dữ liệu được lưu trữ và truy cập theo đúng thứ tự của nó, từ đầu đến cuối. Đây là lựa chọn hoàn hảo cho các tác vụ xử lý hàng loạt như tính lương cho tất cả nhân viên.<br />- <b>Indexed file (File chỉ mục) & Hashed file (File băm):</b> Đây là các file truy cập trực tiếp/ngẫu nhiên. Chúng rất hiệu quả khi bạn muốn tìm <b>một nhân viên cụ thể</b> một cách nhanh chóng (ví dụ: truy vấn thông tin của nhân viên có mã 123). Tuy nhiên, chúng không hiệu quả bằng file tuần tự cho việc xử lý toàn bộ file.<br /><br /><b>Kết luận: Đối với việc xử lý tất cả các bản ghi theo thứ tự, Sequential file là phù hợp nhất.</b>",
+      "difficulty": "medium",
+      "topic": "File Systems (File Types)",
       "hints": [
-        "Mẹo nhanh nhất: Vận tốc là đạo hàm của quãng đường.",
-        "Lấy đạo hàm của `h(t)` để có `v(t)`, sau đó thế `t=2` và cho `v(2)=5`.",
-        "Phương trình cuối cùng bạn cần giải là `25 + 4a = 5`."
+        "Thần chú: Xử lý <b>TẤT CẢ</b> bản ghi lần lượt -> Dùng <b>Sequential File</b>.",
+        "Thần chú: Tìm kiếm <b>MỘT</b> bản ghi cụ thể -> Dùng <b>Indexed/Hashed File</b>.",
+        "In phiếu lương cho cả công ty là một tác vụ xử lý hàng loạt điển hình."
       ]
     },
     {
       "id": 48,
-      "question": "Use Newton's method with the specified initial approximation \\(x_0\\) to find \\(x_2\\), the third approximation to the root of the given equation. \\( x^3 - 3x + 1 = 0, x_0 = 0 \\) (Give your answer to 4 decimal places)",
+      "question": "If the transaction file key is 20 and the first master file key is 25, then we [___].",
       "image": null,
       "options": [
-        "A. (See picture)",
-        "B. 1.2472",
-        "C. 0.6528",
-        "D. 0.3472",
-        "E. 0.6667",
-        "F. 0.3133"
+        "A. Add the new record to the new master file",
+        "B. Revise the contents of the old master file",
+        "C. Delete the data",
+        "D. Write the old master file record to the new master file"
       ],
-      "correctAnswer": "D",
-      "explanation": "Để giải siêu tốc, ta cần áp dụng công thức 2 lần một cách máy móc và nhanh gọn.<br /><br /><b>1. Chuẩn bị (nhẩm nhanh):</b><br />- \\( f(x) = x^3 - 3x + 1 \\)<br />- \\( f'(x) = 3x^2 - 3 \\)<br /><br /><b>2. Vòng lặp 1 (Tìm x₁):</b><br />- Với \\(x_0 = 0\\), ta có \\(f(0)=1\\) và \\(f'(0)=-3\\).<br />- \\( x_1 = x_0 - \\frac{f(x_0)}{f'(x_0)} = 0 - \\frac{1}{-3} = \\frac{1}{3} \\).<br /><br /><b>3. Vòng lặp 2 (Tìm x₂):</b><br />- Với \\(x_1 = 1/3\\), ta có:<br />  \\( f(1/3) = (1/3)^3 - 1 + 1 = 1/27 \\).<br />  \\( f'(1/3) = 3(1/3)^2 - 3 = 1/3 - 3 = -8/3 \\).<br />- \\( x_2 = \\frac{1}{3} - \\frac{1/27}{-8/3} = \\frac{1}{3} + \\frac{1}{27} \\cdot \\frac{3}{8} = \\frac{1}{3} + \\frac{1}{72} = \\frac{24+1}{72} = \\frac{25}{72} \\).<br /><br /><b>4. Chuyển sang số thập phân:</b><br />\\( \\frac{25}{72} \\approx 0.3472 \\).",
-      "difficulty": "medium",
-      "topic": "Numerical Methods (Newton's Method)",
+      "correctAnswer": "A",
+      "explanation": "Đây là một câu hỏi kinh điển về thuật toán cập nhật file tuần tự (sequential file update).<br /><br /><b>1. Bối cảnh thuật toán:</b><br />Ta có một file chính (Master file) và một file giao dịch (Transaction file), cả hai đều đã được sắp xếp theo khóa (key). Thuật toán sẽ tạo ra một file chính mới (New Master file) đã được cập nhật.<br /><br /><b>2. Logic so sánh khóa:</b><br />Tại mỗi bước, ta so sánh khóa của bản ghi hiện tại từ file giao dịch (Transaction Key - TK) và file chính (Master Key - MK).<br />- <b>Nếu TK < MK:</b> Điều này có nghĩa là bản ghi trong file giao dịch là một bản ghi mới, không có trong file chính cũ. Do đó, ta phải <b>thêm (add) bản ghi giao dịch này vào file chính mới</b> và đọc bản ghi tiếp theo từ file giao dịch.<br />- <b>Nếu TK > MK:</b> Bản ghi trong file chính không có giao dịch nào. Ta chỉ cần <b>chép (write) nó sang file chính mới</b> và đọc bản ghi tiếp theo từ file chính cũ.<br />- <b>Nếu TK = MK:</b> Có một giao dịch cho bản ghi này. Ta sẽ <b>sửa đổi (modify) hoặc xóa (delete)</b> bản ghi rồi ghi vào file chính mới.<br /><br /><b>3. Áp dụng vào bài toán:</b><br />Ở đây, TK (20) < MK (25). Theo logic trên, đây là một bản ghi mới. Ta phải thêm nó vào file chính mới.<br /><br /><b>Kết luận: Thêm bản ghi mới vào file chính mới.</b>",
+      "difficulty": "hard",
+      "topic": "File Systems (Sequential File Update)",
       "hints": [
-        "Mẹo nhanh nhất: Thuộc lòng công thức \\(x_{n+1} = x_n - f(x_n)/f'(x_n)\\) và thực hiện tuần tự.",
-        "Vòng lặp đầu tiên thường rất đơn giản để tính (với x=0).",
-        "Cẩn thận khi chia phân số ở vòng lặp thứ hai."
+        "Thần chú: <b>Transaction Key < Master Key => Add new record</b> (Khóa giao dịch nhỏ hơn, nghĩa là nó là bản ghi mới cần được chèn vào).",
+        "Nhớ rằng thuật toán này tạo ra một file master MỚI, không sửa trực tiếp file cũ.",
+        "TK > MK => Copy bản ghi master cũ. TK = MK => Update/Delete bản ghi master."
       ]
     },
     {
       "id": 49,
-      "question": "Let A be a 30x70 matrix having rank A = 20. Find dim(Col(A)), dim(Row(A)) and dim(Null(A)).",
+      "question": "The [___] is the highest level in the file system hierarchy. This does not have a parent directory.",
       "image": null,
       "options": [
-        "A. 70, 30, 20",
-        "B. 20, 20, 40",
-        "C. 20, 20, 50",
-        "D. None of the other choices is correct"
+        "A. Root directory",
+        "B. Home directory",
+        "C. Working directory",
+        "D. Parent directory"
       ],
-      "correctAnswer": "C",
-      "explanation": "Để giải siêu tốc, ta áp dụng 3 quy tắc cơ bản và nhanh chóng.<br /><br /><b>1. Số chiều không gian cột và hàng:</b><br />- Cả hai đều bằng hạng của ma trận.<br />- \\( \\text{dim(Col(A))} = \\text{dim(Row(A))} = \\text{rank}(A) = 20 \\).<br /><br /><b>2. Số chiều không gian Null (hạt nhân):</b><br />- Áp dụng Định lý Hạng-Số chiều: \\( \\text{rank}(A) + \\text{dim(Null(A))} = \\text{số cột} \\).<br />- \\( 20 + \\text{dim(Null(A))} = 70 \\).<br />- \\( \\text{dim(Null(A))} = 70 - 20 = 50 \\).<br /><br /><b>Kết quả:</b> Các số chiều lần lượt là (20, 20, 50).",
+      "correctAnswer": "A",
+      "explanation": "Câu hỏi này về cấu trúc cây thư mục trong hệ điều hành.<br /><br /><b>1. Cấu trúc cây (Hierarchy):</b><br />Hệ thống tệp tin được tổ chức như một cây lộn ngược. Điểm bắt đầu của cây, cấp cao nhất, được gọi là thư mục gốc.<br /><br /><b>2. Định nghĩa các loại thư mục:</b><br />- <b>Root directory (Thư mục gốc):</b> Là đỉnh của cây thư mục, là 'tổ tiên' của tất cả các tệp và thư mục khác. Nó <b>không có thư mục cha (parent directory)</b>. Trong Unix/Linux, nó được ký hiệu là `/`. Trong Windows, mỗi ổ đĩa có một thư mục gốc riêng (ví dụ: `C:\\`).<br />- <b>Home directory (Thư mục nhà):</b> Thư mục mặc định cho mỗi người dùng.<br />- <b>Working directory (Thư mục làm việc hiện tại):</b> Thư mục mà bạn đang ở đó trong cửa sổ dòng lệnh.<br />- <b>Parent directory (Thư mục cha):</b> Thư mục chứa thư mục hiện tại.<br /><br /><b>Kết luận: Cấp cao nhất và không có thư mục cha là Root directory.</b>",
       "difficulty": "easy",
-      "topic": "Linear Algebra (Rank-Nullity Theorem, Fundamental Subspaces)",
+      "topic": "Operating Systems (File System)",
       "hints": [
-        "Mẹo nhanh nhất: Nhớ 3 quy tắc vàng.",
-        "1. dim(Cột) = Hạng = 20.",
-        "2. dim(Hàng) = Hạng = 20.",
-        "3. dim(Null) = (Số cột) - Hạng = 70 - 20 = 50."
+        "Thần chú: <b>Root = Gốc rễ</b>, là điểm bắt đầu của mọi thứ.",
+        "Thư mục gốc là thư mục duy nhất không có thư mục cha (không có '..').",
+        "Trên Linux/macOS, đó là dấu `/`. Trên Windows, đó là `C:\\`, `D:\\`."
       ]
     },
     {
       "id": 50,
-      "question": "Given that -3 is an eigenvalue for the matrix \\( \\begin{bmatrix} 3 & -6 <br/> 8 & -11 \\end{bmatrix} \\). Find all eigenvectors corresponding to this eigenvalue \\( \\lambda = -3 \\).",
+      "question": "A [___] is a collection of related logically coherent data used by the application programs in an organization.",
       "image": null,
       "options": [
-        "A. (See picture)",
-        "B. None of the other choices is correct",
-        "C. \\( t(1, 1) \\), t is nonzero",
-        "D. \\( t(2, 1) \\), t is nonzero",
-        "E. \\( t(1, -1) \\), t is nonzero"
+        "A. Database",
+        "B. File",
+        "C. Directory",
+        "D. Flat-file"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Đây là câu hỏi định nghĩa về khái niệm Cơ sở dữ liệu (CSDL).<br /><br /><b>1. Phân tích định nghĩa:</b><br />Câu hỏi mô tả một '<b>collection of related logically coherent data</b>' (tập hợp dữ liệu có liên quan, nhất quán về mặt logic). Đây là đặc điểm cốt lõi của một CSDL, nơi dữ liệu không chỉ được lưu trữ mà còn được tổ chức và có mối quan hệ với nhau.<br /><br /><b>2. So sánh với các khái niệm khác:</b><br />- <b>File / Flat-file (Tệp / Tệp phẳng):</b> Là một tập hợp dữ liệu, nhưng thường không có cấu trúc quan hệ phức tạp bên trong. Các file thường độc lập với nhau, dẫn đến dư thừa và không nhất quán. Ví dụ: một file Excel.<br />- <b>Database (Cơ sở dữ liệu):</b> Là một bước tiến hóa từ file. Nó được quản lý bởi một Hệ quản trị CSDL (DBMS), đảm bảo tính toàn vẹn, bảo mật, và giảm thiểu dư thừa dữ liệu. Dữ liệu trong CSDL có cấu trúc và liên quan chặt chẽ với nhau.<br />- <b>Directory (Thư mục):</b> Chỉ là một công cụ để tổ chức các tệp, không phải để chứa dữ liệu có cấu trúc.<br /><br /><b>Kết luận: Định nghĩa này mô tả chính xác một Cơ sở dữ liệu (Database).</b>",
+      "difficulty": "easy",
+      "topic": "Database Concepts (Definition)",
+      "hints": [
+        "Thần chú: <b>Database = Dữ liệu có cấu trúc + có liên quan</b>.",
+        "Từ khóa 'logically coherent' (nhất quán logic) và 'related' (có liên quan) là dấu hiệu của một Database.",
+        "Hãy nghĩ đến sự khác biệt giữa một loạt file Excel rời rạc (Files) và một hệ thống quản lý bán hàng tích hợp (Database)."
+      ]
+    },
+    {
+      "id": 51,
+      "question": "In the relational database model, data is organized in [___] called relations.",
+      "image": null,
+      "options": [
+        "A. Two-dimensional array",
+        "B. Two-dimensional tables",
+        "C. Two-dimensional record"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Đây là câu hỏi định nghĩa cốt lõi của mô hình cơ sở dữ liệu quan hệ.<br /><br /><b>1. Mô hình Quan hệ (Relational Model):</b><br />Mô hình này, được đề xuất bởi E.F. Codd, là nền tảng cho hầu hết các hệ quản trị CSDL hiện đại (như MySQL, SQL Server, Oracle).<br />Ý tưởng chính là tổ chức tất cả dữ liệu dưới dạng các <b>bảng hai chiều (two-dimensional tables)</b>.<br /><br /><b>2. Thuật ngữ:</b><br />- Trong lý thuyết, mỗi bảng này được gọi là một <b>Relation (Quan hệ)</b>.<br />- Mỗi hàng trong bảng được gọi là một <b>Tuple (Bộ)</b>.<br />- Mỗi cột trong bảng được gọi là một <b>Attribute (Thuộc tính)</b>.<br /><br /><b>Kết luận: Trong mô hình quan hệ, dữ liệu được tổ chức trong các bảng hai chiều.</b>",
+      "difficulty": "easy",
+      "topic": "Database Concepts (Relational Model)",
+      "hints": [
+        "Thần chú: <b>Relational Database = Bảng (Table)</b>.",
+        "Hãy hình dung một CSDL quan hệ như một tập hợp các file Excel, mỗi file là một bảng.",
+        "Bảng = Quan hệ, Hàng = Bộ, Cột = Thuộc tính."
+      ]
+    },
+    {
+      "id": 52,
+      "question": "[___] is needed to ... remove anomalies in insertion, deletion, and updating, and reduce the need for restructuring the database as new data types are added.",
+      "image": null,
+      "options": [
+        "A. Relational database",
+        "B. Database system",
+        "C. Atomic operations",
+        "D. Normalization"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Câu hỏi này mô tả mục đích và lợi ích của một quy trình quan trọng trong thiết kế CSDL.<br /><br /><b>1. Vấn đề cần giải quyết:</b><br />Khi thiết kế các bảng trong CSDL một cách tùy tiện, ta thường gặp phải các '<b>anomalies</b>' (dị thường/bất thường):<br />- <b>Insertion Anomaly:</b> Không thể thêm một dữ liệu mới nếu thiếu một dữ liệu khác.<br />- <b>Deletion Anomaly:</b> Xóa một dữ liệu này làm mất luôn một dữ liệu không liên quan.<br />- <b>Update Anomaly:</b> Phải cập nhật cùng một thông tin ở nhiều nơi, dễ gây ra không nhất quán.<br /><br /><b>2. Giải pháp:</b><br /><b>Normalization (Chuẩn hóa)</b> là một quy trình có hệ thống, bao gồm các quy tắc (các dạng chuẩn 1NF, 2NF, 3NF...) để tách các bảng lớn thành các bảng nhỏ hơn, có cấu trúc tốt hơn. Mục tiêu của nó chính là để <b>loại bỏ các anomalies</b> và giảm dư thừa dữ liệu.<br /><br /><b>Kết luận: Quá trình giúp loại bỏ các dị thường khi thêm/xóa/sửa được gọi là Normalization.</b>",
+      "difficulty": "medium",
+      "topic": "Database Concepts (Normalization)",
+      "hints": [
+        "Thần chú: <b>Normalization = Loại bỏ Dị thường (Anomalies) + Giảm dư thừa</b>.",
+        "Hãy liên kết các từ khóa 'anomalies', 'insertion', 'deletion', 'updating' với Normalization.",
+        "Chuẩn hóa giúp cho CSDL trở nên 'sạch sẽ' và 'vững chắc' hơn."
+      ]
+    },
+    {
+      "id": 53,
+      "question": "The [___] operation always results in a relation that has exactly one more row than the original.",
+      "image": null,
+      "options": [
+        "A. Insert",
+        "B. Delete",
+        "C. Update",
+        "D. Select"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Câu hỏi này về các thao tác cơ bản trên dữ liệu trong CSDL quan hệ.<br /><br /><b>1. Phân tích các thao tác:</b><br />- <b>INSERT (Chèn):</b> Thêm <b>một hàng (row) mới</b> vào một bảng. Điều này làm cho số lượng hàng trong bảng tăng lên chính xác là 1.<br />- <b>DELETE (Xóa):</b> Xóa một hoặc nhiều hàng khỏi một bảng. Số lượng hàng sẽ giảm đi.<br />- <b>UPDATE (Cập nhật):</b> Thay đổi dữ liệu trong các cột của một hoặc nhiều hàng đã tồn tại. Số lượng hàng không thay đổi.<br />- <b>SELECT (Truy vấn):</b> Lấy ra các hàng từ một bảng. Nó không làm thay đổi dữ liệu gốc.<br /><br /><b>2. Từ khóa nhận diện:</b><br />'<b>exactly one more row</b>' (thêm chính xác một hàng) là kết quả duy nhất của một thao tác <b>INSERT</b> một bản ghi.<br /><br /><b>Kết luận: Thao tác Insert làm tăng số hàng của bảng lên 1.</b>",
+      "difficulty": "easy",
+      "topic": "Database Concepts (SQL Operations)",
+      "hints": [
+        "<b>INSERT</b> -> Thêm hàng -> Số hàng tăng.",
+        "<b>DELETE</b> -> Xóa hàng -> Số hàng giảm.",
+        "<b>UPDATE</b> -> Sửa hàng -> Số hàng không đổi.",
+        "<b>SELECT</b> -> Đọc hàng -> Số hàng không đổi."
+      ]
+    },
+    {
+      "id": 54,
+      "question": "[___] is the process by which a given set of relations are transformed to a new set of relations with a more solid structure.",
+      "image": null,
+      "options": [
+        "A. Relational database",
+        "B. Database system",
+        "C. Atomic operations",
+        "D. Normalization"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Câu hỏi này đưa ra một định nghĩa khác của quá trình Chuẩn hóa.<br /><br /><b>1. Phân tích định nghĩa:</b><br />Câu hỏi mô tả một '<b>process</b>' (quá trình) biến đổi một tập hợp các '<b>relations</b>' (quan hệ/bảng) thành một tập hợp mới có '<b>more solid structure</b>' (cấu trúc vững chắc hơn).<br /><br /><b>2. Quá trình Chuẩn hóa (Normalization):</b><br />Đây chính xác là mục tiêu của chuẩn hóa. Bằng cách áp dụng các quy tắc của các dạng chuẩn (1NF, 2NF, 3NF...), chúng ta tách các bảng được thiết kế kém thành các bảng nhỏ hơn. Các bảng mới này có các đặc điểm sau:<br />- Giảm thiểu sự trùng lặp dữ liệu.<br />- Đảm bảo tính toàn vẹn dữ liệu.<br />- Loại bỏ các dị thường khi cập nhật.<br />Tất cả những điều này góp phần tạo ra một 'cấu trúc vững chắc hơn' cho cơ sở dữ liệu.<br /><br /><b>Kết luận: Quá trình biến đổi quan hệ để có cấu trúc tốt hơn là Normalization.</b>",
+      "difficulty": "easy",
+      "topic": "Database Concepts (Normalization)",
+      "hints": [
+        "Thần chú: <b>Normalization = Cải thiện cấu trúc bảng (relations)</b>.",
+        "Từ khóa 'transformed to a new set of relations' và 'more solid structure' là dấu hiệu của Normalization.",
+        "Hãy coi Normalization như việc 'dọn dẹp' và 'sắp xếp lại' các bảng trong CSDL."
+      ]
+    },
+    {
+      "id": 55,
+      "question": "In the [___] attacks, threats to the confidentiality are based on monitoring online traffic, from which they can obtain other types of information.",
+      "image": null,
+      "options": [
+        "A. Snooping",
+        "B. Repudiation",
+        "C. Denial of service",
+        "D. Traffic analysis"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Câu hỏi này về một loại tấn công thụ động trong an ninh mạng.<br /><br /><b>1. So sánh các loại tấn công thụ động:</b><br />Tấn công thụ động là loại tấn công mà kẻ tấn công chỉ 'lắng nghe' chứ không thay đổi dữ liệu. Có hai loại chính:<br />- <b>Snooping (Nghe lén) / Eavesdropping:</b> Là việc đọc nội dung của một tin nhắn. Ví dụ: đọc email hoặc tin nhắn chat của người khác. Mục tiêu là lấy được <b>nội dung</b>.<br />- <b>Traffic Analysis (Phân tích lưu lượng):</b> Ngay cả khi tin nhắn đã được mã hóa và không thể đọc được nội dung, kẻ tấn công vẫn có thể thu thập các 'siêu dữ liệu' (metadata) bằng cách quan sát luồng traffic. Ví dụ: biết được ai đang nói chuyện với ai, nói chuyện vào lúc nào, nói chuyện trong bao lâu. Thông tin này cũng có thể rất nhạy cảm.<br /><br /><b>2. Từ khóa nhận diện:</b><br />'<b>monitoring online traffic</b>' và '<b>obtain other types of information</b>' (không nhất thiết là nội dung) mô tả chính xác cuộc tấn công <b>Traffic Analysis</b>.<br /><br /><b>Kết luận: Tấn công bằng cách giám sát lưu lượng để thu thập thông tin được gọi là Traffic Analysis.</b>",
+      "difficulty": "medium",
+      "topic": "Cybersecurity (Attack Types)",
+      "hints": [
+        "<b>Snooping</b> = Đọc trộm 'bức thư'.",
+        "<b>Traffic Analysis</b> = Phân tích 'phong bì' của bức thư (ai gửi, ai nhận, khi nào...).",
+        "Tấn công này nguy hiểm ngay cả khi nội dung đã được mã hóa."
+      ]
+    },
+    {
+      "id": 56,
+      "question": "Before transmission, the sender transforms the plaintext into the ciphertext—this is [___].",
+      "image": null,
+      "options": [
+        "A. Plain text",
+        "B. Cipher text",
+        "C. Encryption",
+        "D. Decryption"
       ],
       "correctAnswer": "C",
-      "explanation": "Để giải siêu tốc, ta chỉ cần giải hệ \\((A - \\lambda I)\\vec{v} = \\vec{0}\\) bằng cách nhìn vào một hàng duy nhất.<br /><br /><b>1. Tính nhanh \\( A - \\lambda I \\):</b><br />- Với \\(\\lambda = -3\\), ta cần tính \\(A + 3I\\):<br />\\( A + 3I = \\begin{bmatrix} 3+3 & -6 \\\\ 8 & -11+3 \\end{bmatrix} = \\begin{bmatrix} 6 & -6 \\\\ 8 & -8 \\end{bmatrix} \\).<br /><br /><b>2. Dùng một hàng để tìm vector (Mẹo nhanh nhất):</b><br />- Hai hàng của ma trận này luôn tỉ lệ với nhau. Ta chỉ cần dùng hàng đầu tiên: \\([6, -6]\\).<br />- Phương trình tương ứng là \\(6x - 6y = 0\\), suy ra \\(x = y\\).<br /><br /><b>3. Kết luận:</b><br />- Một vector có dạng \\(x=y\\) sẽ là \\((t, t)\\) hoặc \\(t(1, 1)\\).<br />- Điều này khớp với đáp án C.",
+      "explanation": "Đây là câu hỏi định nghĩa một trong hai quy trình cơ bản nhất của mật mã học.<br /><br /><b>1. Hai quy trình chính:</b><br />- <b>Encryption (Mã hóa):</b> Là quá trình biến đổi thông tin từ dạng đọc được (<b>Plaintext</b> - văn bản rõ) thành dạng không đọc được (<b>Ciphertext</b> - văn bản mã). Quá trình này được thực hiện bởi người gửi để bảo vệ thông tin.<br />- <b>Decryption (Giải mã):</b> Là quá trình ngược lại, biến đổi thông tin từ Ciphertext trở lại Plaintext. Quá trình này được thực hiện bởi người nhận hợp lệ.<br /><br /><b>2. Sơ đồ luồng:</b><br />Người gửi: <b>Plaintext</b> --(Encryption)--> <b>Ciphertext</b> -> Truyền đi<br />Người nhận: Nhận <b>Ciphertext</b> --(Decryption)--> <b>Plaintext</b><br /><br /><b>Kết luận: Quá trình biến đổi từ plaintext sang ciphertext được gọi là Encryption.</b>",
       "difficulty": "easy",
-      "topic": "Linear Algebra (Eigenvalues and Eigenvectors)",
+      "topic": "Cybersecurity (Cryptography Basics)",
       "hints": [
-        "Mục tiêu là giải \\((A - \\lambda I)\\vec{v} = \\vec{0}\\).",
-        "Mẹo nhanh nhất: Sau khi tính \\((A - \\lambda I)\\), bạn chỉ cần dùng một hàng để tìm ra mối quan hệ giữa x và y.",
-        "Nếu một hàng là `[a, b]`, vector riêng tương ứng sẽ là `t(-b, a)`. Trong bài này, hàng là `[6, -6]`, vậy vector là `t(6, 6)` hay `t(1, 1)`."
+        "Thần chú: <b>Encryption = En-code = Mã hóa</b> (làm cho nó khó đọc).",
+        "Thần chú: <b>Decryption = De-code = Giải mã</b> (làm cho nó đọc được).",
+        "Encryption là việc của người gửi, Decryption là việc của người nhận."
+      ]
+    },
+    {
+      "id": 57,
+      "question": "The [___] of ethics says that an act is ethical if it brings about a useful result for society.",
+      "image": null,
+      "options": [
+        "A. Moral rules",
+        "B. Social contract",
+        "C. Utilitarianism",
+        "D. Nonmaleficence"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Câu hỏi này về một học thuyết đạo đức quan trọng.<br /><br /><b>1. Phân tích các học thuyết đạo đức:</b><br />- <b>Deontology (Dựa trên quy tắc/nghĩa vụ):</b> Một hành động là đúng hay sai dựa trên việc nó có tuân thủ một bộ quy tắc đạo đức hay không, bất kể kết quả. Ví dụ: 'Không được nói dối' là một quy tắc.<br />- <b>Utilitarianism (Thuyết vị lợi / Thuyết hữu dụng):</b> Một hành động là đúng nếu nó tạo ra <b>kết quả tốt nhất cho số đông người nhất</b>. Nó tập trung vào 'hậu quả' (consequence) và 'sự hữu dụng' (utility) của hành động.<br />- <b>Social Contract (Khế ước xã hội):</b> Mọi người tuân theo các quy tắc để sống trong một xã hội văn minh.<br />- <b>Nonmaleficence (Không gây hại):</b> Nguyên tắc cơ bản là 'đừng làm hại người khác'.<br /><br /><b>2. Từ khóa nhận diện:</b><br />'<b>brings about a useful result for society</b>' (mang lại kết quả hữu ích cho xã hội) là tư tưởng cốt lõi của <b>Utilitarianism</b>. Lưu ý: Utilization là một cách diễn đạt khác của Utilitarianism.<br /><br /><b>Kết luận: Học thuyết cho rằng hành động đạo đức là hành động mang lại kết quả hữu ích cho xã hội là Utilitarianism.</b>",
+      "difficulty": "hard",
+      "topic": "Computer Ethics",
+      "hints": [
+        "Thần chú: <b>Utilitarianism = Utility = Useful result</b> (Kết quả hữu dụng cho số đông).",
+        "Học thuyết này tập trung vào 'kết quả' của hành động.",
+        "Đối lập với nó là Deontology, tập trung vào 'bản chất' của hành động."
+      ]
+    },
+    {
+      "id": 58,
+      "question": "[___] are the 'bad guys.' They are the types of hackers who break into computer networks with purely negative motives such as monetary gain or reputation.",
+      "image": null,
+      "options": [
+        "A. Black Hat Hacker",
+        "B. Grey Hat Hacker",
+        "C. Red Hat Hacker",
+        "D. Blue Hat Hacker"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Câu hỏi này về cách phân loại hacker dựa trên động cơ của họ.<br /><br /><b>1. Phân loại theo màu mũ:</b><br />Đây là một cách ẩn dụ phổ biến, bắt nguồn từ các bộ phim cao bồi miền Tây.<br />- <b>Black Hat (Mũ đen):</b> Là những 'kẻ xấu' (bad guys). Họ hack vì mục đích bất hợp pháp và tiêu cực như trộm cắp tiền bạc, dữ liệu, phá hoại hệ thống, hoặc để nổi danh trong thế giới ngầm.<br />- <b>White Hat (Mũ trắng):</b> Là những 'người tốt' (good guys), còn được gọi là hacker đạo đức. Họ được các công ty thuê để tìm ra lỗ hổng bảo mật và giúp vá chúng lại.<br />- <b>Grey Hat (Mũ xám):</b> Nằm giữa trắng và đen. Họ có thể hack vào một hệ thống mà không có sự cho phép, nhưng mục đích có thể là để cảnh báo cho chủ sở hữu về lỗ hổng, hoặc đôi khi đòi một khoản phí nhỏ.<br /><br /><b>Kết luận: Hacker có động cơ tiêu cực được gọi là Black Hat Hacker.</b>",
+      "difficulty": "easy",
+      "topic": "Cybersecurity (Hacker Types)",
+      "hints": [
+        "Thần chú: <b>Black Hat = Bad Guy</b> (Kẻ xấu).",
+        "Thần chú: <b>White Hat = Good Guy / Ethical Hacker</b> (Người tốt / Hacker đạo đức).",
+        "Thần chú: <b>Grey Hat = Nửa tốt nửa xấu</b>."
+      ]
+    },
+    {
+      "id": 59,
+      "question": "[___] does not substitute one symbol for another; instead, it changes the location of the symbols.",
+      "image": null,
+      "options": [
+        "A. Monoalphabetic cipher",
+        "B. Substitution cipher",
+        "C. Polyalphabetic cipher",
+        "D. Transposition cipher"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Câu hỏi này phân biệt hai loại mật mã cổ điển cơ bản.<br /><br /><b>1. Hai loại mật mã cổ điển:</b><br />- <b>Substitution Cipher (Mật mã thay thế):</b> Giữ nguyên vị trí của các ký tự, nhưng <b>thay thế</b> mỗi ký tự bằng một ký tự khác theo một quy tắc nào đó. Ví dụ: Mật mã Caesar (thay 'A' bằng 'D', 'B' bằng 'E', ...). Monoalphabetic và Polyalphabetic là các dạng con của mật mã thay thế.<br />- <b>Transposition Cipher (Mật mã hoán vị):</b> Giữ nguyên các ký tự gốc, nhưng <b>thay đổi vị trí (hoán vị)</b> của chúng theo một quy tắc nào đó. Giống như việc xáo trộn các chữ cái trong một từ.<br /><br /><b>2. Ví dụ:</b><br />Plaintext: `HELLO`<br />- Substitution (A->B, B->C,...): `IFMMP`<br />- Transposition (viết vào cột rồi đọc theo hàng): `HLOOL` (tùy quy tắc)<br /><br /><b>Kết luận: Mật mã thay đổi vị trí của ký tự được gọi là Transposition cipher.</b>",
+      "difficulty": "medium",
+      "topic": "Cybersecurity (Classical Ciphers)",
+      "hints": [
+        "Thần chú: <b>Substitution = Substitute = Thay thế</b> (thay chữ).",
+        "Thần chú: <b>Transposition = Transport = Vận chuyển</b> (đổi chỗ).",
+        "Hãy liên kết 'changes the location' với 'Transposition'."
+      ]
+    },
+    {
+      "id": 60,
+      "question": "In [___] cryptography, everyone has access to everyone's public key.",
+      "image": null,
+      "options": [
+        "A. Symmetric-key",
+        "B. Asymmetric-key",
+        "C. Secret-key",
+        "D. Private-key"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Câu hỏi này phân biệt hai trường phái chính trong mật mã học hiện đại.<br /><br /><b>1. Hai trường phái mật mã:</b><br />- <b>Symmetric-key (Mật mã khóa đối xứng):</b> Người gửi và người nhận sử dụng <b>cùng một khóa bí mật</b> để mã hóa và giải mã. Khóa này phải được giữ bí mật tuyệt đối và phải được chia sẻ một cách an toàn từ trước. Còn được gọi là Secret-key cryptography.<br />- <b>Asymmetric-key (Mật mã khóa bất đối xứng):</b> Mỗi người có một cặp khóa: một <b>Public Key (Khóa công khai)</b> và một <b>Private Key (Khóa riêng tư)</b>. Khóa công khai có thể được chia sẻ cho mọi người. Bất kỳ ai cũng có thể dùng Public Key của bạn để mã hóa tin nhắn gửi cho bạn, nhưng chỉ có bạn mới có Private Key tương ứng để giải mã nó.<br /><br /><b>2. Từ khóa nhận diện:</b><br />'<b>everyone has access to everyone's public key</b>' (mọi người đều có quyền truy cập vào khóa công khai của mọi người) là đặc điểm nhận dạng của mật mã khóa bất đối xứng.<br /><br /><b>Kết luận: Mật mã mà mọi người đều có khóa công khai của nhau là Asymmetric-key.</b>",
+      "difficulty": "easy",
+      "topic": "Cybersecurity (Cryptography Types)",
+      "hints": [
+        "Thần chú: <b>Symmetric = Same key</b> (Cùng một khóa bí mật).",
+        "Thần chú: <b>Asymmetric = Public + Private keys</b> (Cặp khóa Công khai + Riêng tư).",
+        "Hãy tưởng tượng Public Key như địa chỉ hòm thư của bạn (ai cũng biết), còn Private Key là chìa khóa của hòm thư đó (chỉ bạn có)."
       ]
     }
   ]
