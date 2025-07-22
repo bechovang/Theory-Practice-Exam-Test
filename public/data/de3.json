@@ -1,131 +1,120 @@
 {
-    "examId": "csi_test_3",
-    "title": "Đề 3 CSI",
-    "description": "Bộ câu hỏi trắc nghiệm về các khái niệm cơ bản và nâng cao trong Khoa học Máy tính, kèm giải thích chi tiết và gợi ý.",
+    "examId": "de_thi_csi_02",
+    "title": "Đề thi trắc nghiệm Khoa học Máy tính (Bộ 2)",
+    "description": "Bộ đề thi trắc nghiệm 60 câu hỏi về các chủ đề nền tảng của Khoa học Máy tính, bao gồm kiến trúc máy tính, mạng, hệ điều hành, thuật toán, cơ sở dữ liệu và an ninh mạng.",
     "questions": [
       {
         "id": 1,
-        "question": "The personnel who deal with the computer & its management put together are called",
+        "question": "In the Turing model, the __________ depends on the combination of two factors: the input data and the program.",
         "image": null,
         "options": [
-          "A. Software",
-          "B. Humanware",
-          "C. Firmware",
-          "D. Hardware"
+          "A. Output data",
+          "B. Instructions",
+          "C. Algorithm",
+          "D. Data processing"
         ],
-        "correctAnswer": "B",
-        "explanation": "Trong ngữ cảnh của máy tính, <b>'Humanware'</b> đề cập đến những <b>người làm việc với máy tính và quản lý nó</b>. Điều này bao gồm người dùng, lập trình viên, quản trị viên hệ thống, v.v.. Các lựa chọn khác như 'Software' là tập hợp các chương trình, 'Firmware' là phần mềm nhúng vào phần cứng, và 'Hardware' là các thiết bị vật lý của máy tính.",
+        "correctAnswer": "A",
+        "explanation": "Trong mô hình Turing, dữ liệu đầu ra (output) phụ thuộc vào sự kết hợp giữa dữ liệu đầu vào và chương trình.",
         "difficulty": "easy",
-        "topic": "Computer Components",
+        "topic": "Theoretical Computer Science",
         "hints": [
-          "Từ khóa là 'personnel' (nhân sự).",
-          "Hãy liên kết 'Human' (con người) với 'personnel'.",
-          "Ware' là một hậu tố chỉ một thành phần của hệ thống máy tính."
+          "Mô hình Turing định nghĩa một máy tính lý thuyết, nơi kết quả (output) là sản phẩm của việc xử lý đầu vào (input) theo một bộ quy tắc (program)."
         ]
       },
       {
         "id": 2,
-        "question": "FORTRAN and COBOL are examples of…..",
+        "question": "Who is considered the 'father' of the minicomputer and one of the founding fathers of the modern computer industry worldwide?",
         "image": null,
         "options": [
-          "A. Hardware",
-          "B. Operating systems",
-          "C. Computer languages",
-          "D. Algorithms"
+          "A. George Tate",
+          "B. Kenneth H. Olsen",
+          "C. Seymour Cray",
+          "D. Basic Pascal"
         ],
-        "correctAnswer": "C",
-        "explanation": "<b>FORTRAN và COBOL</b> là hai ngôn ngữ lập trình bậc cao đã được phát minh, giúp việc lập trình trở nên dễ dàng hơn trong thế hệ máy tính thứ hai (khoảng 1959–1965). Các ngôn ngữ máy tính là một tập hợp các từ được định nghĩa trước, kết hợp theo các quy tắc để tạo thành chương trình.",
+        "correctAnswer": "B",
+        "explanation": "Kenneth H. Olsen là người sáng lập Digital Equipment Corporation (DEC) và được coi là 'cha đẻ' của minicomputer, một bước tiến quan trọng giúp máy tính trở nên dễ tiếp cận hơn.",
         "difficulty": "easy",
-        "topic": "Programming Languages",
+        "topic": "History of Computing",
         "hints": [
-          "FORTRAN là viết tắt của Formula Translation.",
-          "COBOL là viết tắt của Common Business-Oriented Language.",
-          "Đây là những ví dụ kinh điển về ngôn ngữ lập trình thế hệ đầu tiên."
+          "Hãy liên kết 'minicomputer' với Kenneth H. Olsen và công ty DEC."
         ]
       },
       {
         "id": 3,
-        "question": "……is a stand-alone storage location that holds data temporarily.",
+        "question": "A path by which communication is achieved between a central processor and other devices is called __________.",
         "image": null,
         "options": [
-          "A. An ALU",
-          "B. A register",
-          "C. A control unit",
-          "D. A tape drive"
+          "A. Audit trail",
+          "B. Network",
+          "C. Bus",
+          "D. Channel"
         ],
-        "correctAnswer": "B",
-        "explanation": "<b>Thanh ghi (Registers)</b> là các vị trí lưu trữ độc lập, nhanh chóng, giữ dữ liệu tạm thời để tạo điều kiện thuận lợi cho hoạt động của CPU. <b>Đơn vị số học logic (ALU)</b> thực hiện các phép toán. <b>Đơn vị điều khiển (Control unit)</b> kiểm soát hoạt động. 'Tape drive' là một thiết bị lưu trữ thứ cấp, không phải là nơi lưu trữ tạm thời tốc độ cao trong CPU.",
+        "correctAnswer": "C",
+        "explanation": "Bus là một hệ thống đường truyền dùng để truyền dữ liệu và tín hiệu điều khiển giữa các thành phần trong máy tính, như CPU, bộ nhớ và các thiết bị ngoại vi.",
         "difficulty": "easy",
-        "topic": "CPU Architecture",
+        "topic": "Computer Architecture",
         "hints": [
-          "Từ khóa là 'holds data temporarily' và 'storage location'.",
-          "Hãy nghĩ đến thành phần lưu trữ nhỏ nhất và nhanh nhất bên trong CPU.",
-          "ALU và Control Unit là các đơn vị xử lý, không phải lưu trữ chính."
+          "Hãy tưởng tượng Bus như một 'đường cao tốc' dữ liệu bên trong máy tính."
         ]
       },
       {
         "id": 4,
-        "question": "What is the 80-20 rule in cache?",
+        "question": "If the memory address space is 16 MB and the word size is 8 bits, then __________ bits are needed to access each word.",
         "image": null,
         "options": [
-          "A. Most computers typically spend 80 percent of their time accessing only 20 percent of the data",
-          "B. Cache memory at any time contains a copy of a portion of main memory.",
-          "C. It can hold data 20 percent to make access faster at least 80 percent of the time.",
-          "D. The CPU needs to check the cache first."
+          "A. 8",
+          "B. 16",
+          "C. 24",
+          "D. 32"
         ],
-        "correctAnswer": "A",
-        "explanation": "Quy tắc 80-20 trong bộ nhớ đệm (cache) hay còn gọi là <b>nguyên tắc Pareto</b>, phát biểu rằng hầu hết các máy tính thường dành <b>80% thời gian của chúng để truy cập chỉ 20% dữ liệu</b>. Đây là lý do tại sao bộ nhớ cache, dù nhỏ, lại có thể cải thiện hiệu suất đáng kể bằng cách lưu trữ dữ liệu thường xuyên được truy cập để truy xuất nhanh hơn.",
+        "correctAnswer": "C",
+        "explanation": "Để xác định số bit cần thiết để định địa chỉ, ta tính 16 MB = 16 * 2^20 Bytes = 2^4 * 2^20 Bytes = 2^24 Bytes. Vì vậy, cần 24 bit để định địa chỉ cho mỗi byte (tức là mỗi từ, vì word size = 8 bits = 1 byte).",
         "difficulty": "medium",
-        "topic": "Memory Hierarchy",
+        "topic": "Computer Architecture",
         "hints": [
-          "Quy tắc 80-20 còn được gọi là Nguyên tắc Pareto.",
-          "Nó mô tả một sự mất cân bằng phổ biến: một phần nhỏ nguyên nhân tạo ra phần lớn kết quả.",
-          "Hãy nhớ: 80% thời gian CPU chỉ 'chơi' với 20% dữ liệu quen thuộc."
+          "Công thức: Số bit địa chỉ = log2(Kích thước bộ nhớ tính bằng byte).",
+          "Ghi nhớ: 1 KB = 2^10 B, 1 MB = 2^20 B, 1 GB = 2^30 B."
         ]
       },
       {
         "id": 5,
-        "question": "A monitor's….. is the distance between the holes in the mask behind the screen. This helps determine how sharp the dots appear.",
+        "question": "Which printer uses a combination of laser-beam and electro-photographic techniques?",
         "image": null,
         "options": [
-          "A. Refresh rate",
-          "B. Dot pitch",
-          "C. Resolution",
-          "D. Color depth"
+          "A. Laser printers",
+          "B. Dot-Matrix",
+          "C. Line printer",
+          "D. Daisy wheel"
         ],
-        "correctAnswer": "B",
-        "explanation": "<b>Dot pitch</b> là khoảng cách giữa các lỗ trên mặt nạ phía sau màn hình, giúp xác định độ sắc nét của các chấm (pixel) xuất hiện. Độ phân giải (Resolution) là số lượng pixel, tần số làm tươi (Refresh rate) là số lần màn hình được cập nhật mỗi giây, và độ sâu màu (Color depth) là số bit dùng để biểu thị một pixel.",
-        "difficulty": "medium",
-        "topic": "Display Technology",
+        "correctAnswer": "A",
+        "explanation": "Máy in laser (Laser printers) hoạt động bằng cách sử dụng một tia laser để tạo ra hình ảnh tĩnh điện trên một trống quang, sau đó mực sẽ bám vào và được ép lên giấy.",
+        "difficulty": "easy",
+        "topic": "Hardware",
         "hints": [
-          "Từ khóa là 'distance between the holes'.",
-          "Dot pitch càng nhỏ, hình ảnh càng sắc nét.",
-          "Hãy phân biệt nó với Resolution (tổng số chấm) và Refresh Rate (tốc độ làm mới)."
+          "Tên của công nghệ (laser-beam) đã được nêu ngay trong câu hỏi."
         ]
       },
       {
         "id": 6,
-        "question": "What is taxonomy of computer organization?",
+        "question": "RISC (Reduced Instruction Set Computer): The strategy behind RISC architecture is to have a small set of instructions that do a minimum number of __________.",
         "image": null,
         "options": [
-          "A. SIMD - Single Instruction-stream, Multiple Data-stream",
-          "B. MISD - Multiple Instruction-stream, Single Data-stream",
-          "C. MIMD - Multiple Instruction-stream, Multiple Data-stream",
-          "D. All of the others"
+          "A. Complex instructions",
+          "B. Complex operations",
+          "C. Simple operations",
+          "D. Simple instructions"
         ],
-        "correctAnswer": "D",
-        "explanation": "Trong xử lý song song, các phân loại phổ biến bao gồm:<br>- <b>SISD</b> (Single Instruction-stream, Single Data-stream)<br>- <b>SIMD</b> (Single Instruction-stream, Multiple Data-stream)<br>- <b>MIMD</b> (Multiple Instruction-stream, Multiple Data-stream)<br>- <b>MISD</b> (Multiple Instruction-stream, Single Data-stream)<br>Vì tất cả các lựa chọn A, B, C đều là các loại kiến trúc máy tính theo Phân loại Flynn, nên đáp án là D.",
-        "difficulty": "medium",
+        "correctAnswer": "C",
+        "explanation": "Kiến trúc RISC (Máy tính với tập lệnh rút gọn) tập trung vào việc có một tập lệnh nhỏ, mỗi lệnh thực hiện các hoạt động rất đơn giản (simple operations) và nhanh chóng. Điều này trái ngược với CISC (Complex Instruction Set Computer).",
+        "difficulty": "easy",
         "topic": "Computer Architecture",
         "hints": [
-          "Đây là câu hỏi về Phân loại Flynn (Flynn's Taxonomy).",
-          "Hệ thống phân loại này có 4 mục chính: SISD, SIMD, MISD, MIMD.",
-          "Câu hỏi hỏi về 'taxonomy' (hệ thống phân loại), bao gồm tất cả các thành phần của nó."
+          "RISC = Reduced = Rút gọn -> Tập trung vào sự đơn giản (Simple)."
         ]
       },
       {
         "id": 7,
-        "question": "Instructions and memory addresses are represented by",
+        "question": "Instructions and memory addresses are represented by __________.",
         "image": null,
         "options": [
           "A. Character codes",
@@ -134,18 +123,16 @@
           "D. Parity bit"
         ],
         "correctAnswer": "B",
-        "explanation": "Dữ liệu và chương trình được lưu trữ trong máy tính bằng cách sử dụng các mẫu nhị phân, tức là <b>một chuỗi các bit (0 và 1)</b>. Do đó, các lệnh và địa chỉ bộ nhớ được biểu diễn bằng <b>mã nhị phân (binary codes)</b>.",
+        "explanation": "Ở cấp độ cơ bản nhất, máy tính chỉ hiểu được mã nhị phân (binary codes), là các chuỗi 0 và 1. Mọi lệnh và địa chỉ bộ nhớ đều được biểu diễn dưới dạng này.",
         "difficulty": "easy",
         "topic": "Data Representation",
         "hints": [
-          "Ngôn ngữ cơ bản nhất của máy tính là gì?",
-          "Mọi thứ trong máy tính, từ lệnh đến địa chỉ, đều được quy về 0 và 1.",
-          "Binary codes là thuật ngữ chung cho việc biểu diễn thông tin bằng hệ nhị phân."
+          "Ngôn ngữ của máy tính là nhị phân."
         ]
       },
       {
         "id": 8,
-        "question": "The base of the hexadecimal number system is….",
+        "question": "The base of the octal number system is __________.",
         "image": null,
         "options": [
           "A. 2",
@@ -153,39 +140,35 @@
           "C. 10",
           "D. 16"
         ],
-        "correctAnswer": "D",
-        "explanation": "Hệ thập lục phân (hexadecimal system) có cơ số (base) là <b>16</b>. Nó sử dụng 16 ký tự để biểu diễn một số: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F}.",
+        "correctAnswer": "B",
+        "explanation": "Hệ bát phân (octal) sử dụng cơ số 8, bao gồm các chữ số từ 0 đến 7.",
         "difficulty": "easy",
         "topic": "Number Systems",
         "hints": [
-          "Hexa- có nghĩa là 6, Deca- có nghĩa là 10.",
-          "6 + 10 = 16.",
-          "Các hệ đếm phổ biến: Binary (2), Octal (8), Decimal (10), Hexadecimal (16)."
+          "Octal = Octa = 8."
         ]
       },
       {
         "id": 9,
-        "question": "Which of the following is equivalent to 12 in decimal?",
+        "question": "The maximum value of a binary integer with K digits is __________. For example, if K = 5, the maximum value is:",
         "image": null,
         "options": [
-          "A. (1110)2",
-          "B. (C)16",
-          "C. (15)8",
-          "D. None of the others"
+          "A. 30",
+          "B. 31",
+          "C. 32",
+          "D. 33"
         ],
         "correctAnswer": "B",
-        "explanation": "Trong hệ thập lục phân (hexadecimal system), các ký tự từ A đến F đại diện cho các giá trị từ 10 đến 15. Do đó, <b>(C)16 tương đương với 12 trong hệ thập phân</b>.<br>- (1110)2 = 8 + 4 + 2 + 0 = 14.<br>- (15)8 = 1*8 + 5 = 13.",
-        "difficulty": "easy",
+        "explanation": "Giá trị lớn nhất của một số nguyên nhị phân không dấu với K chữ số được tính bằng công thức 2^K - 1. Với K = 5, giá trị lớn nhất là 2^5 - 1 = 32 - 1 = 31.",
+        "difficulty": "medium",
         "topic": "Number Systems",
         "hints": [
-          "Hãy nhớ bảng chuyển đổi Hex: A=10, B=11, C=12.",
-          "Kiểm tra từng đáp án bằng cách chuyển chúng về hệ thập phân.",
-          "Đáp án A là 14, đáp án C là 13."
+          "Một số nhị phân có 5 chữ số sẽ là 11111, tương đương với 16 + 8 + 4 + 2 + 1 = 31."
         ]
       },
       {
         "id": 10,
-        "question": "The maximum value of an octal integer with K=2 digits is Nmax =......",
+        "question": "The maximum value of an octal integer with K = 2 digits is Nmax = __________.",
         "image": null,
         "options": [
           "A. 63",
@@ -194,18 +177,16 @@
           "D. 66"
         ],
         "correctAnswer": "A",
-        "explanation": "Trong hệ bát phân (octal system), cơ số là 8. Với K=2 chữ số, số lớn nhất có thể biểu diễn là (77)8. Để chuyển đổi (77)8 sang hệ thập phân, ta tính: 7 * 8^1 + 7 * 8^0 = 56 + 7 = <b>63</b>.",
+        "explanation": "Giá trị lớn nhất của một số nguyên bát phân với K chữ số là 8^K - 1. Với K = 2, giá trị lớn nhất là 8^2 - 1 = 64 - 1 = 63. Hoặc có thể hiểu là số octal lớn nhất có 2 chữ số là 77 (octal), tương đương 7*8^1 + 7*8^0 = 56 + 7 = 63.",
         "difficulty": "medium",
         "topic": "Number Systems",
         "hints": [
-          "Số lớn nhất với K chữ số trong hệ cơ số B là (B-1)...(B-1).",
-          "Trong hệ bát phân (cơ số 8), chữ số lớn nhất là 7.",
-          "Vậy số lớn nhất có 2 chữ số là 77 (hệ 8), sau đó chuyển nó sang hệ 10."
+          "Số lớn nhất trong hệ cơ số B có K chữ số là B^K - 1."
         ]
       },
       {
         "id": 11,
-        "question": "Conversion of binary number 1010101000010111 to hexadecimal number is…..",
+        "question": "Conversion of the binary number 1010101000010111 to a hexadecimal number is __________.",
         "image": null,
         "options": [
           "A. D8F9",
@@ -214,241 +195,232 @@
           "D. D9F8"
         ],
         "correctAnswer": "C",
-        "explanation": "Để chuyển đổi một số nhị phân sang hệ thập lục phân, ta nhóm các bit thành các nhóm 4 bit từ phải sang trái.<br>- 1010 1010 0001 0111<br>- 1010 -> A<br>- 1010 -> A<br>- 0001 -> 1<br>- 0111 -> 7<br>Vậy, 1010101000010111 (binary) tương đương với <b>AA17 (hexadecimal)</b>.",
+        "explanation": "Để chuyển từ nhị phân sang thập lục phân, ta nhóm 4 bit một từ phải sang trái: 1010 | 1010 | 0001 | 0111. Sau đó chuyển từng nhóm: 1010=A, 1010=A, 0001=1, 0111=7. Kết quả là AA17.",
         "difficulty": "easy",
         "topic": "Number Systems",
         "hints": [
-          "Nhóm 4 bit một từ phải sang trái.",
-          "Sử dụng bảng chuyển đổi nhị phân sang thập lục phân.",
-          "1010 là A, 0111 là 7."
+          "Hexadecimal (hệ 16) = 2^4, vì vậy nhóm 4 bit lại."
         ]
       },
       {
         "id": 12,
-        "question": "The precision of the fractional part of a number stored in a computer is defined by the…..",
+        "question": "What is the number of bit patterns provided by a 7-bit code?",
         "image": null,
         "options": [
-          "A. Sign",
-          "B. Exponent",
-          "C. Mantissa",
-          "D. Last digit"
+          "A. 256",
+          "B. 128",
+          "C. 64",
+          "D. 512"
         ],
-        "correctAnswer": "C",
-        "explanation": "Trong biểu diễn dấu phẩy động, độ chính xác của phần phân số được xác định bởi <b>phần định trị (mantissa)</b>. Phần định trị lưu trữ các chữ số có nghĩa của số, trong khi dấu (sign) xác định dương/âm, và số mũ (exponent) xác định vị trí của dấu phẩy.",
-        "difficulty": "medium",
+        "correctAnswer": "B",
+        "explanation": "Với N bit, số lượng mẫu bit (tổ hợp) khác nhau có thể tạo ra là 2^N. Với 7-bit, ta có 2^7 = 128 mẫu bit khác nhau.",
+        "difficulty": "easy",
         "topic": "Data Representation",
         "hints": [
-          "Hãy nghĩ về cách biểu diễn số khoa học: 1.23 x 10^4.",
-          "Số '1.23' quyết định độ chính xác, tương ứng với Mantissa.",
-          "Số '4' quyết định độ lớn, tương ứng với Exponent."
+          "Số tổ hợp = 2^(số bit)."
         ]
       },
       {
         "id": 13,
-        "question": "Which of the following is the coding of data so that it can't be easily understood if intercepted?",
+        "question": "A byte consists of __________ bits.",
         "image": null,
         "options": [
-          "A. Barcode",
-          "B. Decoder",
-          "C. Encryption",
-          "D. Mnemonics"
+          "A. 2",
+          "B. 4",
+          "C. 8",
+          "D. 16"
         ],
         "correctAnswer": "C",
-        "explanation": "<b>Mã hóa (Encryption)</b> là quá trình người gửi chuyển đổi văn bản gốc (plaintext) thành văn bản mã hóa (ciphertext) trước khi truyền tải, làm cho nó không dễ hiểu nếu bị chặn. Mục đích là để bảo vệ thông tin.",
+        "explanation": "Theo định nghĩa chuẩn trong máy tính, một byte bao gồm 8 bit.",
         "difficulty": "easy",
-        "topic": "Cybersecurity",
+        "topic": "Data Representation",
         "hints": [
-          "Đây là định nghĩa cơ bản của mật mã học.",
-          "Việc biến dữ liệu thành dạng không đọc được gọi là gì?",
-          "Encryption là mã hóa, Decryption là giải mã."
+          "Đây là một kiến thức định nghĩa cơ bản."
         ]
       },
       {
         "id": 14,
-        "question": "If we call the bit depth or number of bits per sample B, the number of samples per second S, so how to calculate BIT RATE (R)?",
+        "question": "If we cannot record all the values of an audio signal over an interval, we can record some of them. This means that we select only a finite number of points on the analog signal, measure their values, and record them. This is called __________.",
         "image": null,
         "options": [
-          "A. B × 2S",
-          "B. 2B × S",
-          "C. B × S",
-          "D. B2 × S2"
+          "A. Digital",
+          "B. Analog",
+          "C. Sampling",
+          "D. Binary"
         ],
         "correctAnswer": "C",
-        "explanation": "Tốc độ bit (Bit rate), thường được ký hiệu là R, được tính bằng cách nhân độ sâu bit (bit depth - B) với số lượng mẫu mỗi giây (samples per second - S). Công thức là <b>R = B × S</b>.",
+        "explanation": "Lấy mẫu (Sampling) là quá trình chuyển đổi một tín hiệu tương tự (analog) liên tục thành một tín hiệu số (digital) rời rạc bằng cách lấy các giá trị tại các khoảng thời gian đều đặn.",
         "difficulty": "easy",
         "topic": "Data Representation",
         "hints": [
-          "Bit rate là tổng số bit truyền đi trong một giây.",
-          "Mỗi mẫu có B bit, và có S mẫu mỗi giây.",
-          "Vậy tổng số bit mỗi giây là tích của chúng."
+          "Lấy một vài 'mẫu' từ một tổng thể lớn chính là 'sampling'."
         ]
       },
       {
         "id": 15,
-        "question": "In storing images, the samples are called (which stands for picture elements).",
+        "question": "Images are stored in computers using __________ techniques.",
         "image": null,
         "options": [
-          "A. Bit map",
-          "B. Pixels",
-          "C. Resolution",
-          "D. Color depth"
+          "A. Raster graphics and bit map",
+          "B. Vector graphics and bit map",
+          "C. True-color and raster graphics",
+          "D. Index-color and vector graphics"
         ],
         "correctAnswer": "B",
-        "explanation": "Khi lưu trữ hình ảnh, dữ liệu được lấy mẫu, và các mẫu này được gọi là <b>pixel (picture elements)</b>. Mỗi pixel đại diện cho một phần nhỏ của hình ảnh và có màu sắc riêng.",
-        "difficulty": "easy",
+        "explanation": "Hai kỹ thuật chính để lưu trữ hình ảnh là đồ họa vector (vector graphics - dựa trên các công thức toán học) và đồ họa raster/bitmap (dựa trên lưới các điểm ảnh - pixel).",
+        "difficulty": "medium",
         "topic": "Data Representation",
         "hints": [
-          "Câu hỏi đã gợi ý 'picture elements'.",
-          "Pixel là từ viết tắt của 'PICture ELement'.",
-          "Pixel là đơn vị cơ bản nhất tạo nên một hình ảnh số."
+          "Câu trả lời đúng nhất nên bao gồm cả hai phương pháp phổ biến là Vector và Bitmap (Raster)."
         ]
       },
       {
         "id": 16,
-        "question": "Use an arithmetic right shift operation on the bit pattern 1001 1000",
+        "question": "Use a simple right shift operation on the bit pattern 1001 1000. The result is __________.",
         "image": null,
         "options": [
-          "A. 0100 1100",
-          "B. 1100 1100",
-          "C. 1101 1001",
-          "D. 1001 1000"
+          "A. 1001 1001",
+          "B. 1001 1000",
+          "C. 0100 1101",
+          "D. 0100 1100"
         ],
-        "correctAnswer": "B",
-        "explanation": "Phép toán <b>dịch phải số học (arithmetic right shift)</b> giả định mẫu bit là một số nguyên có dấu. Phép toán này <b>giữ lại bit dấu (bit ngoài cùng bên trái) và sao chép nó</b> vào các vị trí trống khi dịch phải.<br>Với mẫu bit 1001 1000, bit dấu là 1. Sau khi dịch phải, bit 1 này được giữ lại và sao chép vào vị trí tiếp theo, tạo ra <b>1100 1100</b>.",
-        "difficulty": "medium",
+        "correctAnswer": "D",
+        "explanation": "Phép dịch phải đơn giản (logical right shift) sẽ di chuyển tất cả các bit sang phải một vị trí. Bit ngoài cùng bên phải (0) sẽ bị loại bỏ, và một bit 0 sẽ được thêm vào vị trí ngoài cùng bên trái. Kết quả: 0100 1100.",
+        "difficulty": "easy",
         "topic": "Bitwise Operations",
         "hints": [
-          "Dịch phải số học (Arithmetic) khác với dịch phải logic (Logical).",
-          "Arithmetic shift giữ lại bit dấu (bit ngoài cùng bên trái) để bảo toàn dấu của số.",
-          "Bit dấu ở đây là 1, nó sẽ được giữ lại và sao chép."
+          "Dịch phải logic luôn thêm 0 vào bên trái."
         ]
       },
       {
         "id": 17,
-        "question": "…..is usually privately owned, limited in size and connects some hosts in a single office, building, or campus.",
+        "question": "Use a simple left shift operation on the bit pattern 1001 1000. The result is __________.",
         "image": null,
         "options": [
-          "A. LAN",
-          "B. WAN",
-          "C. Internet",
-          "D. Network"
+          "A. 0001 1001",
+          "B. 0001 1010",
+          "C. 0011 0000",
+          "D. 0011 0001"
         ],
-        "correctAnswer": "A",
-        "explanation": "<b>Mạng cục bộ (LAN - Local Area Network)</b> thường thuộc sở hữu tư nhân và kết nối một số máy chủ trong một văn phòng, tòa nhà hoặc khuôn viên trường. LAN thường giới hạn về kích thước.",
+        "correctAnswer": "C",
+        "explanation": "Phép dịch trái đơn giản sẽ di chuyển tất cả các bit sang trái một vị trí. Bit ngoài cùng bên trái (1) sẽ bị loại bỏ, và một bit 0 sẽ được thêm vào vị trí ngoài cùng bên phải. Kết quả: 0011 0000.",
         "difficulty": "easy",
-        "topic": "Networking",
+        "topic": "Bitwise Operations",
         "hints": [
-          "Từ khóa là 'single office, building, or campus'.",
-          "Đây là định nghĩa của mạng có phạm vi địa lý nhỏ.",
-          "LAN là viết tắt của Local Area Network."
+          "Dịch trái luôn thêm 0 vào bên phải."
         ]
       },
       {
         "id": 18,
-        "question": "In the physical layer, a ……can be broadly defined as anything that can carry information from a source to a destination.",
+        "question": "Which network is a packet switching network?",
         "image": null,
         "options": [
-          "A. Digital-to-digital conversion",
-          "B. Analog-to-digital conversion",
-          "C. Digital-to-analog conversion",
-          "D. Analog-to-analog conversion",
-          "E. Transmission medium"
+          "A. Ring network",
+          "B. LAN",
+          "C. Star network",
+          "D. EuroNET"
         ],
-        "correctAnswer": "E",
-        "explanation": "Trong lớp vật lý, <b>phương tiện truyền dẫn (transmission medium)</b> có thể được định nghĩa rộng rãi là bất cứ thứ gì có thể mang thông tin từ nguồn đến đích. Ví dụ bao gồm cáp đồng, cáp quang, hoặc sóng vô tuyến trong không khí.",
-        "difficulty": "easy",
+        "correctAnswer": "D",
+        "explanation": "Chuyển mạch gói (Packet switching) là một phương pháp truyền dữ liệu trong đó dữ liệu được chia thành các gói nhỏ và gửi đi qua mạng. Internet và các mạng diện rộng như EuroNET là các ví dụ điển hình của mạng chuyển mạch gói. Các mạng LAN có thể sử dụng các phương pháp khác nhau.",
+        "difficulty": "medium",
         "topic": "Networking",
         "hints": [
-          "Thứ gì mang (carry) thông tin?",
-          "Các lựa chọn A, B, C, D là các quá trình chuyển đổi, không phải vật mang.",
-          "Medium có nghĩa là phương tiện."
+          "Mạng diện rộng (WAN) như Internet thường sử dụng chuyển mạch gói."
         ]
       },
       {
         "id": 19,
-        "question": "The……layer of the TCP/IP protocol suite is responsible for source-to-destination delivery of the entire message.",
+        "question": "The TCP/IP model has __________ layers.",
         "image": null,
         "options": [
-          "A. Transport",
-          "B. Network",
-          "C. Data-link",
-          "D. Session"
+          "A. Five",
+          "B. Six",
+          "C. Seven",
+          "D. Eight"
         ],
-        "correctAnswer": "B",
-        "explanation": "<b>Lớp mạng (Network layer)</b> trong bộ giao thức TCP/IP chịu trách nhiệm giao hàng từ máy chủ đến máy chủ (host-to-host delivery). <b>Lớp vận chuyển (Transport layer)</b> chịu trách nhiệm giao hàng từ tiến trình đến tiến trình (process-to-process), tức là giao tiếp giữa các chương trình ứng dụng trên các máy chủ khác nhau, đảm bảo việc truyền tải toàn bộ thông điệp từ nguồn đến đích.",
-        "difficulty": "medium",
+        "correctAnswer": "A",
+        "explanation": "Mô hình TCP/IP nguyên thủy có 4 lớp, nhưng mô hình tham chiếu lai phổ biến hiện nay thường được mô tả với 5 lớp: Physical, Data Link, Network (Internet), Transport, và Application.",
+        "difficulty": "easy",
         "topic": "Networking",
         "hints": [
-          "Phân biệt giữa host-to-host và process-to-process.",
-          "Network layer (IP) quan tâm đến việc đưa gói tin đến đúng MÁY TÍNH.",
-          "Transport layer (TCP/UDP) quan tâm đến việc đưa gói tin đến đúng ỨNG DỤNG trên máy tính đó."
+          "Mô hình OSI có 7 lớp, TCP/IP thường được mô tả có 4 hoặc 5 lớp. 5 là câu trả lời phổ biến trong các sách giáo khoa hiện đại."
         ]
       },
       {
         "id": 20,
-        "question": "……protocol(s) is one of the protocols in the transport layer.",
+        "question": "An IPv4 address is a __________ address that uniquely and universally defines the connection of a host or a router to the internet.",
         "image": null,
         "options": [
-          "A. Only TCP",
-          "B. Only UDP",
-          "C. Only SCTP",
-          "D. TCP, UDP, and SCTP"
+          "A. 32-bit",
+          "B. 64-bit",
+          "C. 128-bit",
+          "D. None of the others"
         ],
-        "correctAnswer": "D",
-        "explanation": "Lớp vận chuyển (Transport layer) trong bộ giao thức TCP/IP bao gồm các giao thức chính là <b>TCP (Transmission Control Protocol), UDP (User Datagram Protocol) và SCTP (Stream Control Transmission Protocol)</b>.",
+        "correctAnswer": "A",
+        "explanation": "Địa chỉ IPv4 (Internet Protocol version 4) là một địa chỉ 32-bit.",
         "difficulty": "easy",
         "topic": "Networking",
         "hints": [
-          "TCP và UDP là hai giao thức nổi tiếng nhất ở lớp Transport.",
-          "TCP đảm bảo độ tin cậy, UDP thì nhanh và đơn giản.",
-          "SCTP là một giao thức mới hơn cũng thuộc lớp này."
+          "IPv4 = 32-bit, IPv6 = 128-bit."
         ]
       },
       {
         "id": 21,
-        "question": "In a….., the directory system listing of the peers and what they offer uses the client-server paradigm, but the storing and downloading of the files are done using the peer-to-peer paradigm.",
+        "question": "The __________ acts as a liaison between a client program and a server program, providing a process-to-process connection.",
         "image": null,
         "options": [
-          "A. WWW",
-          "B. Centralized network",
-          "C. Hybrid network",
-          "D. Decentralized network"
+          "A. Physical",
+          "B. Data-link",
+          "C. Network",
+          "D. Transport"
         ],
-        "correctAnswer": "C",
-        "explanation": "Mô hình <b>mạng lai (hybrid network)</b> kết hợp các đặc điểm của cả mô hình client-server và peer-to-peer (P2P). Trong đó, việc liệt kê và tìm kiếm (directory) sử dụng mô hình client-server, nhưng việc truyền file thực sự lại diễn ra trực tiếp giữa các máy ngang hàng (P2P).",
-        "difficulty": "medium",
+        "correctAnswer": "D",
+        "explanation": "Lớp Giao vận (Transport Layer) chịu trách nhiệm cung cấp kết nối logic từ tiến trình đến tiến trình (process-to-process), hoạt động như một cầu nối giữa các chương trình ứng dụng trên các máy khác nhau.",
+        "difficulty": "easy",
         "topic": "Networking",
         "hints": [
-          "Từ khóa là sự kết hợp (lai) của hai mô hình.",
-          "Client-server cho việc quản lý, P2P cho việc chia sẻ.",
-          "Ví dụ kinh điển là các hệ thống Napster đời đầu."
+          "Network layer: machine-to-machine. Transport layer: process-to-process."
         ]
       },
       {
         "id": 22,
-        "question": "The major design goals of an operating system:",
+        "question": "In the __________ paradigm, there is no need for a server process to be running all the time and waiting for client processes to connect.",
         "image": null,
         "options": [
-          "A. Efficient use of hardware and easy use of resources",
-          "B. Control subsystems and manage memory",
-          "C. Access I/O device and CPU",
-          "D. Provide UI",
-          "E. Operation on data",
-          "F. Text editor"
+          "A. P2P",
+          "B. Traditional",
+          "C. Client-server",
+          "D. Model"
         ],
-        "correctAnswer": "A,B,C,D",
-        "explanation": "Hai mục tiêu thiết kế chính của một hệ điều hành là <b>sử dụng phần cứng một cách hiệu quả</b> và <b>dễ dàng sử dụng các tài nguyên</b>. Để làm được điều này, nó phải <b>kiểm soát các hệ thống con</b>, <b>quản lý bộ nhớ</b>, <b>quản lý quyền truy cập vào các thiết bị I/O và CPU</b>, và <b>cung cấp giao diện người dùng (UI)</b>. Các lựa chọn E và F là các ứng dụng, không phải chức năng cốt lõi của HĐH.",
-        "difficulty": "medium",
-        "topic": "Operating Systems",
+        "correctAnswer": "A",
+        "explanation": "Trong mô hình ngang hàng (Peer-to-Peer - P2P), các máy tính (peers) có vai trò như nhau, vừa có thể là client vừa có thể là server. Không cần một máy chủ chuyên dụng phải chạy liên tục.",
+        "difficulty": "easy",
+        "topic": "Networking",
         "hints": [
-          "HĐH là một nhà quản lý tài nguyên và một giao diện.",
-          "Hãy nghĩ về các thành phần chính mà HĐH phải quản lý: CPU, Memory, I/O devices, Files.",
-          "Loại bỏ các đáp án là chương trình ứng dụng (text editor)."
+          "P2P = Peer-to-Peer = Ngang hàng, không có máy chủ trung tâm."
         ]
       },
       {
         "id": 23,
-        "question": "A multi-programming system is one that can",
+        "question": "All the instructions and procedures needed to start up a computer, up to the point it can load an operating system, are stored in ROM chips. In IBM-compatible PCs, this is called the __________.",
+        "image": null,
+        "options": [
+          "A. RAM BIOS",
+          "B. ROM BIOS",
+          "C. EPROM",
+          "D. POST"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Chương trình khởi động máy tính được lưu trữ trong bộ nhớ chỉ đọc (ROM) và được gọi là BIOS (Basic Input/Output System). Do đó, thuật ngữ chính xác là ROM BIOS.",
+        "difficulty": "easy",
+        "topic": "Operating Systems",
+        "hints": [
+          "BIOS được lưu trong ROM để không bị mất khi tắt máy."
+        ]
+      },
+      {
+        "id": 24,
+        "question": "A multiprogramming system is one that can __________.",
         "image": null,
         "options": [
           "A. Run very fast",
@@ -457,217 +429,196 @@
           "D. Use many operating systems"
         ],
         "correctAnswer": "B",
-        "explanation": "Trong hệ thống đa chương trình (multiprogramming), nhiều chương trình có thể cùng lúc nằm trong bộ nhớ, cho phép CPU chuyển đổi nhanh chóng giữa chúng. Điều này cho phép <b>chia sẻ tài nguyên phần cứng (như CPU, bộ nhớ) giữa nhiều chương trình đồng thời</b>.",
+        "explanation": "Mục tiêu chính của hệ thống đa chương (multiprogramming) là giữ cho CPU luôn bận rộn bằng cách cho phép nhiều chương trình cùng nằm trong bộ nhớ và chia sẻ các tài nguyên phần cứng (như CPU, I/O).",
         "difficulty": "easy",
         "topic": "Operating Systems",
         "hints": [
-          "Multi-programming có nghĩa là nhiều chương trình.",
-          "Mục đích của nó là tối đa hóa việc sử dụng tài nguyên.",
-          "Nhiều chương trình cùng 'chia nhau' phần cứng."
-        ]
-      },
-      {
-        "id": 24,
-        "question": "In….., only one program can reside in memory for execution.",
-        "image": null,
-        "options": [
-          "A. Mono-programming",
-          "B. Multi-programming",
-          "C. Partitioning",
-          "D. Paging"
-        ],
-        "correctAnswer": "A",
-        "explanation": "Trong kỹ thuật <b>lập trình đơn (monoprogramming)</b>, chỉ có <b>một chương trình duy nhất được nạp vào bộ nhớ và thực thi tại một thời điểm</b>. Phương pháp này kém hiệu quả vì CPU thường ở trạng thái rỗi khi chờ thiết bị nhập/xuất.",
-        "difficulty": "easy",
-        "topic": "Operating Systems",
-        "hints": [
-          "Mono có nghĩa là một.",
-          "Đây là phương pháp sơ khai nhất của hệ điều hành.",
-          "Đối lập với nó là Multi-programming."
+          "Multiprogramming = Nhiều chương trình cùng chia sẻ tài nguyên."
         ]
       },
       {
         "id": 25,
-        "question": "The…… scheduler creates a process from a job and changes a process back to a job.",
+        "question": "Which technique is used in multiprogramming where the memory manager determines the size beforehand, and each program occupies a contiguous space?",
         "image": null,
         "options": [
-          "A. Job",
-          "B. Process",
-          "C. Virtual",
-          "D. Queue"
+          "A. Partitioning",
+          "B. Paging",
+          "C. Demand paging",
+          "D. Demand segmentation"
         ],
         "correctAnswer": "A",
-        "explanation": "<b>Bộ lập lịch công việc (Job Scheduler)</b>, còn gọi là bộ lập lịch dài hạn, chịu trách nhiệm chọn các công việc (jobs) từ hàng đợi trên đĩa và nạp chúng vào bộ nhớ để trở thành các tiến trình (processes). Nó cũng xử lý khi một tiến trình kết thúc.",
+        "explanation": "Trong kỹ thuật Phân vùng (Partitioning), bộ nhớ được chia thành các vùng liên tục (contiguous). Mỗi chương trình được cấp phát một phân vùng để chạy. Paging và Segmentation là các kỹ thuật cho phép chương trình nằm ở các vùng bộ nhớ không liên tục.",
         "difficulty": "medium",
         "topic": "Operating Systems",
         "hints": [
-          "Bộ lập lịch này quyết định công việc nào được vào 'sân chơi' (bộ nhớ).",
-          "Nó hoạt động ở cấp độ 'công việc' (job), không phải 'tiến trình' (process).",
-          "Còn có Process Scheduler (bộ lập lịch ngắn hạn) quyết định tiến trình nào được dùng CPU."
+          "Từ khóa là 'contiguous space' (không gian liên tục)."
         ]
       },
       {
         "id": 26,
-        "question": "What kind of state does a process execute until it needs I/O resources when I/O is complete?",
+        "question": "Every process is __________.",
         "image": null,
         "options": [
-          "A. Hold state",
-          "B. Ready state",
-          "C. Running state",
-          "D. Waiting state"
+          "A. Only a job",
+          "B. Only a program",
+          "C. Only a partition",
+          "D. A job and a program"
         ],
         "correctAnswer": "D",
-        "explanation": "Khi một tiến trình đang ở trạng thái <b>Running</b> (đang dùng CPU) và cần tài nguyên I/O (ví dụ: đọc file), nó sẽ chuyển sang trạng thái <b>Waiting</b> (chờ). Nó sẽ ở trạng thái này cho đến khi thao tác I/O hoàn tất, sau đó nó sẽ chuyển lại trạng thái Ready để chờ đến lượt dùng CPU tiếp theo.",
-        "difficulty": "easy",
+        "explanation": "Một tiến trình (process) có thể được xem là một chương trình (program) đang được thực thi. Trong các hệ thống cũ, nó cũng tương đương với một công việc (job). Do đó, nó có thể được mô tả như cả hai.",
+        "difficulty": "medium",
         "topic": "Operating Systems",
         "hints": [
-          "Nếu một tiến trình đang chờ đợi một sự kiện (như I/O), nó không thể chạy.",
-          "Trạng thái này được gọi là Waiting hoặc Blocked.",
-          "Sau khi chờ xong, nó sẽ chuyển sang Ready, không phải Running ngay."
+          "Process = Program in execution."
         ]
       },
       {
         "id": 27,
-        "question": "The….. construct tests a condition.",
+        "question": "Why is the OS responsible for the efficient use of input/output devices?",
         "image": null,
         "options": [
-          "A. Sequence",
-          "B. Decision",
-          "C. Repetition",
-          "D. Flow"
+          "A. Because it needs to maintain a queue for each input/output device",
+          "B. Because these devices are slower in speed compared with the CPU and memory",
+          "C. It may use FIFO for one device",
+          "D. The manager also needs to know when a device has finished serving one process"
         ],
         "correctAnswer": "B",
-        "explanation": "Cấu trúc <b>quyết định (Decision)</b>, còn được gọi là lựa chọn (selection) hay rẽ nhánh, là cấu trúc điều khiển dùng để kiểm tra một điều kiện (ví dụ: `if (x > 10)`), và dựa vào kết quả (đúng/sai) để thực hiện các hành động khác nhau.",
-        "difficulty": "easy",
-        "topic": "Algorithms",
+        "explanation": "Lý do chính mà hệ điều hành phải quản lý hiệu quả các thiết bị I/O là vì chúng có tốc độ chậm hơn rất nhiều so với CPU và bộ nhớ. Nếu không quản lý tốt, CPU sẽ phải chờ đợi I/O rất lâu, gây lãng phí tài nguyên.",
+        "difficulty": "medium",
+        "topic": "Operating Systems",
         "hints": [
-          "Cấu trúc nào liên quan đến 'if-then-else'?",
-          "Từ khóa là 'tests a condition'.",
-          "Sequence là tuần tự, Repetition là lặp lại."
+          "Sự chênh lệch tốc độ giữa CPU và I/O là vấn đề cốt lõi mà HĐH phải giải quyết."
         ]
       },
       {
         "id": 28,
-        "question": "…..is an English-language-like representation of code.",
+        "question": "The list of coded instructions is called __________.",
         "image": null,
         "options": [
-          "A. A UML diagram",
-          "B. A program",
-          "C. Pseudocode",
-          "D. An algorithm"
+          "A. Computer program",
+          "B. Algorithm",
+          "C. Flowchart",
+          "D. Utility programs"
         ],
-        "correctAnswer": "C",
-        "explanation": "<b>Mã giả (Pseudocode)</b> là một dạng biểu diễn thuật toán giống ngôn ngữ tiếng Anh, dễ đọc và hiểu đối với con người, không bị ràng buộc bởi cú pháp cụ thể của bất kỳ ngôn ngữ lập trình nào.",
+        "correctAnswer": "A",
+        "explanation": "Một danh sách các chỉ thị, lệnh đã được mã hóa để máy tính có thể hiểu và thực thi được gọi là một chương trình máy tính (Computer program).",
         "difficulty": "easy",
-        "topic": "Algorithms",
+        "topic": "Programming Fundamentals",
         "hints": [
-          "Pseudo có nghĩa là 'giả'.",
-          "Đây là 'mã giả', không phải mã thật có thể chạy được.",
-          "Nó dùng để mô tả logic thuật toán một cách rõ ràng."
+          "Algorithm là ý tưởng, Program là hiện thực hóa của ý tưởng đó bằng mã lệnh."
         ]
       },
       {
         "id": 29,
-        "question": "…..is a basic algorithm in which we want to find the location of a target in a list of items.",
+        "question": "__________ is an English-language-like representation of an algorithm. There is no standard for it — some people use a lot of detail.",
         "image": null,
         "options": [
-          "A. Sorting",
-          "B. Searching",
-          "C. Product",
-          "D. Summation"
+          "A. Pseudocode",
+          "B. Unified Modeling Language (UML)",
+          "C. Flowchart",
+          "D. State diagram"
         ],
-        "correctAnswer": "B",
-        "explanation": "<b>Tìm kiếm (Searching)</b> là quá trình tìm vị trí của một mục tiêu trong một danh sách các đối tượng. Có hai loại tìm kiếm cơ bản: tìm kiếm tuần tự và tìm kiếm nhị phân.",
+        "correctAnswer": "A",
+        "explanation": "Mã giả (Pseudocode) là một cách mô tả thuật toán bằng ngôn ngữ tự nhiên (thường là tiếng Anh) kết hợp với các cấu trúc của ngôn ngữ lập trình. Nó không có một tiêu chuẩn cú pháp chặt chẽ.",
         "difficulty": "easy",
         "topic": "Algorithms",
         "hints": [
-          "Từ khóa là 'find the location of a target'.",
-          "Sorting là sắp xếp, không phải tìm kiếm.",
-          "Đây là một trong hai thuật toán cơ bản nhất cùng với Sắp xếp."
+          "Pseudo = Giả. Pseudocode = Mã giả."
         ]
       },
       {
         "id": 30,
-        "question": "In….. sort, the item that goes into the sorted list is always the first item in the unsorted list.",
+        "question": "We use the __________ search for an ordered list.",
         "image": null,
         "options": [
-          "A. Selection",
-          "B. Bubble",
-          "C. Insertion"
+          "A. Sequential",
+          "B. Binary",
+          "C. Bubble",
+          "D. Insertion"
         ],
-        "correctAnswer": "C",
-        "explanation": "Trong thuật toán <b>sắp xếp chèn (Insertion Sort)</b>, danh sách được chia thành hai phần: đã sắp xếp và chưa sắp xếp. Thuật toán luôn lấy phần tử đầu tiên từ phần chưa sắp xếp và 'chèn' nó vào đúng vị trí trong phần đã sắp xếp.",
-        "difficulty": "medium",
+        "correctAnswer": "B",
+        "explanation": "Tìm kiếm nhị phân (Binary search) là một thuật toán tìm kiếm rất hiệu quả nhưng yêu cầu danh sách phải được sắp xếp (ordered) trước. Tìm kiếm tuần tự (Sequential search) có thể dùng cho cả danh sách đã sắp xếp và chưa sắp xếp.",
+        "difficulty": "easy",
         "topic": "Algorithms",
         "hints": [
-          "Hãy tưởng tượng bạn đang sắp xếp một bộ bài trên tay.",
-          "Bạn lấy một lá bài (first item in the unsorted list) và tìm đúng vị trí để chèn nó vào những lá đã sắp xếp.",
-          "Selection Sort thì tìm lá nhỏ nhất, không phải lá đầu tiên."
+          "Ordered list + Search = Binary Search."
         ]
       },
       {
         "id": 31,
-        "question": "A….. analyzer reads the source code symbol by symbol and creates a list of tokens in the source language",
+        "question": "The items are divided into two lists (sorted and unsorted) in __________ sort.",
         "image": null,
         "options": [
-          "A. Lexical",
-          "B. Syntax",
-          "C. Semantic",
-          "D. Code generation"
+          "A. Only in a selection",
+          "B. Only in a bubble",
+          "C. Only in an insertion",
+          "D. In selection, bubble, or insertion"
         ],
-        "correctAnswer": "A",
-        "explanation": "Trong quá trình biên dịch, <b>bộ phân tích từ vựng (Lexical analyzer)</b> đọc mã nguồn từng ký hiệu một và nhóm chúng lại thành các đơn vị có ý nghĩa gọi là 'token' (ví dụ: từ khóa `if`, tên biến `x`, toán tử `+`).",
+        "correctAnswer": "D",
+        "explanation": "Cả ba thuật toán sắp xếp cơ bản: Sắp xếp chọn (selection), Sắp xếp nổi bọt (bubble), và Sắp xếp chèn (insertion) đều hoạt động dựa trên nguyên tắc duy trì một phần đã được sắp xếp và một phần chưa được sắp xếp của danh sách.",
         "difficulty": "medium",
-        "topic": "Compilers",
+        "topic": "Algorithms",
         "hints": [
-          "Đây là giai đoạn đầu tiên của quá trình biên dịch.",
-          "Lexical liên quan đến 'từ vựng' (words, symbols).",
-          "Nó giống như việc tách một câu thành các từ riêng lẻ."
+          "Cả 3 thuật toán sắp xếp cơ bản này đều có chung ý tưởng là mở rộng dần vùng đã được sắp xếp."
         ]
       },
       {
         "id": 32,
-        "question": "A notation used to express clearly on algorithm is known as",
+        "question": "The first CAD system called AutoCAD for PCs was announced in 1982. Who announced it?",
         "image": null,
         "options": [
-          "A. Algorithmic language",
-          "B. Assembly language",
-          "C. Machine language",
-          "D. High level language"
+          "A. Intel Corpn.",
+          "B. Rolta India Ltd.",
+          "C. Autodesk Inc.",
+          "D. AT & T Corp."
         ],
-        "correctAnswer": "A",
-        "explanation": "Một <b>ngôn ngữ thuật toán (algorithmic language)</b> là một ký hiệu được sử dụng để thể hiện rõ ràng một thuật toán. Đây là thuật ngữ chung cho các cách biểu diễn thuật toán như pseudocode, lưu đồ, v.v.",
+        "correctAnswer": "C",
+        "explanation": "AutoCAD, một trong những phần mềm Thiết kế có sự trợ giúp của Máy tính (CAD) đầu tiên và phổ biến nhất cho PC, được phát hành bởi công ty Autodesk Inc.",
         "difficulty": "easy",
-        "topic": "Algorithms",
+        "topic": "Software History",
         "hints": [
-          "Câu hỏi hỏi về một 'notation' (ký hiệu) để biểu diễn 'algorithm' (thuật toán).",
-          "Kết hợp hai từ khóa này lại.",
-          "Các ngôn ngữ lập trình cũng có thể được dùng, nhưng 'algorithmic language' là thuật ngữ tổng quát nhất."
+          "AutoCAD -> Autodesk."
         ]
       },
       {
         "id": 33,
-        "question": "In the….., we can think of a program as an active agent that manipulates passive objects.",
+        "question": "Programs designed to perform specific tasks are called __________.",
         "image": null,
         "options": [
-          "A. Procedural paradigm",
-          "B. Functional paradigm",
-          "C. Declarative paradigm",
-          "D. Object-oriented paradigm"
+          "A. System software",
+          "B. Application software",
+          "C. Utility programs",
+          "D. Operating system"
         ],
-        "correctAnswer": "A",
-        "explanation": "Trong <b>mô hình lập trình thủ tục (procedural paradigm)</b>, chương trình được xem như một chuỗi các lệnh hoặc thủ tục (active agent) hoạt động trên các cấu trúc dữ liệu (passive objects). Dữ liệu và các hành động xử lý nó được tách biệt.",
-        "difficulty": "hard",
-        "topic": "Programming Paradigms",
+        "correctAnswer": "B",
+        "explanation": "Phần mềm ứng dụng (Application software) là các chương trình được thiết kế để giúp người dùng thực hiện các công việc cụ thể, ví dụ như soạn thảo văn bản, lướt web, chơi game.",
+        "difficulty": "easy",
+        "topic": "Software",
         "hints": [
-          "Hãy nghĩ về sự khác biệt với OOP.",
-          "Trong OOP, dữ liệu và hành động được gói lại với nhau trong một đối tượng 'chủ động'.",
-          "Trong lập trình thủ tục, các hàm (chủ động) được gọi để xử lý các biến (thụ động)."
+          "Application = Ứng dụng -> Phục vụ các tác vụ cụ thể."
         ]
       },
       {
         "id": 34,
-        "question": "A………is a unit of code consisting of zero or more statements. It is also known as a block.",
+        "question": "Which language of the procedural paradigm is a high-level language and also has some low-level instructions?",
+        "image": null,
+        "options": [
+          "A. COBOL",
+          "B. C",
+          "C. Pascal",
+          "D. Ada"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Ngôn ngữ C được coi là một ngôn ngữ bậc trung. Nó có các cấu trúc của ngôn ngữ bậc cao nhưng cũng cho phép các thao tác ở mức thấp như truy cập trực tiếp vào bộ nhớ thông qua con trỏ.",
+        "difficulty": "medium",
+        "topic": "Programming Languages",
+        "hints": [
+          "Ngôn ngữ C nổi tiếng với khả năng lập trình hệ thống, đòi hỏi cả khả năng bậc cao và bậc thấp."
+        ]
+      },
+      {
+        "id": 35,
+        "question": "A __________ is a unit of code consisting of zero or more statements, also known as a block. Example: { X = 1; Y = 20; }",
         "image": null,
         "options": [
           "A. Compound statement",
@@ -675,18 +626,16 @@
           "C. Control statement"
         ],
         "correctAnswer": "A",
-        "explanation": "Một <b>câu lệnh ghép (compound statement)</b> là một đơn vị mã bao gồm từ không hoặc nhiều câu lệnh, còn được gọi là một khối (block). Các câu lệnh này được nhóm lại với nhau, thường được bao quanh bởi dấu ngoặc nhọn `{}`.",
+        "explanation": "Một câu lệnh phức hợp (Compound statement) hay một khối (block) là một nhóm gồm không hoặc nhiều câu lệnh được đặt trong cặp dấu ngoặc nhọn `{}` và được coi như một câu lệnh đơn.",
         "difficulty": "easy",
         "topic": "Programming Fundamentals",
         "hints": [
-          "Từ khóa là 'block'.",
-          "Trong các ngôn ngữ như C, Java, C++, một khối lệnh được đặt trong `{}`.",
-          "Câu hỏi đã cho một ví dụ rõ ràng về một khối lệnh."
+          "Compound = Phức hợp, kết hợp nhiều thứ lại với nhau."
         ]
       },
       {
-        "id": 35,
-        "question": "In a…. languages, the project team needs to choose a language or a set of languages from among the procedural",
+        "id": 36,
+        "question": "In the __________ phase, the project team needs to choose a language or a set of languages from among the procedural languages.",
         "image": null,
         "options": [
           "A. Analysis phase",
@@ -695,18 +644,16 @@
           "D. Testing phase"
         ],
         "correctAnswer": "C",
-        "explanation": "Trong mô hình thác nước, sau khi giai đoạn thiết kế hoàn tất, giai đoạn <b>hiện thực (implementation phase)</b> là lúc các lập trình viên bắt đầu viết mã. Đây chính là giai đoạn mà nhóm dự án cần chọn và sử dụng một ngôn ngữ lập trình cụ thể để hiện thực hóa bản thiết kế.",
+        "explanation": "Giai đoạn Triển khai (Implementation phase) là giai đoạn mà mã nguồn thực tế được viết. Việc lựa chọn ngôn ngữ lập trình là một phần quan trọng của giai đoạn này.",
         "difficulty": "easy",
         "topic": "Software Engineering",
         "hints": [
-          "Giai đoạn nào là giai đoạn 'viết code'?",
-          "Việc chọn ngôn ngữ là một phần của việc chuẩn bị để viết code.",
-          "Analysis là 'làm gì', Design là 'làm như thế nào', Implementation là 'làm nó'."
+          "Implementation = Triển khai = Viết code."
         ]
       },
       {
-        "id": 36,
-        "question": "Defining the users, requirements, and methods is part of the…. phase.",
+        "id": 37,
+        "question": "Defining the users, requirements, and methods is part of the __________ phase.",
         "image": null,
         "options": [
           "A. Analysis",
@@ -715,18 +662,16 @@
           "D. Testing"
         ],
         "correctAnswer": "A",
-        "explanation": "Giai đoạn <b>phân tích (analysis phase)</b> là giai đoạn đầu tiên, tập trung vào việc tìm hiểu và xác định các vấn đề. Nó bao gồm việc định nghĩa người dùng cuối, thu thập và phân tích các yêu cầu của họ, và đề xuất các phương pháp giải quyết.",
+        "explanation": "Giai đoạn Phân tích (Analysis phase) tập trung vào việc tìm hiểu và định nghĩa vấn đề: xác định người dùng là ai, họ cần gì (yêu cầu), và các phương pháp để giải quyết vấn đề.",
         "difficulty": "easy",
         "topic": "Software Engineering",
         "hints": [
-          "Đây là giai đoạn 'WHAT' (làm cái gì?), không phải 'HOW' (làm như thế nào?).",
-          "Từ khóa là 'defining requirements'.",
-          "Trước khi thiết kế hay viết code, bạn phải phân tích yêu cầu."
+          "Analysis = Phân tích -> Tìm hiểu cái 'gì' (what) cần làm."
         ]
       },
       {
-        "id": 37,
-        "question": "In the system development process, structure charts are tools used in the…. phase.",
+        "id": 38,
+        "question": "In the system development process, structure charts are tools used in the __________ phase.",
         "image": null,
         "options": [
           "A. Analysis",
@@ -735,18 +680,16 @@
           "D. Testing"
         ],
         "correctAnswer": "B",
-        "explanation": "Trong giai đoạn <b>thiết kế (design phase)</b>, các công cụ như biểu đồ cấu trúc (Structure Charts) được sử dụng để mô hình hóa và trực quan hóa cách hệ thống được chia thành các mô-đun và mối quan hệ giữa chúng.",
+        "explanation": "Biểu đồ cấu trúc (Structure charts) là một công cụ được sử dụng trong giai đoạn Thiết kế (Design phase) để biểu diễn kiến trúc của hệ thống, cho thấy các module và mối quan hệ giữa chúng.",
         "difficulty": "medium",
         "topic": "Software Engineering",
         "hints": [
-          "Structure chart là một công cụ thiết kế.",
-          "Nó thể hiện 'cấu trúc' của phần mềm.",
-          "Giai đoạn thiết kế là nơi tạo ra các bản thiết kế và biểu đồ như thế này."
+          "Design = Thiết kế -> Tìm hiểu cái 'như thế nào' (how) để làm. Biểu đồ cấu trúc là một phần của 'how'."
         ]
       },
       {
-        "id": 38,
-        "question": "What is quality referring to the ability to move data and/or a system from one platform to another and to reuse code?",
+        "id": 39,
+        "question": "What does quality refer to when talking about the ability to move software from one hardware platform to another?",
         "image": null,
         "options": [
           "A. Flexibility",
@@ -755,18 +698,16 @@
           "D. Changeability"
         ],
         "correctAnswer": "B",
-        "explanation": "<b>Transferability</b> (tính chuyển đổi) là khả năng di chuyển dữ liệu và/hoặc một hệ thống từ nền tảng này sang nền tảng khác và khả năng tái sử dụng mã. Dựa trên các lựa chọn, <b>Interoperability</b> (khả năng tương tác/tương thích) là thuật ngữ gần nhất, mô tả khả năng hệ thống hoạt động trên nhiều nền tảng khác nhau. Có thể có sự chồng chéo thuật ngữ trong tài liệu.",
-        "difficulty": "hard",
+        "explanation": "Tính tương hợp (Interoperability) và Tính khả chuyển (Portability) đều đề cập đến khả năng phần mềm hoạt động hoặc di chuyển giữa các nền tảng khác nhau. Trong các lựa chọn này, Interoperability là gần nhất.",
+        "difficulty": "medium",
         "topic": "Software Engineering",
         "hints": [
-          "Câu hỏi mô tả khả năng di chuyển giữa các nền tảng (portability) và tái sử dụng (reusability).",
-          "Thuật ngữ chính xác nhất là 'Transferability'.",
-          "Trong các lựa chọn, Interoperability (khả năng tương tác giữa các hệ thống/nền tảng) là gần nhất."
+          "Inter-operate = Hoạt động qua lại (giữa các hệ thống)."
         ]
       },
       {
-        "id": 39,
-        "question": "What is the method in black-box testing that a subset of values in the input domain is selected for testing?",
+        "id": 40,
+        "question": "What is the method in black-box testing where tests are designed to include representatives of boundary values in a range?",
         "image": null,
         "options": [
           "A. Boundary-value testing",
@@ -774,19 +715,17 @@
           "C. Exhaustive testing",
           "D. Data flow testing"
         ],
-        "correctAnswer": "B",
-        "explanation": "Trong kiểm thử hộp đen, <b>kiểm thử ngẫu nhiên (random testing)</b> là phương pháp trong đó một tập con các giá trị trong miền đầu vào được chọn ngẫu nhiên để kiểm thử. Mục đích là để mô phỏng việc sử dụng thực tế và tìm ra các lỗi không mong muốn.",
+        "correctAnswer": "A",
+        "explanation": "Kiểm thử giá trị biên (Boundary-value testing) là một kỹ thuật kiểm thử hộp đen tập trung vào việc kiểm tra các giá trị tại hoặc gần các ranh giới của miền dữ liệu đầu vào, nơi các lỗi thường có khả năng xảy ra nhất.",
         "difficulty": "easy",
         "topic": "Software Engineering",
         "hints": [
-          "Từ khóa là 'subset of values ... is selected'.",
-          "Nếu việc lựa chọn là ngẫu nhiên, đó là random testing.",
-          "Boundary-value testing tập trung vào các giá trị biên, không phải một tập con ngẫu nhiên."
+          "Boundary = Biên giới. Lỗi thường xảy ra ở 'biên giới'."
         ]
       },
       {
-        "id": 40,
-        "question": "What is the more common technique of two-dimensional arrays that can be stored in memory?",
+        "id": 41,
+        "question": "What is the more common technique for storing two-dimensional arrays in memory?",
         "image": null,
         "options": [
           "A. Column-major storage",
@@ -795,98 +734,87 @@
           "D. Row-major storage"
         ],
         "correctAnswer": "D",
-        "explanation": "Hầu hết các ngôn ngữ lập trình và máy tính sử dụng kỹ thuật lưu trữ <b>theo hàng chính (row-major storage)</b>. Với kỹ thuật này, toàn bộ một hàng của mảng hai chiều được lưu trữ liên tiếp trong bộ nhớ, sau đó mới đến hàng tiếp theo.",
-        "difficulty": "easy",
+        "explanation": "Lưu trữ theo hàng (Row-major storage) là kỹ thuật phổ biến hơn, trong đó các phần tử của cùng một hàng được lưu trữ liên tiếp nhau trong bộ nhớ. Đây là cách mà các ngôn ngữ như C/C++, Python sử dụng.",
+        "difficulty": "medium",
         "topic": "Data Structures",
         "hints": [
-          "Hãy nghĩ về cách bạn đọc một cuốn sách: từ trái sang phải (hàng), rồi xuống dòng tiếp theo.",
-          "Row-major là cách tự nhiên nhất để 'làm phẳng' một mảng 2D thành mảng 1D.",
-          "FORTRAN là một ngoại lệ nổi tiếng sử dụng Column-major."
-        ]
-      },
-      {
-        "id": 41,
-        "question": "Each element in a record is called…..",
-        "image": null,
-        "options": [
-          "A. A variable",
-          "B. An index",
-          "C. A field",
-          "D. A node"
-        ],
-        "correctAnswer": "C",
-        "explanation": "Một bản ghi (record) là một tập hợp các phần tử có liên quan. Mỗi phần tử trong một bản ghi được gọi là một <b>trường (field)</b>.",
-        "difficulty": "easy",
-        "topic": "Data Structures",
-        "hints": [
-          "Record tương đương với một hàng trong bảng CSDL.",
-          "Field tương đương với một cột trong bảng CSDL.",
-          "Ví dụ: Record = SinhVien, Fields = MaSV, HoTen."
+          "Row-major: Các hàng được xếp nối đuôi nhau. Column-major: Các cột được xếp nối đuôi nhau."
         ]
       },
       {
         "id": 42,
-        "question": "Given a linked list called children, the pointer variable children identifies…. element of the linked list.",
+        "question": "__________ is a set of characters that is treated like an array in some languages and as a type in others.",
         "image": null,
         "options": [
-          "A. The first",
-          "B. The second",
-          "C. The last",
-          "D. Any"
+          "A. A string",
+          "B. A record",
+          "C. A symbol",
+          "D. A link"
         ],
         "correctAnswer": "A",
-        "explanation": "Trong một danh sách liên kết, biến con trỏ (ví dụ: `children`) chính là tên của danh sách và nó luôn luôn trỏ đến <b>phần tử đầu tiên (the first element)</b> trong danh sách đó. Đây là điểm khởi đầu để duyệt qua toàn bộ danh sách.",
+        "explanation": "Một chuỗi (string) là một tập hợp các ký tự. Trong ngôn ngữ C, nó được coi là một mảng các ký tự. Trong các ngôn ngữ như Python hay Java, nó là một kiểu dữ liệu riêng.",
         "difficulty": "easy",
         "topic": "Data Structures",
         "hints": [
-          "Đây là định nghĩa của con trỏ đầu (head pointer) trong danh sách liên kết.",
-          "Mất con trỏ này là mất cả danh sách.",
-          "Nó là cánh cổng để đi vào danh sách."
+          "Chuỗi ký tự chính là 'string'."
         ]
       },
       {
         "id": 43,
-        "question": "The push operation …. of the stack.",
+        "question": "The name of a linked list is the name of the head pointer that points to the __________ of the list.",
         "image": null,
         "options": [
-          "A. Deletes an item from the top",
-          "B. Deletes an item from the bottom",
-          "C. Inserts an item at the top",
-          "D. Inserts an item at the bottom"
+          "A. First node",
+          "B. Second node",
+          "C. Null node",
+          "D. Last node"
         ],
-        "correctAnswer": "C",
-        "explanation": "Phép toán <b>push</b> trong cấu trúc dữ liệu ngăn xếp (stack) dùng để <b>thêm một mục vào đỉnh (top)</b> của ngăn xếp. Ngăn xếp hoạt động theo nguyên tắc LIFO (Last-In, First-Out).",
+        "correctAnswer": "A",
+        "explanation": "Con trỏ đầu (head pointer) là điểm bắt đầu của danh sách liên kết. Nó lưu giữ địa chỉ của nút đầu tiên (first node). Mất con trỏ này là mất cả danh sách.",
         "difficulty": "easy",
         "topic": "Data Structures",
         "hints": [
-          "Push là đẩy vào.",
-          "Trong một chồng đĩa, bạn luôn đặt đĩa mới lên trên cùng.",
-          "Thao tác ngược lại là 'pop' (lấy ra từ đỉnh)."
+          "Head = Đầu -> Trỏ đến cái đầu tiên."
         ]
       },
       {
         "id": 44,
-        "question": "In….. of a binary tree we process all the children of a node before proceeding with the next generation.",
+        "question": "The Stack operation returns a/an __________.",
         "image": null,
         "options": [
-          "A. Preorder traversal",
-          "B. Inorder traversal",
-          "C. Postorder traversal",
-          "D. Breadth-first traversal"
+          "A. Full stack",
+          "B. Empty stack",
+          "C. Check status of stack",
+          "D. All of the others"
         ],
-        "correctAnswer": "D",
-        "explanation": "Duyệt <b>theo chiều rộng (breadth-first traversal)</b> là phương pháp xử lý tất cả các con của một nút (hoặc tất cả các nút ở cùng một cấp độ/thế hệ) trước khi chuyển sang xử lý các nút ở cấp độ sâu hơn (thế hệ tiếp theo).",
+        "correctAnswer": "C",
+        "explanation": "Câu hỏi này hơi mơ hồ. Các thao tác trên stack có thể là push (thêm), pop (lấy ra), peek (xem đỉnh). Ngoài ra còn có các thao tác kiểm tra trạng thái như isEmpty, isFull. Trong các lựa chọn, 'Check status of stack' (Kiểm tra trạng thái của stack) là một loại thao tác hợp lệ và bao quát.",
         "difficulty": "medium",
         "topic": "Data Structures",
         "hints": [
-          "Breadth có nghĩa là 'chiều rộng'.",
-          "Nó duyệt theo từng tầng, giống như sóng lan trên mặt nước.",
-          "Các phương pháp duyệt còn lại (Preorder, Inorder, Postorder) là duyệt theo chiều sâu (Depth-first)."
+          "Một thao tác stack phổ biến là kiểm tra xem nó rỗng hay đầy trước khi thực hiện push hoặc pop."
         ]
       },
       {
         "id": 45,
-        "question": "The queue operation: \"queue (queueName)\" is used to….",
+        "question": "A binary search tree (BST) is a binary tree with one extra property: the key value of the root is __________ the values of all nodes in each left subtree.",
+        "image": null,
+        "options": [
+          "A. Greater than",
+          "B. Less than",
+          "C. Equal to"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Theo định nghĩa của Cây tìm kiếm nhị phân (BST), với mọi nút, giá trị của nút đó phải lớn hơn tất cả các giá trị trong cây con bên trái của nó, và nhỏ hơn tất cả các giá trị trong cây con bên phải.",
+        "difficulty": "easy",
+        "topic": "Data Structures",
+        "hints": [
+          "BST: Trái < Nút < Phải."
+        ]
+      },
+      {
+        "id": 46,
+        "question": "The queue operation: 'queue (queueName)' is used to __________.",
         "image": null,
         "options": [
           "A. Delete queue",
@@ -895,117 +823,105 @@
           "D. Insert queue"
         ],
         "correctAnswer": "C",
-        "explanation": "Phép toán <b>queue (queueName)</b>, theo quy ước thông thường trong sách giáo khoa, được sử dụng để khởi tạo hoặc <b>tạo ra một hàng đợi rỗng (empty queue)</b>.",
-        "difficulty": "easy",
+        "explanation": "Cú pháp `tên_kiểu_dữ_liệu (tên_biến)` thường là cú pháp của một hàm khởi tạo (constructor) trong nhiều ngôn ngữ lập trình. Trong trường hợp này, `queue(queueName)` có khả năng cao nhất là để tạo ra một hàng đợi rỗng mới với tên là queueName.",
+        "difficulty": "medium",
         "topic": "Data Structures",
         "hints": [
-          "Đây là thao tác khởi tạo.",
-          "Trước khi có thể thêm (enqueue) hay xóa (dequeue), bạn phải tạo ra hàng đợi trước.",
-          "Thao tác này tương tự như một constructor trong lập trình."
-        ]
-      },
-      {
-        "id": 46,
-        "question": "In the sequential file we process the records one by one. After the operating system processes the last record the ….. is detected and the loop is exited.",
-        "image": null,
-        "options": [
-          "A. Hashed file",
-          "B. Sequential file",
-          "C. EOF"
-        ],
-        "correctAnswer": "C",
-        "explanation": "Trong tệp tuần tự, sau khi hệ điều hành xử lý bản ghi cuối cùng, một dấu hiệu <b>EOF (End-Of-File - kết thúc tệp)</b> được phát hiện, báo hiệu rằng không còn bản ghi nào để xử lý, và vòng lặp duyệt tệp sẽ kết thúc.",
-        "difficulty": "easy",
-        "topic": "File Systems",
-        "hints": [
-          "EOF là một ký hiệu đặc biệt, không phải là một phần của dữ liệu.",
-          "Nó cho chương trình biết khi nào nên dừng đọc file.",
-          "EOF là viết tắt của End-Of-File."
+          "Đây là cú pháp khởi tạo một đối tượng mới."
         ]
       },
       {
         "id": 47,
-        "question": "In the ….. hashing method, the key is divided by the file size, and the address is the remainder plus 1.",
+        "question": "When a sequential file is updated, the __________ file gets the actual update.",
         "image": null,
         "options": [
-          "A. Direct",
-          "B. Division remainder",
-          "C. Modulo division",
-          "D. Digit extraction"
+          "A. New master",
+          "B. Old master",
+          "C. Transaction",
+          "D. Error report"
         ],
-        "correctAnswer": "B",
-        "explanation": "Phương pháp băm này được gọi là <b>băm chia lấy phần dư (division remainder hashing)</b>. Trong đó, khóa được chia cho kích thước tệp, và phần dư của phép chia được dùng để tính địa chỉ. Đây là một trong những phương pháp băm phổ biến nhất.",
+        "correctAnswer": "A",
+        "explanation": "Khi cập nhật một tệp tuần tự, thuật toán sẽ đọc từ tệp chính cũ (old master) và tệp giao dịch (transaction), sau đó ghi kết quả đã được cập nhật vào một tệp chính mới (new master). Tệp chính cũ không bị thay đổi.",
         "difficulty": "medium",
         "topic": "File Systems",
         "hints": [
-          "Từ khóa là 'divided' (chia) và 'remainder' (phần dư).",
-          "Đây là ứng dụng của phép toán modulo trong băm.",
-          "Modulo division cũng là một tên gọi khác của phương pháp này."
+          "Quy trình: (Old Master + Transaction) -> New Master."
         ]
       },
       {
         "id": 48,
-        "question": "….are provided by most operating systems for organizing files. This performs the same function as a folder in a filing cabinet.",
+        "question": "If the transaction file key is 20 and the first master file key is 25, then we __________.",
         "image": null,
         "options": [
-          "A. Operating system",
-          "B. Files",
-          "C. Binary files",
-          "D. Directories"
+          "A. Add the new record to the new master file",
+          "B. Revise the contents of the old master file",
+          "C. Delete the data",
+          "D. Write the old master file record to the new master file"
         ],
-        "correctAnswer": "D",
-        "explanation": "<b>Thư mục (Directories)</b> được cung cấp bởi hầu hết các hệ điều hành để tổ chức các tệp. Chức năng của chúng tương tự như một thư mục (folder) trong tủ hồ sơ, giúp quản lý và sắp xếp các tệp một cách có hệ thống.",
-        "difficulty": "easy",
-        "topic": "Operating Systems",
+        "correctAnswer": "A",
+        "explanation": "Trong thuật toán cập nhật tệp tuần tự, nếu khóa của bản ghi giao dịch (20) nhỏ hơn khóa của bản ghi chính (25), điều đó có nghĩa đây là một bản ghi mới cần được chèn vào. Do đó, bản ghi giao dịch này sẽ được ghi vào tệp chính mới.",
+        "difficulty": "hard",
+        "topic": "File Systems",
         "hints": [
-          "Thứ gì dùng để chứa các file?",
-          "Câu hỏi đã gợi ý 'folder in a filing cabinet'.",
-          "Directory và Folder về cơ bản là cùng một khái niệm."
+          "Transaction Key < Master Key => Đây là một bản ghi mới, cần Add."
         ]
       },
       {
         "id": 49,
-        "question": "In a three-level DBMS architecture, the …..level interacts directly with the users.",
+        "question": "The __________ method is used when a collision occurs, and the prime area addresses are searched for an open or unoccupied record where the new data can be placed.",
         "image": null,
         "options": [
-          "A. External",
-          "B. Conceptual",
-          "C. Internal",
-          "D. Physical"
+          "A. Linked list resolution",
+          "B. Open addressing resolution",
+          "C. Bucket hashing",
+          "D. Digit extraction hashing"
         ],
-        "correctAnswer": "A",
-        "explanation": "Trong kiến trúc ba cấp của DBMS, <b>cấp độ bên ngoài (External level)</b> là cấp độ tương tác trực tiếp với người dùng cuối hoặc các chương trình ứng dụng. Nó cung cấp các 'khung nhìn' (views) tùy chỉnh về cơ sở dữ liệu cho mỗi nhóm người dùng.",
+        "correctAnswer": "B",
+        "explanation": "Giải quyết va chạm bằng địa chỉ mở (Open addressing resolution) là một nhóm các phương pháp, trong đó khi xảy ra va chạm, hệ thống sẽ tìm một vị trí trống khác trong bảng băm để lưu dữ liệu.",
         "difficulty": "medium",
-        "topic": "Database Concepts",
+        "topic": "Data Structures",
         "hints": [
-          "Kiến trúc 3 cấp là: External, Conceptual, Internal.",
-          "External là 'bên ngoài', gần với người dùng nhất.",
-          "Internal là 'bên trong', gần với phần cứng nhất."
+          "Open addressing = Tìm một địa chỉ 'mở' (trống) khác."
         ]
       },
       {
         "id": 50,
-        "question": "In the network database model, the entities are organized in a ….in which some entities can be accessed through several paths.",
+        "question": "The intersection of a column and row in a spreadsheet is called a __________.",
         "image": null,
         "options": [
-          "A. Graph",
-          "B. Tree",
-          "C. Array",
-          "D. Record"
+          "A. Key",
+          "B. Field",
+          "C. Cell",
+          "D. Menu"
         ],
-        "correctAnswer": "A",
-        "explanation": "Trong mô hình cơ sở dữ liệu mạng, các thực thể được tổ chức theo dạng <b>đồ thị (graph)</b>. Điều này cho phép một bản ghi con (child) có thể có nhiều bản ghi cha (parent), tạo ra các mối quan hệ phức tạp và cho phép truy cập một thực thể qua nhiều đường dẫn.",
-        "difficulty": "hard",
-        "topic": "Database Concepts",
+        "correctAnswer": "C",
+        "explanation": "Trong một bảng tính (spreadsheet), giao điểm của một hàng và một cột được gọi là một ô (cell).",
+        "difficulty": "easy",
+        "topic": "General IT Knowledge",
         "hints": [
-          "Mô hình này linh hoạt hơn mô hình phân cấp (tree).",
-          "Trong một cây, một nút con chỉ có một nút cha.",
-          "Trong một đồ thị, một nút có thể kết nối với nhiều nút khác."
+          "Đây là thuật ngữ cơ bản khi sử dụng Excel hoặc Google Sheets."
         ]
       },
       {
         "id": 51,
-        "question": "Each column in a relation is called….",
+        "question": "In the relational database model, data is organized in __________ called relations.",
+        "image": null,
+        "options": [
+          "A. Two-dimensional array",
+          "B. Two-dimensional tables",
+          "C. Two-dimensional record"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Trong mô hình cơ sở dữ liệu quan hệ, dữ liệu được tổ chức dưới dạng các bảng hai chiều (two-dimensional tables). Mỗi bảng được gọi là một quan hệ (relation).",
+        "difficulty": "easy",
+        "topic": "Database Concepts",
+        "hints": [
+          "Relational Database = Bảng (Table)."
+        ]
+      },
+      {
+        "id": 52,
+        "question": "Each column in a relation is called __________.",
         "image": null,
         "options": [
           "A. An attribute",
@@ -1014,38 +930,34 @@
           "D. An attitude"
         ],
         "correctAnswer": "A",
-        "explanation": "Trong mô hình cơ sở dữ liệu quan hệ, mỗi <b>cột (column)</b> trong một quan hệ (bảng) được gọi là một <b>thuộc tính (attribute)</b>.",
+        "explanation": "Trong mô hình cơ sở dữ liệu quan hệ, mỗi cột của một bảng (quan hệ) được gọi là một thuộc tính (attribute). Mỗi hàng được gọi là một bộ (tuple) hoặc một bản ghi (record).",
         "difficulty": "easy",
         "topic": "Database Concepts",
         "hints": [
-          "Relation = Bảng.",
-          "Attribute = Cột.",
-          "Tuple = Hàng."
-        ]
-      },
-      {
-        "id": 52,
-        "question": "The unary …. operation always results in a relation that has exactly one more row than the original.",
-        "image": null,
-        "options": [
-          "A. Insert",
-          "B. Delete",
-          "C. Update",
-          "D. Select"
-        ],
-        "correctAnswer": "A",
-        "explanation": "Phép toán <b>Insert</b> (chèn) là một phép toán đơn nhất (unary) được áp dụng cho một quan hệ. Thao tác này <b>chèn một bộ dữ liệu (tuple - hàng) mới</b> vào quan hệ, do đó làm tăng số lượng hàng lên chính xác một hàng.",
-        "difficulty": "easy",
-        "topic": "Database Concepts",
-        "hints": [
-          "Thao tác nào làm 'thêm' một hàng?",
-          "Insert thêm hàng, Delete xóa hàng, Update sửa hàng.",
-          "Select chỉ đọc, không thay đổi số hàng."
+          "Bảng = Quan hệ, Cột = Thuộc tính, Hàng = Bộ."
         ]
       },
       {
         "id": 53,
-        "question": "The term users in a DBMS has a broad meaning. We can divide users into:",
+        "question": "Which of the following is a binary operator?",
+        "image": null,
+        "options": [
+          "A. Select",
+          "B. Update",
+          "C. Difference",
+          "D. All of the above"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Trong đại số quan hệ, một toán tử nhị phân (binary operator) là toán tử hoạt động trên hai quan hệ. Phép hiệu (Difference), phép hợp (Union), phép tích (Product) là các toán tử nhị phân. Phép chọn (Select) là toán tử một ngôi (unary).",
+        "difficulty": "medium",
+        "topic": "Database Concepts",
+        "hints": [
+          "Binary = Hai. Toán tử cần 2 'đầu vào' (hai bảng)."
+        ]
+      },
+      {
+        "id": 54,
+        "question": "The term 'users' in a DBMS has a broad meaning. We can divide users into __________.",
         "image": null,
         "options": [
           "A. End users and database administrators",
@@ -1054,58 +966,52 @@
           "D. Application programs and database administrators"
         ],
         "correctAnswer": "C",
-        "explanation": "Thuật ngữ 'người dùng' trong DBMS có ý nghĩa rộng. Chúng ta có thể chia người dùng thành hai nhóm chính: <b>chương trình ứng dụng (Application programs)</b> và <b>người dùng cuối (end users)</b>. Người dùng cuối lại bao gồm các loại khác nhau như quản trị viên cơ sở dữ liệu (DBA) và người dùng thông thường.",
+        "explanation": "Người dùng của một Hệ quản trị CSDL (DBMS) có thể được phân thành hai loại chính: các chương trình ứng dụng (application programs) truy cập vào CSDL, và người dùng cuối (end users) tương tác với CSDL (thường là thông qua các chương trình ứng dụng).",
         "difficulty": "medium",
         "topic": "Database Concepts",
         "hints": [
-          "Hãy nghĩ xem ai/cái gì 'sử dụng' cơ sở dữ liệu.",
-          "Không chỉ con người, mà cả các chương trình cũng sử dụng CSDL.",
-          "End users là một nhóm lớn bao gồm cả DBA và người dùng thường."
-        ]
-      },
-      {
-        "id": 54,
-        "question": "In the attacks threaten confidentiality based on…. they can obtain some other type of information by monitoring online traffic.",
-        "image": null,
-        "options": [
-          "A. Snooping",
-          "B. Repudiation",
-          "C. Denial of service",
-          "D. Traffic analysis"
-        ],
-        "correctAnswer": "D",
-        "explanation": "Các cuộc tấn công đe dọa tính bảo mật có thể dựa trên <b>phân tích lưu lượng (traffic analysis)</b>. Kẻ tấn công có thể thu thập các loại thông tin khác bằng cách giám sát lưu lượng trực tuyến, ngay cả khi không thể đọc được nội dung của nó.",
-        "difficulty": "medium",
-        "topic": "Cybersecurity",
-        "hints": [
-          "Đây là một cuộc tấn công thụ động.",
-          "Nó không đọc nội dung, mà phân tích các mẫu (pattern) của lưu lượng.",
-          "Snooping là đọc trộm nội dung."
+          "Hãy nghĩ xem ai/cái gì đang 'dùng' CSDL."
         ]
       },
       {
         "id": 55,
-        "question": "Before transmission the sender transforms the plaintext into the ciphertext-this is…..",
+        "question": "Which of the following describes how to protect data by ensuring that information is protected from unauthorized change?",
         "image": null,
         "options": [
-          "A. Plain text",
-          "B. Cipher text",
-          "C. Encryption",
-          "D. Decryption"
+          "A. Confidentiality",
+          "B. Integrity",
+          "C. Availability",
+          "D. Masquerading"
         ],
-        "correctAnswer": "C",
-        "explanation": "Quá trình người gửi chuyển đổi văn bản gốc (plaintext) thành văn bản mã hóa (ciphertext) trước khi truyền tải được gọi là <b>mã hóa (encryption)</b>.",
+        "correctAnswer": "B",
+        "explanation": "Tính toàn vẹn (Integrity) là mục tiêu an ninh nhằm đảm bảo rằng dữ liệu không bị thay đổi một cách trái phép trong quá trình lưu trữ hoặc truyền tải.",
         "difficulty": "easy",
         "topic": "Cybersecurity",
         "hints": [
-          "Plaintext -> Ciphertext.",
-          "Đây là quá trình làm cho thông tin trở nên bí mật.",
-          "Quá trình ngược lại là Decryption."
+          "Confidentiality (Bảo mật): Chống đọc trộm. Integrity (Toàn vẹn): Chống sửa đổi. Availability (Sẵn sàng): Chống từ chối dịch vụ."
         ]
       },
       {
         "id": 56,
-        "question": "….are unwanted programs that are hidden within other programs (host). When the user executes the host program.",
+        "question": "When the ciphertext is received, the receiver must transform the ciphertext back into the plaintext. This is called __________.",
+        "image": null,
+        "options": [
+          "A. Plain text",
+          "B. Ciphertext",
+          "C. Encryption",
+          "D. Decryption"
+        ],
+        "correctAnswer": "D",
+        "explanation": "Giải mã (Decryption) là quá trình ngược lại của mã hóa, biến đổi bản mã (ciphertext) trở lại thành bản rõ (plaintext).",
+        "difficulty": "easy",
+        "topic": "Cybersecurity",
+        "hints": [
+          "Encryption: Plaintext -> Ciphertext. Decryption: Ciphertext -> Plaintext."
+        ]
+      },
+      {
+        "id": 57,
+        "question": "__________ is an independent program that can copy itself and travels through the network. It tries to find weaknesses in the system to inflict harm.",
         "image": null,
         "options": [
           "A. DoS",
@@ -1113,39 +1019,35 @@
           "C. Worms",
           "D. Viruses"
         ],
-        "correctAnswer": "B",
-        "explanation": "<b>Trojan horses (ngựa thành Troia)</b> là những chương trình độc hại được ngụy trang hoặc ẩn trong các chương trình hợp pháp (chương trình chủ - host). Khi người dùng chạy chương trình chủ, Trojan cũng được kích hoạt.",
+        "correctAnswer": "C",
+        "explanation": "Sâu máy tính (Worms) là một loại phần mềm độc hại có khả năng tự nhân bản và lan truyền qua mạng máy tính mà không cần sự tương tác của người dùng. Virus cần một tệp vật chủ để lây nhiễm.",
         "difficulty": "easy",
         "topic": "Cybersecurity",
         "hints": [
-          "Hãy nhớ câu chuyện về con ngựa gỗ thành Troy.",
-          "Nó trông vô hại bên ngoài nhưng chứa đựng nguy hiểm bên trong.",
-          "Khác với virus, Trojan không tự nhân bản."
-        ]
-      },
-      {
-        "id": 57,
-        "question": "Sending a virus to a computer is called an…..attack.",
-        "image": null,
-        "options": [
-          "A. Penetration",
-          "B. Denial of service",
-          "C. Either a or b",
-          "D. Neither a nor b"
-        ],
-        "correctAnswer": "A",
-        "explanation": "Hành động gửi virus đến máy tính hoặc xâm nhập vào hệ thống máy tính để lây nhiễm virus được gọi là tấn công <b>thâm nhập (penetration)</b>.",
-        "difficulty": "easy",
-        "topic": "Cybersecurity",
-        "hints": [
-          "Penetration có nghĩa là thâm nhập, xâm nhập.",
-          "Đây là một hành động tấn công chủ động.",
-          "Denial of service (DoS) là tấn công làm hệ thống ngừng hoạt động."
+          "Worm: Tự lan truyền qua mạng. Virus: Cần vật chủ (file) để lây lan."
         ]
       },
       {
         "id": 58,
-        "question": "In a…. the relationship between a character in the plaintext to a character in the ciphertext is one-to-many.",
+        "question": "Sending a virus to a computer is called an __________ attack.",
+        "image": null,
+        "options": [
+          "A. Penetration",
+          "B. Denial of Service",
+          "C. Either a or b",
+          "D. Neither a nor b"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Gửi virus là một hình thức tấn công thâm nhập (Penetration attack), với mục tiêu là xâm nhập vào hệ thống của nạn nhân để gây hại hoặc đánh cắp thông tin.",
+        "difficulty": "medium",
+        "topic": "Cybersecurity",
+        "hints": [
+          "Penetrate = Thâm nhập."
+        ]
+      },
+      {
+        "id": 59,
+        "question": "In a __________ cipher, the relationship between a character in the plaintext and a character in the ciphertext is one-to-many.",
         "image": null,
         "options": [
           "A. Monoalphabetic cipher",
@@ -1154,53 +1056,29 @@
           "D. Transposition cipher"
         ],
         "correctAnswer": "C",
-        "explanation": "Trong mã hóa <b>đa bảng chữ cái (Polyalphabetic cipher)</b>, một ký tự trong văn bản gốc có thể được mã hóa thành nhiều ký tự khác nhau trong văn bản mã hóa, tùy thuộc vào vị trí của nó trong văn bản. Điều này tạo ra mối quan hệ một-nhiều và làm cho việc phá mã khó hơn so với mã hóa đơn bảng chữ cái (monoalphabetic), nơi mối quan hệ luôn là một-một.",
-        "difficulty": "hard",
+        "explanation": "Trong mật mã đa bảng chữ (Polyalphabetic cipher), một ký tự trong bản rõ có thể được mã hóa thành nhiều ký tự khác nhau trong bản mã ở những vị trí khác nhau. Điều này làm cho việc phân tích tần suất trở nên khó khăn hơn. Mật mã đơn bảng chữ (Monoalphabetic) có quan hệ 1-1.",
+        "difficulty": "medium",
         "topic": "Cybersecurity",
         "hints": [
-          "Mono-alphabetic có mối quan hệ 1-1 (ví dụ: A luôn thành X).",
-          "Poly-alphabetic có mối quan hệ 1-nhiều (ví dụ: A có thể thành X ở lần đầu, nhưng thành Y ở lần sau).",
-          "Poly có nghĩa là 'nhiều'."
-        ]
-      },
-      {
-        "id": 59,
-        "question": "….ciphers are sometimes called public-key ciphers.",
-        "image": null,
-        "options": [
-          "A. Symmetric-key",
-          "B. Asymmetric-key",
-          "C. Public-key",
-          "D. Private-key"
-        ],
-        "correctAnswer": "B",
-        "explanation": "<b>Mã hóa khóa bất đối xứng (Asymmetric-key ciphers)</b> đôi khi được gọi là mã hóa <b>khóa công khai (public-key ciphers)</b>. Điều này là do nó sử dụng một cặp khóa riêng biệt: một khóa công khai để mã hóa và một khóa riêng tư để giải mã.",
-        "difficulty": "easy",
-        "topic": "Cybersecurity",
-        "hints": [
-          "Asymmetric có nghĩa là 'bất đối xứng'.",
-          "Nó sử dụng hai khóa khác nhau: một công khai, một riêng tư.",
-          "Vì có sự tồn tại của khóa công khai, nó còn được gọi là mật mã khóa công khai."
+          "Mono = Một, Poly = Nhiều. One-to-many -> Polyalphabetic."
         ]
       },
       {
         "id": 60,
-        "question": "In a computer, the…. subsystem stores data and programs.",
+        "question": "In RSA, if user A wants to send an encrypted message to user B, the plaintext is encrypted with the public key of __________.",
         "image": null,
         "options": [
-          "A. ALU",
-          "B. Input/output",
-          "C. Memory",
-          "D. Control unit"
+          "A. User A",
+          "B. User B",
+          "C. The network",
+          "D. A third party"
         ],
-        "correctAnswer": "C",
-        "explanation": "Trong mô hình Von Neumann, <b>bộ nhớ (Memory)</b> là nơi lưu trữ cả chương trình và dữ liệu. Đây là một trong những thành phần cốt lõi của máy tính.",
+        "correctAnswer": "B",
+        "explanation": "Trong mật mã khóa công khai như RSA, để gửi một tin nhắn bảo mật cho người nhận, người gửi sẽ mã hóa tin nhắn bằng khóa công khai (public key) của người nhận. Chỉ người nhận mới có khóa riêng tư (private key) tương ứng để giải mã.",
         "difficulty": "easy",
-        "topic": "Computer Components",
+        "topic": "Cybersecurity",
         "hints": [
-          "Thành phần nào của máy tính có chức năng lưu trữ?",
-          "ALU và Control Unit xử lý, I/O nhập/xuất.",
-          "Đây là một câu hỏi củng cố kiến thức về kiến trúc von Neumann."
+          "Mã hóa bằng khóa công khai của người nhận, giải mã bằng khóa riêng tư của người nhận."
         ]
       }
     ]

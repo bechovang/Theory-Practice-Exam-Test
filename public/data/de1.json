@@ -1,7 +1,7 @@
 {
-  "examId": "csi1",
-  "title": "Đề 1 CSI ",
-  "description": "AI hints and explanations",
+  "examId": "de2_csi",
+  "title": "Đề 2 CSI",
+  "description": "Đề thi trắc nghiệm bao gồm các chủ đề cốt lõi của Khoa học Máy tính, với giải thích sử dụng định dạng HTML.",
   "questions": [
     {
       "id": 1,
@@ -14,13 +14,13 @@
         "D. Neither data nor programs"
       ],
       "correctAnswer": "C",
-      "explanation": "Đây là câu hỏi định nghĩa cốt lõi về kiến trúc máy tính hiện đại.<br /><br /><b>1. Khái niệm chính:</b><br />Điểm đột phá của mô hình von Neumann là khái niệm <b>'chương trình được lưu trữ' (stored-program concept)</b>. Nó phát biểu rằng cả <b>lệnh (chương trình)</b> và <b>dữ liệu</b> mà các lệnh đó xử lý đều được lưu trữ trong cùng một bộ nhớ chung.<br /><br /><b>2. Ví dụ đời thực dễ nhớ:</b><br />Hãy tưởng tượng bộ nhớ máy tính như một <b>quyển sổ tay</b>. Bạn có thể viết cả <b>công thức nấu ăn (chương trình)</b> và <b>danh sách nguyên liệu (dữ liệu)</b> vào cùng một quyển sổ đó. CPU sẽ đọc công thức và lấy nguyên liệu từ chính quyển sổ đó để làm việc.<br /><br /><b>3. Loại trừ đáp án sai:</b><br />- Các máy tính sơ khai tách biệt hai thứ này (lệnh được cài đặt bằng công tắc, dây cắm). Mô hình von Neumann đã thay đổi điều đó.<br /><br /><b>Kết luận: Cả dữ liệu và chương trình đều được lưu trong bộ nhớ.</b>",
+      "explanation": "Mô hình Von Neumann, nền tảng của kiến trúc máy tính hiện đại, quy định rằng <b>cả chương trình và dữ liệu đều được lưu trữ trong bộ nhớ</b>. Điều này hoàn toàn khác biệt so với các máy tính tiền thân, nơi chỉ dữ liệu được lưu trữ trong bộ nhớ, còn chương trình được thực hiện thông qua việc điều khiển các công tắc hoặc thay đổi hệ thống dây điện.",
       "difficulty": "easy",
-      "topic": "Computer Architecture (von Neumann Model)",
+      "topic": "Computer Architecture",
       "hints": [
-        "Câu thần chú: <b>von Neumann = Chương trình + Dữ liệu</b> trong cùng bộ nhớ.",
-        "Tưởng tượng chương trình là 'công thức' và dữ liệu là 'nguyên liệu' – cả hai đều nằm chung trong 'nhà bếp' (bộ nhớ).",
-        "Ghi nhớ thuật ngữ 'stored-program concept' (khái niệm chương trình được lưu trữ)."
+        "Câu thần chú: von Neumann = Chương trình + Dữ liệu trong cùng bộ nhớ.",
+        "Ghi nhớ khái niệm 'stored-program concept'.",
+        "Tưởng tượng bộ nhớ là một cuốn sổ, bạn viết cả công thức (chương trình) và nguyên liệu (dữ liệu) vào đó."
       ]
     },
     {
@@ -34,13 +34,13 @@
         "D. Fourth generation"
       ],
       "correctAnswer": "B",
-      "explanation": "Câu hỏi này liên quan đến lịch sử phát triển của máy tính.<br /><br /><b>1. Liên kết các thế hệ:</b><br />- <b>Thế hệ 1 (1940-1956):</b> Bóng đèn chân không, Lập trình bằng ngôn ngữ máy (dãy số 0 và 1). Rất vất vả.<br />- <b>Thế hệ 2 (1956-1963):</b> <b>Bóng bán dẫn (Transistor)</b> ra đời. Đây là bước ngoặt cho phép sự phát triển của <b>ngôn ngữ bậc cao</b> đầu tiên như <b>FORTRAN</b> và <b>COBOL</b>, giúp con người lập trình dễ dàng hơn.<br />- <b>Thế hệ 3 (1964-1971):</b> Mạch tích hợp (IC).<br />- <b>Thế hệ 4 (1971-nay):</b> Vi xử lý (Microprocessor).<br /><br /><b>2. Mẹo ghi nhớ:</b><br />Ngay khi máy tính chuyển từ 'bóng đèn' sang 'bóng bán dẫn' (thế hệ 2), nó trở nên đủ mạnh và ổn định để các nhà khoa học tạo ra ngôn ngữ lập trình gần với ngôn ngữ con người hơn.<br /><br /><b>Kết luận: Ngôn ngữ bậc cao xuất hiện ở thế hệ thứ hai.</b>",
+      "explanation": "Máy tính thế hệ thứ hai (khoảng năm 1959-1965) đã chứng kiến sự ra đời của các ngôn ngữ lập trình cấp cao như <b>FORTRAN và COBOL</b>, giúp việc lập trình trở nên dễ dàng hơn.",
       "difficulty": "easy",
-      "topic": "History of Computing (Computer Generations)",
+      "topic": "History of Computing",
       "hints": [
-        "Thần chú: <b>Thế hệ 2 = Transistor + Ngôn ngữ bậc cao (FORTRAN, COBOL)</b>.",
-        "Ngôn ngữ bậc cao ra đời để thay thế cho việc lập trình bằng mã máy (010110) cực khổ của thế hệ 1.",
-        "Hãy liên kết sự ra đời của bóng bán dẫn (gen 2) với sự ra đời của ngôn ngữ lập trình bậc cao."
+        "Thần chú: Thế hệ 2 = Transistor + Ngôn ngữ bậc cao (FORTRAN, COBOL).",
+        "Ngôn ngữ bậc cao ra đời để thay thế cho việc lập trình bằng mã máy cực khổ của thế hệ 1.",
+        "Liên kết sự ra đời của bóng bán dẫn (gen 2) với sự ra đời của ngôn ngữ lập trình bậc cao."
       ]
     },
     {
@@ -54,12 +54,12 @@
         "D. Register"
       ],
       "correctAnswer": "B",
-      "explanation": "Đây là câu hỏi về chu trình thực thi lệnh cơ bản của CPU (Fetch-Decode-Execute).<br /><br /><b>1. Phân tích chu trình Fetch (Tìm nạp):</b><br />- <b>Program Counter (PC):</b> Giống như một người chỉ đường, nó giữ <b>địa chỉ</b> của lệnh tiếp theo cần thực thi.<br />- <b>Control Unit (CU):</b> 'Người quản lý', đọc địa chỉ từ PC, đi đến Memory để lấy lệnh.<br />- <b>Instruction Register (IR):</b> 'Bàn làm việc'. Lệnh sau khi được lấy từ Memory sẽ được đặt vào đây để chuẩn bị cho giai đoạn 'Decode' (giải mã).<br /><br /><b>2. Ví dụ đời thực:</b><br />- <b>PC</b> là số trang bạn cần đọc tiếp theo trong sách (ví dụ: trang 52).<br />- <b>CU</b> lật đến trang 52 và đọc câu đầu tiên (lệnh).<br />- <b>IR</b> là nơi bạn ghi lại câu đó ra giấy nháp để phân tích xem phải làm gì.<br /><br /><b>Kết luận: Lệnh được tìm nạp sẽ được sao chép vào Thanh ghi Lệnh (Instruction Register).</b>",
+      "explanation": "Trong giai đoạn <b>Fetch</b> (nạp lệnh) của chu trình thực thi lệnh của CPU, CPU sẽ lấy thông tin từ bộ nhớ và lưu trữ nó vào <b>thanh ghi lệnh (Instruction Register - IR)</b>. Thanh ghi lệnh là một bộ nhớ nhanh tạm thời quan trọng trong CPU.",
       "difficulty": "medium",
-      "topic": "CPU Architecture (Instruction Cycle)",
+      "topic": "CPU Architecture",
       "hints": [
-        "<b>Program Counter (PC)</b> chỉ giữ ĐỊA CHỈ, không giữ lệnh.",
-        "<b>Instruction Register (IR)</b> là nơi NẮM GIỮ lệnh đang được xử lý.",
+        "Program Counter (PC) chỉ giữ ĐỊA CHỈ, không giữ lệnh.",
+        "Instruction Register (IR) là nơi NẮM GIỮ lệnh đang được xử lý.",
         "Tưởng tượng: PC chỉ đường, IR là nơi lệnh 'ngồi chờ' để được giải mã và thực thi."
       ]
     },
@@ -74,11 +74,11 @@
         "D. CD-RR"
       ],
       "correctAnswer": "C",
-      "explanation": "Câu hỏi này kiểm tra kiến thức về các loại đĩa quang.<br /><br /><b>1. Giải mã các hậu tố:</b><br />- <b>ROM (Read-Only Memory):</b> Chỉ Đọc. Dữ liệu được nhà sản xuất ghi sẵn, bạn không thể thay đổi. Ví dụ: Đĩa game gốc.<br />- <b>R (Recordable):</b> Có thể Ghi. Bạn có thể ghi dữ liệu lên đĩa trống <b>một lần duy nhất</b>.<br />- <b>RW (ReWritable):</b> Có thể Ghi Lại. Đây là loại đĩa đặc biệt cho phép bạn <b>ghi, xóa, và ghi lại</b> dữ liệu nhiều lần.<br /><br /><b>2. Mẹo ghi nhớ:</b><br />Hãy tập trung vào chữ cái cuối cùng:<br />- R = Record (Ghi 1 lần)<br />- RW = <b>Re</b>-<b>W</b>rite (Ghi lại nhiều lần)<br /><br /><b>3. Loại trừ:</b><br />- CD-RR không phải là một định dạng đĩa tiêu chuẩn.<br /><br /><b>Kết luận: CD-RW là thiết bị cho phép ghi và xóa nhiều lần.</b>",
+      "explanation": "<b>CD-RW (Compact Disc-ReWritable)</b> là loại đĩa quang cho phép ghi, đọc và xóa dữ liệu nhiều lần, trong khi CD-ROM (Read-Only Memory) chỉ đọc, và CD-R (Recordable) chỉ ghi một lần.",
       "difficulty": "easy",
-      "topic": "Storage Devices (Optical Discs)",
+      "topic": "Storage Devices",
       "hints": [
-        "Thần chú: <b>RW = ReWritable = Ghi Lại Được</b>.",
+        "Thần chú: RW = ReWritable = Ghi Lại Được.",
         "ROM = Read-Only (Chỉ Đọc).",
         "R = Recordable (Ghi 1 lần)."
       ]
@@ -94,11 +94,11 @@
         "D. Cursor"
       ],
       "correctAnswer": "B",
-      "explanation": "Câu hỏi này về các thuật ngữ giao diện người dùng.<br /><br /><b>1. Định nghĩa các thuật ngữ:</b><br />- <b>Pixel:</b> Là một điểm ảnh, đơn vị nhỏ nhất tạo nên hình ảnh trên màn hình. Nó không phải là một 'tính năng'.<br />- <b>Reverse Video (Đảo màu video):</b> Đây chính là tính năng đảo ngược màu nền và màu chữ (ví dụ: từ chữ đen trên nền trắng thành chữ trắng trên nền đen) để <b>làm nổi bật</b> một đoạn văn bản, một mục menu, hoặc một thông báo quan trọng. Đây chính xác là thứ dùng để thu hút sự chú ý.<br />- <b>Touch screen:</b> Là một loại màn hình cho phép nhập liệu bằng cách chạm vào.<br />- <b>Cursor (Con trỏ):</b> Chỉ vị trí hiện tại sẽ nhập văn bản hoặc tương tác chuột, nó không nhất thiết 'làm nổi bật' một khu vực.<br /><br /><b>2. Ví dụ thực tế:</b><br />Khi bạn chọn một file trong máy tính, nó thường được bôi xanh (chữ trắng trên nền xanh). Đó chính là một dạng của <b>reverse video</b>.<br /><br /><b>Kết luận: Reverse video là tính năng dùng để làm nổi bật một khu vực trên màn hình.</b>",
+      "explanation": "Trong lĩnh vực máy tính, <b>'reverse video'</b> là một kỹ thuật hiển thị dùng để đảo ngược màu nền và màu chữ của một vùng văn bản, thường được sử dụng để làm nổi bật hoặc chỉ ra một khu vực cần sự chú ý của người dùng.",
       "difficulty": "medium",
-      "topic": "User Interface (Display Features)",
+      "topic": "User Interface",
       "hints": [
-        "<b>Reverse Video</b> = Đảo màu nền và chữ để làm NỔI BẬT.",
+        "Reverse Video = Đảo màu nền và chữ để làm NỔI BẬT.",
         "Hãy nghĩ đến việc bạn bôi đen một đoạn văn bản trong Word, màu sắc của nó bị đảo ngược.",
         "Pixel là điểm ảnh, Cursor là con trỏ, chúng không phải là tính năng làm nổi bật cả một khu vực."
       ]
@@ -114,12 +114,12 @@
         "D. All of the others"
       ],
       "correctAnswer": "D",
-      "explanation": "Câu hỏi này về Phân loại Flynn (Flynn's Taxonomy), một hệ thống phân loại các kiến trúc máy tính.<br /><br /><b>1. Phân loại Flynn:</b><br />Michael J. Flynn đã đề xuất phân loại các kiến trúc máy tính dựa trên số lượng <b>luồng lệnh (Instruction stream)</b> và <b>luồng dữ liệu (Data stream)</b>.<br /><br /><b>2. Bốn loại chính là:</b><br />- <b>SISD (Single Instruction, Single Data):</b> Máy tính đơn nhân truyền thống (1 lệnh xử lý 1 dữ liệu tại một thời điểm).<br />- <b>SIMD (Single Instruction, Multiple Data):</b> 1 lệnh được áp dụng cho nhiều dữ liệu cùng lúc. Rất phổ biến trong xử lý đồ họa (GPU).<br />- <b>MISD (Multiple Instruction, Single Data):</b> Nhiều lệnh xử lý trên cùng một luồng dữ liệu. Ít phổ biến trong thực tế.<br />- <b>MIMD (Multiple Instruction, Multiple Data):</b> Nhiều lệnh xử lý nhiều luồng dữ liệu khác nhau. Đây là kiến trúc của các máy tính đa lõi hiện đại.<br /><br /><b>Kết luận: Cả A, B, và C đều là các phần của hệ thống phân loại tổ chức máy tính này.</b>",
+      "explanation": "Các kiến trúc xử lý song song, một phần của tổ chức máy tính, bao gồm <b>SISD, SIMD, và MIMD</b>. Mặc dù <b>MISD</b> không phổ biến, nó vẫn là một phần của Phân loại Flynn (Flynn's Taxonomy). Do đó, tất cả các tùy chọn đều đại diện cho các phân loại tổ chức máy tính.",
       "difficulty": "medium",
-      "topic": "Computer Architecture (Flynn's Taxonomy)",
+      "topic": "Computer Architecture",
       "hints": [
-        "Ghi nhớ <b>Phân loại Flynn</b> bao gồm 4 loại: SISD, SIMD, MISD, MIMD.",
-        "S = Single (Đơn), M = Multiple (Đa), I = Instruction (Lệnh), D = Data (Dữ liệu).",
+        "Ghi nhớ Phân loại Flynn bao gồm 4 loại: SISD, SIMD, MISD, MIMD.",
+        "S = Single, M = Multiple, I = Instruction, D = Data.",
         "Câu hỏi hỏi về 'taxonomy' (hệ thống phân loại), nên tất cả các thành phần của hệ thống đó đều là câu trả lời đúng."
       ]
     },
@@ -130,16 +130,14 @@
       "options": [
         "A. Baud",
         "B. Byte",
-        "C. Bit",
-        "D. All of the others",
-        "E. None of the others"
+        "C. Bit"
       ],
       "correctAnswer": "C",
-      "explanation": "Đây là câu hỏi về đơn vị thông tin cơ bản nhất.<br /><br /><b>1. Định nghĩa các đơn vị:</b><br />- <b>Bit (Binary Digit):</b> Là đơn vị dữ liệu <b>nhỏ nhất</b> trong máy tính. Nó chỉ có thể nhận một trong hai giá trị: 0 hoặc 1.<br />- <b>Byte:</b> Là một nhóm gồm <b>8 bits</b>. Nó thường được dùng để biểu diễn một ký tự (ví dụ: chữ 'A').<br />- <b>Baud:</b> Là đơn vị đo tốc độ thay đổi tín hiệu trên một đường truyền (ví dụ: modem), không phải là đơn vị đo lường dữ liệu.<br /><br /><b>2. Ví dụ đời thực:</b><br />- <b>Bit</b> giống như một công tắc đèn: chỉ có thể ở trạng thái Bật (1) hoặc Tắt (0).<br />- <b>Byte</b> là một dãy 8 công tắc đèn, có thể tạo ra 256 tổ hợp khác nhau.<br /><br /><b>Kết luận: Bit là đơn vị cơ bản nhất, đại diện cho một 'số' dữ liệu rời rạc (0 hoặc 1).</b>",
+      "explanation": "Trong máy tính, <b>bit (binary digit)</b> là đơn vị dữ liệu nhỏ nhất có thể được lưu trữ, biểu thị bằng ký tự 0 hoặc 1.",
       "difficulty": "easy",
-      "topic": "Data Representation (Units)",
+      "topic": "Data Representation",
       "hints": [
-        "Câu thần chú: <b>Bit = Binary Digit</b>, là đơn vị nhỏ nhất (0 hoặc 1).",
+        "Câu thần chú: Bit = Binary Digit, là đơn vị nhỏ nhất (0 hoặc 1).",
         "Byte là một nhóm gồm 8 bits.",
         "Đừng nhầm lẫn 'bit' (đơn vị dữ liệu) với 'baud' (tốc độ tín hiệu)."
       ]
@@ -152,17 +150,16 @@
         "A. 0's and 1's can be added in front of them",
         "B. 0's and 1's have to be properly placed",
         "C. They are always big numbers",
-        "D. Binary base is small",
-        "E. None of the others"
+        "D. Binary base is small"
       ],
       "correctAnswer": "D",
-      "explanation": "Câu hỏi này đào sâu vào bản chất của các hệ đếm.<br /><br /><b>1. Nguyên tắc cốt lõi:</b><br />Số lượng 'chữ số' cần thiết để biểu diễn một số phụ thuộc vào <b>cơ số (base)</b> của hệ đếm đó.<br />- Hệ thập phân (Decimal) có <b>cơ số 10</b> (dùng 10 ký tự: 0-9).<br />- Hệ nhị phân (Binary) có <b>cơ số 2</b> (chỉ dùng 2 ký tự: 0, 1).<br /><br /><b>2. Ví dụ so sánh:</b><br />Để biểu diễn số 'mười', hệ thập phân chỉ cần 2 vị trí: '10'.<br />Nhưng hệ nhị phân, vì cơ số quá nhỏ, phải dùng đến 4 vị trí: '1010'.<br /><br /><b>3. Ví dụ đời thực:</b><br />Hãy tưởng tượng bạn đang đếm tiền. Nếu bạn chỉ có tờ 1đ và 2đ (cơ số nhỏ), bạn sẽ cần một cọc tiền rất dày để có 10đ. Nhưng nếu bạn có cả tờ 10đ (cơ số lớn), bạn chỉ cần một tờ duy nhất.<br /><br /><b>Kết luận: Vì cơ số của hệ nhị phân (base 2) rất nhỏ, nó cần nhiều vị trí hơn để biểu diễn cùng một giá trị so với hệ có cơ số lớn hơn.</b>",
+      "explanation": "Hệ nhị phân sử dụng cơ số <b>b = 2</b>, chỉ có hai ký tự (0 và 1). So với hệ thập phân (cơ số 10), việc sử dụng một cơ số nhỏ hơn đòi hỏi <b>nhiều chữ số hơn</b> để biểu diễn cùng một giá trị.",
       "difficulty": "medium",
-      "topic": "Number Systems (Base Concept)",
+      "topic": "Number Systems",
       "hints": [
-        "<b>Cơ số càng nhỏ, số càng dài.</b>",
+        "Cơ số càng nhỏ, số càng dài.",
         "So sánh hệ Nhị phân (cơ số 2) và Thập phân (cơ số 10).",
-        "Nhớ ví dụ đếm tiền: chỉ có tờ 1đ và 2đ sẽ cần nhiều tờ hơn là khi có tờ 10đ."
+        "Ví dụ: 10 trong hệ thập phân là 1010 trong hệ nhị phân."
       ]
     },
     {
@@ -176,13 +173,13 @@
         "D. 0.110"
       ],
       "correctAnswer": "B",
-      "explanation": "Đây là bài toán chuyển đổi hệ cơ số cho phần thập phân.<br /><br /><b>1. Phương pháp:</b><br />Để chuyển phần thập phân từ hệ 10 sang hệ 2, ta dùng phương pháp <b>nhân liên tục phần thập phân với 2</b> và ghi lại phần nguyên của kết quả.<br /><br /><b>2. Các bước thực hiện:</b><br />- 0.625 * 2 = <b>1</b>.25  (Lấy phần nguyên là <b>1</b>, phần thập phân còn lại là 0.25)<br />- 0.25  * 2 = <b>0</b>.50  (Lấy phần nguyên là <b>0</b>, phần thập phân còn lại là 0.50)<br />- 0.50  * 2 = <b>1</b>.00  (Lấy phần nguyên là <b>1</b>, phần thập phân còn lại là 0.00 -> Dừng)<br /><br /><b>3. Tổng hợp kết quả:</b><br />Đọc các phần nguyên đã lấy ra <b>từ trên xuống dưới</b>, ta được phần thập phân trong hệ nhị phân: <b>0.101</b>.<br /><br /><b>Mẹo kiểm tra nhanh:</b> \\( 0.101_2 = 1 \\cdot 2^{-1} + 0 \\cdot 2^{-2} + 1 \\cdot 2^{-3} = 0.5 + 0 + 0.125 = 0.625_{10} \\). Hoàn toàn chính xác!",
+      "explanation": "Để chuyển đổi phần thập phân của một số từ hệ thập phân sang hệ nhị phân, ta thực hiện phép nhân liên tiếp phần thập phân với cơ số 2 và lấy phần nguyên của kết quả:<br>- 0.625 × 2 = <b>1</b>.25 (lấy <b>1</b>)<br>- 0.25 × 2 = <b>0</b>.5 (lấy <b>0</b>)<br>- 0.5 × 2 = <b>1</b>.0 (lấy <b>1</b>)<br>Đọc các phần nguyên từ trên xuống dưới, ta được kết quả là <b>0.101</b>.",
       "difficulty": "medium",
-      "topic": "Number Systems (Decimal to Binary Conversion)",
+      "topic": "Number Systems",
       "hints": [
-        "Thần chú chuyển phần thập phân: <b>Nhân liên tục với 2, lấy phần nguyên</b>.",
-        "Quan trọng: Đọc kết quả (các phần nguyên) <b>từ trên xuống dưới</b>.",
-        "Mẹo loại trừ: Số ban đầu là 0.625 (nhỏ hơn 1), nên kết quả nhị phân phải bắt đầu bằng '0.'. Loại ngay đáp án A và C."
+        "Thần chú chuyển phần thập phân: Nhân liên tục với 2, lấy phần nguyên.",
+        "Quan trọng: Đọc kết quả (các phần nguyên) từ trên xuống dưới.",
+        "Số ban đầu nhỏ hơn 1, nên kết quả nhị phân phải bắt đầu bằng '0.'."
       ]
     },
     {
@@ -196,13 +193,13 @@
         "D. 4"
       ],
       "correctAnswer": "C",
-      "explanation": "Câu hỏi này về mối quan hệ giữa hệ nhị phân (Binary) và hệ bát phân (Octal).<br /><br /><b>1. Mối liên hệ qua lũy thừa của 2:</b><br />- Hệ Bát phân (Octal) có cơ số <b>8</b>.<br />- Ta thấy rằng \\( 8 = 2^3 \\).<br />- Số mũ <b>'3'</b> trong biểu thức này chính là chìa khóa. Nó cho biết rằng <b>một chữ số của hệ bát phân</b> tương đương với một nhóm <b>3 chữ số (bits) của hệ nhị phân</b>.<br /><br /><b>2. Ví dụ chuyển đổi:</b><br />Để chuyển từ nhị phân sang bát phân, ta nhóm các bit thành từng cụm 3. <br />Ví dụ: \\( 101110_2 \\) -> nhóm thành (101)(110) -> \\( 56_8 \\).<br /><br /><b>3. Mở rộng kiến thức:</b><br />Tương tự, với hệ Thập lục phân (Hexadecimal, cơ số 16), vì \\( 16 = 2^4 \\), nên một chữ số hệ 16 sẽ tương ứng với một nhóm <b>4 bits</b>.<br /><br /><b>Kết luận: Cần 3 bits để biểu diễn một chữ số trong hệ bát phân.</b>",
+      "explanation": "Để chuyển đổi một số nhị phân sang hệ bát phân, ta nhóm các bit thành từng nhóm <b>3 bit</b> và chuyển đổi từng nhóm thành một chữ số bát phân tương ứng, vì 2³ = 8.",
       "difficulty": "easy",
-      "topic": "Number Systems (Binary to Octal)",
+      "topic": "Number Systems",
       "hints": [
-        "Thần chú: <b>Octal = 8 = 2³</b>. Do đó, 1 chữ số Octal = <b>3 bits</b>.",
-        "Mẹo ghi nhớ tương tự: <b>Hexadecimal = 16 = 2⁴</b>. Do đó, 1 chữ số Hex = <b>4 bits</b>.",
-        "Để chuyển đổi giữa hai hệ này, bạn luôn nhóm 3 bit lại với nhau."
+        "Thần chú: Octal = 8 = 2³ -> Cần 3 bits.",
+        "Tương tự: Hexadecimal = 16 = 2⁴ -> Cần 4 bits.",
+        "Để chuyển đổi, bạn luôn nhóm 3 bit lại với nhau."
       ]
     },
     {
@@ -216,13 +213,13 @@
         "D. D9F8"
       ],
       "correctAnswer": "C",
-      "explanation": "Đây là bài toán chuyển đổi từ hệ nhị phân (Binary) sang hệ thập lục phân (Hexadecimal).<br /><br /><b>1. Nguyên tắc chuyển đổi:</b><br />Mối liên hệ giữa hai hệ này là \\( 16 = 2^4 \\). Điều này có nghĩa là <b>1 chữ số Hex = 4 bits</b>. Do đó, ta chỉ cần nhóm số nhị phân thành từng cụm 4 bit từ phải sang trái.<br /><br /><b>2. Thực hiện nhóm và chuyển đổi:</b><br />Số nhị phân: <b>1010 1010 0001 0111</b><br />- Nhóm 1 (phải nhất): <b>0111</b> = <b>7</b><br />- Nhóm 2: <b>0001</b> = <b>1</b><br />- Nhóm 3: <b>1010</b> = 10 (thập phân) = <b>A</b> (hex)<br />- Nhóm 4 (trái nhất): <b>1010</b> = 10 (thập phân) = <b>A</b> (hex)<br /><br /><b>3. Kết hợp kết quả:</b><br />Ghép các chữ số hex lại, ta được: <b>AA17</b>.<br /><br /><b>Kết luận: Đáp án đúng là AA17.</b>",
+      "explanation": "Để chuyển đổi một số nhị phân sang hệ thập lục phân, ta nhóm các bit thành từng nhóm <b>4 bit</b> từ phải sang trái và chuyển đổi từng nhóm thành một chữ số thập lục phân tương ứng:<br><b>1010 | 1010 | 0001 | 0111</b><br> A    |    A   |    1   |    7<br>Kết quả là <b>AA17</b>.",
       "difficulty": "easy",
-      "topic": "Number Systems (Binary to Hexadecimal Conversion)",
+      "topic": "Number Systems",
       "hints": [
-        "Thần chú: <b>Hex = 16 = 2⁴</b>. Nhóm <b>4 bits</b> lại với nhau.",
+        "Thần chú: Hex = 16 = 2⁴ -> Nhóm 4 bits.",
         "Bắt đầu nhóm từ bên phải sang trái.",
-        "Ghi nhớ các giá trị Hex cơ bản: A=10, B=11, C=12, D=13, E=14, F=15."
+        "Ghi nhớ: A=10, B=11, C=12, D=13, E=14, F=15."
       ]
     },
     {
@@ -236,13 +233,13 @@
         "D. 65536"
       ],
       "correctAnswer": "C",
-      "explanation": "Câu hỏi này về cách tính giá trị độ lệch (bias) trong biểu diễn số chấm động (floating-point).<br /><br /><b>1. Công thức tính Bias:</b><br />Giá trị bias được dùng để biểu diễn cả số mũ âm và dương mà không cần dùng bit dấu. Công thức 'thần thánh' là:<br /><b>Bias = 2^(m-1) - 1</b><br />Trong đó <b>m</b> là số bit dùng cho phần mũ (exponent).<br /><br /><b>2. Áp dụng vào bài toán:</b><br />- Ta có: <b>m = 17</b>.<br />- Thay vào công thức: Bias = 2^(17-1) - 1<br />- Tính toán: Bias = 2^16 - 1 = 65536 - 1 = <b>65535</b>.<br /><br /><b>Kết luận: Giá trị bias là 65535.</b>",
+      "explanation": "Trong hệ thống Excess (Biased Exponent System), giá trị <b>bias</b> được tính bằng công thức <b>2^(m-1) - 1</b>, trong đó 'm' là số bit được cấp phát cho phần số mũ. Với 17 bit, bias sẽ là:<br>2^(17-1) - 1 = 2^16 - 1 = 65536 - 1 = <b>65535</b>.",
       "difficulty": "medium",
-      "topic": "Data Representation (Floating-Point Numbers)",
+      "topic": "Data Representation",
       "hints": [
-        "Công thức cốt lõi: <b>Bias = 2^(số bit mũ - 1) - 1</b>.",
+        "Công thức cốt lõi: Bias = 2^(số bit mũ - 1) - 1.",
         "Đừng nhầm lẫn! Phải lấy 2 lũy thừa (m-1) trước, sau đó mới trừ 1.",
-        "Ví dụ kinh điển: IEEE 754 single-precision dùng 8 bit mũ, nên bias = 2^(8-1) - 1 = 127."
+        "Ví dụ: IEEE 754 single-precision dùng 8 bit mũ, nên bias = 2^(8-1) - 1 = 127."
       ]
     },
     {
@@ -256,11 +253,11 @@
         "D. Extended ASCII"
       ],
       "correctAnswer": "B",
-      "explanation": "Câu hỏi này kiểm tra kiến thức về các bộ mã hóa ký tự.<br /><br /><b>1. Phân tích các bộ mã:</b><br />- <b>ASCII (7-bit) & Extended ASCII (8-bit):</b> Chỉ đủ để biểu diễn ký tự tiếng Anh và một số ngôn ngữ châu Âu. Không đủ cho toàn thế giới.<br />- <b>EBCDIC:</b> Một bộ mã cũ của IBM, không phổ biến.<br />- <b>Unicode:</b> Đây là một 'siêu bộ mã' được tạo ra với mục tiêu <b>đại diện cho tất cả ký tự trong mọi ngôn ngữ trên thế giới</b>. Các phiên bản phổ biến của nó như UTF-8, UTF-16, và <b>UTF-32</b> (sử dụng 32 bit) cho phép mã hóa một không gian ký tự khổng lồ.<br /><br /><b>2. Từ khóa nhận diện:</b><br />Khi bạn thấy các từ khóa như '<b>all languages</b>' (tất cả ngôn ngữ) hoặc một số lượng bit lớn như <b>32-bit</b>, hãy nghĩ ngay đến <b>Unicode</b>.<br /><br /><b>Kết luận: Unicode là bộ mã 32-bit đại diện cho ký tự trong mọi ngôn ngữ.</b>",
+      "explanation": "<b>Unicode</b> là một tiêu chuẩn mã hóa ký tự sử dụng <b>32 bit để biểu diễn 2^32 ký tự</b>, bao gồm cả các ký hiệu đồ họa và ký tự đặc biệt, làm cho nó phù hợp cho việc giao tiếp bằng nhiều ngôn ngữ khác nhau. ASCII và ASCII mở rộng là một phần của Unicode.",
       "difficulty": "easy",
-      "topic": "Data Representation (Character Encoding)",
+      "topic": "Data Representation",
       "hints": [
-        "Thần chú: <b>Unicode = Universal = Tất cả ngôn ngữ</b>.",
+        "Thần chú: Unicode = Universal = Tất cả ngôn ngữ.",
         "ASCII chỉ đủ cho tiếng Anh. Unicode là giải pháp toàn cầu.",
         "Từ khóa '32-bit' và 'all languages' gần như chắc chắn chỉ đến Unicode."
       ]
@@ -276,12 +273,12 @@
         "D. 40,000"
       ],
       "correctAnswer": "D",
-      "explanation": "Câu hỏi này liên quan đến Định lý Lấy mẫu Nyquist-Shannon trong xử lý tín hiệu số.<br /><br /><b>1. Nguyên tắc cốt lõi:</b><br />Để tái tạo một tín hiệu âm thanh một cách trung thực, tần số lấy mẫu (sampling rate) phải <b>lớn hơn ít nhất 2 lần</b> tần số cao nhất của tín hiệu đó.<br /><br /><b>2. Áp dụng vào thực tế:</b><br />- Tai người có thể nghe được âm thanh với tần số lên đến khoảng <b>20,000 Hz</b>.<br />- Theo định lý Nyquist, tần số lấy mẫu cần thiết là: 2 * 20,000 Hz = <b>40,000 Hz</b> (hay 40,000 mẫu/giây).<br /><br /><b>3. Tiêu chuẩn công nghiệp:</b><br />Đây là lý do tại sao chất lượng CD âm thanh tiêu chuẩn sử dụng tần số lấy mẫu là <b>44,100 Hz</b> (tức là 44,100 mẫu/giây), cao hơn một chút so với mức 40,000 Hz để đảm bảo chất lượng.<br /><br /><b>Kết luận: 40,000 mẫu/giây là con số tiêu chuẩn tốt để tái tạo tín hiệu âm thanh cho tai người.</b>",
+      "explanation": "Khi lưu trữ âm thanh, việc lấy mẫu (sampling) được thực hiện để ghi lại một số giá trị của tín hiệu tương tự. Theo định lý Nyquist, tần số lấy mẫu phải lớn hơn gấp đôi tần số cao nhất của tín hiệu. Tai người nghe được đến khoảng 20,000 Hz, do đó cần lấy mẫu với tần số lớn hơn 40,000 mẫu/giây. Tiêu chuẩn CD âm thanh là 44,100 mẫu/giây, vì vậy <b>40,000</b> là một con số phù hợp.",
       "difficulty": "medium",
-      "topic": "Data Representation (Audio Sampling)",
+      "topic": "Data Representation",
       "hints": [
-        "Thần chú: <b>Tần số lấy mẫu > 2 * Tần số cao nhất</b> (Định lý Nyquist).",
-        "Tai người nghe được đến ~20,000 Hz. Vậy cần lấy mẫu > 2 * 20,000 = 40,000 Hz.",
+        "Thần chú: Tần số lấy mẫu > 2 * Tần số cao nhất (Định lý Nyquist).",
+        "Tai người nghe được đến ~20,000 Hz. Vậy cần lấy mẫu > 40,000 Hz.",
         "Hãy nhớ đến chất lượng CD là 44.1 kHz, gần với con số 40,000."
       ]
     },
@@ -296,11 +293,11 @@
         "D. Color depth"
       ],
       "correctAnswer": "C",
-      "explanation": "Câu hỏi này kiểm tra thuật ngữ cơ bản trong biểu diễn hình ảnh số.<br /><br /><b>1. Phân tích câu hỏi:</b><br />Câu hỏi mô tả một 'tốc độ quét' (scanning rate) mà nếu đủ cao, mắt người không nhận ra sự gián đoạn. Điều này ám chỉ đến <b>mật độ của các điểm ảnh</b>.<br /><br /><b>2. Định nghĩa các thuật ngữ:</b><br />- <b>Pixel:</b> Là một điểm ảnh đơn lẻ.<br />- <b>Bit map:</b> Là phương pháp lưu trữ hình ảnh bằng cách lưu thông tin của từng pixel.<br />- <b>Resolution (Độ phân giải):</b> Chính là thuật ngữ chỉ <b>số lượng pixel trên một đơn vị diện tích</b> (ví dụ: pixels per inch - PPI). Nó chính là 'tốc độ quét' hay mật độ quét. Độ phân giải cao nghĩa là các pixel dày đặc hơn, làm hình ảnh mịn hơn.<br />- <b>Color depth:</b> Số bit dùng để lưu màu sắc của một pixel, quyết định số lượng màu sắc có thể hiển thị.<br /><br /><b>Kết luận: 'Tốc độ quét' trong xử lý hình ảnh được gọi là Độ phân giải (Resolution).</b>",
+      "explanation": "Trong xử lý hình ảnh, tốc độ quét (the scanning rate) hình ảnh được gọi là <b>độ phân giải (resolution)</b>. Độ phân giải quyết định số lượng pixel được ghi lại cho mỗi inch vuông hoặc inch tuyến tính, ảnh hưởng đến độ rõ nét của hình ảnh.",
       "difficulty": "easy",
-      "topic": "Data Representation (Image)",
+      "topic": "Data Representation",
       "hints": [
-        "Thần chú: <b>Resolution = Mật độ điểm ảnh</b>. Độ phân giải càng cao, ảnh càng nét.",
+        "Thần chú: Resolution = Mật độ điểm ảnh. Độ phân giải càng cao, ảnh càng nét.",
         "Hãy liên kết 'scanning rate' với 'mật độ điểm ảnh', và thuật ngữ tương ứng là Resolution.",
         "Pixel là 'viên gạch', Resolution là 'mật độ xây gạch'."
       ]
@@ -316,13 +313,13 @@
         "D. 0100 1100"
       ],
       "correctAnswer": "D",
-      "explanation": "Câu hỏi này về phép toán dịch bit (bit shift).<br /><br /><b>1. Quy tắc dịch phải (Right Shift):</b><br />- Tất cả các bit được dịch sang phải 1 vị trí.<br />- Bit ở vị trí <b>ngoài cùng bên phải sẽ bị loại bỏ</b> (rơi ra ngoài).<br />- Một bit <b>0 được thêm vào vị trí ngoài cùng bên trái</b>.<br /><br /><b>2. Áp dụng vào mẫu bit: 1001 1000</b><br />- Mẫu ban đầu: `1001 1000`<br />- Bit phải nhất (`0`) bị loại bỏ.<br />- Các bit còn lại dịch phải: `_100 1100`<br />- Thêm `0` vào bên trái: `0100 1100`<br /><br /><b>Kết luận: Kết quả là 0100 1100.</b><br /><br /><b>Bản chất:</b> Phép dịch phải một bit tương đương với phép chia số nguyên cho 2.",
+      "explanation": "Phép toán <b>dịch phải đơn giản</b> di chuyển mỗi bit một vị trí sang bên phải. Bit ngoài cùng bên phải sẽ bị mất, và một bit 0 sẽ được chèn vào vị trí ngoài cùng bên trái.<br>Mẫu bit ban đầu: <b>1</b>001 100<b>0</b><br>Sau khi dịch phải: <b>0</b>100 110<b>0</b>",
       "difficulty": "easy",
-      "topic": "Bitwise Operations (Shift)",
+      "topic": "Bitwise Operations",
       "hints": [
-        "Dịch phải: <b>Bit phải nhất MẤT, bit trái nhất THÊM 0</b>.",
-        "Tưởng tượng các bit như một hàng người, tất cả cùng bước sang phải một bước. Người cuối hàng bên phải bị đẩy ra, và một người mới (số 0) chen vào đầu hàng bên trái.",
-        "Dịch phải 1 bit = Chia cho 2."
+        "Dịch phải: Bit phải nhất MẤT, bit trái nhất THÊM 0.",
+        "Tưởng tượng các bit như một hàng người, tất cả cùng bước sang phải một bước.",
+        "Dịch phải 1 bit về cơ bản là phép chia số nguyên cho 2."
       ]
     },
     {
@@ -336,13 +333,13 @@
         "D. 0011 0001"
       ],
       "correctAnswer": "C",
-      "explanation": "Câu hỏi này về phép toán dịch bit (bit shift).<br /><br /><b>1. Quy tắc dịch trái (Left Shift):</b><br />- Tất cả các bit được dịch sang trái 1 vị trí.<br />- Bit ở vị trí <b>ngoài cùng bên trái sẽ bị loại bỏ</b> (rơi ra ngoài).<br />- Một bit <b>0 được thêm vào vị trí ngoài cùng bên phải</b>.<br /><br /><b>2. Áp dụng vào mẫu bit: 1001 1000</b><br />- Mẫu ban đầu: `1001 1000`<br />- Bit trái nhất (`1`) bị loại bỏ.<br />- Các bit còn lại dịch trái: `0011 000_`<br />- Thêm `0` vào bên phải: `0011 0000`<br /><br /><b>Kết luận: Kết quả là 0011 0000.</b><br /><br /><b>Bản chất:</b> Phép dịch trái một bit tương đương với phép nhân số nguyên cho 2 (nếu không xảy ra tràn số).",
+      "explanation": "Phép toán <b>dịch trái đơn giản</b> di chuyển mỗi bit một vị trí sang bên trái. Bit ngoài cùng bên trái sẽ bị mất, và một bit 0 sẽ được chèn vào vị trí ngoài cùng bên phải.<br>Mẫu bit ban đầu: <b>1</b>001 100<b>0</b><br>Sau khi dịch trái: 0011 000<b>0</b>",
       "difficulty": "easy",
-      "topic": "Bitwise Operations (Shift)",
+      "topic": "Bitwise Operations",
       "hints": [
-        "Dịch trái: <b>Bit trái nhất MẤT, bit phải nhất THÊM 0</b>.",
-        "Tưởng tượng các bit như một hàng người, tất cả cùng bước sang trái một bước. Người đầu hàng bên trái bị đẩy ra, và một người mới (số 0) chen vào cuối hàng bên phải.",
-        "Dịch trái 1 bit = Nhân cho 2."
+        "Dịch trái: Bit trái nhất MẤT, bit phải nhất THÊM 0.",
+        "Tưởng tượng các bit như một hàng người, tất cả cùng bước sang trái một bước.",
+        "Dịch trái 1 bit về cơ bản là phép nhân số nguyên cho 2."
       ]
     },
     {
@@ -356,13 +353,13 @@
         "D. Decoder"
       ],
       "correctAnswer": "C",
-      "explanation": "Câu hỏi này về thiết bị mạng cơ bản.<br /><br /><b>1. Phân tích nhiệm vụ:</b><br />Nhiệm vụ là chuyển đổi giữa tín hiệu <b>số (Digital)</b> của máy tính và tín hiệu <b>tương tự (Analog)</b> của đường truyền (ví dụ: đường dây điện thoại).<br /><br /><b>2. Giải mã thuật ngữ Modem:</b><br /><b>Modem</b> là từ viết tắt của <b>Mo</b>dulator - <b>Dem</b>odulator.<br />- <b>Modulator (Điều chế):</b> Chuyển tín hiệu <b>Digital -> Analog</b> để gửi đi.<br />- <b>Demodulator (Giải điều chế):</b> Chuyển tín hiệu <b>Analog -> Digital</b> khi nhận về.<br /><br /><b>3. Kết luận:</b><br />Vì Modem thực hiện cả hai quá trình, nó chính là thiết bị tổng quát thực hiện việc chuyển đổi này. Câu hỏi chỉ đề cập đến một chiều (Digital -> Analog), nhưng Modem là câu trả lời bao hàm và chính xác nhất.<br /><br /><b>Kết luận: Modem là thiết bị dùng để chuyển đổi giữa tín hiệu số và tương tự.</b>",
+      "explanation": "<b>Modem</b> (viết tắt của Modulator-Demodulator) là một thiết bị chuyển đổi tín hiệu. Nó thực hiện chức năng điều chế (modulation) để chuyển đổi tín hiệu số từ máy tính thành tín hiệu tương tự để truyền qua đường truyền analog (ví dụ như đường điện thoại) và giải điều chế (demodulation) để chuyển đổi ngược lại.",
       "difficulty": "easy",
-      "topic": "Networking (Hardware)",
+      "topic": "Networking",
       "hints": [
-        "Thần chú: <b>Modem = MOdulator + DEMoludator</b>.",
-        "<b>MOdulator</b>: Digital -> Analog (điều chế, gửi đi).",
-        "<b>DEModulator</b>: Analog -> Digital (giải điều chế, nhận về)."
+        "Thần chú: Modem = MOdulator + DEMoludator.",
+        "MOdulator: Digital -> Analog (điều chế, gửi đi).",
+        "DEModulator: Analog -> Digital (giải điều chế, nhận về)."
       ]
     },
     {
@@ -376,12 +373,12 @@
         "D. Electronic signals"
       ],
       "correctAnswer": "C",
-      "explanation": "Câu hỏi này phân biệt hai loại tín hiệu cơ bản.<br /><br /><b>1. Phân tích từ khóa:</b><br />Từ khóa quan trọng nhất là '<b>limited number of defined values</b>' (số lượng giá trị xác định hữu hạn) và ví dụ '<b>1 and 0</b>'.<br /><br /><b>2. So sánh hai loại tín hiệu:</b><br />- <b>Analog Signal (Tín hiệu tương tự):</b> Là một sóng liên tục, có thể nhận <b>vô số giá trị</b> trong một khoảng cho trước. Giống như một chiếc công tắc dimmer có thể chỉnh độ sáng ở bất kỳ mức nào.<br />- <b>Digital Signal (Tín hiệu số):</b> Là một tín hiệu rời rạc, chỉ có thể nhận một <b>số lượng giá trị hữu hạn</b> đã được định nghĩa trước. Ví dụ kinh điển nhất là 0 và 1. Giống như một công tắc đèn chỉ có hai trạng thái: Bật hoặc Tắt.<br /><br /><b>Kết luận: Mô tả trong câu hỏi hoàn toàn khớp với định nghĩa của Tín hiệu số (Digital signals).</b>",
+      "explanation": "Lớp vật lý trong mô hình TCP/IP chịu trách nhiệm chuyển đổi các bit thành tín hiệu điện từ để truyền dẫn. <b>Tín hiệu số (Digital signals)</b> là loại tín hiệu có số lượng giá trị xác định giới hạn, thường là 0 và 1, phù hợp với cách dữ liệu được biểu diễn trong máy tính.",
       "difficulty": "easy",
-      "topic": "Networking (Physical Layer)",
+      "topic": "Networking",
       "hints": [
-        "Thần chú: <b>Digital = Discrete (Rời rạc) = Hữu hạn giá trị</b> (như 0 và 1).",
-        "Thần chú đối lập: <b>Analog = Continuous (Liên tục) = Vô số giá trị</b> (như sóng âm).",
+        "Thần chú: Digital = Discrete (Rời rạc) = Hữu hạn giá trị (như 0 và 1).",
+        "Đối lập: Analog = Continuous (Liên tục) = Vô số giá trị.",
         "Hãy liên kết '1 and 0' với 'Digital'."
       ]
     },
@@ -396,12 +393,12 @@
         "D. IP address"
       ],
       "correctAnswer": "B",
-      "explanation": "Câu hỏi này về cơ chế định danh trong mô hình mạng TCP/IP.<br /><br /><b>1. Ví dụ đời thực về địa chỉ:</b><br />- <b>Địa chỉ IP (IP Address):</b> Giống như địa chỉ của một <b>tòa nhà chung cư</b>. Nó xác định máy tính nào trên mạng sẽ nhận dữ liệu.<br />- <b>Số cổng (Port Number):</b> Giống như số của một <b>căn hộ cụ thể</b> trong tòa nhà đó. Nó xác định ứng dụng nào (ví dụ: trình duyệt web, game, email) trên máy tính sẽ nhận dữ liệu.<br /><br /><b>2. Vai trò của các tầng:</b><br />- Tầng Mạng (Network Layer) dùng <b>địa chỉ IP</b> để đưa gói tin đến đúng máy tính.<br />- Tầng Giao vận (Transport Layer) dùng <b>số cổng</b> để đưa dữ liệu trong gói tin đó đến đúng chương trình ứng dụng.<br /><br /><b>Kết luận: Số cổng (Port numbers) được dùng để xác định các chương trình ở tầng ứng dụng.</b>",
+      "explanation": "Tại lớp truyền tải, để xác định các chương trình ứng dụng (processes) cụ thể trên máy chủ nguồn và đích, cần sử dụng các định danh thứ cấp gọi là <b>số cổng (port numbers)</b>. Các số cổng này xác định các chương trình ở lớp ứng dụng đang giao tiếp.",
       "difficulty": "medium",
-      "topic": "Networking (Transport Layer)",
+      "topic": "Networking",
       "hints": [
-        "Thần chú: <b>IP Address = Địa chỉ tòa nhà. Port Number = Số căn hộ.</b>",
-        "Tầng Giao vận (Transport Layer) quan tâm đến việc giao tiếp giữa các ứng dụng (process-to-process), do đó nó cần số cổng.",
+        "Thần chú: IP Address = Địa chỉ tòa nhà. Port Number = Số căn hộ.",
+        "Tầng Giao vận (Transport Layer) quan tâm đến việc giao tiếp giữa các ứng dụng, do đó nó cần số cổng.",
         "TCP và UDP là các giao thức sử dụng số cổng, không phải bản thân số cổng."
       ]
     },
@@ -416,13 +413,13 @@
         "D. HTTP"
       ],
       "correctAnswer": "A",
-      "explanation": "Câu hỏi này kiểm tra kiến thức về các giao thức tầng ứng dụng.<br /><br /><b>1. Phân tích chức năng:</b><br />Từ khóa cốt lõi là '<b>copying a file</b>' (sao chép tập tin) và '<b>transferring files</b>' (truyền tải tập tin). Nhiệm vụ này yêu cầu một giao thức chuyên biệt cho việc quản lý và di chuyển file.<br /><br /><b>2. Giải mã các giao thức:</b><br />- <b>FTP (File Transfer Protocol):</b> Tên gọi đã nói lên tất cả - 'Giao thức Truyền tải Tập tin'. Đây chính là giao thức tiêu chuẩn được thiết kế riêng cho việc này.<br />- <b>SMTP (Simple Mail Transfer Protocol):</b> Dùng để gửi email.<br />- <b>HTTP (HyperText Transfer Protocol):</b> Dùng để truy cập các trang web.<br />- <b>URL (Uniform Resource Locator):</b> Là một địa chỉ (ví dụ: `http://google.com`), không phải là một giao thức.<br /><br /><b>Kết luận: FTP là giao thức dùng để truyền tải tập tin.</b>",
+      "explanation": "<b>FTP (File Transfer Protocol)</b> là một trong các dịch vụ truyền thống sử dụng mô hình client-server, được dùng để <b>sao chép tập tin từ một máy chủ này sang máy chủ khác</b> qua Internet.",
       "difficulty": "easy",
-      "topic": "Networking (Application Layer Protocols)",
+      "topic": "Networking",
       "hints": [
-        "Thần chú: <b>FTP = File Transfer Protocol</b>. Cứ thấy 'file transfer' là nghĩ đến FTP.",
+        "Thần chú: FTP = File Transfer Protocol. Cứ thấy 'file transfer' là nghĩ đến FTP.",
         "Phân biệt rõ: HTTP cho web, SMTP cho mail, FTP cho file.",
-        "URL là một địa chỉ, không phải là một giao thức (protocol)."
+        "URL là một địa chỉ, không phải là một giao thức."
       ]
     },
     {
@@ -436,12 +433,12 @@
         "D. Model"
       ],
       "correctAnswer": "C",
-      "explanation": "Câu hỏi này mô tả một trong những mô hình kiến trúc ứng dụng mạng phổ biến nhất.<br /><br /><b>1. Phân tích mô hình:</b><br />Câu hỏi mô tả một bên là '<b>service provider</b>' (nhà cung cấp dịch vụ) chạy liên tục để chờ đợi, và một bên khác là chương trình kết nối đến để '<b>ask for service</b>' (yêu cầu dịch vụ).<br /><br /><b>2. So sánh các mô hình:</b><br />- <b>Client-Server (Khách-Chủ):</b> Đây chính xác là mô hình được mô tả. <b>Server (máy chủ)</b> là 'nhà cung cấp dịch vụ', luôn chạy và lắng nghe. <b>Client (máy khách)</b> là chương trình kết nối đến và yêu cầu dịch vụ.<br />- <b>P2P (Peer-to-Peer - Ngang hàng):</b> Trong mô hình này, mọi máy đều có vai trò như nhau, vừa là client vừa là server. Không có một 'nhà cung cấp dịch vụ' cố định.<br /><br /><b>Ví dụ đời thực:</b> Trình duyệt web (client) của bạn yêu cầu trang web từ máy chủ của Google (server).<br /><br /><b>Kết luận: Mô tả trong câu hỏi là của mô hình Client-Server.</b>",
+      "explanation": "Trong mô hình <b>Client-Server</b>, nhà cung cấp dịch vụ (server) là một chương trình ứng dụng chạy liên tục, chờ đợi các chương trình ứng dụng khác (client) thiết lập kết nối qua Internet và yêu cầu dịch vụ. Các dịch vụ như World Wide Web (WWW) với HTTP, FTP, email đều sử dụng mô hình này.",
       "difficulty": "easy",
-      "topic": "Networking (Application Paradigms)",
+      "topic": "Networking",
       "hints": [
-        "Thần chú: <b>Client-Server = Một bên Yêu cầu (Client), một bên Phục vụ (Server)</b>.",
-        "Từ khóa: 'service provider' (nhà cung cấp dịch vụ) và 'ask for service' (yêu cầu dịch vụ) là dấu hiệu rõ ràng của mô hình Client-Server.",
+        "Thần chú: Client-Server = Một bên Yêu cầu (Client), một bên Phục vụ (Server).",
+        "Từ khóa: 'service provider' và 'ask for service' là dấu hiệu rõ ràng của mô hình Client-Server.",
         "Mô hình đối lập là P2P (Ngang hàng), nơi mọi người đều 'bình đẳng'."
       ]
     },
@@ -458,12 +455,12 @@
         "F. Text editor"
       ],
       "correctAnswer": "A,B,C,D",
-      "explanation": "Câu hỏi này yêu cầu xác định các mục tiêu và chức năng cốt lõi của một Hệ điều hành (HĐH).<br /><br /><b>1. Hai mục tiêu bao trùm:</b><br />Mọi HĐH đều hướng tới hai mục tiêu lớn: <b>sử dụng hiệu quả phần cứng</b> và <b>cung cấp giao diện dễ sử dụng cho người dùng</b>. Điều này làm cho đáp án <b>A</b> và <b>D</b> đúng.<br />- <b>A. Efficient use of hardware and easy use of resources:</b> Đây là mục tiêu tổng quát nhất.<br />- <b>D. Provide UI (User Interface):</b> Cung cấp giao diện người dùng (dòng lệnh hoặc đồ họa) để người dùng có thể tương tác.<br /><br /><b>2. Các chức năng quản lý cốt lõi:</b><br />Để đạt được mục tiêu trên, HĐH phải thực hiện các vai trò quản lý cụ thể. Điều này làm cho đáp án <b>B</b> và <b>C</b> đúng.<br />- <b>B. Control subsystems and manage memory:</b> Quản lý bộ nhớ và kiểm soát các thành phần phần cứng là chức năng trung tâm.<br />- <b>C. Access I/O device and CPU:</b> Quản lý và điều phối việc truy cập đến CPU (quản lý tiến trình) và các thiết bị vào/ra (I/O) là nhiệm vụ sống còn.<br /><br /><b>3. Loại trừ:</b><br />- <b>E (Operation on data):</b> Đây là việc của các chương trình ứng dụng, không phải của HĐH.<br />- <b>F (Text editor):</b> Đây là một chương trình ứng dụng, không phải là mục tiêu thiết kế của HĐH.<br /><br /><b>Kết luận: A, B, C, D là các mục tiêu và chức năng thiết kế chính.</b>",
+      "explanation": "Hai mục tiêu thiết kế chính của một hệ điều hành là <b>sử dụng phần cứng hiệu quả</b> và <b>dễ dàng sử dụng các tài nguyên</b>. Để đạt được các mục tiêu này, hệ điều hành bao gồm các thành phần quản lý chính như: Giao diện người dùng (UI), Quản lý bộ nhớ, Quản lý tiến trình (CPU), và Quản lý thiết bị (I/O). Các tùy chọn A, B, C, D đều phản ánh các mục tiêu và chức năng cốt lõi này.",
       "difficulty": "medium",
-      "topic": "Operating Systems (Core Concepts)",
+      "topic": "Operating Systems",
       "hints": [
-        "HĐH có 2 vai trò: <b>làm ông chủ</b> (quản lý phần cứng hiệu quả) và <b>làm người giúp việc</b> (cung cấp môi trường dễ dùng).",
-        "Hãy nghĩ về 4 'nhà quản lý' chính của HĐH: quản lý bộ nhớ, quản lý tiến trình (CPU), quản lý thiết bị (I/O), quản lý file.",
+        "HĐH có 2 vai trò: làm ông chủ (quản lý phần cứng) và làm người giúp việc (cung cấp giao diện).",
+        "Hãy nghĩ về 4 'nhà quản lý' chính của HĐH: quản lý bộ nhớ, tiến trình (CPU), thiết bị (I/O), và file.",
         "Loại trừ những thứ là 'ứng dụng' (như Text Editor) chứ không phải 'chức năng hệ thống'."
       ]
     },
@@ -478,11 +475,11 @@
         "D. Real-time systems"
       ],
       "correctAnswer": "B",
-      "explanation": "Câu hỏi này về các loại hệ điều hành hiện đại.<br /><br /><b>1. Phân tích từ khóa:</b><br />Từ khóa quyết định là '<b>files located in different parts of the world</b>' (tập tin ở nhiều nơi trên thế giới) và '<b>Networking and internetworking</b>' (Mạng và liên mạng). Điều này ám chỉ một hệ thống được trải rộng trên nhiều máy tính khác nhau về mặt địa lý.<br /><br /><b>2. Định nghĩa các loại hệ thống:</b><br />- <b>Distributed systems (Hệ thống phân tán):</b> Là một tập hợp các máy tính tự trị được kết nối qua mạng và hoạt động cùng nhau như một hệ thống duy nhất. Người dùng có cảm giác như đang làm việc trên một máy tính, mặc dù tài nguyên (như file) có thể được phân tán ở nhiều nơi.<br />- <b>Parallel systems (Hệ thống song song):</b> Tập trung vào việc sử dụng nhiều CPU trong cùng một máy tính để tăng tốc độ xử lý.<br />- <b>Real-time systems (Hệ thống thời gian thực):</b> Tập trung vào việc đảm bảo các tác vụ được hoàn thành trong một khoảng thời gian nghiêm ngặt (ví dụ: hệ thống điều khiển tên lửa).<br /><br /><b>Kết luận: Hệ điều hành cho phép truy cập tài nguyên phân tán toàn cầu được gọi là Hệ thống phân tán.</b>",
+      "explanation": "Với sự phát triển của mạng và Internet, <b>hệ thống phân tán (Distributed systems)</b> đã trở nên quan trọng. Những hệ thống này cho phép các công việc được chia sẻ giữa nhiều máy tính kết nối qua mạng, ngay cả khi chúng cách xa hàng ngàn dặm.",
       "difficulty": "easy",
-      "topic": "Operating Systems (Types)",
+      "topic": "Operating Systems",
       "hints": [
-        "Thần chú: <b>Distributed = Geographically Dispersed</b> (Phân tán về mặt địa lý).",
+        "Thần chú: Distributed = Geographically Dispersed (Phân tán về mặt địa lý).",
         "Hãy liên kết 'networking', 'internet', 'different parts of the world' với 'Distributed'.",
         "Phân biệt rõ: Parallel (nhiều CPU, 1 máy) vs. Distributed (nhiều máy, nối mạng)."
       ]
@@ -498,11 +495,11 @@
         "D. Demand segmentation"
       ],
       "correctAnswer": "A",
-      "explanation": "Câu hỏi này về các kỹ thuật quản lý bộ nhớ sơ khai.<br /><br /><b>1. Phân tích từ khóa:</b><br />Hai từ khóa quan trọng nhất là '<b>determined size beforehand</b>' (kích thước được xác định trước) và '<b>occupying a contiguous space</b>' (chiếm một không gian liền kề).<br /><br /><b>2. So sánh các kỹ thuật:</b><br />- <b>Partitioning (Phân vùng):</b> Đây là kỹ thuật cổ điển nhất. Bộ nhớ được chia thành các 'phân vùng' có kích thước cố định hoặc động. Mỗi chương trình khi được nạp vào sẽ được cấp phát <b>nguyên một khối bộ nhớ liền kề</b>. Kích thước của nó phải được biết trước.<br />- <b>Paging & Segmentation:</b> Đây là các kỹ thuật hiện đại hơn, cho phép một chương trình được chia thành các phần nhỏ (pages hoặc segments) và nạp vào các vùng nhớ <b>không cần liền kề</b>. Điều này giải quyết vấn đề phân mảnh của Partitioning.<br /><br /><b>Kết luận: Kỹ thuật yêu cầu không gian liền kề và biết trước kích thước là Partitioning.</b>",
+      "explanation": "Trong kỹ thuật <b>phân vùng (Partitioning)</b> của multiprogramming, bộ nhớ được chia thành các phân vùng. Mỗi chương trình chiếm một không gian liên tục và kích thước của nó cần được xác định trước bởi bộ quản lý bộ nhớ. Các kỹ thuật như Paging hoặc Segmentation thì cho phép chương trình chiếm các vị trí bộ nhớ không liên tục.",
       "difficulty": "medium",
-      "topic": "Operating Systems (Memory Management)",
+      "topic": "Operating Systems",
       "hints": [
-        "Thần chú: <b>Partitioning = Contiguous (Liền kề)</b>. Giống như chia một cái bánh thành từng miếng lớn.",
+        "Thần chú: Partitioning = Contiguous (Liền kề). Giống như chia một cái bánh thành từng miếng lớn.",
         "Từ khóa 'contiguous space' là dấu hiệu rõ ràng nhất của Partitioning.",
         "Paging và Segmentation là các kỹ thuật 'phi liền kề' (non-contiguous)."
       ]
@@ -518,12 +515,12 @@
         "D. Deadlock"
       ],
       "correctAnswer": "A",
-      "explanation": "Câu hỏi này phân biệt hai vấn đề phổ biến trong xử lý đồng thời: Deadlock và Starvation.<br /><br /><b>1. Phân tích từ khóa:</b><br />Từ khóa là '<b>too many resource restrictions</b>' (quá nhiều ràng buộc tài nguyên), dẫn đến một tiến trình có thể không bao giờ được chạy.<br /><br /><b>2. So sánh Deadlock và Starvation:</b><br />- <b>Deadlock (Khóa chết):</b> Là một vòng lặp chờ đợi. Tiến trình A giữ tài nguyên 1 và chờ tài nguyên 2. Tiến trình B giữ tài nguyên 2 và chờ tài nguyên 1. Cả hai đều bị kẹt, không thể tiến triển.<br />- <b>Starvation (Chết đói):</b> Là vấn đề về sự công bằng. Một tiến trình có độ ưu tiên thấp (hoặc có nhiều ràng buộc) liên tục bị các tiến trình khác 'chen hàng' và không bao giờ được cấp phát CPU hoặc tài nguyên. Nó không bị kẹt, chỉ là 'bị lãng quên'.<br /><br /><b>Ví dụ đời thực:</b> Starvation giống như bạn đứng chờ thang máy nhưng người khác cứ liên tục chen vào trước, khiến bạn không bao giờ vào được.<br /><br /><b>Kết luận: Tình trạng một tiến trình bị trì hoãn vô hạn định do các ràng buộc hoặc độ ưu tiên thấp được gọi là Starvation.</b>",
+      "explanation": "Trong quản lý tiến trình, <b>thiếu tài nguyên (starvation)</b> xảy ra khi một tiến trình không bao giờ nhận được quyền truy cập vào tài nguyên vì các tiến trình khác liên tục được ưu tiên hơn nó. Điều này làm cho tiến trình bị trì hoãn vô thời hạn.",
       "difficulty": "medium",
-      "topic": "Operating Systems (Concurrency)",
+      "topic": "Operating Systems",
       "hints": [
-        "Thần chú: <b>Deadlock = Vòng lặp chờ đợi</b> (A chờ B, B chờ A).",
-        "Thần chú: <b>Starvation = Bị lãng quên</b> (Không bao giờ đến lượt).",
+        "Thần chú: Deadlock = Vòng lặp chờ đợi (A chờ B, B chờ A).",
+        "Thần chú: Starvation = Bị lãng quên (Không bao giờ đến lượt).",
         "Quá nhiều 'ràng buộc' hoặc 'độ ưu tiên thấp' thường dẫn đến Starvation."
       ]
     },
@@ -538,13 +535,13 @@
         "D. Running"
       ],
       "correctAnswer": "C",
-      "explanation": "Đây là câu hỏi về một trong bốn chức năng quản lý chính của hệ điều hành.<br /><br /><b>1. Vai trò của Device Manager (Trình quản lý thiết bị):</b><br />Trình quản lý thiết bị của HĐH có ba nhiệm vụ chính:<br />- <b>Theo dõi (track)</b> trạng thái của tất cả các thiết bị.<br />- <b>Thiết lập chính sách</b> (quyết định ai được dùng thiết bị, khi nào, trong bao lâu).<br />- <b>Cấp phát và thu hồi</b> thiết bị.<br /><br /><b>2. Mục đích của việc theo dõi:</b><br />Việc theo dõi liên tục trạng thái của các thiết bị (như máy in, ổ đĩa, bàn phím) là để đảm bảo rằng chúng đang <b>hoạt động bình thường (functioning properly)</b> và sẵn sàng nhận lệnh. Nếu một thiết bị gặp lỗi, trình quản lý thiết bị cần phải biết để xử lý.<br /><br /><b>Kết luận: Mục đích chính của việc theo dõi thiết bị là để đảm bảo chúng hoạt động bình thường.</b>",
+      "explanation": "Trình quản lý thiết bị (Device Manager) chịu trách nhiệm theo dõi mọi thiết bị đầu vào/đầu ra liên tục để đảm bảo rằng thiết bị đó <b>đang hoạt động bình thường (functioning properly)</b>.",
       "difficulty": "easy",
-      "topic": "Operating Systems (Device Management)",
+      "topic": "Operating Systems",
       "hints": [
         "Device Manager giống như một người 'giám sát viên' của tất cả các thiết bị phần cứng.",
         "Nhiệm vụ chính của giám sát viên là kiểm tra xem mọi thứ có 'chạy tốt' hay không.",
-        "Cụm từ 'functioning properly' (hoạt động bình thường) là mục tiêu bao quát nhất của việc theo dõi."
+        "Cụm từ 'functioning properly' là mục tiêu bao quát nhất của việc theo dõi."
       ]
     },
     {
@@ -558,13 +555,13 @@
         "D. Flow"
       ],
       "correctAnswer": "A",
-      "explanation": "Câu hỏi này về ba cấu trúc điều khiển cơ bản trong lập trình có cấu trúc.<br /><br /><b>1. Ba cấu trúc cơ bản:</b><br />Mọi thuật toán đều có thể được xây dựng từ ba cấu trúc đơn giản:<br />- <b>Sequence (Tuần tự):</b> Thực hiện một tập hợp các hành động <b>lần lượt, từ trên xuống dưới, không bỏ qua bước nào</b>. Đây chính là cấu trúc được mô tả trong câu hỏi.<br />- <b>Decision (Rẽ nhánh / Lựa chọn):</b> Dựa trên một điều kiện (đúng/sai) để quyết định thực hiện hành động nào tiếp theo. Thường dùng `if-else`.<br />- <b>Repetition (Lặp):</b> Lặp lại một tập hợp các hành động cho đến khi một điều kiện nào đó được thỏa mãn. Thường dùng `while`, `for`.<br /><br /><b>Kết luận: Cấu trúc thực hiện các hành động lần lượt nối tiếp nhau được gọi là Sequence.</b>",
+      "explanation": "Trong ba cấu trúc cơ bản của thuật toán, cấu trúc <b>trình tự (sequence)</b> là một loạt các hành động được thực hiện <b>liên tiếp, hết hành động này đến hành động khác</b>.",
       "difficulty": "easy",
-      "topic": "Algorithms (Control Structures)",
+      "topic": "Algorithms",
       "hints": [
-        "Thần chú: <b>Sequence = Tuần tự</b> (làm từ A đến B đến C).",
-        "Thần chú: <b>Decision = Lựa chọn</b> (nếu... thì... ngược lại thì...).",
-        "Thần chú: <b>Repetition = Lặp lại</b> (làm đi làm lại)."
+        "Thần chú: Sequence = Tuần tự (làm từ A đến B đến C).",
+        "Đối lập: Decision (Lựa chọn) và Repetition (Lặp lại).",
+        "Đây là cấu trúc mặc định của một chương trình máy tính."
       ]
     },
     {
@@ -578,13 +575,13 @@
         "D. State diagram"
       ],
       "correctAnswer": "B",
-      "explanation": "Câu hỏi này phân biệt các công cụ mô tả thuật toán và hệ thống.<br /><br /><b>1. Phân tích các lựa chọn:</b><br />- <b>Pseudocode (Mã giả):</b> Dùng ngôn ngữ giống tiếng Anh để mô tả chi tiết các bước của thuật toán.<br />- <b>Flowchart (Lưu đồ):</b> Dùng các biểu tượng hình học (hình chữ nhật, hình thoi) để mô tả luồng của thuật toán, nhưng vẫn có thể khá chi tiết.<br />- <b>UML (Unified Modeling Language - Ngôn ngữ Mô hình hóa Thống nhất):</b> Đây là một bộ công cụ mạnh mẽ, không chỉ dùng cho thuật toán mà còn cho toàn bộ hệ thống phần mềm. Nó cung cấp nhiều loại biểu đồ (như biểu đồ hoạt động, biểu đồ tuần tự) để mô tả hệ thống ở các mức độ trừu tượng khác nhau, cho phép <b>ẩn đi chi tiết</b> để nhìn vào '<b>the big picture</b>' (bức tranh tổng thể).<br /><br /><b>Kết luận: UML là công cụ được thiết kế để mô tả 'bức tranh tổng thể' và ẩn đi các chi tiết không cần thiết.</b>",
+      "explanation": "<b>Ngôn ngữ Mô hình Hợp nhất (UML)</b> là một cách biểu diễn thuật toán và hệ thống bằng hình ảnh. Nó giúp che giấu tất cả các chi tiết để cung cấp một cái nhìn tổng thể ('big picture') và thể hiện luồng hoạt động từ đầu đến cuối.",
       "difficulty": "medium",
-      "topic": "Software Engineering (Modeling)",
+      "topic": "Software Engineering",
       "hints": [
-        "Thần chú: <b>UML = Big Picture</b> (Bức tranh tổng thể).",
+        "Thần chú: UML = Big Picture (Bức tranh tổng thể).",
         "Từ khóa 'hides all the details' và 'big picture' là dấu hiệu mạnh nhất của UML.",
-        "Pseudocode và Flowchart thường tập trung vào chi tiết của một thuật toán cụ thể hơn là cả một hệ thống."
+        "Pseudocode và Flowchart thường tập trung vào chi tiết của một thuật toán cụ thể."
       ]
     },
     {
@@ -598,12 +595,12 @@
         "D. Recursion"
       ],
       "correctAnswer": "B",
-      "explanation": "Đây là câu hỏi định nghĩa một trong những thuật toán cơ bản và phổ biến nhất.<br /><br /><b>1. Phân tích từ khóa:</b><br />Từ khóa cốt lõi là '<b>arranges data according to its value</b>' (sắp xếp dữ liệu theo giá trị của nó).<br /><br /><b>2. Định nghĩa các thuật toán:</b><br />- <b>Sorting (Sắp xếp):</b> Là quá trình sắp đặt các phần tử trong một danh sách theo một thứ tự nhất định (ví dụ: từ nhỏ đến lớn, hoặc theo thứ tự bảng chữ cái). Điều này hoàn toàn khớp với mô tả.<br />- <b>Searching (Tìm kiếm):</b> Là quá trình tìm một phần tử cụ thể trong một danh sách.<br />- <b>Recursion (Đệ quy):</b> Là một kỹ thuật lập trình trong đó một hàm tự gọi lại chính nó. Đây là một phương pháp, không phải một loại thuật toán cụ thể như sắp xếp hay tìm kiếm.<br /><br /><b>Kết luận: Thuật toán sắp xếp dữ liệu theo giá trị được gọi là Sorting.</b>",
+      "explanation": "<b>Sắp xếp (Sorting)</b> là một trong những thuật toán phổ biến nhất trong khoa học máy tính, là quá trình sắp xếp dữ liệu theo giá trị của nó (ví dụ: tăng dần hoặc giảm dần).",
       "difficulty": "easy",
-      "topic": "Algorithms (Basic Algorithms)",
+      "topic": "Algorithms",
       "hints": [
-        "Thần chú: <b>Sorting = Sắp xếp</b> (sắp đặt theo thứ tự).",
-        "Thần chú: <b>Searching = Tìm kiếm</b> (tìm một thứ gì đó).",
+        "Thần chú: Sorting = Sắp xếp (sắp đặt theo thứ tự).",
+        "Đối lập: Searching = Tìm kiếm (tìm một thứ gì đó).",
         "Hãy liên kết 'arrange' (sắp xếp) với 'Sorting'."
       ]
     },
@@ -617,12 +614,12 @@
         "C. Insertion"
       ],
       "correctAnswer": "A",
-      "explanation": "Câu hỏi này phân biệt các thuật toán sắp xếp cơ bản.<br /><br /><b>1. Phân tích cách hoạt động:</b><br />- <b>Selection Sort (Sắp xếp chọn):</b> Duyệt qua toàn bộ phần chưa sắp xếp để <b>tìm ra phần tử nhỏ nhất</b>, sau đó đưa nó về đầu của phần chưa sắp xếp đó. Quá trình này chỉ thực hiện <b>một lần hoán đổi</b> cho mỗi vòng lặp lớn.<br />- <b>Bubble Sort (Sắp xếp nổi bọt):</b> So sánh các cặp phần tử <b>liền kề</b> và hoán đổi chúng nếu sai thứ tự. Quá trình này có rất nhiều lần hoán đổi 'one-to-one'.<br />- <b>Insertion Sort (Sắp xếp chèn):</b> Lấy từng phần tử của phần chưa sắp xếp và 'chèn' nó vào đúng vị trí trong phần đã sắp xếp.<br /><br /><b>2. Từ khóa nhận diện:</b><br />'<b>Smallest item moves to the beginning</b>' (phần tử nhỏ nhất di chuyển về đầu) và '<b>no one-to-one swapping</b>' (không có hoán đổi 1-1 liên tục) là đặc điểm nhận dạng kinh điển của <b>Selection Sort</b>.<br /><br /><b>Kết luận: Thuật toán được mô tả là Selection Sort.</b>",
+      "explanation": "Trong thuật toán <b>sắp xếp chọn lọc (Selection Sort)</b>, danh sách được chia thành hai phần. Thuật toán tìm phần tử nhỏ nhất từ phần chưa sắp xếp và hoán đổi nó với phần tử ở đầu phần chưa sắp xếp. Quá trình này chỉ có một lần hoán đổi mỗi vòng lặp.",
       "difficulty": "medium",
-      "topic": "Algorithms (Sorting)",
+      "topic": "Algorithms",
       "hints": [
-        "Thần chú: <b>Selection Sort = SELECT the smallest</b> (chọn ra thằng nhỏ nhất) rồi đưa về đầu.",
-        "Bubble Sort thì giống như bong bóng, đổi chỗ liên tục với hàng xóm.",
+        "Thần chú: Selection Sort = SELECT the smallest (chọn ra thằng nhỏ nhất) rồi đưa về đầu.",
+        "Bubble Sort thì đổi chỗ liên tục với hàng xóm.",
         "Selection Sort rất 'kén chọn', chỉ đổi chỗ một lần duy nhất sau khi đã tìm ra phần tử nhỏ nhất trong một lượt."
       ]
     },
@@ -637,12 +634,12 @@
         "D. Interpretation"
       ],
       "correctAnswer": "D",
-      "explanation": "Câu hỏi này phân biệt hai cách chính để thực thi một chương trình: biên dịch và thông dịch.<br /><br /><b>1. So sánh hai phương pháp:</b><br />- <b>Compilation (Biên dịch):</b> Giống như dịch một quyển sách. Dịch <b>toàn bộ chương trình nguồn</b> một lần để tạo ra một file thực thi (chương trình đối tượng). Sau đó, bạn chạy file thực thi đó. Quá trình dịch và chạy là tách biệt.<br />- <b>Interpretation (Thông dịch):</b> Giống như một thông dịch viên. Dịch <b>từng dòng lệnh một</b>, rồi thực thi ngay dòng lệnh đó, sau đó mới chuyển sang dòng tiếp theo. Quá trình dịch và chạy diễn ra xen kẽ.<br /><br /><b>2. Từ khóa nhận diện:</b><br />'<b>translating each line ... and executing the line</b>' (dịch từng dòng ... và thực thi dòng đó) là định nghĩa chính xác của <b>Interpretation</b>.<br /><br /><b>Kết luận: Quá trình dịch và chạy từng dòng được gọi là Interpretation.</b>",
+      "explanation": "<b>Thông dịch (Interpretation)</b> là quá trình dịch từng dòng của chương trình nguồn sang dòng tương ứng của chương trình đối tượng và thực thi dòng đó ngay lập tức, thay vì dịch toàn bộ mã nguồn trước khi thực thi như biên dịch.",
       "difficulty": "easy",
-      "topic": "Programming Languages (Compiler vs. Interpreter)",
+      "topic": "Programming Languages",
       "hints": [
-        "Thần chú: <b>Interpreter = Dịch và chạy từng dòng</b> (line-by-line).",
-        "Thần chú đối lập: <b>Compiler = Dịch cả cục</b> (dịch toàn bộ rồi mới chạy).",
+        "Thần chú: Interpreter = Dịch và chạy từng dòng (line-by-line).",
+        "Đối lập: Compiler = Dịch cả cục (dịch toàn bộ rồi mới chạy).",
         "Các ngôn ngữ như Python, JavaScript là ví dụ điển hình của ngôn ngữ thông dịch."
       ]
     },
@@ -657,11 +654,11 @@
         "D. Object-oriented paradigm"
       ],
       "correctAnswer": "C",
-      "explanation": "Câu hỏi này về các mô hình (hệ hình) lập trình.<br /><br /><b>1. Phân tích các mô hình:</b><br />- <b>Procedural (Thủ tục):</b> Tập trung vào 'cách làm' (how-to), chia chương trình thành các thủ tục và hàm.<br />- <b>Object-Oriented (Hướng đối tượng):</b> Mô hình hóa thế giới thực bằng các đối tượng có thuộc tính và phương thức.<br />- <b>Functional (Hàm):</b> Coi mọi thứ như các hàm toán học, tránh thay đổi trạng thái và dữ liệu.<br />- <b>Declarative (Khai báo):</b> Đây là mô hình đặc biệt, tập trung vào việc mô tả 'cái gì cần làm' (what-to-do) thay vì 'làm như thế nào'. Nó sử dụng các quy tắc logic (facts and rules) để hệ thống tự suy luận ra câu trả lời. Ngôn ngữ Prolog là ví dụ kinh điển.<br /><br /><b>2. Từ khóa nhận diện:</b><br />'<b>Logical reasoning</b>' (suy luận logic) và '<b>formal logic</b>' (logic hình thức) là những dấu hiệu không thể nhầm lẫn của <b>Declarative paradigm</b>.<br /><br /><b>Kết luận: Mô hình lập trình dựa trên suy luận logic là Declarative.</b>",
+      "explanation": "Mô hình <b>lập trình khai báo (Declarative paradigm)</b> sử dụng nguyên tắc suy luận logic để trả lời các truy vấn. Nó dựa trên logic hình thức và tập trung vào việc mô tả 'cái gì cần làm' thay vì 'làm như thế nào'.",
       "difficulty": "hard",
       "topic": "Programming Paradigms",
       "hints": [
-        "Thần chú: <b>Declarative = Logic-based</b> (dựa trên logic).",
+        "Thần chú: Declarative = Logic-based (dựa trên logic).",
         "Procedural & OOP: Bạn ra lệnh cho máy tính làm thế nào.",
         "Declarative: Bạn mô tả vấn đề và các quy tắc, máy tính tự tìm cách giải quyết."
       ]
@@ -677,13 +674,13 @@
         "D. Ada"
       ],
       "correctAnswer": "B",
-      "explanation": "Câu hỏi này tìm một ngôn ngữ lập trình đặc biệt, nằm giữa bậc cao và bậc thấp.<br /><br /><b>1. Phân tích đặc điểm:</b><br />- <b>High-level (Bậc cao):</b> Dễ đọc, dễ viết, gần với ngôn ngữ con người (ví dụ: `if`, `while`, `for`). Tất cả các ngôn ngữ trong đáp án đều là bậc cao.<br />- <b>Low-level instructions (Lệnh bậc thấp):</b> Cho phép truy cập và thao tác trực tiếp với bộ nhớ, thanh ghi, phần cứng. Đây là điểm khác biệt.<br /><br /><b>2. So sánh các ngôn ngữ:</b><br />- <b>COBOL, Pascal, Ada:</b> Đây là các ngôn ngữ bậc cao thuần túy, được thiết kế để trừu tượng hóa phần cứng và tập trung vào logic nghiệp vụ hoặc giáo dục. Chúng rất hạn chế khả năng truy cập bậc thấp.<br />- <b>C:</b> Được mệnh danh là 'ngôn ngữ bậc trung' (middle-level language). Nó có cú pháp bậc cao nhưng đồng thời cung cấp các công cụ mạnh mẽ để truy cập bậc thấp như <b>con trỏ (pointers)</b> và các phép toán trên bit. Điều này làm cho C trở thành lựa chọn hàng đầu để viết hệ điều hành và trình điều khiển thiết bị.<br /><br /><b>Kết luận: Ngôn ngữ C vừa là bậc cao, vừa có các chỉ dẫn bậc thấp.</b>",
+      "explanation": "Ngôn ngữ <b>C</b> được coi là một ngôn ngữ bậc trung. Nó có cấu trúc của một ngôn ngữ bậc cao nhưng cũng cung cấp khả năng thao tác gần với phần cứng (thông qua con trỏ và quản lý bộ nhớ trực tiếp), cho phép nó thực hiện các tác vụ thường liên quan đến ngôn ngữ cấp thấp.",
       "difficulty": "medium",
-      "topic": "Programming Languages (C Language)",
+      "topic": "Programming Languages",
       "hints": [
-        "Thần chú: <b>Ngôn ngữ C = Middle-level language</b> (ngôn ngữ bậc trung).",
+        "Thần chú: Ngôn ngữ C = Middle-level language (ngôn ngữ bậc trung).",
         "Hãy liên kết ngôn ngữ C với 'con trỏ' (pointers) - công cụ truy cập bộ nhớ bậc thấp.",
-        "C là ngôn ngữ dùng để viết HĐH Linux, Windows - những thứ cần tương tác sâu với phần cứng."
+        "C là ngôn ngữ dùng để viết hệ điều hành và trình điều khiển thiết bị."
       ]
     },
     {
@@ -696,11 +693,11 @@
         "C. Control statement"
       ],
       "correctAnswer": "B",
-      "explanation": "Câu hỏi này về một loại câu lệnh cơ bản nhất trong lập trình.<br /><br /><b>1. Phân tích các loại câu lệnh:</b><br />- <b>Declaration statement (Lệnh khai báo):</b> Dùng để 'tạo ra' một biến (ví dụ: `int x;`).<br />- <b>Assignment statement (Lệnh gán):</b> Dùng để 'lưu trữ một giá trị' vào một biến đã được tạo. Ví dụ: `x = 10;`. Đây chính xác là những gì câu hỏi mô tả.<br />- <b>Control statement (Lệnh điều khiển):</b> Dùng để thay đổi luồng thực thi của chương trình (ví dụ: `if`, `while`, `for`).<br />- <b>Compound statement (Lệnh ghép):</b> Là một khối các câu lệnh được bao trong cặp ngoặc nhọn `{...}`.<br /><br /><b>2. Từ khóa nhận diện:</b><br />'<b>stores the value in the variable</b>' (lưu giá trị vào biến) là định nghĩa của phép gán.<br /><br /><b>Kết luận: Lệnh dùng để lưu giá trị vào biến là Lệnh gán (Assignment statement).</b>",
+      "explanation": "Việc lưu trữ một giá trị vào một biến đã được tạo là chức năng cơ bản của một <b>câu lệnh gán (assignment statement)</b> trong lập trình. Ví dụ: `x = 10;`.",
       "difficulty": "easy",
-      "topic": "Programming Fundamentals (Statements)",
+      "topic": "Programming Fundamentals",
       "hints": [
-        "Thần chú: <b>Assignment = Gán giá trị</b> (dùng dấu '=').",
+        "Thần chú: Assignment = Gán giá trị (thường dùng dấu '=').",
         "Phân biệt: Khai báo là 'tạo ra', gán là 'đặt giá trị vào'.",
         "Ví dụ: `int age;` (khai báo), `age = 25;` (gán)."
       ]
@@ -716,12 +713,12 @@
         "D. Software engineering"
       ],
       "correctAnswer": "B",
-      "explanation": "Câu hỏi này so sánh các mô hình phát triển phần mềm.<br /><br /><b>1. So sánh các mô hình:</b><br />- <b>Waterfall model (Mô hình thác nước):</b> Là một quy trình tuyến tính, tuần tự. Phải hoàn thành xong toàn bộ giai đoạn này mới được chuyển sang giai đoạn tiếp theo (Phân tích -> Thiết kế -> Lập trình -> Kiểm thử). Giống như xây một ngôi nhà, phải xong móng mới xây tường.<br />- <b>Incremental model (Mô hình gia tăng):</b> Chia dự án thành các phần nhỏ, độc lập (increments hoặc modules). Mỗi phần được phát triển và bàn giao riêng. Ví dụ, xây dựng phiên bản 1.0 của phần mềm chỉ với các chức năng cơ bản, sau đó thêm các chức năng mới trong phiên bản 1.1, 2.0,...<br /><br /><b>2. Từ khóa nhận diện:</b><br />'<b>requirements are divided into multiple standalone modules</b>' (yêu cầu được chia thành nhiều module độc lập) là đặc điểm cốt lõi của <b>Incremental model</b>.<br /><br /><b>Kết luận: Mô hình chia nhỏ yêu cầu thành các module là Incremental model.</b>",
+      "explanation": "Trong <b>mô hình gia tăng (Incremental Model)</b>, phần mềm được phát triển theo từng bước hoặc từng giai đoạn. Yêu cầu được chia thành các module độc lập, và một phiên bản cơ bản của hệ thống được tạo ra trước, sau đó các chức năng bổ sung được thêm vào dần dần.",
       "difficulty": "easy",
-      "topic": "Software Engineering (Development Models)",
+      "topic": "Software Engineering",
       "hints": [
-        "Thần chú: <b>Incremental = Gia tăng</b> (làm từng phần rồi ghép lại).",
-        "Thần chú đối lập: <b>Waterfall = Thác nước</b> (làm tuần tự từ đầu đến cuối).",
+        "Thần chú: Incremental = Gia tăng (làm từng phần rồi ghép lại).",
+        "Đối lập: Waterfall = Thác nước (làm tuần tự từ đầu đến cuối).",
         "Hãy liên kết 'chia thành module' với 'Incremental'."
       ]
     },
@@ -736,13 +733,13 @@
         "D. Collecting"
       ],
       "correctAnswer": "A",
-      "explanation": "Câu hỏi này về các giai đoạn trong vòng đời phát triển phần mềm.<br /><br /><b>1. Vòng đời phát triển phần mềm (SDLC - Software Development Life Cycle):</b><br />Một mô hình SDLC kinh điển (như Waterfall) bao gồm các giai đoạn chính sau:<br />1. <b>Analysis (Phân tích):</b> Thu thập và phân tích yêu cầu của khách hàng để hiểu rõ cần làm gì.<br />2. <b>Design (Thiết kế):</b> Lên kế hoạch và thiết kế kiến trúc, giao diện của hệ thống.<br />3. <b>Implementation (Triển khai/Lập trình):</b> Viết code dựa trên bản thiết kế.<br />4. <b>Testing (Kiểm thử):</b> Kiểm tra để đảm bảo phần mềm hoạt động đúng và không có lỗi.<br />5. <b>Deployment (Triển khai):</b> Cài đặt và đưa phần mềm vào sử dụng.<br />6. <b>Maintenance (Bảo trì):</b> Sửa lỗi và nâng cấp phần mềm sau khi đã triển khai.<br /><br /><b>2. Phân tích các lựa chọn:</b><br />- <b>Analysis</b> và <b>Designing</b> (ở dạng danh động từ) đều là các giai đoạn chính. Trong các đáp án, 'Analysis' (danh từ) là một lựa chọn phù hợp và là giai đoạn đầu tiên.<br /><br /><b>Kết luận: Analysis là một giai đoạn trong phát triển hệ thống.</b>",
+      "explanation": "Quá trình phát triển phần mềm tuân theo một vòng đời với bốn giai đoạn chính: <b>phân tích (analysis)</b>, thiết kế (design), triển khai (implementation) và kiểm thử (testing). 'Analysis' là một trong những giai đoạn cốt lõi này.",
       "difficulty": "easy",
-      "topic": "Software Engineering (SDLC)",
+      "topic": "Software Engineering",
       "hints": [
-        "Ghi nhớ 4 giai đoạn cốt lõi: <b>Analysis -> Design -> Implementation -> Testing</b>.",
+        "Ghi nhớ 4 giai đoạn cốt lõi: Analysis -> Design -> Implementation -> Testing.",
         "Analysis là bước đầu tiên: 'Tìm hiểu xem chúng ta cần làm gì?'.",
-        "Application là sản phẩm, không phải giai đoạn. Collecting là một hành động trong giai đoạn Analysis."
+        "Application là sản phẩm, không phải giai đoạn."
       ]
     },
     {
@@ -756,13 +753,13 @@
         "D. Cohesion"
       ],
       "correctAnswer": "B",
-      "explanation": "Câu hỏi này về hai thước đo quan trọng trong thiết kế module hóa phần mềm.<br /><br /><b>1. So sánh Coupling và Cohesion:</b><br />Hãy tưởng tượng các module phần mềm như các phòng trong một ngôi nhà.<br />- <b>Coupling (Sự liên kết):</b> Đo lường sự <b>phụ thuộc giữa các phòng</b>. Coupling cao có nghĩa là các phòng phụ thuộc chặt chẽ vào nhau (ví dụ: phải đi qua phòng khách mới vào được phòng ngủ). Điều này không tốt, vì sửa một phòng sẽ ảnh hưởng đến phòng khác.<br />- <b>Cohesion (Sự gắn kết):</b> Đo lường mức độ <b>liên quan của các đồ vật bên trong một phòng</b>. Cohesion cao có nghĩa là tất cả đồ vật trong phòng đều phục vụ một mục đích chung (ví dụ: phòng bếp chỉ chứa đồ nấu ăn). Điều này rất tốt.<br /><br /><b>2. Mục tiêu thiết kế:</b><br />Mục tiêu của một thiết kế tốt là <b>Low Coupling (Liên kết thấp)</b> và <b>High Cohesion (Gắn kết cao)</b>.<br /><br /><b>Kết luận: Thước đo sự phụ thuộc chặt chẽ giữa hai module được gọi là Coupling.</b>",
+      "explanation": "Trong thiết kế phần mềm, <b>ghép nối (coupling)</b> là khái niệm chỉ <b>mức độ phụ thuộc giữa các mô-đun</b> trong hệ thống. Mức độ ghép nối thấp thường được ưa chuộng vì nó làm cho các mô-đun độc lập hơn và dễ bảo trì hơn.",
       "difficulty": "medium",
-      "topic": "Software Engineering (Design Principles)",
+      "topic": "Software Engineering",
       "hints": [
-        "Thần chú: <b>Coupling = Sự phụ thuộc GIỮA các module (không tốt)</b>.",
-        "Thần chú: <b>Cohesion = Sự liên quan BÊN TRONG một module (tốt)</b>.",
-        "Mục tiêu: <b>LOW Coupling, HIGH Cohesion</b>."
+        "Thần chú: Coupling = Sự phụ thuộc GIỮA các module (không tốt).",
+        "Đối lập: Cohesion = Sự liên quan BÊN TRONG một module (tốt).",
+        "Mục tiêu thiết kế tốt: LOW Coupling, HIGH Cohesion."
       ]
     },
     {
@@ -776,12 +773,12 @@
         "D. Transferability"
       ],
       "correctAnswer": "D",
-      "explanation": "Câu hỏi này về các thuộc tính chất lượng của phần mềm.<br /><br /><b>1. Phân tích các thuộc tính ('-ability'):</b><br />- <b>Maintainability (Khả năng bảo trì):</b> Phần mềm dễ dàng được sửa đổi, cập nhật hay sửa lỗi như thế nào.<br />- <b>Operability (Khả năng vận hành):</b> Phần mềm dễ dàng được vận hành trong môi trường của nó như thế nào.<br />- <b>Correctability (Khả năng sửa lỗi):</b> Liên quan đến việc sửa các lỗi trong phần mềm.<br />- <b>Transferability (Khả năng chuyển giao/di chuyển):</b> Đo lường mức độ dễ dàng để di chuyển phần mềm từ một môi trường/nền tảng này sang một môi trường/nền tảng khác (ví dụ: từ Windows sang Linux). Nó bao gồm hai phần nhỏ hơn là <b>Portability (Khả năng tương thích đa nền tảng)</b> và <b>Reusability (Khả năng tái sử dụng)</b>.<br /><br /><b>2. Từ khóa nhận diện:</b><br />'<b>move ... from one platform to another</b>' (di chuyển từ nền tảng này sang nền tảng khác) và '<b>reuse code</b>' (tái sử dụng code) là định nghĩa chính xác của <b>Transferability</b>.<br /><br /><b>Kết luận: Khả năng di chuyển và tái sử dụng được gọi là Transferability.</b>",
+      "explanation": "<b>Tính khả chuyển (Transferability)</b> đề cập đến khả năng di chuyển dữ liệu và/hoặc một hệ thống từ một nền tảng này sang nền tảng khác, cũng như khả năng <b>tái sử dụng mã (reuse code)</b>.",
       "difficulty": "medium",
-      "topic": "Software Engineering (Quality Attributes)",
+      "topic": "Software Engineering",
       "hints": [
-        "Thần chú: <b>Transferability = Transfer = Di chuyển</b> (giữa các nền tảng) + <b>Reuse</b> (tái sử dụng).",
-        "Portability là một phần của Transferability.",
+        "Thần chú: Transferability = Transfer = Di chuyển (giữa các nền tảng).",
+        "Tính khả chuyển bao gồm cả khả năng tương thích đa nền tảng (portability) và tái sử dụng (reusability).",
         "Phân biệt với Maintainability (khả năng sửa chữa, bảo trì)."
       ]
     },
@@ -796,11 +793,11 @@
         "D. Data flow testing"
       ],
       "correctAnswer": "A",
-      "explanation": "Câu hỏi này về một kỹ thuật quan trọng trong kiểm thử phần mềm.<br /><br /><b>1. Kiểm thử hộp đen (Black-box testing):</b><br />Là phương pháp kiểm thử mà không cần biết code bên trong hoạt động như thế nào, chỉ tập trung vào đầu vào và đầu ra. Giống như bạn sử dụng một chiếc TV mà không cần biết mạch điện bên trong.<br /><br /><b>2. Phân tích các kỹ thuật Black-box:</b><br />- <b>Boundary-value testing (Kiểm thử giá trị biên):</b> Đây là kỹ thuật thông minh nhất. Lập trình viên thường mắc lỗi ở các giá trị 'rìa' của một khoảng. Ví dụ, nếu một trường nhập tuổi hợp lệ từ 18 đến 60, kỹ thuật này sẽ tập trung kiểm tra các giá trị như 17, 18, 19 và 59, 60, 61.<br />- <b>Random testing (Kiểm thử ngẫu nhiên):</b> Chọn các giá trị đầu vào một cách ngẫu nhiên.<br />- <b>Exhaustive testing (Kiểm thử toàn diện):</b> Thử tất cả mọi trường hợp đầu vào có thể. Thường là bất khả thi.<br /><br /><b>Kết luận: Phương pháp kiểm thử tập trung vào các giá trị biên được gọi là Boundary-value testing.</b>",
+      "explanation": "<b>Kiểm thử giá trị biên (Boundary-value testing)</b> là một phương pháp kiểm thử hộp đen (black-box testing) tập trung vào việc tạo các trường hợp kiểm thử cho các giá trị ở ranh giới của miền đầu vào. Các lỗi thường xảy ra khi hệ thống xử lý các giá trị biên.",
       "difficulty": "easy",
-      "topic": "Software Engineering (Testing)",
+      "topic": "Software Engineering",
       "hints": [
-        "Thần chú: Lỗi hay xảy ra ở <b>biên giới (boundary)</b>.",
+        "Thần chú: Lỗi hay xảy ra ở biên giới (boundary).",
         "Nếu một hệ thống cho phép số từ 1-100, hãy kiểm tra các số 0, 1, 2 và 99, 100, 101.",
         "Đây là kỹ thuật giúp tìm ra nhiều lỗi nhất với ít ca kiểm thử nhất."
       ]
@@ -816,11 +813,11 @@
         "D. Binary search"
       ],
       "correctAnswer": "D",
-      "explanation": "Câu hỏi này về việc lựa chọn thuật toán tìm kiếm hiệu quả.<br /><br /><b>1. Phân tích từ khóa:</b><br />Hai từ khóa quan trọng nhất là '<b>search for elements</b>' (tìm kiếm phần tử) và '<b>on sorted arrays</b>' (trên mảng đã được sắp xếp).<br /><br /><b>2. So sánh các thuật toán tìm kiếm:</b><br />- <b>Sequential Search (Tìm kiếm tuần tự):</b> Duyệt qua mảng từ đầu đến cuối. Nó hoạt động trên cả mảng đã sắp xếp và chưa sắp xếp, nhưng rất chậm với mảng lớn (độ phức tạp \\(O(n)\\)).<br />- <b>Binary Search (Tìm kiếm nhị phân):</b> Là một thuật toán rất hiệu quả, nhưng có một yêu cầu bắt buộc: <b>mảng phải được sắp xếp trước</b>. Nó hoạt động bằng cách liên tục chia đôi khoảng tìm kiếm, giúp giảm đáng kể thời gian (độ phức tạp \\(O(\\log n)\\)).<br /><br /><b>3. Loại trừ:</b><br />- Insertion Sort và Selection Sort là các thuật toán <b>sắp xếp</b>, không phải tìm kiếm.<br /><br /><b>Kết luận: Trên mảng đã sắp xếp, Binary Search là thuật toán tìm kiếm hiệu quả nhất.</b>",
+      "explanation": "<b>Tìm kiếm nhị phân (Binary search)</b> là một thuật toán tìm kiếm hiệu quả được sử dụng trên các danh sách hoặc mảng <b>đã được sắp xếp</b>. Nó hoạt động bằng cách liên tục chia đôi khoảng tìm kiếm, giúp giảm đáng kể độ phức tạp thời gian so với tìm kiếm tuần tự.",
       "difficulty": "easy",
-      "topic": "Algorithms (Searching)",
+      "topic": "Algorithms",
       "hints": [
-        "Thần chú: <b>Sorted Array + Search = Binary Search</b>.",
+        "Thần chú: Sorted Array + Search = Binary Search.",
         "Binary Search giống như trò chơi đoán số, bạn luôn đoán ở giữa để loại bỏ một nửa các khả năng.",
         "Sort là sắp xếp, Search là tìm kiếm. Đừng nhầm lẫn!"
       ]
@@ -836,13 +833,13 @@
         "D. A node"
       ],
       "correctAnswer": "C",
-      "explanation": "Câu hỏi này về thuật ngữ cơ bản trong cấu trúc dữ liệu và cơ sở dữ liệu.<br /><br /><b>1. Ví dụ đời thực:</b><br />Hãy tưởng tượng một '<b>Hồ sơ sinh viên</b>'. Đây chính là một <b>Record (Bản ghi)</b>.<br />Hồ sơ này bao gồm các thông tin:<br />- Họ và tên<br />- Mã số sinh viên<br />- Ngày sinh<br />- Điểm trung bình<br />Mỗi một thông tin (Họ và tên, Mã số sinh viên, ...) được gọi là một <b>Field (Trường)</b>.<br /><br /><b>2. Định nghĩa chính thức:</b><br />- <b>Record (Bản ghi):</b> Một tập hợp các dữ liệu có liên quan về một đối tượng cụ thể.<br />- <b>Field (Trường):</b> Một mẩu thông tin đơn lẻ trong một bản ghi.<br /><br /><b>Kết luận: Mỗi phần tử trong một bản ghi được gọi là một Trường (Field).</b>",
+      "explanation": "Một bản ghi (record) là một tập hợp các phần tử liên quan. Mỗi phần tử trong một bản ghi được gọi là một <b>trường (field)</b>.",
       "difficulty": "easy",
-      "topic": "Data Structures (Records and Fields)",
+      "topic": "Data Structures",
       "hints": [
-        "Thần chú: <b>Record = Hồ sơ, Field = Mục thông tin trong hồ sơ</b>.",
+        "Thần chú: Record = Hồ sơ, Field = Mục thông tin trong hồ sơ.",
         "Ví dụ: Record = SinhVien, Fields = MaSV, HoTen, NgaySinh.",
-        "Đừng nhầm với Node (một phần tử trong cây hoặc danh sách liên kết) hay Index (chỉ số của mảng)."
+        "Trong CSDL, Record tương ứng với một Hàng, Field tương ứng với một Cột."
       ]
     },
     {
@@ -856,11 +853,11 @@
         "D. Last node"
       ],
       "correctAnswer": "A",
-      "explanation": "Câu hỏi này về cách hoạt động của cấu trúc dữ liệu Danh sách liên kết (Linked List).<br /><br /><b>1. Cấu trúc của Linked List:</b><br />Danh sách liên kết không lưu trữ các phần tử (nodes) liền kề nhau trong bộ nhớ như mảng. Thay vào đó, mỗi node chứa dữ liệu và một con trỏ (pointer) chỉ đến node tiếp theo.<br /><br /><b>2. Vai trò của Head Pointer:</b><br />Vì các node nằm rải rác, làm thế nào để hệ thống biết danh sách bắt đầu từ đâu? Câu trả lời là dùng một con trỏ đặc biệt gọi là <b>Head Pointer (Con trỏ đầu)</b>. Con trỏ này không phải là một phần của danh sách, nó chỉ đơn giản là một biến lưu giữ địa chỉ của <b>node đầu tiên (first node)</b>.<br /><br /><b>Ví dụ đời thực:</b> Head pointer giống như địa chỉ nhà của người bạn đầu tiên trong một chuỗi bạn bè. Từ người đó, bạn mới có thể hỏi đường đến nhà người tiếp theo.<br /><br /><b>Kết luận: Head pointer trỏ đến node đầu tiên của danh sách.</b>",
+      "explanation": "Trong danh sách liên kết (linked list), con trỏ đầu (head pointer) lưu địa chỉ của phần tử đầu tiên. Tên của danh sách chính là tên của biến con trỏ này, vì nó trỏ đến <b>nút đầu tiên (first node)</b> của danh sách.",
       "difficulty": "easy",
-      "topic": "Data Structures (Linked List)",
+      "topic": "Data Structures",
       "hints": [
-        "Thần chú: <b>Head = First Node</b> (Đầu thì trỏ đến cái đầu tiên).",
+        "Thần chú: Head = First Node (Đầu thì trỏ đến cái đầu tiên).",
         "Mất Head Pointer là mất cả danh sách liên kết, vì không biết bắt đầu từ đâu.",
         "Node cuối cùng sẽ trỏ đến NULL, không phải Head."
       ]
@@ -876,13 +873,13 @@
         "D. SIFO"
       ],
       "correctAnswer": "B",
-      "explanation": "Đây là câu hỏi định nghĩa kinh điển về cấu trúc dữ liệu Stack (Ngăn xếp).<br /><br /><b>1. Nguyên tắc hoạt động của Stack:</b><br />Stack hoạt động theo nguyên tắc <b>LIFO (Last-In, First-Out)</b>, có nghĩa là '<b>Vào sau, Ra trước</b>'.<br /><br /><b>2. Ví dụ đời thực dễ nhớ:</b><br />- <b>Chồng đĩa:</b> Cái đĩa bạn đặt lên trên cùng (vào sau cùng) sẽ là cái đĩa bạn lấy ra đầu tiên (ra trước tiên).<br />- <b>Nút Back trên trình duyệt:</b> Trang web bạn vừa truy cập (vào stack sau cùng) sẽ là trang đầu tiên bạn quay lại khi nhấn nút Back (ra khỏi stack đầu tiên).<br /><br /><b>3. Phân biệt với Queue:</b><br />- Cấu trúc đối lập là <b>Queue (Hàng đợi)</b>, hoạt động theo nguyên tắc <b>FIFO (First-In, First-Out)</b> - 'Vào trước, Ra trước', giống như xếp hàng mua vé.<br /><br /><b>Kết luận: Stack là một cấu trúc LIFO.</b>",
+      "explanation": "Một ngăn xếp (stack) là một danh sách tuyến tính bị giới hạn, nơi tất cả các thao tác thêm và xóa dữ liệu đều được thực hiện từ một đầu duy nhất là đỉnh (top). Do đó, dữ liệu được thêm vào sau cùng sẽ được lấy ra đầu tiên, tuân theo nguyên tắc <b>Vào sau, ra trước (Last-In, First-Out - LIFO)</b>.",
       "difficulty": "easy",
-      "topic": "Data Structures (Stack)",
+      "topic": "Data Structures",
       "hints": [
-        "Câu thần chú: <b>Stack = LIFO (Last-In, First-Out)</b>. Nhớ đến 'chồng đĩa'.",
-        "Câu thần chú đối lập: <b>Queue = FIFO (First-In, First-Out)</b>. Nhớ đến 'xếp hàng'.",
-        "DIFO và SIFO không phải là các nguyên tắc tiêu chuẩn."
+        "Câu thần chú: Stack = LIFO (Last-In, First-Out).",
+        "Hãy nhớ đến hình ảnh một 'chồng đĩa'.",
+        "Đối lập với Stack là Queue (FIFO - Vào trước, ra trước)."
       ]
     },
     {
@@ -892,15 +889,14 @@
       "options": [
         "A. Greater than",
         "B. Less than",
-        "C. Equal",
-        "D. Smaller than"
+        "C. Equal"
       ],
       "correctAnswer": "A",
-      "explanation": "Câu hỏi này về thuộc tính cốt lõi của Cây tìm kiếm nhị phân (Binary Search Tree - BST).<br /><br /><b>1. Định nghĩa của BST:</b><br />Một cây nhị phân được gọi là BST nếu nó thỏa mãn đồng thời hai điều kiện sau tại <b>mọi nút</b> trong cây:<br />1. Tất cả các giá trị trong <b>cây con trái</b> đều <b>nhỏ hơn</b> giá trị của nút đó.<br />2. Tất cả các giá trị trong <b>cây con phải</b> đều <b>lớn hơn</b> giá trị của nút đó.<br /><br /><b>2. Phân tích câu hỏi:</b><br />Câu hỏi đang hỏi về mối quan hệ giữa 'giá trị của nút gốc' và 'các giá trị trong cây con trái'. Theo định nghĩa trên, giá trị của nút gốc phải <b>lớn hơn (greater than)</b> tất cả các giá trị trong cây con trái của nó.<br /><br /><b>Ví dụ:</b> Nếu gốc là 50, mọi nút bên trái phải < 50 và mọi nút bên phải phải > 50.<br /><br /><b>Kết luận: Giá trị của nút gốc lớn hơn tất cả các giá trị trong cây con trái.</b>",
+      "explanation": "Một cây tìm kiếm nhị phân (Binary Search Tree - BST) có một tính chất đặc biệt: giá trị khóa của mỗi nút (bao gồm cả nút gốc) <b>lớn hơn</b> giá trị khóa của tất cả các nút trong cây con bên trái của nó, và nhỏ hơn giá trị của tất cả các nút trong cây con bên phải của nó.",
       "difficulty": "medium",
-      "topic": "Data Structures (Binary Search Tree)",
+      "topic": "Data Structures",
       "hints": [
-        "Thần chú: <b>BST = (Trái < Gốc < Phải)</b>.",
+        "Thần chú: BST = (Trái < Gốc < Phải).",
         "Tất cả những gì 'bé hơn' thì đi sang trái, tất cả những gì 'lớn hơn' thì đi sang phải.",
         "Câu hỏi đang so sánh Gốc với Trái, vậy Gốc phải LỚN HƠN."
       ]
@@ -916,13 +912,13 @@
         "D. Ordered"
       ],
       "correctAnswer": "B",
-      "explanation": "Đây là câu hỏi định nghĩa khác về cấu trúc dữ liệu Queue (Hàng đợi).<br /><br /><b>1. Nguyên tắc hoạt động của Queue:</b><br />Queue hoạt động theo nguyên tắc <b>FIFO (First-In, First-Out)</b>, có nghĩa là '<b>Vào trước, Ra trước</b>'.<br /><br /><b>2. Ví dụ đời thực dễ nhớ:</b><br />- <b>Xếp hàng ở siêu thị:</b> Người đến trước được thanh toán trước.<br />- <b>Hàng đợi in ấn:</b> Tài liệu bạn gửi lệnh in đầu tiên sẽ được máy in in ra trước tiên.<br /><br /><b>3. Kết luận:</b><br />Vì Queue tuân theo nguyên tắc FIFO, một danh sách FIFO (FIFO list) chính là một tên gọi khác của Queue.<br /><br /><b>Kết luận: Một danh sách FIFO được gọi là Queue.</b>",
+      "explanation": "Một hàng đợi (queue) là một danh sách tuyến tính trong đó dữ liệu chỉ có thể được thêm vào ở cuối (rear) và xóa khỏi đầu (front). Điều này đảm bảo rằng dữ liệu được xử lý theo thứ tự nó được nhận vào, tức là tuân theo nguyên tắc <b>Vào trước, ra trước (First-In, First-Out - FIFO)</b>.",
       "difficulty": "easy",
-      "topic": "Data Structures (Queue)",
+      "topic": "Data Structures",
       "hints": [
-        "Câu thần chú: <b>Queue = FIFO (First-In, First-Out)</b>. Nhớ đến 'xếp hàng'.",
-        "Câu thần chú đối lập: <b>Stack = LIFO (Last-In, First-Out)</b>. Nhớ đến 'chồng đĩa'.",
-        "Hãy liên kết Queue với hình ảnh một hàng người đang chờ đợi."
+        "Câu thần chú: Queue = FIFO (First-In, First-Out).",
+        "Hãy nhớ đến hình ảnh một 'hàng người xếp hàng'.",
+        "Đối lập với Queue là Stack (LIFO - Vào sau, ra trước)."
       ]
     },
     {
@@ -936,12 +932,12 @@
         "D. Index file"
       ],
       "correctAnswer": "B",
-      "explanation": "Câu hỏi này về cách lựa chọn loại file phù hợp cho một tác vụ cụ thể.<br /><br /><b>1. Phân tích tác vụ:</b><br />Tác vụ là '<b>retrieve each record at the end of the month to print the paychecks</b>' (lấy từng bản ghi vào cuối tháng để in phiếu lương). Điều này có nghĩa là chúng ta cần xử lý <b>toàn bộ nhân viên, lần lượt từ người đầu tiên đến người cuối cùng</b>. Đây là một tác vụ xử lý hàng loạt, tuần tự.<br /><br /><b>2. So sánh các loại file:</b><br />- <b>Sequential file (File tuần tự):</b> Dữ liệu được lưu trữ và truy cập theo đúng thứ tự của nó, từ đầu đến cuối. Đây là lựa chọn hoàn hảo cho các tác vụ xử lý hàng loạt như tính lương cho tất cả nhân viên.<br />- <b>Indexed file (File chỉ mục) & Hashed file (File băm):</b> Đây là các file truy cập trực tiếp/ngẫu nhiên. Chúng rất hiệu quả khi bạn muốn tìm <b>một nhân viên cụ thể</b> một cách nhanh chóng (ví dụ: truy vấn thông tin của nhân viên có mã 123). Tuy nhiên, chúng không hiệu quả bằng file tuần tự cho việc xử lý toàn bộ file.<br /><br /><b>Kết luận: Đối với việc xử lý tất cả các bản ghi theo thứ tự, Sequential file là phù hợp nhất.</b>",
+      "explanation": "Trong tình huống cần xử lý lần lượt tất cả các bản ghi (ví dụ: in bảng lương cho tất cả nhân viên), <b>tệp tuần tự (sequential file)</b> là phù hợp vì các bản ghi trong đó chỉ có thể được truy cập lần lượt, từ đầu đến cuối.",
       "difficulty": "medium",
-      "topic": "File Systems (File Types)",
+      "topic": "File Systems",
       "hints": [
-        "Thần chú: Xử lý <b>TẤT CẢ</b> bản ghi lần lượt -> Dùng <b>Sequential File</b>.",
-        "Thần chú: Tìm kiếm <b>MỘT</b> bản ghi cụ thể -> Dùng <b>Indexed/Hashed File</b>.",
+        "Thần chú: Xử lý TẤT CẢ bản ghi lần lượt -> Dùng Sequential File.",
+        "Đối lập: Tìm kiếm MỘT bản ghi cụ thể -> Dùng Indexed/Hashed File.",
         "In phiếu lương cho cả công ty là một tác vụ xử lý hàng loạt điển hình."
       ]
     },
@@ -956,13 +952,13 @@
         "D. Write the old master file record to the new master file"
       ],
       "correctAnswer": "A",
-      "explanation": "Đây là một câu hỏi kinh điển về thuật toán cập nhật file tuần tự (sequential file update).<br /><br /><b>1. Bối cảnh thuật toán:</b><br />Ta có một file chính (Master file) và một file giao dịch (Transaction file), cả hai đều đã được sắp xếp theo khóa (key). Thuật toán sẽ tạo ra một file chính mới (New Master file) đã được cập nhật.<br /><br /><b>2. Logic so sánh khóa:</b><br />Tại mỗi bước, ta so sánh khóa của bản ghi hiện tại từ file giao dịch (Transaction Key - TK) và file chính (Master Key - MK).<br />- <b>Nếu TK < MK:</b> Điều này có nghĩa là bản ghi trong file giao dịch là một bản ghi mới, không có trong file chính cũ. Do đó, ta phải <b>thêm (add) bản ghi giao dịch này vào file chính mới</b> và đọc bản ghi tiếp theo từ file giao dịch.<br />- <b>Nếu TK > MK:</b> Bản ghi trong file chính không có giao dịch nào. Ta chỉ cần <b>chép (write) nó sang file chính mới</b> và đọc bản ghi tiếp theo từ file chính cũ.<br />- <b>Nếu TK = MK:</b> Có một giao dịch cho bản ghi này. Ta sẽ <b>sửa đổi (modify) hoặc xóa (delete)</b> bản ghi rồi ghi vào file chính mới.<br /><br /><b>3. Áp dụng vào bài toán:</b><br />Ở đây, TK (20) < MK (25). Theo logic trên, đây là một bản ghi mới. Ta phải thêm nó vào file chính mới.<br /><br /><b>Kết luận: Thêm bản ghi mới vào file chính mới.</b>",
+      "explanation": "Trong thuật toán cập nhật file tuần tự, nếu khóa của tệp giao dịch (20) nhỏ hơn khóa của tệp chính (25), điều đó có nghĩa là bản ghi giao dịch là một bản ghi mới cần được chèn vào. Do đó, ta sẽ <b>thêm (add) bản ghi giao dịch này vào tệp chính mới</b>.",
       "difficulty": "hard",
-      "topic": "File Systems (Sequential File Update)",
+      "topic": "File Systems",
       "hints": [
-        "Thần chú: <b>Transaction Key < Master Key => Add new record</b> (Khóa giao dịch nhỏ hơn, nghĩa là nó là bản ghi mới cần được chèn vào).",
-        "Nhớ rằng thuật toán này tạo ra một file master MỚI, không sửa trực tiếp file cũ.",
-        "TK > MK => Copy bản ghi master cũ. TK = MK => Update/Delete bản ghi master."
+        "Thần chú: Transaction Key < Master Key => Add new record.",
+        "Khóa giao dịch nhỏ hơn, nghĩa là nó là bản ghi mới cần được chèn vào trước bản ghi chính hiện tại.",
+        "Thuật toán này luôn tạo ra một file master MỚI, không sửa trực tiếp file cũ."
       ]
     },
     {
@@ -976,13 +972,13 @@
         "D. Parent directory"
       ],
       "correctAnswer": "A",
-      "explanation": "Câu hỏi này về cấu trúc cây thư mục trong hệ điều hành.<br /><br /><b>1. Cấu trúc cây (Hierarchy):</b><br />Hệ thống tệp tin được tổ chức như một cây lộn ngược. Điểm bắt đầu của cây, cấp cao nhất, được gọi là thư mục gốc.<br /><br /><b>2. Định nghĩa các loại thư mục:</b><br />- <b>Root directory (Thư mục gốc):</b> Là đỉnh của cây thư mục, là 'tổ tiên' của tất cả các tệp và thư mục khác. Nó <b>không có thư mục cha (parent directory)</b>. Trong Unix/Linux, nó được ký hiệu là `/`. Trong Windows, mỗi ổ đĩa có một thư mục gốc riêng (ví dụ: `C:\\`).<br />- <b>Home directory (Thư mục nhà):</b> Thư mục mặc định cho mỗi người dùng.<br />- <b>Working directory (Thư mục làm việc hiện tại):</b> Thư mục mà bạn đang ở đó trong cửa sổ dòng lệnh.<br />- <b>Parent directory (Thư mục cha):</b> Thư mục chứa thư mục hiện tại.<br /><br /><b>Kết luận: Cấp cao nhất và không có thư mục cha là Root directory.</b>",
+      "explanation": "Trong hệ thống phân cấp tệp, <b>thư mục gốc (root directory)</b> là cấp cao nhất và là thư mục duy nhất không có thư mục cha. Nó là điểm khởi đầu cho tất cả các thư mục và tệp khác trong hệ thống.",
       "difficulty": "easy",
-      "topic": "Operating Systems (File System)",
+      "topic": "Operating Systems",
       "hints": [
-        "Thần chú: <b>Root = Gốc rễ</b>, là điểm bắt đầu của mọi thứ.",
+        "Thần chú: Root = Gốc rễ, là điểm bắt đầu của mọi thứ.",
         "Thư mục gốc là thư mục duy nhất không có thư mục cha (không có '..').",
-        "Trên Linux/macOS, đó là dấu `/`. Trên Windows, đó là `C:\\`, `D:\\`."
+        "Trên Linux/macOS, đó là dấu '/'. Trên Windows, đó là `C:\\`, `D:\\`."
       ]
     },
     {
@@ -996,13 +992,13 @@
         "D. Flat-file"
       ],
       "correctAnswer": "A",
-      "explanation": "Đây là câu hỏi định nghĩa về khái niệm Cơ sở dữ liệu (CSDL).<br /><br /><b>1. Phân tích định nghĩa:</b><br />Câu hỏi mô tả một '<b>collection of related logically coherent data</b>' (tập hợp dữ liệu có liên quan, nhất quán về mặt logic). Đây là đặc điểm cốt lõi của một CSDL, nơi dữ liệu không chỉ được lưu trữ mà còn được tổ chức và có mối quan hệ với nhau.<br /><br /><b>2. So sánh với các khái niệm khác:</b><br />- <b>File / Flat-file (Tệp / Tệp phẳng):</b> Là một tập hợp dữ liệu, nhưng thường không có cấu trúc quan hệ phức tạp bên trong. Các file thường độc lập với nhau, dẫn đến dư thừa và không nhất quán. Ví dụ: một file Excel.<br />- <b>Database (Cơ sở dữ liệu):</b> Là một bước tiến hóa từ file. Nó được quản lý bởi một Hệ quản trị CSDL (DBMS), đảm bảo tính toàn vẹn, bảo mật, và giảm thiểu dư thừa dữ liệu. Dữ liệu trong CSDL có cấu trúc và liên quan chặt chẽ với nhau.<br />- <b>Directory (Thư mục):</b> Chỉ là một công cụ để tổ chức các tệp, không phải để chứa dữ liệu có cấu trúc.<br /><br /><b>Kết luận: Định nghĩa này mô tả chính xác một Cơ sở dữ liệu (Database).</b>",
+      "explanation": "<b>Cơ sở dữ liệu (Database)</b> được định nghĩa là một tập hợp các dữ liệu có liên quan với nhau, được tổ chức một cách logic và được sử dụng bởi các chương trình ứng dụng trong một tổ chức.",
       "difficulty": "easy",
-      "topic": "Database Concepts (Definition)",
+      "topic": "Database Concepts",
       "hints": [
-        "Thần chú: <b>Database = Dữ liệu có cấu trúc + có liên quan</b>.",
-        "Từ khóa 'logically coherent' (nhất quán logic) và 'related' (có liên quan) là dấu hiệu của một Database.",
-        "Hãy nghĩ đến sự khác biệt giữa một loạt file Excel rời rạc (Files) và một hệ thống quản lý bán hàng tích hợp (Database)."
+        "Thần chú: Database = Dữ liệu có cấu trúc + có liên quan.",
+        "Từ khóa 'logically coherent' và 'related' là dấu hiệu của một Database.",
+        "Hãy nghĩ đến sự khác biệt giữa các file Excel rời rạc (Files) và một hệ thống quản lý tích hợp (Database)."
       ]
     },
     {
@@ -1015,18 +1011,18 @@
         "C. Two-dimensional record"
       ],
       "correctAnswer": "B",
-      "explanation": "Đây là câu hỏi định nghĩa cốt lõi của mô hình cơ sở dữ liệu quan hệ.<br /><br /><b>1. Mô hình Quan hệ (Relational Model):</b><br />Mô hình này, được đề xuất bởi E.F. Codd, là nền tảng cho hầu hết các hệ quản trị CSDL hiện đại (như MySQL, SQL Server, Oracle).<br />Ý tưởng chính là tổ chức tất cả dữ liệu dưới dạng các <b>bảng hai chiều (two-dimensional tables)</b>.<br /><br /><b>2. Thuật ngữ:</b><br />- Trong lý thuyết, mỗi bảng này được gọi là một <b>Relation (Quan hệ)</b>.<br />- Mỗi hàng trong bảng được gọi là một <b>Tuple (Bộ)</b>.<br />- Mỗi cột trong bảng được gọi là một <b>Attribute (Thuộc tính)</b>.<br /><br /><b>Kết luận: Trong mô hình quan hệ, dữ liệu được tổ chức trong các bảng hai chiều.</b>",
+      "explanation": "Trong <b>mô hình cơ sở dữ liệu quan hệ (relational database model)</b>, dữ liệu được tổ chức dưới dạng các <b>bảng hai chiều (two-dimensional tables)</b>, được gọi là các quan hệ (relations).",
       "difficulty": "easy",
-      "topic": "Database Concepts (Relational Model)",
+      "topic": "Database Concepts",
       "hints": [
-        "Thần chú: <b>Relational Database = Bảng (Table)</b>.",
+        "Thần chú: Relational Database = Bảng (Table).",
         "Hãy hình dung một CSDL quan hệ như một tập hợp các file Excel, mỗi file là một bảng.",
-        "Bảng = Quan hệ, Hàng = Bộ, Cột = Thuộc tính."
+        "Bảng = Quan hệ, Hàng = Bộ (Tuple), Cột = Thuộc tính (Attribute)."
       ]
     },
     {
       "id": 52,
-      "question": "[___] is needed to ... remove anomalies in insertion, deletion, and updating, and reduce the need for restructuring the database as new data types are added.",
+      "question": "[___] is needed to allow any relation in the database to be represented, to allow a language like SQL to use powerful retrieval operations composed of atomic operations, to remove anomalies in insertion, deletion, and updating, and reduce the need for restructuring the database as new data types are added.",
       "image": null,
       "options": [
         "A. Relational database",
@@ -1035,11 +1031,11 @@
         "D. Normalization"
       ],
       "correctAnswer": "D",
-      "explanation": "Câu hỏi này mô tả mục đích và lợi ích của một quy trình quan trọng trong thiết kế CSDL.<br /><br /><b>1. Vấn đề cần giải quyết:</b><br />Khi thiết kế các bảng trong CSDL một cách tùy tiện, ta thường gặp phải các '<b>anomalies</b>' (dị thường/bất thường):<br />- <b>Insertion Anomaly:</b> Không thể thêm một dữ liệu mới nếu thiếu một dữ liệu khác.<br />- <b>Deletion Anomaly:</b> Xóa một dữ liệu này làm mất luôn một dữ liệu không liên quan.<br />- <b>Update Anomaly:</b> Phải cập nhật cùng một thông tin ở nhiều nơi, dễ gây ra không nhất quán.<br /><br /><b>2. Giải pháp:</b><br /><b>Normalization (Chuẩn hóa)</b> là một quy trình có hệ thống, bao gồm các quy tắc (các dạng chuẩn 1NF, 2NF, 3NF...) để tách các bảng lớn thành các bảng nhỏ hơn, có cấu trúc tốt hơn. Mục tiêu của nó chính là để <b>loại bỏ các anomalies</b> và giảm dư thừa dữ liệu.<br /><br /><b>Kết luận: Quá trình giúp loại bỏ các dị thường khi thêm/xóa/sửa được gọi là Normalization.</b>",
+      "explanation": "<b>Chuẩn hóa (Normalization)</b> là quá trình chuyển đổi một tập hợp các quan hệ sang một tập hợp các quan hệ mới với cấu trúc vững chắc hơn. Quá trình này cần thiết để <b>loại bỏ các bất thường (anomalies) trong việc chèn, xóa và cập nhật</b> dữ liệu, giảm thiểu sự dư thừa và tăng tính toàn vẹn dữ liệu.",
       "difficulty": "medium",
-      "topic": "Database Concepts (Normalization)",
+      "topic": "Database Concepts",
       "hints": [
-        "Thần chú: <b>Normalization = Loại bỏ Dị thường (Anomalies) + Giảm dư thừa</b>.",
+        "Thần chú: Normalization = Loại bỏ Dị thường (Anomalies) + Giảm dư thừa.",
         "Hãy liên kết các từ khóa 'anomalies', 'insertion', 'deletion', 'updating' với Normalization.",
         "Chuẩn hóa giúp cho CSDL trở nên 'sạch sẽ' và 'vững chắc' hơn."
       ]
@@ -1055,14 +1051,14 @@
         "D. Select"
       ],
       "correctAnswer": "A",
-      "explanation": "Câu hỏi này về các thao tác cơ bản trên dữ liệu trong CSDL quan hệ.<br /><br /><b>1. Phân tích các thao tác:</b><br />- <b>INSERT (Chèn):</b> Thêm <b>một hàng (row) mới</b> vào một bảng. Điều này làm cho số lượng hàng trong bảng tăng lên chính xác là 1.<br />- <b>DELETE (Xóa):</b> Xóa một hoặc nhiều hàng khỏi một bảng. Số lượng hàng sẽ giảm đi.<br />- <b>UPDATE (Cập nhật):</b> Thay đổi dữ liệu trong các cột của một hoặc nhiều hàng đã tồn tại. Số lượng hàng không thay đổi.<br />- <b>SELECT (Truy vấn):</b> Lấy ra các hàng từ một bảng. Nó không làm thay đổi dữ liệu gốc.<br /><br /><b>2. Từ khóa nhận diện:</b><br />'<b>exactly one more row</b>' (thêm chính xác một hàng) là kết quả duy nhất của một thao tác <b>INSERT</b> một bản ghi.<br /><br /><b>Kết luận: Thao tác Insert làm tăng số hàng của bảng lên 1.</b>",
+      "explanation": "Thao tác <b>chèn (insert)</b> trong cơ sở dữ liệu quan hệ là một thao tác một ngôi (unary operation) áp dụng cho một quan hệ duy nhất. Thao tác này <b>chèn một bộ giá trị (tuple)</b> mới vào quan hệ, do đó làm tăng số hàng lên đúng một.",
       "difficulty": "easy",
-      "topic": "Database Concepts (SQL Operations)",
+      "topic": "Database Concepts",
       "hints": [
-        "<b>INSERT</b> -> Thêm hàng -> Số hàng tăng.",
-        "<b>DELETE</b> -> Xóa hàng -> Số hàng giảm.",
-        "<b>UPDATE</b> -> Sửa hàng -> Số hàng không đổi.",
-        "<b>SELECT</b> -> Đọc hàng -> Số hàng không đổi."
+        "INSERT -> Thêm hàng -> Số hàng tăng.",
+        "DELETE -> Xóa hàng -> Số hàng giảm.",
+        "UPDATE -> Sửa hàng -> Số hàng không đổi.",
+        "SELECT -> Đọc hàng -> Số hàng không đổi."
       ]
     },
     {
@@ -1076,13 +1072,13 @@
         "D. Normalization"
       ],
       "correctAnswer": "D",
-      "explanation": "Câu hỏi này đưa ra một định nghĩa khác của quá trình Chuẩn hóa.<br /><br /><b>1. Phân tích định nghĩa:</b><br />Câu hỏi mô tả một '<b>process</b>' (quá trình) biến đổi một tập hợp các '<b>relations</b>' (quan hệ/bảng) thành một tập hợp mới có '<b>more solid structure</b>' (cấu trúc vững chắc hơn).<br /><br /><b>2. Quá trình Chuẩn hóa (Normalization):</b><br />Đây chính xác là mục tiêu của chuẩn hóa. Bằng cách áp dụng các quy tắc của các dạng chuẩn (1NF, 2NF, 3NF...), chúng ta tách các bảng được thiết kế kém thành các bảng nhỏ hơn. Các bảng mới này có các đặc điểm sau:<br />- Giảm thiểu sự trùng lặp dữ liệu.<br />- Đảm bảo tính toàn vẹn dữ liệu.<br />- Loại bỏ các dị thường khi cập nhật.<br />Tất cả những điều này góp phần tạo ra một 'cấu trúc vững chắc hơn' cho cơ sở dữ liệu.<br /><br /><b>Kết luận: Quá trình biến đổi quan hệ để có cấu trúc tốt hơn là Normalization.</b>",
+      "explanation": "<b>Chuẩn hóa (Normalization)</b> là quá trình chuyển đổi một tập hợp các quan hệ (bảng) sang một tập hợp các quan hệ mới với cấu trúc vững chắc hơn, nhằm giảm dư thừa và cải thiện tính toàn vẹn dữ liệu.",
       "difficulty": "easy",
-      "topic": "Database Concepts (Normalization)",
+      "topic": "Database Concepts",
       "hints": [
-        "Thần chú: <b>Normalization = Cải thiện cấu trúc bảng (relations)</b>.",
+        "Thần chú: Normalization = Cải thiện cấu trúc bảng (relations).",
         "Từ khóa 'transformed to a new set of relations' và 'more solid structure' là dấu hiệu của Normalization.",
-        "Hãy coi Normalization như việc 'dọn dẹp' và 'sắp xếp lại' các bảng trong CSDL."
+        "Đây là câu hỏi lặp lại, củng cố kiến thức về chuẩn hóa."
       ]
     },
     {
@@ -1096,12 +1092,12 @@
         "D. Traffic analysis"
       ],
       "correctAnswer": "D",
-      "explanation": "Câu hỏi này về một loại tấn công thụ động trong an ninh mạng.<br /><br /><b>1. So sánh các loại tấn công thụ động:</b><br />Tấn công thụ động là loại tấn công mà kẻ tấn công chỉ 'lắng nghe' chứ không thay đổi dữ liệu. Có hai loại chính:<br />- <b>Snooping (Nghe lén) / Eavesdropping:</b> Là việc đọc nội dung của một tin nhắn. Ví dụ: đọc email hoặc tin nhắn chat của người khác. Mục tiêu là lấy được <b>nội dung</b>.<br />- <b>Traffic Analysis (Phân tích lưu lượng):</b> Ngay cả khi tin nhắn đã được mã hóa và không thể đọc được nội dung, kẻ tấn công vẫn có thể thu thập các 'siêu dữ liệu' (metadata) bằng cách quan sát luồng traffic. Ví dụ: biết được ai đang nói chuyện với ai, nói chuyện vào lúc nào, nói chuyện trong bao lâu. Thông tin này cũng có thể rất nhạy cảm.<br /><br /><b>2. Từ khóa nhận diện:</b><br />'<b>monitoring online traffic</b>' và '<b>obtain other types of information</b>' (không nhất thiết là nội dung) mô tả chính xác cuộc tấn công <b>Traffic Analysis</b>.<br /><br /><b>Kết luận: Tấn công bằng cách giám sát lưu lượng để thu thập thông tin được gọi là Traffic Analysis.</b>",
+      "explanation": "<b>Phân tích lưu lượng (traffic analysis)</b> là một hình thức tấn công vào tính bảo mật (confidentiality) thông qua việc <b>giám sát lưu lượng truy cập trực tuyến</b> để thu thập thông tin gián tiếp (siêu dữ liệu), chẳng hạn như tần suất hoặc kích thước của các gói tin, từ đó suy ra thông tin nhạy cảm.",
       "difficulty": "medium",
-      "topic": "Cybersecurity (Attack Types)",
+      "topic": "Cybersecurity",
       "hints": [
-        "<b>Snooping</b> = Đọc trộm 'bức thư'.",
-        "<b>Traffic Analysis</b> = Phân tích 'phong bì' của bức thư (ai gửi, ai nhận, khi nào...).",
+        "Snooping = Đọc trộm 'nội dung' bức thư.",
+        "Traffic Analysis = Phân tích 'phong bì' của bức thư (ai gửi, ai nhận, khi nào...).",
         "Tấn công này nguy hiểm ngay cả khi nội dung đã được mã hóa."
       ]
     },
@@ -1116,12 +1112,12 @@
         "D. Decryption"
       ],
       "correctAnswer": "C",
-      "explanation": "Đây là câu hỏi định nghĩa một trong hai quy trình cơ bản nhất của mật mã học.<br /><br /><b>1. Hai quy trình chính:</b><br />- <b>Encryption (Mã hóa):</b> Là quá trình biến đổi thông tin từ dạng đọc được (<b>Plaintext</b> - văn bản rõ) thành dạng không đọc được (<b>Ciphertext</b> - văn bản mã). Quá trình này được thực hiện bởi người gửi để bảo vệ thông tin.<br />- <b>Decryption (Giải mã):</b> Là quá trình ngược lại, biến đổi thông tin từ Ciphertext trở lại Plaintext. Quá trình này được thực hiện bởi người nhận hợp lệ.<br /><br /><b>2. Sơ đồ luồng:</b><br />Người gửi: <b>Plaintext</b> --(Encryption)--> <b>Ciphertext</b> -> Truyền đi<br />Người nhận: Nhận <b>Ciphertext</b> --(Decryption)--> <b>Plaintext</b><br /><br /><b>Kết luận: Quá trình biến đổi từ plaintext sang ciphertext được gọi là Encryption.</b>",
+      "explanation": "<b>Mã hóa (Encryption)</b> là quá trình biến đổi thông tin ban đầu (plaintext) thành một dạng không thể đọc được (ciphertext) nhằm bảo vệ thông tin khỏi sự truy cập trái phép trước khi truyền tải.",
       "difficulty": "easy",
-      "topic": "Cybersecurity (Cryptography Basics)",
+      "topic": "Cybersecurity",
       "hints": [
-        "Thần chú: <b>Encryption = En-code = Mã hóa</b> (làm cho nó khó đọc).",
-        "Thần chú: <b>Decryption = De-code = Giải mã</b> (làm cho nó đọc được).",
+        "Thần chú: Encryption = En-code = Mã hóa (làm cho nó khó đọc).",
+        "Đối lập: Decryption = De-code = Giải mã (làm cho nó đọc được).",
         "Encryption là việc của người gửi, Decryption là việc của người nhận."
       ]
     },
@@ -1136,11 +1132,11 @@
         "D. Nonmaleficence"
       ],
       "correctAnswer": "C",
-      "explanation": "Câu hỏi này về một học thuyết đạo đức quan trọng.<br /><br /><b>1. Phân tích các học thuyết đạo đức:</b><br />- <b>Deontology (Dựa trên quy tắc/nghĩa vụ):</b> Một hành động là đúng hay sai dựa trên việc nó có tuân thủ một bộ quy tắc đạo đức hay không, bất kể kết quả. Ví dụ: 'Không được nói dối' là một quy tắc.<br />- <b>Utilitarianism (Thuyết vị lợi / Thuyết hữu dụng):</b> Một hành động là đúng nếu nó tạo ra <b>kết quả tốt nhất cho số đông người nhất</b>. Nó tập trung vào 'hậu quả' (consequence) và 'sự hữu dụng' (utility) của hành động.<br />- <b>Social Contract (Khế ước xã hội):</b> Mọi người tuân theo các quy tắc để sống trong một xã hội văn minh.<br />- <b>Nonmaleficence (Không gây hại):</b> Nguyên tắc cơ bản là 'đừng làm hại người khác'.<br /><br /><b>2. Từ khóa nhận diện:</b><br />'<b>brings about a useful result for society</b>' (mang lại kết quả hữu ích cho xã hội) là tư tưởng cốt lõi của <b>Utilitarianism</b>. Lưu ý: Utilization là một cách diễn đạt khác của Utilitarianism.<br /><br /><b>Kết luận: Học thuyết cho rằng hành động đạo đức là hành động mang lại kết quả hữu ích cho xã hội là Utilitarianism.</b>",
+      "explanation": "Nguyên tắc đạo đức <b>Utilitarianism (Chủ nghĩa công lợi)</b>, liên quan đến hậu quả của hành động. Một hành động được coi là đạo đức nếu nó mang lại <b>kết quả hữu ích cho xã hội</b> hoặc cho số đông người nhất.",
       "difficulty": "hard",
       "topic": "Computer Ethics",
       "hints": [
-        "Thần chú: <b>Utilitarianism = Utility = Useful result</b> (Kết quả hữu dụng cho số đông).",
+        "Thần chú: Utilitarianism = Utility = Useful result (Kết quả hữu dụng cho số đông).",
         "Học thuyết này tập trung vào 'kết quả' của hành động.",
         "Đối lập với nó là Deontology, tập trung vào 'bản chất' của hành động."
       ]
@@ -1156,13 +1152,13 @@
         "D. Blue Hat Hacker"
       ],
       "correctAnswer": "A",
-      "explanation": "Câu hỏi này về cách phân loại hacker dựa trên động cơ của họ.<br /><br /><b>1. Phân loại theo màu mũ:</b><br />Đây là một cách ẩn dụ phổ biến, bắt nguồn từ các bộ phim cao bồi miền Tây.<br />- <b>Black Hat (Mũ đen):</b> Là những 'kẻ xấu' (bad guys). Họ hack vì mục đích bất hợp pháp và tiêu cực như trộm cắp tiền bạc, dữ liệu, phá hoại hệ thống, hoặc để nổi danh trong thế giới ngầm.<br />- <b>White Hat (Mũ trắng):</b> Là những 'người tốt' (good guys), còn được gọi là hacker đạo đức. Họ được các công ty thuê để tìm ra lỗ hổng bảo mật và giúp vá chúng lại.<br />- <b>Grey Hat (Mũ xám):</b> Nằm giữa trắng và đen. Họ có thể hack vào một hệ thống mà không có sự cho phép, nhưng mục đích có thể là để cảnh báo cho chủ sở hữu về lỗ hổng, hoặc đôi khi đòi một khoản phí nhỏ.<br /><br /><b>Kết luận: Hacker có động cơ tiêu cực được gọi là Black Hat Hacker.</b>",
+      "explanation": "<b>Hacker Mũ Đen (Black Hat Hacker)</b> được định nghĩa là 'những kẻ xấu' trong thế giới hacker. Họ là những loại hacker xâm nhập vào mạng máy tính với các động cơ hoàn toàn tiêu cực như <b>kiếm tiền bất chính hoặc vì danh tiếng xấu</b>.",
       "difficulty": "easy",
-      "topic": "Cybersecurity (Hacker Types)",
+      "topic": "Cybersecurity",
       "hints": [
-        "Thần chú: <b>Black Hat = Bad Guy</b> (Kẻ xấu).",
-        "Thần chú: <b>White Hat = Good Guy / Ethical Hacker</b> (Người tốt / Hacker đạo đức).",
-        "Thần chú: <b>Grey Hat = Nửa tốt nửa xấu</b>."
+        "Thần chú: Black Hat = Bad Guy (Kẻ xấu).",
+        "Đối lập: White Hat = Good Guy / Ethical Hacker (Người tốt / Hacker đạo đức).",
+        "Grey Hat = Nửa tốt nửa xấu."
       ]
     },
     {
@@ -1176,12 +1172,12 @@
         "D. Transposition cipher"
       ],
       "correctAnswer": "D",
-      "explanation": "Câu hỏi này phân biệt hai loại mật mã cổ điển cơ bản.<br /><br /><b>1. Hai loại mật mã cổ điển:</b><br />- <b>Substitution Cipher (Mật mã thay thế):</b> Giữ nguyên vị trí của các ký tự, nhưng <b>thay thế</b> mỗi ký tự bằng một ký tự khác theo một quy tắc nào đó. Ví dụ: Mật mã Caesar (thay 'A' bằng 'D', 'B' bằng 'E', ...). Monoalphabetic và Polyalphabetic là các dạng con của mật mã thay thế.<br />- <b>Transposition Cipher (Mật mã hoán vị):</b> Giữ nguyên các ký tự gốc, nhưng <b>thay đổi vị trí (hoán vị)</b> của chúng theo một quy tắc nào đó. Giống như việc xáo trộn các chữ cái trong một từ.<br /><br /><b>2. Ví dụ:</b><br />Plaintext: `HELLO`<br />- Substitution (A->B, B->C,...): `IFMMP`<br />- Transposition (viết vào cột rồi đọc theo hàng): `HLOOL` (tùy quy tắc)<br /><br /><b>Kết luận: Mật mã thay đổi vị trí của ký tự được gọi là Transposition cipher.</b>",
+      "explanation": "Một <b>mật mã hoán vị (transposition cipher)</b> hoạt động bằng cách thay đổi vị trí của các ký hiệu trong thông điệp gốc, thay vì thay thế một ký hiệu bằng một ký hiệu khác (như trong mật mã thay thế - substitution cipher).",
       "difficulty": "medium",
-      "topic": "Cybersecurity (Classical Ciphers)",
+      "topic": "Cybersecurity",
       "hints": [
-        "Thần chú: <b>Substitution = Substitute = Thay thế</b> (thay chữ).",
-        "Thần chú: <b>Transposition = Transport = Vận chuyển</b> (đổi chỗ).",
+        "Thần chú: Substitution = Substitute = Thay thế (thay chữ).",
+        "Thần chú: Transposition = Transport = Vận chuyển (đổi chỗ).",
         "Hãy liên kết 'changes the location' với 'Transposition'."
       ]
     },
@@ -1196,13 +1192,13 @@
         "D. Private-key"
       ],
       "correctAnswer": "B",
-      "explanation": "Câu hỏi này phân biệt hai trường phái chính trong mật mã học hiện đại.<br /><br /><b>1. Hai trường phái mật mã:</b><br />- <b>Symmetric-key (Mật mã khóa đối xứng):</b> Người gửi và người nhận sử dụng <b>cùng một khóa bí mật</b> để mã hóa và giải mã. Khóa này phải được giữ bí mật tuyệt đối và phải được chia sẻ một cách an toàn từ trước. Còn được gọi là Secret-key cryptography.<br />- <b>Asymmetric-key (Mật mã khóa bất đối xứng):</b> Mỗi người có một cặp khóa: một <b>Public Key (Khóa công khai)</b> và một <b>Private Key (Khóa riêng tư)</b>. Khóa công khai có thể được chia sẻ cho mọi người. Bất kỳ ai cũng có thể dùng Public Key của bạn để mã hóa tin nhắn gửi cho bạn, nhưng chỉ có bạn mới có Private Key tương ứng để giải mã nó.<br /><br /><b>2. Từ khóa nhận diện:</b><br />'<b>everyone has access to everyone's public key</b>' (mọi người đều có quyền truy cập vào khóa công khai của mọi người) là đặc điểm nhận dạng của mật mã khóa bất đối xứng.<br /><br /><b>Kết luận: Mật mã mà mọi người đều có khóa công khai của nhau là Asymmetric-key.</b>",
+      "explanation": "Trong <b>mật mã khóa bất đối xứng (Asymmetric-key cryptography)</b>, hay còn gọi là mật mã khóa công khai, mỗi người có một cặp khóa: một khóa công khai (public key) và một khóa riêng (private key). <b>Khóa công khai có thể được truy cập bởi bất kỳ ai</b>, trong khi khóa riêng được giữ bí mật.",
       "difficulty": "easy",
-      "topic": "Cybersecurity (Cryptography Types)",
+      "topic": "Cybersecurity",
       "hints": [
-        "Thần chú: <b>Symmetric = Same key</b> (Cùng một khóa bí mật).",
-        "Thần chú: <b>Asymmetric = Public + Private keys</b> (Cặp khóa Công khai + Riêng tư).",
-        "Hãy tưởng tượng Public Key như địa chỉ hòm thư của bạn (ai cũng biết), còn Private Key là chìa khóa của hòm thư đó (chỉ bạn có)."
+        "Thần chú: Symmetric = Same key (Cùng một khóa bí mật).",
+        "Thần chú: Asymmetric = Public + Private keys (Cặp khóa Công khai + Riêng tư).",
+        "Hãy tưởng tượng Public Key như địa chỉ hòm thư của bạn, còn Private Key là chìa khóa của hòm thư đó."
       ]
     }
   ]
