@@ -1,6 +1,6 @@
 {
-    "examId": "de_thi_csi_02",
-    "title": "Đề thi trắc nghiệm Khoa học Máy tính (Bộ 2)",
+    "examId": "de3_csi",
+    "title": "Đề 3 CSI",
     "description": "Bộ đề thi trắc nghiệm 60 câu hỏi về các chủ đề nền tảng của Khoa học Máy tính, bao gồm kiến trúc máy tính, mạng, hệ điều hành, thuật toán, cơ sở dữ liệu và an ninh mạng.",
     "questions": [
       {
