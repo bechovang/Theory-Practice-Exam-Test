@@ -1,0 +1,926 @@
+{
+    "examId": "de3_cea",
+    "title": "Đề 3 CEA",
+    "description": "Bộ đề thi trắc nghiệm 50 câu hỏi về các chủ đề cốt lõi của Kiến trúc Máy tính, bao gồm lịch sử, các thành phần CPU, hệ thống nhớ, I/O, tập lệnh, và các kiến trúc song song.",
+    "questions": [
+      {
+        "id": 1,
+        "question": "Which of the following components was used in the first ENIAC computer?",
+        "image": null,
+        "options": [
+          "A. Bipolar transistors",
+          "B. Field transistors",
+          "C. Vacuum tubes",
+          "D. Semiconductor ICs"
+        ],
+        "correctAnswer": "C",
+        "explanation": "ENIAC là một trong những máy tính điện tử đầu tiên (ra mắt năm 1945). Nó sử dụng vacuum tubes (bóng chân không) để thực hiện các phép toán, vì lúc đó chưa có transistor hay vi mạch tích hợp.",
+        "difficulty": "easy",
+        "topic": "History of Computing",
+        "hints": [
+          "Thế hệ 1 (1940s - 1950s): Vacuum tubes",
+          "Thế hệ 2 (1950s - 1960s): Transistors",
+          "Thế hệ 3 (1960s - 1970s): Integrated Circuits (ICs)"
+        ]
+      },
+      {
+        "id": 2,
+        "question": "Which of the following statements is true for Von Neumann architecture?",
+        "image": null,
+        "options": [
+          "A. Shared bus between the program memory and data memory",
+          "B. Separate bus between the program memory and data memory",
+          "C. External bus for program memory and data memory",
+          "D. External bus for data memory only"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Kiến trúc Von Neumann sử dụng một bộ nhớ và một bus duy nhất cho cả chương trình (lệnh) và dữ liệu. Điều này tạo ra một nút thắt cổ chai (bottleneck) vì CPU không thể nạp lệnh và truy cập dữ liệu cùng một lúc.",
+        "difficulty": "easy",
+        "topic": "Basic Concepts",
+        "hints": [
+          "Von Neumann → Chia sẻ bus giữa dữ liệu & chương trình (Shared bus)",
+          "Harvard → Tách riêng bus dữ liệu & chương trình (Separate bus)"
+        ]
+      },
+      {
+        "id": 3,
+        "question": "Which of the following components does not belong to the central processing unit?",
+        "image": null,
+        "options": [
+          "A. System interconnection",
+          "B. Arithmetic and logic unit",
+          "C. Registers",
+          "D. Control unit"
+        ],
+        "correctAnswer": "A",
+        "explanation": "CPU (Bộ xử lý trung tâm) bao gồm 3 thành phần chính: ALU (Đơn vị Số học và Logic), CU (Khối điều khiển), và các Thanh ghi (Registers). System interconnection (Kết nối hệ thống, ví dụ: system bus) là thành phần kết nối CPU với các bộ phận khác như bộ nhớ chính và I/O, chứ không nằm bên trong CPU.",
+        "difficulty": "easy",
+        "topic": "CPU Architecture",
+        "hints": [
+          "CPU = ALU + CU + Registers",
+          "System interconnection là 'đường cao tốc' nối các thành phần lớn của máy tính."
+        ]
+      },
+      {
+        "id": 4,
+        "question": "The central processing unit (CPU) of the IAS computer consists of:",
+        "image": null,
+        "options": [
+          "A. Main memory and ALU (arithmetic and logic unit)",
+          "B. ALU (Arithmetic and Logic Unit) and CU (Control Unit)",
+          "C. CU (Control Unit) and IO Module",
+          "D. ALU (Arithmetic and Logic Unit) and IO Module"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Máy tính IAS, một mô hình mẫu cho kiến trúc Von Neumann, có một CPU bao gồm hai thành phần chính là Đơn vị Số học và Logic (ALU) và Khối điều khiển (CU). Bộ nhớ chính và I/O là các thành phần riêng biệt.",
+        "difficulty": "easy",
+        "topic": "History of Computing",
+        "hints": [
+          "CPU nói chung luôn gồm 2 phần cốt lõi là ALU (để tính toán) và CU (để điều khiển)."
+        ]
+      },
+      {
+        "id": 5,
+        "question": "The first generation of computers used [___] for digital logic elements and memory.",
+        "image": null,
+        "options": [
+          "A. Transistor",
+          "B. Integrated Circuits",
+          "C. Large-scale integration",
+          "D. Vacuum Tubes"
+        ],
+        "correctAnswer": "D",
+        "explanation": "Thế hệ máy tính đầu tiên (khoảng thập niên 1940-1950) sử dụng bóng đèn chân không (Vacuum Tubes) để xử lý dữ liệu. Chúng rất lớn, tiêu thụ nhiều điện năng và tỏa nhiệt nhiều.",
+        "difficulty": "easy",
+        "topic": "History of Computing",
+        "hints": [
+          "Thế hệ 1: Vacuum tubes",
+          "Thế hệ 2: Transistors",
+          "Thế hệ 3: ICs"
+        ]
+      },
+      {
+        "id": 6,
+        "question": "In the computer, what categories do external devices include? (choose 3 correct answers)",
+        "image": null,
+        "options": [
+          "A. Human readable",
+          "B. Communication",
+          "C. Data Conversion",
+          "D. Machine readable"
+        ],
+        "correctAnswer": ["A", "B", "D"],
+        "explanation": "Các thiết bị ngoại vi được phân thành ba loại chính: Con người đọc được (VD: màn hình, bàn phím, máy in), Giao tiếp (VD: modem, card mạng), và Máy đọc được (VD: ổ đĩa, cảm biến).",
+        "difficulty": "medium",
+        "topic": "I/O System",
+        "hints": [
+          "Thiết bị ngoại vi có 3 loại chính: Human-readable, Machine-readable, Communication.",
+          "Data conversion không phải là một danh mục thiết bị."
+        ]
+      },
+      {
+        "id": 7,
+        "question": "Which of the following determines the Bus Width?",
+        "image": null,
+        "options": [
+          "A. The clock speed of the CPU",
+          "B. The number of cores in the processor",
+          "C. The size of the motherboard",
+          "D. The number of parallel lines in the data bus"
+        ],
+        "correctAnswer": "D",
+        "explanation": "Độ rộng bus (Bus Width) là số bit có thể được truyền song song cùng một lúc. Điều này được quyết định bởi số lượng đường dây vật lý song song trong bus dữ liệu.",
+        "difficulty": "easy",
+        "topic": "System Bus",
+        "hints": [
+          "Bus Width = Số đường dây song song trên bus dữ liệu.",
+          "Bus 64-bit có 64 đường dây để truyền dữ liệu."
+        ]
+      },
+      {
+        "id": 8,
+        "question": "In the CPU, what is the functionality of the control unit?",
+        "image": null,
+        "options": [
+          "A. To decode program instructions",
+          "B. To control the sequence of operations",
+          "C. To store program instructions",
+          "D. To transfer data to primary storage"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Khối điều khiển (Control Unit - CU) chịu trách nhiệm điều phối và kiểm soát trình tự thực thi các lệnh. Nó giải mã lệnh và tạo ra các tín hiệu điều khiển để ra lệnh cho các bộ phận khác.",
+        "difficulty": "easy",
+        "topic": "CPU Architecture",
+        "hints": [
+          "CU = Điều khiển trình tự thực thi lệnh.",
+          "ALU = Thực hiện phép toán."
+        ]
+      },
+      {
+        "id": 9,
+        "question": "The basic components of a computer are:",
+        "image": null,
+        "options": [
+          "A. Main memory, CPU, I/O modules and system interconnection",
+          "B. Main memory, CPU, I/O modules and Storage device",
+          "C. Main Memory, CPU, Peripherals and Storage device",
+          "D. Main memory, CPU, I/O modules and Storage device"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Bốn thành phần cơ bản của một hệ thống máy tính bao gồm: CPU (Bộ xử lý trung tâm), Main Memory (Bộ nhớ chính), I/O modules (Các mô-đun vào/ra), và System interconnection (Kết nối hệ thống, ví dụ bus).",
+        "difficulty": "easy",
+        "topic": "Basic Concepts",
+        "hints": [
+          "Thiết bị lưu trữ (Storage device) thường được coi là một phần của I/O."
+        ]
+      },
+      {
+        "id": 10,
+        "question": "What is the correct order of memory access speed from fastest to slowest?",
+        "image": null,
+        "options": [
+          "A. Registers > Cache > RAM > SSD",
+          "B. Cache > Registers > RAM > SSD",
+          "C. Registers > Cache > SSD > RAM",
+          "D. Cache > Registers > SSD > RAM"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Tốc độ truy xuất dữ liệu trong hệ thống phân cấp bộ nhớ giảm dần theo thứ tự: Thanh ghi (nhanh nhất, trong CPU), Cache (gần CPU), RAM (chậm hơn), SSD (lưu trữ lâu dài, chậm nhất trong danh sách).",
+        "difficulty": "easy",
+        "topic": "Memory Hierarchy",
+        "hints": [
+          "Thứ tự: Registers > Cache > RAM > Storage.",
+          "Càng gần CPU thì càng nhanh."
+        ]
+      },
+      {
+        "id": 11,
+        "question": "What is the cache memory level that is integrated into the processor chip and has the lowest latency?",
+        "image": null,
+        "options": [
+          "A. L1 cache",
+          "B. L2 cache",
+          "C. L3 cache",
+          "D. L4 cache"
+        ],
+        "correctAnswer": "A",
+        "explanation": "L1 cache (Level 1 cache) là bộ nhớ đệm nhỏ nhất nhưng nhanh nhất, được tích hợp trực tiếp bên trong mỗi lõi của CPU. Vì nằm gần các đơn vị thực thi nhất, L1 cache có độ trễ (latency) thấp nhất.",
+        "difficulty": "easy",
+        "topic": "Cache Memory",
+        "hints": [
+          "Nếu câu hỏi nhấn mạnh 'tích hợp trong lõi CPU' và 'độ trễ thấp nhất', hãy chọn L1 cache."
+        ]
+      },
+      {
+        "id": 12,
+        "question": "Which of the following components of the CPU is responsible to direct the system to execute instructions?",
+        "image": null,
+        "options": [
+          "A. Arithmetic and Logic Unit (ALU)",
+          "B. Control Unit (CU)",
+          "C. Registers",
+          "D. Random Access Memory (RAM)"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Khối điều khiển (Control Unit - CU) là bộ phận của CPU có trách nhiệm điều khiển việc thực thi các lệnh. Nó giải mã lệnh, quản lý luồng dữ liệu và điều phối hoạt động giữa các thành phần khác.",
+        "difficulty": "easy",
+        "topic": "CPU Architecture",
+        "hints": [
+          "Nếu hỏi về tính toán số học & logic, chọn ALU.",
+          "Nếu hỏi về điều khiển và điều phối, chọn CU."
+        ]
+      },
+      {
+        "id": 13,
+        "question": "Consider a machine with a byte addressable main memory of 2^16 bytes and block size of 8 bytes. Assume that a direct mapped cache consisting of 32 lines is used. How many bits are there in the line field of the cache?",
+        "image": null,
+        "options": [
+          "A. 3",
+          "B. 4",
+          "C. 5",
+          "D. 6"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Số bit của trường dòng (line field) trong ánh xạ trực tiếp được xác định bởi số dòng cache. Số bit = log2(Số dòng cache). Với 32 dòng cache, ta có: log2(32) = 5. Do đó, cần 5 bit cho trường dòng.",
+        "difficulty": "medium",
+        "topic": "Cache Memory",
+        "hints": [
+          "Nếu số dòng cache là 2^n, thì số bit của trường dòng chính là n.",
+          "Trong trường hợp này, 32 = 2^5, vậy cần 5 bit."
+        ]
+      },
+      {
+        "id": 14,
+        "question": "For reads to and writes from main memory, which component translates each virtual address into a physical address?",
+        "image": null,
+        "options": [
+          "A. MAR",
+          "B. MMU",
+          "C. Overlays",
+          "D. TLB"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Đơn vị Quản lý Bộ nhớ (Memory Management Unit - MMU) là thành phần phần cứng trong CPU có chức năng dịch địa chỉ ảo (virtual address) được tạo ra bởi chương trình thành địa chỉ vật lý (physical address) trong RAM.",
+        "difficulty": "easy",
+        "topic": "Memory Management",
+        "hints": [
+          "MAR chỉ giữ địa chỉ, TLB là cache cho MMU, còn MMU là bộ phận thực hiện việc dịch địa chỉ."
+        ]
+      },
+      {
+        "id": 15,
+        "question": "What is the main idea of using Hamming code for error correction?",
+        "image": null,
+        "options": [
+          "A. Adding parity bits such that the number of 1s in each subset is even",
+          "B. Adding parity bits such that the number of 1s in each subset is odd",
+          "C. Adding parity bits such that they form a binary number indicating the position of the error bit",
+          "D. Adding parity bits such that they form a binary number indicating the number of error bits"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Mã Hamming là một phương pháp sửa lỗi. Nó thêm các bit chẵn lẻ (parity bits) vào các vị trí đặc biệt trong chuỗi dữ liệu. Khi kiểm tra, tổ hợp các bit chẵn lẻ này sẽ tạo thành một số nhị phân (gọi là syndrome), giá trị của số này chính là vị trí của bit bị lỗi, cho phép sửa lỗi.",
+        "difficulty": "medium",
+        "topic": "Memory System",
+        "hints": [
+          "Hamming code không chỉ phát hiện lỗi mà còn 'chỉ ra' vị trí lỗi để sửa."
+        ]
+      },
+      {
+        "id": 16,
+        "question": "What are the key differences in the architecture of NOR and NAND flash memory?",
+        "image": null,
+        "options": [
+          "A. NOR flash cells are connected in series, while NAND flash cells are connected in parallel",
+          "B. NOR flash cells are connected in parallel, while NAND flash cells are connected in series",
+          "C. Both NOR and NAND flash cells are connected in series",
+          "D. Both NOR and NAND flash cells are connected in parallel"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Trong bộ nhớ flash NOR, các ô nhớ được kết nối song song (parallel), cho phép truy cập ngẫu nhiên nhanh (giống RAM). Trong bộ nhớ flash NAND, các ô nhớ được kết nối nối tiếp (series), giúp tăng mật độ lưu trữ và giảm chi phí, phù hợp cho việc lưu trữ tuần tự khối lớn.",
+        "difficulty": "medium",
+        "topic": "Storage System",
+        "hints": [
+          "NOR -> Song song (Parallel) -> Truy cập nhanh từng byte.",
+          "NAND -> Nối tiếp (Series) -> Lưu trữ khối lớn, rẻ hơn."
+        ]
+      },
+      {
+        "id": 17,
+        "question": "Which memory has the fastest speed and smallest capacity?",
+        "image": null,
+        "options": [
+          "A. Cache",
+          "B. Main memory",
+          "C. HDD",
+          "D. Magnetic Disk"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Trong các lựa chọn, Cache là bộ nhớ có tốc độ nhanh nhất vì nó thường được tích hợp gần hoặc trong CPU và sử dụng công nghệ SRAM. Tuy nhiên, nó cũng có dung lượng nhỏ nhất và đắt nhất trên mỗi bit.",
+        "difficulty": "easy",
+        "topic": "Memory Hierarchy",
+        "hints": [
+          "Nếu so sánh giữa Cache, RAM, và đĩa cứng, Cache luôn là nhanh nhất và nhỏ nhất."
+        ]
+      },
+      {
+        "id": 18,
+        "question": "[___] is a set of physical disk drives viewed by the operating system as a single logical drive.",
+        "image": null,
+        "options": [
+          "A. CLV",
+          "B. SSD",
+          "C. RAID",
+          "D. CAV"
+        ],
+        "correctAnswer": "C",
+        "explanation": "RAID (Redundant Array of Independent Disks) là công nghệ kết hợp nhiều ổ đĩa vật lý lại với nhau để hệ điều hành nhìn thấy chúng như một ổ đĩa logic duy nhất. RAID được dùng để tăng hiệu suất và/hoặc khả năng chịu lỗi.",
+        "difficulty": "easy",
+        "topic": "Storage System",
+        "hints": [
+          "Nếu đề cập đến việc 'kết hợp nhiều ổ đĩa', hãy nghĩ ngay đến RAID."
+        ]
+      },
+      {
+        "id": 19,
+        "question": "Sort the following memory types in ascending order by access speed:",
+        "image": null,
+        "options": [
+          "A. HDD - Main Memory - L2 cache - L1 cache",
+          "B. HDD - Main Memory - L1 cache - L2 cache",
+          "C. HDD - L2 cache - L1 cache - Main Memory",
+          "D. Main Memory - L2 cache - L1 cache - HDD"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Sắp xếp theo thứ tự tốc độ truy cập tăng dần (từ chậm nhất đến nhanh nhất) là: HDD (chậm nhất) -> Main Memory (RAM) -> L2 cache -> L1 cache (nhanh nhất).",
+        "difficulty": "easy",
+        "topic": "Memory Hierarchy",
+        "hints": [
+          "Cache luôn nhanh hơn RAM, và L1 nhanh hơn L2.",
+          "HDD luôn là chậm nhất trong danh sách."
+        ]
+      },
+      {
+        "id": 20,
+        "question": "Which is the correct choice for sorting in increasing speed average of memory?",
+        "image": null,
+        "options": [
+          "A. SSD, Main Memory, Cache Memory, Magnetic Tape",
+          "B. Magnetic Tape, SSD, Cache Memory, Main Memory",
+          "C. Magnetic Disk, SSD, Cache Memory, Main Memory",
+          "D. Magnetic Disk, Magnetic Tape, Main Memory, Cache Memory",
+          "E. Magnetic Disk, SSD, Main Memory, Cache Memory"
+        ],
+        "correctAnswer": "E",
+        "explanation": "Thứ tự đúng của tốc độ trung bình tăng dần là: Đĩa từ (Magnetic Disk, HDD) < SSD < Bộ nhớ chính (Main Memory, RAM) < Bộ nhớ đệm (Cache Memory).",
+        "difficulty": "easy",
+        "topic": "Memory Hierarchy",
+        "hints": [
+          "Đĩa (cơ hoặc băng từ) là chậm nhất, sau đó đến SSD, rồi đến RAM, và nhanh nhất là Cache."
+        ]
+      },
+      {
+        "id": 21,
+        "question": "For the Boolean expression AB + AB', what is the output for the truth table rows where A=1,B=0 and A=0,B=0?",
+        "image": null,
+        "options": [
+          "A. 1, 0",
+          "B. 1, 1",
+          "C. 0, 0",
+          "D. 0, 1"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Ta có thể rút gọn biểu thức: AB + AB' = A(B + B') = A(1) = A. Do đó, đầu ra chỉ phụ thuộc vào A. Khi A=1, B=0 -> Output = 1. Khi A=0, B=0 -> Output = 0.",
+        "difficulty": "medium",
+        "topic": "Digital Logic",
+        "hints": [
+          "Hãy thử rút gọn biểu thức Boolean trước khi tính toán để đơn giản hóa vấn đề."
+        ]
+      },
+      {
+        "id": 22,
+        "question": "If you have a boolean function with 3 variables, how many rows are there in the truth table?",
+        "image": null,
+        "options": [
+          "A. 8 rows",
+          "B. 3 rows",
+          "C. 6 rows",
+          "D. 12 rows"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Với n biến, mỗi biến có 2 giá trị (0 hoặc 1). Do đó, số lượng tổ hợp đầu vào, hay số dòng trong bảng chân lý, sẽ là 2^n. Với 3 biến, số dòng là 2^3 = 8.",
+        "difficulty": "easy",
+        "topic": "Digital Logic",
+        "hints": [
+          "Nhớ công thức: Số dòng = 2^(số biến)."
+        ]
+      },
+      {
+        "id": 23,
+        "question": "In isolated I/O:",
+        "image": null,
+        "options": [
+          "A. The I/O devices and the memory share the same address space",
+          "B. The I/O devices have a separate address space from memory",
+          "C. The memory and I/O devices have an associated address space",
+          "D. A part of the memory is specifically set aside for the I/O operation"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Trong I/O cô lập (Isolated I/O), các thiết bị I/O có một không gian địa chỉ riêng, tách biệt hoàn toàn với không gian địa chỉ của bộ nhớ. Cần có các lệnh đặc biệt (như IN, OUT trong x86) để truy cập các cổng I/O.",
+        "difficulty": "medium",
+        "topic": "I/O System",
+        "hints": [
+          "Isolated = Cô lập/Tách biệt. Không gian địa chỉ I/O và bộ nhớ là riêng biệt."
+        ]
+      },
+      {
+        "id": 24,
+        "question": "Which component defines the system call interface to the operating system and facilitates binary portability?",
+        "image": null,
+        "options": [
+          "A. Application Binary Interface (ABI)",
+          "B. Application Programming Interface (API)",
+          "C. Instruction Set Architecture (ISA)",
+          "D. Central Processing Unit (CPU)"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Giao diện nhị phân ứng dụng (Application Binary Interface - ABI) định nghĩa giao diện cấp thấp giữa một ứng dụng và hệ điều hành, bao gồm giao diện gọi hệ thống (system call). Tuân thủ một ABI chung giúp đảm bảo tính di động nhị phân (binary portability), cho phép một chương trình đã biên dịch có thể chạy trên các hệ thống khác nhau.",
+        "difficulty": "hard",
+        "topic": "Operating System Support",
+        "hints": [
+          "API là cho mã nguồn, ABI là cho mã nhị phân (đã biên dịch)."
+        ]
+      },
+      {
+        "id": 25,
+        "question": "What is the initial state of a process when it is admitted by the high-level scheduler, but not yet ready to execute?",
+        "image": null,
+        "options": [
+          "A. New",
+          "B. Ready",
+          "C. Running",
+          "D. Halted"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Khi một tiến trình vừa được tạo ra bởi hệ điều hành, nó ở trạng thái Mới (New). Sau đó, nó sẽ được chuyển sang trạng thái Sẵn sàng (Ready) khi đã có đủ tài nguyên (trừ CPU) để chờ được lập lịch.",
+        "difficulty": "easy",
+        "topic": "Operating System Support",
+        "hints": [
+          "Vòng đời tiến trình: New -> Ready -> Running -> Waiting -> Terminated."
+        ]
+      },
+      {
+        "id": 26,
+        "question": "The chunks of a program, known as pages, could be assigned to available chunks of memory, known as frames. This is called:",
+        "image": null,
+        "options": [
+          "A. Swapping",
+          "B. Partitioning",
+          "C. Paging",
+          "D. Virtual Memory"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Phân trang (Paging) là một kỹ thuật quản lý bộ nhớ trong đó không gian địa chỉ logic của một chương trình được chia thành các khối có kích thước cố định gọi là trang (pages), và bộ nhớ vật lý được chia thành các khối cùng kích thước gọi là khung (frames).",
+        "difficulty": "easy",
+        "topic": "Memory Management",
+        "hints": [
+          "Hãy liên kết: chương trình -> pages, bộ nhớ vật lý -> frames. Kỹ thuật này gọi là Paging."
+        ]
+      },
+      {
+        "id": 27,
+        "question": "How does Boolean algebra contribute to the design of digital circuits?",
+        "image": null,
+        "options": [
+          "A. It simplifies the implementation of desired functions",
+          "B. It helps in the analysis of economic data",
+          "C. It facilitates the design of analog circuits",
+          "D. It is primarily used for chemical engineering and physical engineering"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Đại số Boole cung cấp các quy tắc và định lý để phân tích và đơn giản hóa các biểu thức logic. Điều này cho phép các nhà thiết kế tạo ra các mạch số thực hiện các chức năng mong muốn với số lượng cổng logic tối thiểu, giúp mạch đơn giản, rẻ và nhanh hơn.",
+        "difficulty": "easy",
+        "topic": "Digital Logic",
+        "hints": [
+          "Đại số Boole giúp 'rút gọn' các hàm logic, từ đó 'rút gọn' mạch điện tử."
+        ]
+      },
+      {
+        "id": 28,
+        "question": "When both inputs are 1, what is the result of a NAND gate?",
+        "image": null,
+        "options": [
+          "A. 0",
+          "B. 1",
+          "C. 2",
+          "D. Undefined"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Cổng NAND là phủ định của cổng AND (NOT AND). Với cổng AND, 1 AND 1 = 1. Do đó, với cổng NAND, 1 NAND 1 = NOT(1) = 0.",
+        "difficulty": "easy",
+        "topic": "Digital Logic",
+        "hints": [
+          "NAND chỉ cho ra 0 khi tất cả các đầu vào là 1."
+        ]
+      },
+      {
+        "id": 29,
+        "question": "Express a signed integer number (+18) in the sign-magnitude representation (8 bits).",
+        "image": null,
+        "options": [
+          "A. 00010010",
+          "B. 10010010",
+          "C. 11110010",
+          "D. 01110010"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Trong biểu diễn dấu-độ lớn (sign-magnitude) 8 bit: bit ngoài cùng bên trái là bit dấu (0 cho số dương, 1 cho số âm), 7 bit còn lại biểu diễn độ lớn. Số 18 trong hệ nhị phân 7 bit là 0010010. Do đó, +18 là 00010010.",
+        "difficulty": "easy",
+        "topic": "Data Representation",
+        "hints": [
+          "Số dương -> bit dấu là 0.",
+          "Đổi 18 sang nhị phân: 18 = 16 + 2 = 10010."
+        ]
+      },
+      {
+        "id": 30,
+        "question": "Why is it essential to use symbolic representation of machine instructions?",
+        "image": null,
+        "options": [
+          "A. It makes machine instructions more human-readable and understandable",
+          "B. It reduces the overall complexity of computer systems and user programs",
+          "C. It minimizes the need for memory storage for the user programs",
+          "D. It enables fastest execution of high level language instructions"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Việc sử dụng các biểu diễn ký hiệu (symbolic representation), như trong hợp ngữ (assembly language), giúp các lệnh máy trở nên dễ đọc, dễ viết và dễ gỡ lỗi hơn đối với con người so với việc phải làm việc với các chuỗi bit nhị phân thuần túy.",
+        "difficulty": "easy",
+        "topic": "Instruction Sets",
+        "hints": [
+          "Symbolic (ký hiệu) như 'ADD', 'MOV' dễ hiểu hơn nhiều so với '10110010'."
+        ]
+      },
+      {
+        "id": 31,
+        "question": "The hardware mechanism that allows a device to notify the CPU is called:",
+        "image": null,
+        "options": [
+          "A. polling",
+          "B. interrupt",
+          "C. driver",
+          "D. controlling"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Ngắt (interrupt) là một cơ chế phần cứng cho phép các thiết bị ngoại vi có thể gửi một tín hiệu để thông báo cho CPU rằng chúng cần sự chú ý, ví dụ như đã hoàn thành một thao tác hoặc có lỗi xảy ra.",
+        "difficulty": "easy",
+        "topic": "I/O System",
+        "hints": [
+          "Polling: CPU chủ động hỏi. Interrupt: Thiết bị chủ động báo."
+        ]
+      },
+      {
+        "id": 32,
+        "question": "What is a branch instruction?",
+        "image": null,
+        "options": [
+          "A. The instructions that are used to divide a program into multiple subprograms",
+          "B. The instructions that have as one of its operands the address of the next instruction to be executed",
+          "C. The instructions that are used to pause the program",
+          "D. The instructions that are used to return to the beginning of the program"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Lệnh rẽ nhánh (branch instruction) hay lệnh nhảy (jump) là lệnh có chứa địa chỉ của lệnh tiếp theo sẽ được thực thi. Nó làm thay đổi luồng thực thi tuần tự của chương trình bằng cách thay đổi giá trị của bộ đếm chương trình (Program Counter).",
+        "difficulty": "easy",
+        "topic": "Instruction Sets",
+        "hints": [
+          "Branch = Rẽ nhánh. Nó thay đổi giá trị của Program Counter (PC)."
+        ]
+      },
+      {
+        "id": 33,
+        "question": "The effective address of EA = A + (R) is [___] mode.",
+        "image": null,
+        "options": [
+          "A. relative addressing",
+          "B. autoindexing",
+          "C. postindexing",
+          "D. preindexing"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Autoindexing là một dạng của chế độ địa chỉ gián tiếp qua thanh ghi, trong đó địa chỉ hiệu dụng được tính toán, sau đó giá trị trong thanh ghi được tự động tăng hoặc giảm. Postindexing là một dạng cụ thể của autoindexing, nơi thanh ghi được cập nhật sau khi truy cập địa chỉ. Preindexing thì cập nhật trước.",
+        "difficulty": "hard",
+        "topic": "Addressing Modes",
+        "hints": [
+          "Autoindexing là thuật ngữ chung cho việc tự động cập nhật thanh ghi chỉ số."
+        ]
+      },
+      {
+        "id": 34,
+        "question": "In MASM32, which OPCODE is used to compare two values?",
+        "image": null,
+        "options": [
+          "A. COM",
+          "B. CMP",
+          "C. IF... ELSE",
+          "D. TEST"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Trong hợp ngữ x86 (bao gồm MASM), lệnh CMP (Compare) được sử dụng để so sánh hai toán hạng. Nó thực hiện một phép trừ nhưng không lưu kết quả, chỉ cập nhật các cờ trạng thái trong thanh ghi cờ.",
+        "difficulty": "easy",
+        "topic": "Instruction Sets",
+        "hints": [
+          "CMP là viết tắt của CoMPare."
+        ]
+      },
+      {
+        "id": 35,
+        "question": "What is the role of the control unit in a processor?",
+        "image": null,
+        "options": [
+          "A. The control unit's primary role is to perform arithmetic and logical operations",
+          "B. The control unit only manages the flow of data between the CPU and external devices",
+          "C. The control unit is solely responsible for managing the flow of instructions from secondary storage to RAM",
+          "D. The control unit directs and coordinates the execution of instructions, interpreting and managing the flow of operations within the CPU"
+        ],
+        "correctAnswer": "D",
+        "explanation": "Khối điều khiển (Control Unit) đóng vai trò là 'bộ não' của CPU. Nó chỉ đạo và điều phối việc thực thi các lệnh bằng cách giải mã chúng và tạo ra các tín hiệu điều khiển để quản lý luồng hoạt động bên trong CPU.",
+        "difficulty": "easy",
+        "topic": "CPU Architecture",
+        "hints": [
+          "CU là 'nhạc trưởng' của CPU, ra lệnh cho các bộ phận khác."
+        ]
+      },
+      {
+        "id": 36,
+        "question": "How do data registers and address registers differ in some computer systems?",
+        "image": null,
+        "options": [
+          "A. Address registers can be employed in calculating operand addresses, while data registers hold data.",
+          "B. Data registers are only used for stack-related operations",
+          "C. Data registers are used for indexed addressing, while address registers are used for data storage",
+          "D. Address registers are reserved for segmented addressing, while data registers are general-purpose"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Sự khác biệt chính là mục đích sử dụng: Thanh ghi dữ liệu (Data registers) được dùng để chứa các giá trị dữ liệu (số nguyên, ký tự...). Thanh ghi địa chỉ (Address registers) được dùng để chứa các địa chỉ bộ nhớ và tham gia vào việc tính toán địa chỉ hiệu dụng của toán hạng.",
+        "difficulty": "easy",
+        "topic": "CPU Architecture",
+        "hints": [
+          "Tên của chúng đã nói lên chức năng: Data -> Dữ liệu, Address -> Địa chỉ."
+        ]
+      },
+      {
+        "id": 37,
+        "question": "What is the main benefit of using ARM processors over other processors?",
+        "image": null,
+        "options": [
+          "A. Low cost and low power consumption",
+          "B. Higher degree of multi-tasking",
+          "C. Lower error or glitches",
+          "D. Efficient memory management"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Bộ xử lý ARM, dựa trên kiến trúc RISC, được thiết kế để có chi phí sản xuất thấp và đặc biệt là tiêu thụ điện năng thấp. Điều này làm cho chúng trở nên lý tưởng cho các thiết bị di động và nhúng hoạt động bằng pin.",
+        "difficulty": "easy",
+        "topic": "RISC vs CISC",
+        "hints": [
+          "Hãy nghĩ đến điện thoại thông minh và máy tính bảng, chúng đều ưu tiên tiết kiệm pin -> ARM."
+        ]
+      },
+      {
+        "id": 38,
+        "question": "Which statement is incorrect about RISC and CISC architecture?",
+        "image": null,
+        "options": [
+          "A. CISC architecture is more convenient for programmers than RISC architecture.",
+          "B. CISC architecture has more operands in an instruction compared to RISC architecture.",
+          "C. CISC architecture has a more flexible instruction set than RISC architecture.",
+          "D. CISC architecture requires more general-purpose registers than RISC architecture."
+        ],
+        "correctAnswer": "D",
+        "explanation": "Phát biểu không chính xác là D. Thực tế, kiến trúc RISC thường có nhiều thanh ghi đa dụng hơn CISC. Triết lý của RISC là giữ các toán hạng trong các thanh ghi nhanh càng nhiều càng tốt để giảm thiểu việc truy cập bộ nhớ chậm, điều này đòi hỏi một bộ thanh ghi lớn.",
+        "difficulty": "medium",
+        "topic": "RISC vs CISC",
+        "hints": [
+          "RISC = nhiều thanh ghi, lệnh đơn giản.",
+          "CISC = ít thanh ghi hơn, lệnh phức tạp."
+        ]
+      },
+      {
+        "id": 39,
+        "question": "In the concept of Register Windows, how many register groups are there?",
+        "image": null,
+        "options": [
+          "A. 4",
+          "B. 3",
+          "C. 2",
+          "D. No distinction"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Khái niệm Cửa sổ Thanh ghi (Register Windows), nổi bật trong kiến trúc SPARC, sử dụng một tệp thanh ghi lớn được chia thành các cửa sổ chồng chéo. Một thủ tục có thể truy cập 4 nhóm thanh ghi: global, local, in (đầu vào từ thủ tục gọi), và out (đầu ra cho thủ tục được gọi).",
+        "difficulty": "hard",
+        "topic": "CPU Architecture",
+        "hints": [
+          "Register Windows có 4 loại: Global, Local, In, Out."
+        ]
+      },
+      {
+        "id": 40,
+        "question": "What is the main benefit of using RISC over CISC?",
+        "image": null,
+        "options": [
+          "A. RISC has more instructions and addressing modes than CISC",
+          "B. RISC has faster instruction execution and simpler instruction decoding than CISC",
+          "C. RISC has variable-length instruction formats and direct memory access than CISC",
+          "D. RISC has more registers and pipelines than CISC"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Lợi ích chính của RISC so với CISC là các lệnh đơn giản và có định dạng cố định, giúp việc giải mã (decoding) trở nên đơn giản và nhanh hơn. Điều này cho phép thực thi lệnh nhanh hơn trong mỗi chu kỳ và dễ dàng triển khai đường ống (pipelining) hiệu quả.",
+        "difficulty": "medium",
+        "topic": "RISC vs CISC",
+        "hints": [
+          "RISC = Lệnh đơn giản -> Giải mã nhanh -> Dễ dàng pipelining."
+        ]
+      },
+      {
+        "id": 41,
+        "question": "What is the benefit of using a superscalar organization over a scalar organization?",
+        "image": null,
+        "options": [
+          "A. It increases the instruction throughput and improves the performance",
+          "B. It reduces the power consumption and the heat dissipation",
+          "C. It simplifies the instruction set and the compiler design",
+          "D. All of the mentioned"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Một tổ chức siêu vô hướng (superscalar) có nhiều đơn vị thực thi song song, cho phép nó có thể bắt đầu nhiều hơn một lệnh trong mỗi chu kỳ xung nhịp. Điều này làm tăng thông lượng lệnh (số lệnh trên mỗi chu kỳ - IPC) và cải thiện hiệu suất tổng thể so với bộ xử lý vô hướng (scalar) chỉ có thể bắt đầu một lệnh mỗi chu kỳ.",
+        "difficulty": "medium",
+        "topic": "Parallel Processing",
+        "hints": [
+          "Super = Nhiều hơn một. Scalar = Một.",
+          "Superscalar = Nhiều hơn một lệnh mỗi chu kỳ -> Tăng hiệu suất."
+        ]
+      },
+      {
+        "id": 42,
+        "question": "What does the term 'instruction-level parallelism' refer to in computer architecture?",
+        "image": null,
+        "options": [
+          "A. The degree to which instructions in a program can be executed in parallel",
+          "B. The number of processor cores in a multi-core CPU with multiple resources",
+          "C. The complexity of the instruction set architecture",
+          "D. The length of an instruction cycle with high level programming language"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Song song mức lệnh (Instruction-Level Parallelism - ILP) đề cập đến mức độ mà các lệnh trong một chương trình có thể được thực thi song song (ví dụ, do không phụ thuộc vào nhau). Các kỹ thuật như pipelining và superscalar được thiết kế để khai thác ILP.",
+        "difficulty": "easy",
+        "topic": "Parallel Processing",
+        "hints": [
+          "ILP = Parallelism (Song song) ở mức Instruction (Lệnh)."
+        ]
+      },
+      {
+        "id": 43,
+        "question": "To enhance performance in a superscalar processor, which method(s) should we apply?",
+        "image": null,
+        "options": [
+          "A. Duplication of resources.",
+          "B. Out-of-order issue.",
+          "C. Renaming registers",
+          "D. All of the mentioned."
+        ],
+        "correctAnswer": "D",
+        "explanation": "Để tăng cường hiệu năng, bộ xử lý siêu vô hướng áp dụng nhiều phương pháp: Sao chép tài nguyên (Duplication of resources) như có nhiều ALU; Bắt đầu lệnh không theo thứ tự (Out-of-order issue) để thực thi các lệnh sẵn sàng trước; và Đổi tên thanh ghi (Renaming registers) để loại bỏ các xung đột tài nguyên giả.",
+        "difficulty": "medium",
+        "topic": "Parallel Processing",
+        "hints": [
+          "Tất cả các kỹ thuật trên đều là những phương pháp quan trọng để khai thác ILP trong kiến trúc superscalar."
+        ]
+      },
+      {
+        "id": 44,
+        "question": "How many common classifications of parallel systems are there as proposed by Flynn?",
+        "image": null,
+        "options": [
+          "A. 2",
+          "B. 3",
+          "C. 4",
+          "D. 5"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Phân loại Flynn (Flynn's Taxonomy) đề xuất bốn loại hệ thống song song dựa trên luồng lệnh và luồng dữ liệu: SISD (Single Instruction, Single Data), SIMD (Single Instruction, Multiple Data), MISD (Multiple Instruction, Single Data), và MIMD (Multiple Instruction, Multiple Data).",
+        "difficulty": "easy",
+        "topic": "Parallel Processing",
+        "hints": [
+          "Hãy nhớ 4 cái tên: SISD, SIMD, MISD, MIMD."
+        ]
+      },
+      {
+        "id": 45,
+        "question": "Which write technique ensures that all write operations are made to main memory as well as to the cache, ensuring that main memory is always valid?",
+        "image": null,
+        "options": [
+          "A. Write through",
+          "B. Write back",
+          "C. Write around",
+          "D. No write allocate"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Kỹ thuật ghi xuyên (Write-through) yêu cầu mọi thao tác ghi phải được thực hiện đồng thời trên cả cache và bộ nhớ chính. Điều này đảm bảo bộ nhớ chính luôn được cập nhật và nhất quán với cache.",
+        "difficulty": "easy",
+        "topic": "Cache Memory",
+        "hints": [
+          "Write-through = Ghi 'xuyên qua' cache để đến thẳng bộ nhớ chính."
+        ]
+      },
+      {
+        "id": 46,
+        "question": "How does multithreading improve the performance of a processor?",
+        "image": null,
+        "options": [
+          "A. It increases the instruction-level parallelism by issuing multiple instructions from different threads",
+          "B. It increases the thread-level parallelism by executing multiple threads on different cores",
+          "C. It increases the utilization of the processor resources by hiding the latency of long-latency events",
+          "D. All of the mentioned"
+        ],
+        "correctAnswer": "D",
+        "explanation": "Phân luồng (Multithreading) cải thiện hiệu suất bằng tất cả các cách trên. Nó khai thác song song mức luồng (TLP), tăng song song mức lệnh (ILP) bằng cách lấy lệnh từ các luồng khác nhau, và quan trọng nhất là tăng hiệu suất sử dụng tài nguyên bằng cách 'che giấu' độ trễ khi một luồng bị dừng lại.",
+        "difficulty": "medium",
+        "topic": "Parallel Processing",
+        "hints": [
+          "Multithreading là một kỹ thuật mạnh mẽ giúp cải thiện hiệu suất theo nhiều cách."
+        ]
+      },
+      {
+        "id": 47,
+        "question": "Following Amdahl's law, if 90% of the code can be parallelized (f = 0.9) on a 4-processor system, what is the performance gain?",
+        "image": null,
+        "options": [
+          "A. 307%",
+          "B. 297%",
+          "C. 317%",
+          "D. 327%"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Theo Định luật Amdahl, Tăng tốc = 1 / [(1 - P) + (P / N)], trong đó P là phần có thể song song hóa (0.9), và N là số bộ xử lý (4). Tăng tốc = 1 / [(1 - 0.9) + (0.9 / 4)] = 1 / [0.1 + 0.225] = 1 / 0.325 ≈ 3.0769. Mức tăng hiệu năng là (3.0769 - 1) * 100% ≈ 207%. Tuy nhiên, câu hỏi có thể hỏi về 'hệ số tăng tốc' thay vì 'mức tăng'. Nếu là hệ số thì 3.0769x ~ 307% (coi 1x là 100%).",
+        "difficulty": "hard",
+        "topic": "Performance",
+        "hints": [
+          "Áp dụng công thức Amdahl: Tăng tốc = 1 / (S + P/N), với S là phần tuần tự (1-P) và P là phần song song."
+        ]
+      },
+      {
+        "id": 48,
+        "question": "Which cache is not a shared cache?",
+        "image": null,
+        "options": [
+          "A. L4 cache",
+          "B. L3 cache",
+          "C. L2 cache",
+          "D. L1 cache"
+        ],
+        "correctAnswer": "D",
+        "explanation": "L1 cache hầu như luôn là bộ đệm riêng cho mỗi lõi CPU, nó không được chia sẻ giữa các lõi. L2 cache có thể là riêng hoặc chia sẻ, trong khi L3 cache (và L4 nếu có) hầu như luôn được chia sẻ giữa tất cả các lõi trên cùng một chip.",
+        "difficulty": "easy",
+        "topic": "Cache Memory",
+        "hints": [
+          "L1 là cache 'riêng tư' của mỗi lõi. L3 là cache 'công cộng' cho tất cả các lõi."
+        ]
+      },
+      {
+        "id": 49,
+        "question": "The central processing unit (CPU) of the IAS computer consists of:",
+        "image": null,
+        "options": [
+          "A. Main memory and ALU (arithmetic and logic unit)",
+          "B. ALU (Arithmetic and Logic Unit) and CU (Control Unit)",
+          "C. CU (Control Unit) and IO Module",
+          "D. ALU (Arithmetic and Logic Unit) and IO Module"
+        ],
+        "correctAnswer": "B",
+        "explanation": "CPU của máy tính IAS, một mô hình mẫu cho kiến trúc Von Neumann, bao gồm hai thành phần chính là Đơn vị Số học và Logic (ALU) và Khối điều khiển (CU).",
+        "difficulty": "easy",
+        "topic": "History of Computing",
+        "hints": [
+          "CPU luôn gồm 2 phần cốt lõi là ALU (để tính toán) và CU (để điều khiển)."
+        ]
+      },
+      {
+        "id": 50,
+        "question": "What is the significance of the program counter (PC) in the fetch phase of the instruction cycle?",
+        "image": null,
+        "options": [
+          "A. The PC is not used in the fetch phase.",
+          "B. The PC in the fetch phase holds the memory address of the next instruction to be fetched.",
+          "C. The PC is responsible for executing instructions.",
+          "D. The PC is only relevant in multi-core processors."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Bộ đếm chương trình (Program Counter - PC) đóng vai trò cực kỳ quan trọng trong giai đoạn nạp lệnh: nó chứa địa chỉ của lệnh tiếp theo trong bộ nhớ cần được nạp vào CPU để thực thi.",
+        "difficulty": "easy",
+        "topic": "Instruction Cycle",
+        "hints": [
+          "PC luôn 'chỉ đường' đến lệnh tiếp theo.",
+          "Trong giai đoạn Fetch, CPU nhìn vào PC để biết phải lấy lệnh ở đâu trong bộ nhớ."
+        ]
+      }
+    ]
+  }
