@@ -23,7 +23,7 @@ import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch"
 interface Question {
   id: number
   image: string
-  answer: string
+  answer: string | string[]
 }
 
 interface ExamData {
@@ -40,7 +40,7 @@ export default function ExamClient({ examId }: ExamClientProps) {
   const router = useRouter()
   const [examData, setExamData] = useState<ExamData | null>(null)
   const [currentQuestion, setCurrentQuestion] = useState(0)
-  const [userAnswers, setUserAnswers] = useState<Record<number, string>>({})
+  const [userAnswers, setUserAnswers] = useState<Record<number, string | string[]>>({})
   const [timeLeft, setTimeLeft] = useState(60 * 60) // 60 minutes in seconds
   const [showSubmitDialog, setShowSubmitDialog] = useState(false)
   const [showTimeUpDialog, setShowTimeUpDialog] = useState(false)
@@ -109,9 +109,45 @@ export default function ExamClient({ examId }: ExamClientProps) {
   }, [examId])
 
   const handleAnswerSelect = (value: string) => {
+    const currentQuestionData = examData?.questions[currentQuestion];
+    
+    if (!currentQuestionData) return;
+    
+    // Check if this is a multiple choice question
+    const isMultipleChoice = Array.isArray(currentQuestionData.answer);
+    
+    let newAnswer: string | string[];
+    
+    if (isMultipleChoice) {
+      // Handle multiple choice question - just update selection
+      const currentAnswers = userAnswers[currentQuestion + 1];
+      let selectedAnswers: string[];
+      
+      if (Array.isArray(currentAnswers)) {
+        selectedAnswers = [...currentAnswers];
+      } else if (currentAnswers) {
+        selectedAnswers = [currentAnswers];
+      } else {
+        selectedAnswers = [];
+      }
+      
+      // Toggle the selected option
+      const optionIndex = selectedAnswers.indexOf(value);
+      if (optionIndex > -1) {
+        selectedAnswers.splice(optionIndex, 1);
+      } else {
+        selectedAnswers.push(value);
+      }
+      
+      newAnswer = selectedAnswers;
+    } else {
+      // Handle single choice question
+      newAnswer = value;
+    }
+    
     setUserAnswers((prev) => ({
       ...prev,
-      [currentQuestion + 1]: value,
+      [currentQuestion + 1]: newAnswer,
     }))
   }
 
@@ -137,7 +173,21 @@ export default function ExamClient({ examId }: ExamClientProps) {
         timeSpent: 60 * 60 - timeLeft,
         answers: userAnswers,
         correctAnswers: examData.questions.reduce((count, question) => {
-          return userAnswers[question.id] === question.answer ? count + 1 : count
+          const userAnswer = userAnswers[question.id];
+          const correctAnswer = question.answer;
+          
+          if (Array.isArray(correctAnswer)) {
+            // Multiple choice question
+            if (Array.isArray(userAnswer)) {
+              // Check if all correct answers are selected and no incorrect answers
+              return correctAnswer.length === userAnswer.length && 
+                     correctAnswer.every(ans => userAnswer.includes(ans)) ? count + 1 : count;
+            }
+            return count; // No answer or wrong format
+          } else {
+            // Single choice question
+            return userAnswer === correctAnswer ? count + 1 : count;
+          }
         }, 0),
         totalQuestions: examData.questions.length,
       }
@@ -207,7 +257,23 @@ export default function ExamClient({ examId }: ExamClientProps) {
     return `${minutes.toString().padStart(2, "0")}:${remainingSeconds.toString().padStart(2, "0")}`
   }
 
-  const answeredCount = Object.keys(userAnswers).length
+  const getAnsweredCount = () => {
+    let answeredCount = 0;
+    examData.questions.forEach((question, index) => {
+      const questionId = index + 1;
+      const hasAnswer = userAnswers[questionId];
+      const isMultipleChoice = Array.isArray(question.answer);
+      
+      // Count as answered if has an answer (for both single and multiple choice)
+      if (hasAnswer) {
+        answeredCount++;
+      }
+    });
+    
+    return answeredCount;
+  };
+
+  const answeredCount = getAnsweredCount();
   const progressPercentage = (answeredCount / examData.questions.length) * 100
 
   return (
@@ -240,6 +306,14 @@ export default function ExamClient({ examId }: ExamClientProps) {
           <CardContent className="p-4 pt-6">
             <div className="mb-6 overflow-hidden rounded-lg border">
               <div className="relative">
+                {/* Multiple choice indicator */}
+                {Array.isArray(examData.questions[currentQuestion].answer) && (
+                  <div className="absolute top-2 left-2 z-20">
+                    <div className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs font-medium">
+                      Chọn nhiều đáp án
+                    </div>
+                  </div>
+                )}
                 <TransformWrapper
                   initialScale={1}
                   minScale={1}
@@ -283,41 +357,48 @@ export default function ExamClient({ examId }: ExamClientProps) {
             </div>
 
             <RadioGroup
-              value={userAnswers[currentQuestion + 1] || ""}
+              value={Array.isArray(userAnswers[currentQuestion + 1]) ? "" : (userAnswers[currentQuestion + 1] as string) || ""}
               onValueChange={handleAnswerSelect}
               className="grid grid-cols-2 gap-3 sm:grid-cols-3"
             >
-              {["A", "B", "C", "D", "E", "F"].map((option) => (
-                <div
-                  key={option}
-                  className={`relative flex cursor-pointer items-center justify-center rounded-lg border-2 p-4 transition-all hover:bg-gray-50 ${
-                    userAnswers[currentQuestion + 1] === option
-                      ? "border-blue-500 bg-blue-50 shadow-sm"
-                      : "border-gray-200"
-                  }`}
-                  onClick={() => handleAnswerSelect(option)}
-                >
-                  <RadioGroupItem
-                    value={option}
-                    id={`option-${option}`}
-                    className="peer sr-only"
-                  />
-                  <div className="flex items-center justify-center">
-                    <div className={`flex h-10 w-10 items-center justify-center rounded-full border-2 text-lg font-semibold transition-colors ${
-                      userAnswers[currentQuestion + 1] === option
-                        ? "border-blue-500 bg-blue-500 text-white"
-                        : "border-gray-300 text-gray-700"
-                    }`}>
-                      {option}
+              {["A", "B", "C", "D", "E", "F"].map((option) => {
+                const currentAnswer = userAnswers[currentQuestion + 1];
+                const isSelected = Array.isArray(currentAnswer) 
+                  ? currentAnswer.includes(option)
+                  : currentAnswer === option;
+                
+                return (
+                  <div
+                    key={option}
+                    className={`relative flex cursor-pointer items-center justify-center rounded-lg border-2 p-4 transition-all hover:bg-gray-50 ${
+                      isSelected
+                        ? "border-blue-500 bg-blue-50 shadow-sm"
+                        : "border-gray-200"
+                    }`}
+                    onClick={() => handleAnswerSelect(option)}
+                  >
+                    <RadioGroupItem
+                      value={option}
+                      id={`option-${option}`}
+                      className="peer sr-only"
+                    />
+                    <div className="flex items-center justify-center">
+                      <div className={`flex h-10 w-10 items-center justify-center rounded-full border-2 text-lg font-semibold transition-colors ${
+                        isSelected
+                          ? "border-blue-500 bg-blue-500 text-white"
+                          : "border-gray-300 text-gray-700"
+                      }`}>
+                        {option}
+                      </div>
                     </div>
+                    {isSelected && (
+                      <div className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-blue-500 text-xs text-white">
+                        ✓
+                      </div>
+                    )}
                   </div>
-                  {userAnswers[currentQuestion + 1] === option && (
-                    <div className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-blue-500 text-xs text-white">
-                      ✓
-                    </div>
-                  )}
-                </div>
-              ))}
+                );
+              })}
             </RadioGroup>
           </CardContent>
           <CardFooter className="flex justify-between">
@@ -342,18 +423,24 @@ export default function ExamClient({ examId }: ExamClientProps) {
         </Card>
 
         <div className="grid grid-cols-5 gap-2 sm:grid-cols-10">
-          {examData.questions.map((_, index) => (
-            <Button
-              key={index}
-              variant={userAnswers[index + 1] ? "default" : "outline"}
-              className={`h-10 w-10 p-0 ${currentQuestion === index ? "ring-2 ring-blue-500" : ""} ${
-                userAnswers[index + 1] ? "bg-blue-500 text-white hover:bg-blue-600" : ""
-              }`}
-              onClick={() => setCurrentQuestion(index)}
-            >
-              {index + 1}
-            </Button>
-          ))}
+          {examData.questions.map((question, index) => {
+            const hasAnswer = userAnswers[index + 1];
+            const isMultipleChoice = Array.isArray(question.answer);
+            const isAnswered = hasAnswer && (Array.isArray(hasAnswer) ? hasAnswer.length > 0 : true);
+            
+            return (
+              <Button
+                key={index}
+                variant={isAnswered ? "default" : "outline"}
+                className={`h-10 w-10 p-0 ${currentQuestion === index ? "ring-2 ring-blue-500" : ""} ${
+                  isAnswered ? "bg-blue-500 text-white hover:bg-blue-600" : ""
+                }`}
+                onClick={() => setCurrentQuestion(index)}
+              >
+                {index + 1}
+              </Button>
+            );
+          })}
         </div>
       </div>
 

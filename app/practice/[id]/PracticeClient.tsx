@@ -47,7 +47,15 @@ const OPTION_SHORTCUT_MAP = {
 } as const;
 
 interface Question {
-  id: number; question: string; image: string | null; options: string[]; correctAnswer: string; explanation: string; difficulty: string; topic: string; hints: string[];
+  id: number; 
+  question: string; 
+  image: string | null; 
+  options: string[]; 
+  correctAnswer: string | string[]; 
+  explanation: string; 
+  difficulty: string; 
+  topic: string; 
+  hints: string[];
 }
 interface PracticeData {
   examId: string; title: string; description: string; questions: Question[];
@@ -56,14 +64,18 @@ interface PracticeClientProps {
   practiceId: string;
 }
 interface QuestionResult {
-  answered: boolean; correct: boolean; selectedAnswer: string; timeSpent: number; hintsUsed: number;
+  answered: boolean; 
+  correct: boolean; 
+  selectedAnswer: string | string[]; 
+  timeSpent: number; 
+  hintsUsed: number;
 }
 
 export default function PracticeClient({ practiceId }: PracticeClientProps) {
   const router = useRouter()
   const [practiceData, setPracticeData] = useState<PracticeData | null>(null)
   const [currentQuestion, setCurrentQuestion] = useState(0)
-  const [userAnswers, setUserAnswers] = useState<Record<number, string>>({})
+  const [userAnswers, setUserAnswers] = useState<Record<number, string | string[]>>({})
   const [questionResults, setQuestionResults] = useState<Record<number, QuestionResult>>({})
   const [questionStartTime, setQuestionStartTime] = useState<number>(Date.now())
   const [totalTimeSpent, setTotalTimeSpent] = useState(0)
@@ -122,15 +134,77 @@ export default function PracticeClient({ practiceId }: PracticeClientProps) {
 
   const handleAnswerSelect = useCallback((value: string) => {
     if (showFeedback) return;
+    const currentQuestionData = practiceData?.questions[currentQuestion];
+    
+    if (!currentQuestionData) return;
+    
+    // Check if this is a multiple choice question
+    const isMultipleChoice = Array.isArray(currentQuestionData.correctAnswer);
+    
+    let newAnswer: string | string[];
+    
+    if (isMultipleChoice) {
+      // Handle multiple choice question - just update the selection, don't check yet
+      const currentAnswers = userAnswers[currentQuestion + 1];
+      let selectedAnswers: string[];
+      
+      if (Array.isArray(currentAnswers)) {
+        selectedAnswers = [...currentAnswers];
+      } else if (currentAnswers) {
+        selectedAnswers = [currentAnswers];
+      } else {
+        selectedAnswers = [];
+      }
+      
+      // Toggle the selected option
+      const optionIndex = selectedAnswers.indexOf(value);
+      if (optionIndex > -1) {
+        selectedAnswers.splice(optionIndex, 1);
+      } else {
+        selectedAnswers.push(value);
+      }
+      
+      newAnswer = selectedAnswers;
+      
+      // For multiple choice, just update the answer without checking
+      setUserAnswers(prev => ({ ...prev, [currentQuestion + 1]: newAnswer }));
+    } else {
+      // Handle single choice question - check immediately
+      newAnswer = value;
+      const currentTime = Date.now();
+      const timeSpentOnThisQuestion = Math.floor((currentTime - questionStartTime) / 1000);
+      const isCorrect = value === currentQuestionData.correctAnswer;
+      
+      setUserAnswers(prev => ({ ...prev, [currentQuestion + 1]: newAnswer }));
+      setQuestionResults(prev => ({ ...prev, [currentQuestion + 1]: { answered: true, correct: isCorrect, selectedAnswer: newAnswer, timeSpent: timeSpentOnThisQuestion, hintsUsed: hintsUsedCount }}));
+      setShowFeedback(true);
+      spawnParticles(isCorrect);
+      feedbackTimeoutRef.current = setTimeout(() => {}, 3000);
+    }
+  }, [showFeedback, questionStartTime, practiceData, currentQuestion, hintsUsedCount, spawnParticles, userAnswers]);
+
+  const handleCheckMultipleChoice = useCallback(() => {
+    if (showFeedback) return;
+    const currentQuestionData = practiceData?.questions[currentQuestion];
+    
+    if (!currentQuestionData || !Array.isArray(currentQuestionData.correctAnswer)) return;
+    
+    const currentAnswers = userAnswers[currentQuestion + 1];
+    if (!Array.isArray(currentAnswers) || currentAnswers.length === 0) return;
+    
     const currentTime = Date.now();
     const timeSpentOnThisQuestion = Math.floor((currentTime - questionStartTime) / 1000);
-    const isCorrect = value === practiceData?.questions[currentQuestion].correctAnswer;
-    setUserAnswers(prev => ({ ...prev, [currentQuestion + 1]: value }));
-    setQuestionResults(prev => ({ ...prev, [currentQuestion + 1]: { answered: true, correct: isCorrect, selectedAnswer: value, timeSpent: timeSpentOnThisQuestion, hintsUsed: hintsUsedCount }}));
+    
+    // Check if all correct answers are selected and no incorrect answers
+    const correctAnswers = currentQuestionData.correctAnswer as string[];
+    const isCorrect = correctAnswers.length === currentAnswers.length && 
+                     correctAnswers.every(ans => currentAnswers.includes(ans));
+    
+    setQuestionResults(prev => ({ ...prev, [currentQuestion + 1]: { answered: true, correct: isCorrect, selectedAnswer: currentAnswers, timeSpent: timeSpentOnThisQuestion, hintsUsed: hintsUsedCount }}));
     setShowFeedback(true);
     spawnParticles(isCorrect);
     feedbackTimeoutRef.current = setTimeout(() => {}, 3000);
-  }, [showFeedback, questionStartTime, practiceData, currentQuestion, hintsUsedCount, spawnParticles]);
+  }, [showFeedback, questionStartTime, practiceData, currentQuestion, hintsUsedCount, spawnParticles, userAnswers]);
 
   const resetQuestion = useCallback(() => {
     if (practiceData) {
@@ -230,7 +304,28 @@ export default function PracticeClient({ practiceId }: PracticeClientProps) {
   useEffect(() => { localStorage.setItem(`practiceTime_${practiceId}`, totalTimeSpent.toString()) }, [totalTimeSpent, practiceId]);
   
   const formatTime = (seconds: number) => `${Math.floor(seconds / 60).toString().padStart(2, "0")}:${(seconds % 60).toString().padStart(2, "0")}`;
-  const calculateProgress = () => practiceData ? (Object.keys(questionResults).length / practiceData.questions.length) * 100 : 0;
+  const getAnsweredCount = () => {
+    if (!practiceData) return 0;
+    
+    let answeredCount = 0;
+    practiceData.questions.forEach((question, index) => {
+      const questionId = index + 1;
+      const result = questionResults[questionId];
+      const hasAnswer = userAnswers[questionId];
+      const isMultipleChoice = Array.isArray(question.correctAnswer);
+      
+      // Count as answered if:
+      // 1. Has a result (single choice or checked multiple choice)
+      // 2. Has an answer for multiple choice (even if not checked yet)
+      if (result?.answered || (hasAnswer && isMultipleChoice)) {
+        answeredCount++;
+      }
+    });
+    
+    return answeredCount;
+  };
+
+  const calculateProgress = () => practiceData ? (getAnsweredCount() / practiceData.questions.length) * 100 : 0;
   const calculateScore = () => ({ correct: Object.values(questionResults).filter(r => r.correct).length, total: practiceData?.questions.length || 0 });
 
   const resetExam = useCallback(() => {
@@ -268,6 +363,11 @@ export default function PracticeClient({ practiceId }: PracticeClientProps) {
                   <div className="mt-2 flex flex-wrap items-center gap-2">
                     <Badge variant={currentQuestionData.difficulty === 'easy' ? 'secondary' : currentQuestionData.difficulty === 'medium' ? 'default' : 'destructive'} className="text-xs px-2 py-1">{currentQuestionData.difficulty === 'easy' ? 'Dễ' : currentQuestionData.difficulty === 'medium' ? 'Trung bình' : 'Khó'}</Badge>
                     <Badge variant="outline" className="text-xs px-2 py-1"><Target className="h-3 w-3 mr-1" />{currentQuestionData.topic}</Badge>
+                    {Array.isArray(currentQuestionData.correctAnswer) && (
+                      <Badge variant="secondary" className="text-xs px-2 py-1 bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">
+                        Chọn nhiều đáp án
+                      </Badge>
+                    )}
                   </div>
               </CardHeader>
               <CardContent>
@@ -275,15 +375,34 @@ export default function PracticeClient({ practiceId }: PracticeClientProps) {
                   <SimpleMath className="text-lg leading-relaxed">{currentQuestionData.question}</SimpleMath>
                   {currentQuestionData.image && <img src={currentQuestionData.image} alt={`Hình ảnh câu hỏi ${currentQuestion + 1}`} className="mt-4 max-w-full h-auto rounded-lg shadow-sm" />}
                 </div>
-                <RadioGroup value={userAnswers[currentQuestion + 1] || ""} onValueChange={handleAnswerSelect} className="space-y-3" disabled={showFeedback}>
+                <RadioGroup value={Array.isArray(userAnswers[currentQuestion + 1]) ? "" : (userAnswers[currentQuestion + 1] as string) || ""} onValueChange={handleAnswerSelect} className="space-y-3" disabled={showFeedback}>
                   {currentQuestionData.options.map((option, index) => {
                     const optionLetter = option.charAt(0) as keyof typeof OPTION_SHORTCUT_MAP;
-                    const isSelected = userAnswers[currentQuestion + 1] === optionLetter;
-                    const isCorrect = optionLetter === currentQuestionData.correctAnswer;
+                    const currentAnswer = userAnswers[currentQuestion + 1];
+                    const isSelected = Array.isArray(currentAnswer) 
+                      ? currentAnswer.includes(optionLetter)
+                      : currentAnswer === optionLetter;
+                    
+                    const isMultipleChoice = Array.isArray(currentQuestionData.correctAnswer);
+                    const isCorrect = isMultipleChoice 
+                      ? (currentQuestionData.correctAnswer as string[]).includes(optionLetter)
+                      : optionLetter === currentQuestionData.correctAnswer;
+                    
                     const shortcutNumber = OPTION_SHORTCUT_MAP[optionLetter];
                     let optionClass = "relative flex items-center space-x-3 rounded-lg border-2 p-4 transition-all duration-200 shadow-sm cursor-pointer";
-                    if (showFeedback) optionClass += isCorrect ? " border-green-500 bg-green-50 dark:bg-green-950/70 dark:text-green-300 dark:border-green-600" : isSelected && !isCorrect ? " border-red-500 bg-red-50 dark:bg-red-950/70 dark:text-red-300 dark:border-red-600" : " border-gray-200 opacity-60 dark:border-gray-700";
-                    else optionClass += isSelected ? " border-blue-500 bg-blue-50 ring-2 ring-blue-300 dark:bg-blue-950 dark:text-blue-300 dark:border-blue-500" : " border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600";
+                    
+                    if (showFeedback) {
+                      optionClass += isCorrect 
+                        ? " border-green-500 bg-green-50 dark:bg-green-950/70 dark:text-green-300 dark:border-green-600" 
+                        : isSelected && !isCorrect 
+                          ? " border-red-500 bg-red-50 dark:bg-red-950/70 dark:text-red-300 dark:border-red-600" 
+                          : " border-gray-200 opacity-60 dark:border-gray-700";
+                    } else {
+                      optionClass += isSelected 
+                        ? " border-blue-500 bg-blue-50 ring-2 ring-blue-300 dark:bg-blue-950 dark:text-blue-300 dark:border-blue-500" 
+                        : " border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600";
+                    }
+                    
                     return (
                       <Label htmlFor={`option-${index}`} key={index} className={optionClass}>
                         <RadioGroupItem value={optionLetter} id={`option-${index}`} className="text-blue-600" />
@@ -299,6 +418,22 @@ export default function PracticeClient({ practiceId }: PracticeClientProps) {
                 {currentQuestionData.hints?.length > 0 && (
                   <div className="mt-4 flex gap-2 animate-fade-in"><Button variant="outline" size="sm" onClick={toggleHints} className="flex items-center gap-2 transition-all"><HelpCircle className="h-4 w-4" />{showHints ? 'Ẩn gợi ý' : 'Xem gợi ý'}<Badge variant="secondary" className="text-xs ml-1">H</Badge></Button></div>
                 )}
+                
+                {/* Show check button for multiple choice questions */}
+                {Array.isArray(currentQuestionData.correctAnswer) && !showFeedback && (
+                  <div className="mt-4 flex gap-2 animate-fade-in">
+                    <Button 
+                      variant="default" 
+                      size="sm" 
+                      onClick={handleCheckMultipleChoice}
+                      className="flex items-center gap-2 transition-all bg-green-600 hover:bg-green-700"
+                      disabled={!Array.isArray(userAnswers[currentQuestion + 1]) || (userAnswers[currentQuestion + 1] as string[]).length === 0}
+                    >
+                      <CheckCircle className="h-4 w-4" />
+                      Kiểm tra đáp án
+                    </Button>
+                  </div>
+                )}
                 {showHints && currentQuestionData.hints?.length > 0 && (
                   <div className="mt-4 bg-yellow-50 dark:bg-yellow-400/10 border-l-4 border-yellow-400 p-4 rounded-lg animate-fade-in"><h4 className="font-medium text-yellow-800 dark:text-yellow-300 mb-2 flex items-center gap-2"><Lightbulb className="h-5 w-5" />Gợi ý:</h4><ul className="space-y-1 list-disc list-inside">{currentQuestionData.hints.map((hint, index) => <li key={index} className="text-sm text-yellow-700 dark:text-yellow-400"><SimpleMath>{hint}</SimpleMath></li>)}</ul></div>
                 )}
@@ -309,7 +444,20 @@ export default function PracticeClient({ practiceId }: PracticeClientProps) {
               <CardFooter className="flex justify-between items-center p-4">
                 <Button variant="outline" onClick={goToPrevQuestion} disabled={currentQuestion === 0}><ChevronLeft className="mr-2 h-4 w-4" /> Câu trước</Button>
                 {currentResult?.answered && <Button variant="outline" onClick={resetQuestion} className="text-orange-600 border-orange-300 hover:bg-orange-50 dark:text-orange-400 dark:border-orange-600 dark:hover:bg-orange-950"><RotateCcw className="mr-2 h-4 w-4" /> Làm lại</Button>}
-                <Button onClick={goToNextQuestion} disabled={!practiceComplete && currentQuestion < practiceData.questions.length - 1 && !currentResult?.answered} className="bg-blue-600 hover:bg-blue-700 text-white">{currentQuestion === practiceData.questions.length - 1 ? <><Trophy className="mr-2 h-4 w-4" />Hoàn thành</> : <>Câu sau <ChevronRight className="ml-2 h-4 w-4" /></>}</Button>
+                <Button 
+                  onClick={goToNextQuestion} 
+                  disabled={
+                    !practiceComplete && 
+                    currentQuestion < practiceData.questions.length - 1 && 
+                    !currentResult?.answered
+                  } 
+                  className="bg-blue-600 hover:bg-blue-700 text-white"
+                >
+                  {currentQuestion === practiceData.questions.length - 1 ? 
+                    <><Trophy className="mr-2 h-4 w-4" />Hoàn thành</> : 
+                    <>Câu sau <ChevronRight className="ml-2 h-4 w-4" /></>
+                  }
+                </Button>
               </CardFooter>
             </Card>
           </div>
@@ -327,19 +475,43 @@ export default function PracticeClient({ practiceId }: PracticeClientProps) {
                         <div><div className="text-sm text-gray-500">Thời gian</div><div className="text-xl font-bold flex items-center gap-1"><Clock className="h-5 w-5" /> {formatTime(totalTimeSpent)}</div></div>
                         <div><div className="text-sm text-gray-500">Điểm số</div><div className="text-xl font-bold flex items-center gap-1"><Trophy className="h-5 w-5" /> {score.correct}/{score.total}</div></div>
                     </div>
+                    <div className="text-center">
+                        <div className="text-sm text-gray-500">Đã trả lời</div>
+                        <div className="text-lg font-bold">
+                            {getAnsweredCount()}/{practiceData.questions.length}
+                        </div>
+                    </div>
                     <div>
-                        <div className="mb-2 flex justify-between text-sm font-medium"><span>Tiến độ</span><span>{Object.keys(questionResults).length} / {practiceData.questions.length}</span></div>
+                        <div className="mb-2 flex justify-between text-sm font-medium">
+                            <span>Tiến độ</span>
+                            <span>
+                                {getAnsweredCount()} / {practiceData.questions.length}
+                            </span>
+                        </div>
                         <Progress value={calculateProgress()} className="h-2" />
                     </div>
                     <div>
                     <h4 className="mb-3 text-sm font-semibold text-gray-600 dark:text-gray-300">Bản đồ câu hỏi</h4>
                     <div className="grid grid-cols-5 sm:grid-cols-7 lg:grid-cols-5 xl:grid-cols-7 gap-2">
                         {practiceData.questions.map((_, index) => { 
-                        const result = questionResults[index + 1]; const isActive = currentQuestion === index; 
+                        const result = questionResults[index + 1]; 
+                        const isActive = currentQuestion === index;
+                        const hasAnswer = userAnswers[index + 1];
+                        const isMultipleChoice = Array.isArray(practiceData.questions[index].correctAnswer);
+                        
                         let dotClass = "relative w-full aspect-square rounded-lg flex items-center justify-center font-bold text-xs transition-all duration-200 cursor-pointer shadow-sm"; 
-                        if (isActive) dotClass += " bg-blue-600 text-white ring-4 ring-blue-300 scale-110 z-10"; 
-                        else if (result?.answered) dotClass += result.correct ? " bg-green-500 hover:bg-green-600 text-white" : " bg-red-500 hover:bg-red-600 text-white"; 
-                        else dotClass += " bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600"; 
+                        
+                        if (isActive) {
+                          dotClass += " bg-blue-600 text-white ring-4 ring-blue-300 scale-110 z-10";
+                        } else if (result?.answered) {
+                          dotClass += result.correct ? " bg-green-500 hover:bg-green-600 text-white" : " bg-red-500 hover:bg-red-600 text-white";
+                        } else if (hasAnswer && isMultipleChoice) {
+                          // For multiple choice questions, show as partially answered if not yet checked
+                          dotClass += " bg-yellow-500 hover:bg-yellow-600 text-white";
+                        } else {
+                          dotClass += " bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600";
+                        }
+                        
                         return <button key={index} className={dotClass} onClick={() => goToQuestion(index)}>{index + 1}</button>; 
                         })}
                     </div>

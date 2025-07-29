@@ -19,13 +19,13 @@ interface ExamResults {
   title: string
   studentName: string
   timeSpent: number
-  answers: Record<number, string>
+  answers: Record<number, string | string[]>
   correctAnswers: number
   totalQuestions: number
   questions: Array<{
     id: number
     image: string
-    answer: string
+    answer: string | string[]
   }>
 }
 
@@ -88,7 +88,13 @@ Chi tiết câu trả lời:
 ${Object.entries(results.answers)
   .map(([questionId, answer]) => {
     const question = results.questions[Number(questionId) - 1]
-    return `Câu ${questionId}: ${answer} (Đáp án của bạn) - ${question.answer} (Đáp án đúng)`
+    const formatAnswer = (ans: string | string[]) => {
+      if (Array.isArray(ans)) {
+        return ans.join(", ");
+      }
+      return ans;
+    };
+    return `Câu ${questionId}: ${formatAnswer(answer)} (Đáp án của bạn) - ${formatAnswer(question.answer)} (Đáp án đúng)`
   })
   .join("\n")}
 `
@@ -179,12 +185,36 @@ ${Object.entries(results.answers)
                       const questionId = index + 1
                       const userAnswer = results?.answers[questionId] || "-"
                       const correctAnswer = results?.questions?.[index]?.answer || "-"
-                      const isCorrect = userAnswer === correctAnswer
+                      
+                      // Handle multiple choice answers
+                      const formatAnswer = (answer: string | string[]) => {
+                        if (Array.isArray(answer)) {
+                          return answer.join(", ");
+                        }
+                        return answer;
+                      };
+                      
+                      const userAnswerFormatted = formatAnswer(userAnswer);
+                      const correctAnswerFormatted = formatAnswer(correctAnswer);
+                      
+                      // Check if answer is correct
+                      let isCorrect = false;
+                      if (Array.isArray(correctAnswer)) {
+                        // Multiple choice question
+                        if (Array.isArray(userAnswer)) {
+                          isCorrect = correctAnswer.length === userAnswer.length && 
+                                     correctAnswer.every(ans => userAnswer.includes(ans));
+                        }
+                      } else {
+                        // Single choice question
+                        isCorrect = userAnswer === correctAnswer;
+                      }
+                      
                       return (
                         <tr key={questionId} className="border-b last:border-0">
                           <td className="p-2">Câu {questionId}</td>
-                          <td className="p-2">{userAnswer}</td>
-                          <td className="p-2">{correctAnswer}</td>
+                          <td className="p-2">{userAnswerFormatted}</td>
+                          <td className="p-2">{correctAnswerFormatted}</td>
                           <td className="p-2">
                             {isCorrect ? (
                               <div className="flex items-center text-green-500">
