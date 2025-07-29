@@ -1,0 +1,907 @@
+{
+    "examId": "de_thi_c_programming_02",
+    "title": "PRF (Bộ 2)",
+    "description": "Bộ đề thi trắc nghiệm 50 câu hỏi về các chủ đề nền tảng của ngôn ngữ lập trình C, bao gồm các khái niệm cơ bản, biến, toán tử, luồng điều khiển, hàm, con trỏ, mảng, chuỗi và xử lý tệp.",
+    "questions": [
+      {
+        "id": 1,
+        "question": "Who is the inventor of the C programming language?",
+        "image": null,
+        "options": [
+          "A. Dennis Ritchie",
+          "B. Bjarne Stroustrup",
+          "C. Brian Kernighan",
+          "D. Niklaus Wirth"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Dennis Ritchie được công nhận rộng rãi là người đã phát minh ra ngôn ngữ lập trình C tại Bell Labs vào đầu những năm 1970.",
+        "difficulty": "easy",
+        "topic": "Basic Concepts",
+        "hints": [
+          "Bjarne Stroustrup tạo ra C++, còn Dennis Ritchie là cha đẻ của C."
+        ]
+      },
+      {
+        "id": 2,
+        "question": "How does compilation differ from interpretation in the context of the C programming language?",
+        "image": null,
+        "options": [
+          "A. Compilation involves converting source code to machine code, while interpretation involves executing code line by line.",
+          "B. Compilation and interpretation are two terms that are used interchangeably.",
+          "C. Algorithm is another term for interpretation in programming languages.",
+          "D. IDE tools are responsible for both compilation and interpretation processes."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Sự khác biệt cơ bản là: Biên dịch (Compilation) dịch toàn bộ mã nguồn thành một tệp thực thi ngôn ngữ máy trước khi chạy. Thông dịch (Interpretation) đọc mã nguồn và thực thi nó từng dòng một mà không tạo ra một tệp thực thi riêng biệt. Ngôn ngữ C là một ngôn ngữ biên dịch.",
+        "difficulty": "easy",
+        "topic": "Programming Concepts",
+        "hints": [
+          "Compiler: Dịch cả cuốn sách rồi đọc. Interpreter: Đọc và dịch từng câu một."
+        ]
+      },
+      {
+        "id": 3,
+        "question": "When a C program compiles without any errors, it can still produce incorrect results if there are ______ in the code.",
+        "image": null,
+        "options": [
+          "A. compilation errors",
+          "B. runtime errors",
+          "C. logic or semantic errors",
+          "D. interpreter errors"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Một chương trình có thể biên dịch thành công (không có lỗi cú pháp) nhưng vẫn chạy sai do lỗi logic hoặc lỗi ngữ nghĩa. Lỗi logic xảy ra khi thuật toán của chương trình sai, dẫn đến kết quả không mong muốn.",
+        "difficulty": "easy",
+        "topic": "Programming Concepts",
+        "hints": [
+          "Biên dịch chỉ kiểm tra 'ngữ pháp' (syntax), không kiểm tra 'ý nghĩa' (logic)."
+        ]
+      },
+      {
+        "id": 4,
+        "question": "Errors that occur due to syntax errors belong to which of the following?",
+        "image": null,
+        "options": [
+          "A. Compile-time error",
+          "B. Run-time error",
+          "C. Input error",
+          "D. Linking error"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Lỗi cú pháp (syntax errors), chẳng hạn như thiếu dấu chấm phẩy hoặc sai tên từ khóa, là những lỗi vi phạm quy tắc ngữ pháp của ngôn ngữ. Những lỗi này được phát hiện bởi trình biên dịch trong quá trình biên dịch, do đó chúng được gọi là lỗi thời gian biên dịch (compile-time error).",
+        "difficulty": "easy",
+        "topic": "Programming Concepts",
+        "hints": [
+          "Lỗi cú pháp -> Trình biên dịch không hiểu -> Lỗi biên dịch."
+        ]
+      },
+      {
+        "id": 5,
+        "question": "Which of the following statements is incorrect?",
+        "image": null,
+        "options": [
+          "A. To make our programs longer, we use higher-level languages.",
+          "B. Program code in a high-level language must be translated to binary code before running.",
+          "C. C is based on a view of structured programming.",
+          "D. Programs in assembly language contain a large number of statements for simple tasks."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Phát biểu không chính xác là A. Chúng ta sử dụng ngôn ngữ bậc cao để làm cho chương trình DỄ VIẾT và NGẮN GỌN hơn, không phải để làm cho chúng dài hơn. Một dòng code bậc cao có thể tương đương với nhiều dòng code hợp ngữ.",
+        "difficulty": "easy",
+        "topic": "Programming Concepts",
+        "hints": [
+          "Ngôn ngữ bậc cao giúp tăng năng suất và giảm độ dài của mã nguồn."
+        ]
+      },
+      {
+        "id": 6,
+        "question": "Which of the following accurately describes the scope of a local variable in C?",
+        "image": null,
+        "options": [
+          "A. It is visible only within the function where it's declared.",
+          "B. It is accessible throughout the entire program.",
+          "C. It can be accessed by any function within the same source file.",
+          "D. It is available globally but with restricted modification rights."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Một biến cục bộ (local variable) được khai báo bên trong một hàm (hoặc một khối lệnh). Phạm vi (scope) của nó chỉ giới hạn trong hàm hoặc khối lệnh đó. Nó không thể được truy cập từ bên ngoài.",
+        "difficulty": "easy",
+        "topic": "Variables & Data Types",
+        "hints": [
+          "Local = Cục bộ -> Chỉ có tác dụng 'tại chỗ'."
+        ]
+      },
+      {
+        "id": 7,
+        "question": "What will be the output of the C code? int i=10, j=3, k=3; printf(\"%d %d \", i, j, k);",
+        "image": null,
+        "options": [
+          "A. Compile-time error",
+          "B. 1033",
+          "C. 10 3",
+          "D. 10 3 some garbage value"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Hàm `printf` sẽ in ra các giá trị dựa trên chuỗi định dạng. Chuỗi `\"%d %d \"` có hai định dạng `%d`, vì vậy nó sẽ chỉ lấy hai đối số đầu tiên được truyền vào là `i` và `j`. Đối số thứ ba, `k`, sẽ bị bỏ qua. Do đó, output là '10 3'. (Lưu ý: Đoạn mã có thể gây lỗi biên dịch nếu `i,j,k` khai báo ở global scope và `main` không có kiểu trả về, nhưng nếu giả sử nó nằm trong `main`, output sẽ là C).",
+        "difficulty": "easy",
+        "topic": "Input/Output",
+        "hints": [
+          "Số lượng `%d` trong chuỗi định dạng của `printf` quyết định số lượng biến được in ra."
+        ]
+      },
+      {
+        "id": 8,
+        "question": "What is the result of the expression 10 % 3?",
+        "image": null,
+        "options": [
+          "A. 1",
+          "B. 3",
+          "C. 2",
+          "D. 0"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Toán tử `%` (modulo) trong C trả về phần dư của phép chia số nguyên. 10 chia cho 3 được 3 và dư 1. Do đó, kết quả là 1.",
+        "difficulty": "easy",
+        "topic": "Operators",
+        "hints": [
+          "% là toán tử lấy phần dư."
+        ]
+      },
+      {
+        "id": 9,
+        "question": "Which of the following is a valid variable definition?",
+        "image": null,
+        "options": [
+          "A. int 1student_ID;",
+          "B. int _Student_ID1;",
+          "C. int Age$;",
+          "D. int long;"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Tên biến hợp lệ trong C phải bắt đầu bằng một chữ cái hoặc dấu gạch dưới `_`. Lựa chọn B là hợp lệ. A sai vì bắt đầu bằng số. C sai vì chứa ký tự đặc biệt `$`. D sai vì `long` là một từ khóa.",
+        "difficulty": "easy",
+        "topic": "Variables & Data Types",
+        "hints": [
+          "Quy tắc đặt tên biến: bắt đầu bằng chữ cái hoặc `_`, không chứa ký tự đặc biệt, không trùng từ khóa."
+        ]
+      },
+      {
+        "id": 10,
+        "question": "What is the result of the statement printf(\"Welcome to\\rFPTU\");?",
+        "image": null,
+        "options": [
+          "A. FPTUome to",
+          "B. FPTU",
+          "C. Welcome to FPTU",
+          "D. Welcome toFPTU"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Ký tự `\\r` (carriage return) di chuyển con trỏ về đầu dòng hiện tại mà không xuống dòng. Do đó, chương trình sẽ in \"Welcome to\", sau đó con trỏ quay về đầu dòng, và \"FPTU\" được in ra, ghi đè lên 4 ký tự đầu tiên (\"Welc\"). Kết quả cuối cùng là \"FPTUome to\".",
+        "difficulty": "medium",
+        "topic": "Input/Output",
+        "hints": [
+          "`\\n` = xuống dòng mới. `\\r` = về đầu dòng cũ."
+        ]
+      },
+      {
+        "id": 11,
+        "question": "The strcmp(S1, S2) function will return ______ if the value of S1 is greater than the value of S2.",
+        "image": null,
+        "options": [
+          "A. Positive integer",
+          "B. Negative integer",
+          "C. Null",
+          "D. -1"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Hàm `strcmp()` so sánh hai chuỗi theo thứ tự từ điển (dựa trên mã ASCII). Nếu chuỗi S1 lớn hơn chuỗi S2, nó sẽ trả về một số nguyên dương.",
+        "difficulty": "easy",
+        "topic": "Arrays & Strings",
+        "hints": [
+          "strcmp: S1 > S2 -> > 0 (dương); S1 < S2 -> < 0 (âm); S1 == S2 -> 0."
+        ]
+      },
+      {
+        "id": 12,
+        "question": "The ^ operator in the C programming language is used to ______.",
+        "image": null,
+        "options": [
+          "A. XOR two bit sequences",
+          "B. OR two bit sequences",
+          "C. AND two bit sequences",
+          "D. SHIFT UP a bit sequence"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Toán tử `^` trong C là toán tử XOR bitwise (loại trừ). Nó thực hiện phép XOR trên từng cặp bit tương ứng của hai toán hạng.",
+        "difficulty": "easy",
+        "topic": "Operators",
+        "hints": [
+          "Hãy nhớ: `^` trong C là XOR bitwise, không phải phép mũ. Để tính lũy thừa, hãy dùng hàm `pow()`."
+        ]
+      },
+      {
+        "id": 13,
+        "question": "Choose the best comment about the output of the C code: switch (a) case 1: ... case 2: ...",
+        "image": null,
+        "options": [
+          "A. No error, output is 111",
+          "B. No error, output is 1",
+          "C. Compile-time error, no break statements",
+          "D. Compile-time error, case label outside switch statement"
+        ],
+        "correctAnswer": "D",
+        "explanation": "Đoạn mã sẽ gây ra lỗi biên dịch. Cú pháp của câu lệnh `switch` yêu cầu các nhãn `case` phải nằm bên trong một khối lệnh được bao bởi cặp dấu ngoặc nhọn `{}`. Ở đây, các `case` nằm ngoài khối lệnh của `switch`.",
+        "difficulty": "medium",
+        "topic": "Control Flow",
+        "hints": [
+          "Luôn nhớ cú pháp đúng: `switch (variable) { case value: ... break; ... }`"
+        ]
+      },
+      {
+        "id": 14,
+        "question": "What will be the output of the C program? int 2_var = 15; printf(\"%d\", 2_var);",
+        "image": null,
+        "options": [
+          "A. 0",
+          "B. 15",
+          "C. Compilation error",
+          "D. Runtime error"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Chương trình sẽ gây ra lỗi biên dịch (Compilation error) vì tên biến trong C không được phép bắt đầu bằng một chữ số. `2_var` là một tên biến không hợp lệ.",
+        "difficulty": "easy",
+        "topic": "Variables & Data Types",
+        "hints": [
+          "Quy tắc đặt tên biến: phải bắt đầu bằng chữ cái hoặc dấu gạch dưới `_`."
+        ]
+      },
+      {
+        "id": 15,
+        "question": "Which statement about C programming is incorrect?",
+        "image": null,
+        "options": [
+          "A. #define is a preprocessor command often used to introduce named constants.",
+          "B. double and goto are keywords for declaring a data type.",
+          "C. return 0; is normally the last statement in main().",
+          "D. The file stdio.h is the library where the compiler finds scanf()."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Phát biểu không chính xác là B. `double` là từ khóa để khai báo kiểu dữ liệu số thực, nhưng `goto` là từ khóa để thực hiện bước nhảy không điều kiện, không phải là kiểu dữ liệu.",
+        "difficulty": "easy",
+        "topic": "Programming Concepts",
+        "hints": [
+          "`goto` là một câu lệnh điều khiển luồng, không phải một kiểu dữ liệu."
+        ]
+      },
+      {
+        "id": 16,
+        "question": "Which of these is NOT a relational or logical operator?",
+        "image": null,
+        "options": [
+          "A. =",
+          "B. ||",
+          "C. ==",
+          "D. !="
+        ],
+        "correctAnswer": "A",
+        "explanation": "Toán tử `=` là toán tử gán (assignment), dùng để gán giá trị cho biến. Các toán tử còn lại là toán tử quan hệ hoặc logic: `||` (OR logic), `==` (so sánh bằng), `!=` (so sánh khác).",
+        "difficulty": "easy",
+        "topic": "Operators",
+        "hints": [
+          "Hãy phân biệt rõ: `=` là gán, `==` là so sánh bằng."
+        ]
+      },
+      {
+        "id": 17,
+        "question": "What benefit does #define offer when dealing with magic values in code?",
+        "image": null,
+        "options": [
+          "A. It improves code portability.",
+          "B. It makes the code shorter.",
+          "C. It prevents the use of symbolic names.",
+          "D. It increases code complexity."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Sử dụng `#define` để đặt tên cho các 'giá trị ma thuật' (magic values) giúp cải thiện tính dễ đọc và dễ bảo trì. Nếu hằng số đó cần thay đổi, bạn chỉ cần sửa ở một nơi. Điều này cũng giúp cải thiện tính khả chuyển (portability) vì các hằng số phụ thuộc vào hệ thống có thể được định nghĩa tập trung.",
+        "difficulty": "medium",
+        "topic": "Programming Concepts",
+        "hints": [
+          "Dùng `#define` để đặt tên cho hằng số giúp mã nguồn dễ hiểu và dễ sửa đổi hơn."
+        ]
+      },
+      {
+        "id": 18,
+        "question": "What is the result of the command printf(\"%c%c%c%c\", 'A', 0x42, 0103, 68);?",
+        "image": null,
+        "options": [
+          "A. AABC",
+          "B. ABCD",
+          "C. ACCD",
+          "D. ABDC"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Hàm `printf` sẽ in ra các ký tự tương ứng với mã ASCII của các giá trị: 'A' là 'A'. `0x42` (thập lục phân) = 66 (thập phân) = 'B'. `0103` (bát phân) = 67 (thập phân) = 'C'. `68` (thập phân) = 'D'. Kết quả là \"ABCD\".",
+        "difficulty": "medium",
+        "topic": "Data Representation",
+        "hints": [
+          "Hãy nhớ các tiền tố: `0x` là hex, `0` đứng đầu là octal. 'A' có mã ASCII là 65."
+        ]
+      },
+      {
+        "id": 19,
+        "question": "How many times will the do-while loop execute the code if the condition is false?",
+        "image": null,
+        "options": [
+          "A. 1",
+          "B. 0",
+          "C. Loop infinitely",
+          "D. Compile-time error"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Vòng lặp `do-while` có đặc điểm là luôn thực thi thân vòng lặp ít nhất một lần, bởi vì điều kiện chỉ được kiểm tra ở cuối mỗi lần lặp. Ngay cả khi điều kiện sai ngay từ đầu, thân vòng lặp vẫn sẽ chạy 1 lần.",
+        "difficulty": "easy",
+        "topic": "Control Flow",
+        "hints": [
+          "`do-while`: làm trước, hỏi sau."
+        ]
+      },
+      {
+        "id": 20,
+        "question": "What is the output? ... switch (a) { case 2: ... case 1: printf(\"One\"); case 3: printf(\"Three\"); case 4: printf(\"Four\"); }",
+        "image": null,
+        "options": [
+          "A. OneThreeFour",
+          "B. OneTwoThreeFour",
+          "C. One",
+          "D. TwoOneThreeFour"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Biến `a` có giá trị 1. Thực thi sẽ nhảy đến `case 1:`. Vì không có câu lệnh `break` sau đó, chương trình sẽ tiếp tục thực thi các `case` tiếp theo (hiện tượng 'fall-through'). Nó sẽ in \"One\", sau đó in \"Three\", và cuối cùng in \"Four\".",
+        "difficulty": "medium",
+        "topic": "Control Flow",
+        "hints": [
+          "Luôn nhớ đặt `break;` ở cuối mỗi `case` trong câu lệnh `switch` nếu bạn không muốn nó 'rơi' xuống case tiếp theo."
+        ]
+      },
+      {
+        "id": 21,
+        "question": "Which of the following is an incorrect iteration construct?",
+        "image": null,
+        "options": [
+          "A. (condition) ? True_Value : False_Value",
+          "B. for (InitBlock; Condition; Task2) Task1;",
+          "C. do { statements; } while (condition);",
+          "D. while (condition) { statements; }"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Lựa chọn A là toán tử điều kiện ba ngôi (ternary operator), là một cấu trúc lựa chọn (selection), không phải cấu trúc lặp (iteration). Các lựa chọn B, C, D đều là các vòng lặp hợp lệ trong C.",
+        "difficulty": "easy",
+        "topic": "Control Flow",
+        "hints": [
+          "Vòng lặp (iteration) bao gồm for, while, do-while. Toán tử `? :` là để lựa chọn."
+        ]
+      },
+      {
+        "id": 22,
+        "question": "A real-world example of a switch statement in C is:",
+        "image": null,
+        "options": [
+          "A. Check the day of the week.",
+          "B. Sort an array in ascending order.",
+          "C. Sort an array in descending order.",
+          "D. Find the average value of a sequence."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Câu lệnh `switch` rất phù hợp để xử lý các trường hợp khi một biến có thể có một trong nhiều giá trị cụ thể. Việc kiểm tra ngày trong tuần (ví dụ: biến `day` có giá trị từ 1 đến 7 và thực hiện hành động tương ứng) là một ví dụ điển hình để sử dụng `switch`.",
+        "difficulty": "easy",
+        "topic": "Control Flow",
+        "hints": [
+          "`switch` hoạt động tốt nhất khi bạn so sánh một biến với một danh sách các hằng số."
+        ]
+      },
+      {
+        "id": 23,
+        "question": "What programming technique solves complex problems by breaking the program into smaller components?",
+        "image": null,
+        "options": [
+          "A. Modularity",
+          "B. Repeat",
+          "C. Select",
+          "D. Sequentially"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Module hóa (Modularity) là một nguyên tắc thiết kế phần mềm trong đó một chương trình phức tạp được chia thành các phần nhỏ hơn, độc lập và có thể tái sử dụng gọi là module (ví dụ: các hàm). Mỗi module thực hiện một chức năng cụ thể.",
+        "difficulty": "easy",
+        "topic": "Programming Concepts",
+        "hints": [
+          "Chia để trị (Divide and Conquer) là cốt lõi của Modularity."
+        ]
+      },
+      {
+        "id": 24,
+        "question": "What will be the output? int i=5, j=8; while (++i < --j) printf(\"loop\");",
+        "image": null,
+        "options": [
+          "A. loop",
+          "B. Infinite loop",
+          "C. loop loop loop",
+          "D. loop loop"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Biểu thức điều kiện được phân tích là `(++i) < (--j)`. Lần 1: i thành 6, j thành 7. 6 < 7 là đúng, in \"loop\". Lần 2: i thành 7, j thành 6. 7 < 6 là sai, vòng lặp kết thúc. Do đó, \"loop\" chỉ được in ra một lần.",
+        "difficulty": "hard",
+        "topic": "Control Flow",
+        "hints": [
+          "Hãy cẩn thận với thứ tự ưu tiên và tác dụng phụ của các toán tử tăng/giảm trong điều kiện lặp."
+        ]
+      },
+      {
+        "id": 25,
+        "question": "What is the output? const int a=5; if (a>3) a++; break; a--; else printf(\"%d\", a);",
+        "image": null,
+        "options": [
+          "A. Compile-time error",
+          "B. 6",
+          "C. 4",
+          "D. 5"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Đoạn mã này sẽ gây ra nhiều lỗi biên dịch. Lỗi thứ nhất: `a++` cố gắng thay đổi giá trị của một biến hằng (`const`). Lỗi thứ hai: `break;` được sử dụng bên ngoài một vòng lặp hoặc câu lệnh `switch`. Lỗi thứ ba: có một câu lệnh (`a--;`) nằm giữa `if` và `else`, điều này là không hợp lệ về mặt cú pháp.",
+        "difficulty": "medium",
+        "topic": "Control Flow",
+        "hints": [
+          "Không thể thay đổi biến `const`. `break` chỉ dùng trong loop/switch. Không có câu lệnh nào được phép chen giữa `if` và `else`."
+        ]
+      },
+      {
+        "id": 26,
+        "question": "What is the correct order of the main components in a function?",
+        "image": null,
+        "options": [
+          "A. Return type, function name, parameters, and function body",
+          "B. Return type, function name, return value, and function body",
+          "C. Return type, function name, parameters, and return value",
+          "D. Return value, function name, parameters, and function body"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Một định nghĩa hàm trong C có cấu trúc theo thứ tự sau: Kiểu trả về (Return type), Tên hàm (function name), danh sách Tham số (parameters) trong cặp ngoặc đơn, và cuối cùng là Thân hàm (function body) trong cặp ngoặc nhọn.",
+        "difficulty": "easy",
+        "topic": "Functions",
+        "hints": [
+          "Cú pháp định nghĩa hàm: `return_type function_name(parameters) { body }`."
+        ]
+      },
+      {
+        "id": 27,
+        "question": "Which library contains the abs() function?",
+        "image": null,
+        "options": [
+          "A. time.h",
+          "B. conio.h",
+          "C. math.h",
+          "D. stdlib.h"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Hàm `abs()` để tính giá trị tuyệt đối của số nguyên nằm trong thư viện `<stdlib.h>`. Tuy nhiên, các hàm tương tự cho số thực như `fabs()` (cho double) nằm trong `<math.h>`. Do sự nhầm lẫn phổ biến, `math.h` được chấp nhận trong nhiều ngữ cảnh.",
+        "difficulty": "easy",
+        "topic": "Standard Library",
+        "hints": [
+          "`abs()` cho int ở `stdlib.h`, `fabs()` cho double ở `math.h`."
+        ]
+      },
+      {
+        "id": 28,
+        "question": "A function that computes the average of two real numbers should be prototyped as:",
+        "image": null,
+        "options": [
+          "A. int average(double, double);",
+          "B. double average(double, double);",
+          "C. char average(double, double);",
+          "D. void average(double, double);"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Trung bình của hai số thực (double) có khả năng cao cũng là một số thực. Do đó, kiểu trả về của hàm nên là `double` (hoặc `float`) để đảm bảo không mất mát độ chính xác.",
+        "difficulty": "easy",
+        "topic": "Functions",
+        "hints": [
+          "Kiểu trả về phải phù hợp với kiểu dữ liệu của kết quả tính toán."
+        ]
+      },
+      {
+        "id": 29,
+        "question": "What is the output of the following code snippet?",
+        "image": null,
+        "options": [
+          "A. 22",
+          "B. 10",
+          "C. 12",
+          "D. 21"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Hàm `main` gọi hàm `num` với hai đối số `a=10` và `b=12`. Hàm `num` tính tổng `sum = 10 + 12 = 22` và trả về giá trị này. Biến `result` trong `main` nhận giá trị 22 và sau đó được in ra màn hình.",
+        "difficulty": "easy",
+        "topic": "Functions",
+        "hints": [
+          "Đây là một ví dụ cơ bản về việc gọi hàm và trả về giá trị."
+        ]
+      },
+      {
+        "id": 30,
+        "question": "What is the return value type of the pow() function?",
+        "image": null,
+        "options": [
+          "A. double",
+          "B. int",
+          "C. long double",
+          "D. float"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Hàm `pow()` trong thư viện `<math.h>` nhận vào hai đối số kiểu `double` và trả về kết quả cũng là kiểu `double` để đảm bảo độ chính xác cao nhất cho các phép tính lũy thừa.",
+        "difficulty": "easy",
+        "topic": "Standard Library",
+        "hints": [
+          "Hầu hết các hàm toán học trong `<math.h>` đều làm việc với kiểu `double`."
+        ]
+      },
+      {
+        "id": 31,
+        "question": "The function islower() returns a non-zero value if a character is ______.",
+        "image": null,
+        "options": [
+          "A. A lowercase letter",
+          "B. An uppercase letter",
+          "C. A digit",
+          "D. A punctuation character"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Hàm `islower()` trong thư viện `<ctype.h>` được dùng để kiểm tra xem một ký tự có phải là chữ cái viết thường (a-z) hay không. Nó sẽ trả về một giá trị khác 0 (true) nếu đúng, và 0 (false) nếu sai.",
+        "difficulty": "easy",
+        "topic": "Standard Library",
+        "hints": [
+          "Tên của các hàm trong `<ctype.h>` thường rất gợi ý: `islower`, `isupper`, `isdigit`..."
+        ]
+      },
+      {
+        "id": 32,
+        "question": "What is the function of the fflush(stdin); command?",
+        "image": null,
+        "options": [
+          "A. Print a string to the screen",
+          "B. Receive a string entered from the keyboard",
+          "C. Remove characters entered from the keyboard",
+          "D. Remove characters remaining in the keyboard buffer"
+        ],
+        "correctAnswer": "D",
+        "explanation": "Lệnh `fflush(stdin)` được dùng để xóa (làm sạch) bộ đệm đầu vào (input buffer) của bàn phím. Điều này hữu ích để loại bỏ các ký tự không mong muốn (như ký tự newline `\\n`) còn sót lại trong bộ đệm sau một lần nhập liệu.",
+        "difficulty": "medium",
+        "topic": "Input/Output",
+        "hints": [
+          "`fflush` thường được dùng để giải quyết vấn đề 'trôi lệnh' khi dùng `scanf` và `gets`/`fgets`."
+        ]
+      },
+      {
+        "id": 33,
+        "question": "The rand() function in C is used for:",
+        "image": null,
+        "options": [
+          "A. Generating a random integer",
+          "B. Generating a random integer from min to max",
+          "C. Generating a random float from min to max",
+          "D. Generating a random float"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Hàm `rand()` trong thư viện `<stdlib.h>` trả về một số nguyên giả ngẫu nhiên (pseudo-random integer) trong khoảng từ 0 đến `RAND_MAX`.",
+        "difficulty": "easy",
+        "topic": "Standard Library",
+        "hints": [
+          "Để giới hạn khoảng ngẫu nhiên, bạn cần dùng thêm toán tử modulo (`%`)."
+        ]
+      },
+      {
+        "id": 34,
+        "question": "In the context of arrays in C, what does traversal refer to?",
+        "image": null,
+        "options": [
+          "A. The process of accessing elements in an array sequentially",
+          "B. The process of searching for a specific element in an array",
+          "C. The process of resizing the array during runtime",
+          "D. The process of inserting elements into an array"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Duyệt mảng (Array traversal) là quá trình truy cập vào từng phần tử của mảng một cách tuần tự, thường là từ đầu đến cuối, để thực hiện một thao tác nào đó (ví dụ: in, tính tổng).",
+        "difficulty": "easy",
+        "topic": "Arrays & Strings",
+        "hints": [
+          "Duyệt mảng thường được thực hiện bằng một vòng lặp `for`."
+        ]
+      },
+      {
+        "id": 35,
+        "question": "What is incorrect about pointers?",
+        "image": null,
+        "options": [
+          "A. Pointers are containers for storing data values, like numbers and characters",
+          "B. If one variable contains the address of another variable, the first variable is said to point to the second variable",
+          "C. A pointer provides an indirect method of accessing the value of a data item",
+          "D. Pointers can point to variables of other fundamental data types"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Phát biểu không chính xác là A. Con trỏ là các 'container' để lưu trữ ĐỊA CHỈ (memory addresses), không phải để lưu trữ giá trị dữ liệu trực tiếp như số hay ký tự. Các biến thông thường mới là nơi lưu trữ giá trị dữ liệu.",
+        "difficulty": "easy",
+        "topic": "Pointers",
+        "hints": [
+          "Pointer -> Address. Variable -> Value."
+        ]
+      },
+      {
+        "id": 36,
+        "question": "What does the following code print? void swap(int a, int *b) { ... } int main() { int x=5, y=10; swap(x, y); ... }",
+        "image": null,
+        "options": [
+          "A. Runtime error.",
+          "B. Compiler error.",
+          "C. x=5, y=10",
+          "D. x=10, y=5"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Chương trình sẽ gây ra lỗi biên dịch. Hàm `swap` được khai báo để nhận một `int` và một con trỏ `int*`. Tuy nhiên, trong `main`, lời gọi hàm `swap(x, y)` truyền vào hai biến `int`. Kiểu dữ liệu của đối số thứ hai (`y` là `int`) không khớp với tham số yêu cầu (`int*`), gây ra lỗi biên dịch.",
+        "difficulty": "medium",
+        "topic": "Functions & Pointers",
+        "hints": [
+          "Luôn đảm bảo kiểu dữ liệu của đối số truyền vào phải khớp với kiểu dữ liệu của tham số trong khai báo hàm."
+        ]
+      },
+      {
+        "id": 37,
+        "question": "Choose the correct statement for declaring a float pointer:",
+        "image": null,
+        "options": [
+          "A. float* ptr;",
+          "B. float ptr;",
+          "C. *float ptr;",
+          "D. float ptr*;"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Cú pháp đúng để khai báo một con trỏ kiểu float là `float* ptr;` hoặc `float *ptr;`. Dấu `*` cho biết `ptr` là một con trỏ, và `float` cho biết nó sẽ trỏ đến một biến kiểu float.",
+        "difficulty": "easy",
+        "topic": "Pointers",
+        "hints": [
+          "Cú pháp: `data_type* pointer_name;`"
+        ]
+      },
+      {
+        "id": 38,
+        "question": "To reallocate ptr to be an array of 5 elements, which statement generates an error? int *ptr=malloc(sizeof(int));",
+        "image": null,
+        "options": [
+          "A. ptr = realloc(ptr, 5* sizeof(int));",
+          "B. realloc(ptr, 5* sizeof(int));",
+          "C. ptr += malloc(5* sizeof(int));",
+          "D. realloc(ptr, 20);"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Câu lệnh `ptr += malloc(5* sizeof(int));` sẽ gây ra lỗi hoặc hành vi không xác định. Nó cố gắng cộng một địa chỉ mới được trả về từ `malloc` vào địa chỉ hiện tại của `ptr`, đây không phải là cách để cấp phát lại bộ nhớ. Nó chỉ làm thay đổi con trỏ `ptr` và gây rò rỉ bộ nhớ đã cấp phát ban đầu.",
+        "difficulty": "hard",
+        "topic": "Dynamic Memory",
+        "hints": [
+          "Luôn sử dụng `realloc` để thay đổi kích thước một khối nhớ đã được cấp phát động."
+        ]
+      },
+      {
+        "id": 39,
+        "question": "Assume we have a snippet code in C: int main() { int *p = NULL; printf(\"%d\",p); ... } The output will be:",
+        "image": null,
+        "options": [
+          "A. 0",
+          "B. 1",
+          "C. 10",
+          "D. 100"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Trong C, `NULL` là một macro thường được định nghĩa là `(void*)0`. Khi in một con trỏ `NULL` bằng định dạng `%d` (dù không được khuyến khích), nó thường sẽ in ra giá trị số nguyên của địa chỉ đó, tức là 0.",
+        "difficulty": "easy",
+        "topic": "Pointers",
+        "hints": [
+          "Để in địa chỉ của con trỏ một cách an toàn, hãy dùng định dạng `%p`."
+        ]
+      },
+      {
+        "id": 40,
+        "question": "What does the return value of the scanf function indicate?",
+        "image": null,
+        "options": [
+          "A. The function returns the number of items of the argument list successfully filled.",
+          "B. The function returns the total number of items in the argument list.",
+          "C. The function returns the number of items that were not successfully filled.",
+          "D. The function does not return any value."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Hàm `scanf` trả về số lượng mục đã được đọc và gán thành công. Giá trị này có thể được dùng để kiểm tra xem việc nhập liệu có thành công hay không. Nếu có lỗi xảy ra trước khi bất kỳ dữ liệu nào được đọc, nó sẽ trả về `EOF`.",
+        "difficulty": "medium",
+        "topic": "Input/Output",
+        "hints": [
+          "Luôn kiểm tra giá trị trả về của `scanf` để đảm bảo việc nhập liệu diễn ra đúng như mong đợi."
+        ]
+      },
+      {
+        "id": 41,
+        "question": "Choose the correct statement about: scanf(\"%d, %d\", &a, &b);",
+        "image": null,
+        "options": [
+          "A. scanf will expect two integers and write them to variables a and b.",
+          "B. scanf will expect two floating-point numbers and write them to variables a and b.",
+          "C. scanf will expect two integers separated by a comma, and write the first to a, the comma to b.",
+          "D. scanf will expect two integers separated by a comma, and write the first to a, the second to b."
+        ],
+        "correctAnswer": "D",
+        "explanation": "Chuỗi định dạng `\"%d, %d\"` yêu cầu người dùng nhập vào một số nguyên, theo sau là một dấu phẩy (có thể có khoảng trắng xung quanh), và sau đó là một số nguyên thứ hai. Số nguyên đầu tiên sẽ được lưu vào `a`, và số thứ hai sẽ được lưu vào `b`.",
+        "difficulty": "medium",
+        "topic": "Input/Output",
+        "hints": [
+          "Bất kỳ ký tự nào trong chuỗi định dạng của `scanf` (trừ khoảng trắng và định dạng %) đều phải được người dùng nhập vào chính xác."
+        ]
+      },
+      {
+        "id": 42,
+        "question": "What is the maximum index of the last character in a character array initialized with a size of 10?",
+        "image": null,
+        "options": [
+          "A. 9",
+          "B. 10",
+          "C. 8",
+          "D. It depends on the contents of the array"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Trong C, chỉ số của mảng luôn bắt đầu từ 0. Đối với một mảng có kích thước N, các phần tử sẽ được đánh chỉ số từ 0 đến N-1. Do đó, với mảng có kích thước 10, chỉ số lớn nhất là 9.",
+        "difficulty": "easy",
+        "topic": "Arrays & Strings",
+        "hints": [
+          "Chỉ số cuối = Kích thước - 1."
+        ]
+      },
+      {
+        "id": 43,
+        "question": "What commands are used to write data appended to the end of the file? (Choose 2 answers)",
+        "image": null,
+        "options": [
+          "A. FILE *f = fwrite(\"output.txt\", \"a\");",
+          "B. FILE *f = fopen(\"output.txt\", \"a\");",
+          "C. FILE *f = fopen(\"output.txt\", \"a+\");",
+          "D. FILE *f = fopen(\"output.txt\", \"w+\");"
+        ],
+        "correctAnswer": ["B", "C"],
+        "explanation": "Hàm `fopen()` được dùng để mở tệp. Chế độ `\"a\"` (append) mở tệp để nối thêm (chỉ ghi). Chế độ `\"a+\"` mở tệp để đọc và nối thêm. Cả hai chế độ này đều đặt con trỏ ở cuối tệp cho các thao tác ghi. Lựa chọn A sai vì `fwrite` là hàm để ghi, không phải mở.",
+        "difficulty": "medium",
+        "topic": "File I/O",
+        "hints": [
+          "Sử dụng `fopen` để mở tệp. Chế độ bắt đầu bằng 'a' (append) là để nối thêm."
+        ]
+      },
+      {
+        "id": 44,
+        "question": "What function is used to send formatted output to a file?",
+        "image": null,
+        "options": [
+          "A. fprintf",
+          "B. fwritef",
+          "C. fsendf",
+          "D. fputs"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Hàm `fprintf()` hoạt động giống như `printf()`, nhưng nó ghi đầu ra có định dạng vào một luồng tệp (file stream) được chỉ định thay vì đầu ra chuẩn (màn hình).",
+        "difficulty": "easy",
+        "topic": "File I/O",
+        "hints": [
+          "f + printf = file printf."
+        ]
+      },
+      {
+        "id": 45,
+        "question": "What is the return value of the strcmp(\"abc\", \"Abcdef\") function?",
+        "image": null,
+        "options": [
+          "A. 1",
+          "B. 0",
+          "C. -1",
+          "D. 2"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Hàm `strcmp()` so sánh hai chuỗi theo thứ tự từ điển dựa trên mã ASCII. Ký tự khác nhau đầu tiên là 'a' và 'A'. Vì mã ASCII của 'a' (97) lớn hơn mã ASCII của 'A' (65), chuỗi \"abc\" được coi là lớn hơn chuỗi \"Abcdef\". Do đó, hàm sẽ trả về một số nguyên dương.",
+        "difficulty": "medium",
+        "topic": "Arrays & Strings",
+        "hints": [
+          "So sánh chuỗi trong C có phân biệt chữ hoa và chữ thường. Chữ thường có mã ASCII lớn hơn chữ hoa."
+        ]
+      },
+      {
+        "id": 46,
+        "question": "What is the main() function in C?",
+        "image": null,
+        "options": [
+          "A. It is the function where the program's execution starts.",
+          "B. Every program has exactly one main function.",
+          "C. The main function always returns an integer value or void.",
+          "D. All answers are correct."
+        ],
+        "correctAnswer": "D",
+        "explanation": "Tất cả các phát biểu trên đều đúng về hàm `main()`. Nó là điểm khởi đầu của mọi chương trình C, mỗi chương trình thực thi phải có một và chỉ một hàm `main`, và theo tiêu chuẩn, nó phải trả về kiểu `int` (trả về 0 nếu thành công).",
+        "difficulty": "easy",
+        "topic": "Functions",
+        "hints": [
+          "Hàm `main` là 'cửa chính' của bất kỳ chương trình C nào."
+        ]
+      },
+      {
+        "id": 47,
+        "question": "Which of the following declarations is not supported by C?",
+        "image": null,
+        "options": [
+          "A. string a;",
+          "B. float a = 3e2;",
+          "C. int* a;",
+          "D. char *a;"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Ngôn ngữ C không có kiểu dữ liệu `string` tích hợp sẵn. Để làm việc với chuỗi, người ta sử dụng mảng ký tự (`char[]`) hoặc con trỏ ký tự (`char*`). Các khai báo khác đều hợp lệ.",
+        "difficulty": "easy",
+        "topic": "Variables & Data Types",
+        "hints": [
+          "Trong C, 'string' là một khái niệm, không phải là một kiểu dữ liệu gốc."
+        ]
+      },
+      {
+        "id": 48,
+        "question": "What is the size of a float variable in bytes?",
+        "image": null,
+        "options": [
+          "A. 2 bytes",
+          "B. 1 byte",
+          "C. 8 bytes",
+          "D. 4 bytes"
+        ],
+        "correctAnswer": "D",
+        "explanation": "Theo tiêu chuẩn IEEE 754, kiểu `float` (số thực độ chính xác đơn) thường chiếm 4 bytes bộ nhớ.",
+        "difficulty": "easy",
+        "topic": "Variables & Data Types",
+        "hints": [
+          "Kích thước phổ biến: `char` (1 byte), `int` (thường 4 bytes), `float` (4 bytes), `double` (8 bytes)."
+        ]
+      },
+      {
+        "id": 49,
+        "question": "What is correct about the strcpy(s1, s2) function?",
+        "image": null,
+        "options": [
+          "A. Compare two strings s1 and s2",
+          "B. Copy string s2 to string s1",
+          "C. Copy string s1 to string s2",
+          "D. Concatenate string s2 to the end of s1"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Hàm `strcpy(s1, s2)` (string copy) sao chép nội dung của chuỗi nguồn `s2` vào chuỗi đích `s1`, bao gồm cả ký tự null kết thúc.",
+        "difficulty": "easy",
+        "topic": "Arrays & Strings",
+        "hints": [
+          "Cú pháp: `strcpy(destination, source);` -> Sao chép từ nguồn sang đích."
+        ]
+      },
+      {
+        "id": 50,
+        "question": "What is incorrect about a function prototype?",
+        "image": null,
+        "options": [
+          "A. void printSum(int* a, int b);",
+          "B. int printSum(int* a, int b);",
+          "C. int printSum(int a, b);",
+          "D. int* printSum(int* a, int b);"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Khai báo nguyên mẫu hàm (function prototype) không chính xác là C. Trong danh sách tham số, mỗi tham số phải có kiểu dữ liệu được chỉ định rõ ràng. `int printSum(int a, b);` đã thiếu kiểu dữ liệu cho tham số `b`. Nó phải được viết là `int printSum(int a, int b);`.",
+        "difficulty": "easy",
+        "topic": "Functions",
+        "hints": [
+          "Mỗi tham số trong khai báo hàm phải đi kèm với kiểu dữ liệu của nó."
+        ]
+      }
+    ]
+  }
