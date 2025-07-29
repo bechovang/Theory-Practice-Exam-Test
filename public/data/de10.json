@@ -456,20 +456,22 @@
       },
       {
         "id": 26,
-        "question": "Consider the following program. What will be printed? for (i='A'; i<'E'; i++) { for (j='A'; j<=i; j++) { } printf(\"%c\\n\", i); }",
+        "question": "Consider the following program. What will be printed?<br /><br />```c<br />#include <stdio.h><br />int main() {<br />    char i, j;<br />    for (i = 'A'; i < 'E'; i++) {<br />        for (j = 'A'; j <= i; j++) {<br />            printf(\"%c\", i);<br />        }<br />        printf(\"\\n\");<br />    }<br />    return 0;<br />}<br />```",
         "image": null,
         "options": [
-          "A. A\nB\nC\nD\n",
-          "B. AAAAA\nBBBB\n...",
-          "C. A\nAB\n...",
-          "D. A\nAA\n..."
+          "A. <br/>A<br />BB<br />CCC<br />DDDD",
+          "B. <br/>AAAAA<br />BBBB<br />CCC<br />DD<br />E",
+          "C. <br/>A<br />AB<br />ABC<br />ABCD<br />ABCDE",
+          "D. <br/>A<br />AA<br />AAA<br />AAAA<br />AAAAA"
         ],
         "correctAnswer": "A",
-        "explanation": "Vòng lặp bên trong `for (j = 'A'; j <= i; j++)` không có thân lệnh (nó trống rỗng). Do đó, nó chỉ chạy mà không làm gì cả. Vòng lặp bên ngoài sẽ chạy với i từ 'A' đến 'D' (vì `i < 'E'`). Trong mỗi lần lặp, nó chỉ thực hiện `printf(\"%c\\n\", i);`. Vì vậy, nó sẽ in 'A', rồi 'B', 'C', 'D', mỗi ký tự trên một dòng mới.",
+        "explanation": "Chương trình này sử dụng hai vòng lặp lồng nhau:<br /><br />1. Vòng lặp ngoài: `for (i = 'A'; i < 'E'; i++)` - chạy với i từ 'A' đến 'D'<br />2. Vòng lặp trong: `for (j = 'A'; j <= i; j++)` - chạy với j từ 'A' đến i<br /><br />Trong mỗi lần lặp của vòng lặp trong, nó in ra ký tự i. Sau đó in xuống dòng.<br /><br />- Khi i = 'A': vòng lặp trong chạy 1 lần → in 'A' → xuống dòng<br />- Khi i = 'B': vòng lặp trong chạy 2 lần → in 'B' 2 lần → xuống dòng<br />- Khi i = 'C': vòng lặp trong chạy 3 lần → in 'C' 3 lần → xuống dòng<br />- Khi i = 'D': vòng lặp trong chạy 4 lần → in 'D' 4 lần → xuống dòng<br /><br />Kết quả: A<br />BB<br />CCC<br />DDDD",
         "difficulty": "medium",
         "topic": "Control Flow",
         "hints": [
-          "Hãy cẩn thận với các vòng lặp không có thân lệnh. Chúng vẫn chạy nhưng không thực hiện hành động nào."
+          "Hãy theo dõi từng bước của vòng lặp lồng nhau.",
+          "Vòng lặp trong in ra ký tự của vòng lặp ngoài, không phải ký tự của chính nó.",
+          "Số lần lặp của vòng lặp trong phụ thuộc vào giá trị hiện tại của vòng lặp ngoài."
         ]
       },
       {
