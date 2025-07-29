@@ -28,7 +28,7 @@ interface ExamCardDisplayData {
   isAvailable: boolean;
 }
 
-const MAX_EXAMS_TO_CHECK = 12; // Kiểm tra từ de1.json đến de12.json
+const MAX_EXAMS_TO_CHECK = 25; // Kiểm tra từ de1.json đến de12.json
 
 export default function SelectExamPage() { // Đổi tên component cho phù hợp
   const router = useRouter()
