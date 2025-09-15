@@ -1,0 +1,106 @@
+{
+    "examId": "nwc-de1",
+    "title": "Networking Practice Exam 1",
+    "description": "Practice exam covering fundamental networking concepts including the OSI model, TCP/IP, and switching.",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What are three responsibilities of the transport layer? (Choose three.)",
+        "image": null,
+        "options": [
+          "A. meeting the reliability requirements of applications, if any",
+          "B. multiplexing multiple communication streams from many users or applications on the same network",
+          "C. identifying the applications and services on the client and server that should handle transmitted data",
+          "D. directing packets towards the destination network",
+          "E. formatting data into a compatible form for receipt by the destination devices",
+          "F. conducting error detection of the contents in frames"
+        ],
+        "correctAnswer": "A, B, C",
+        "explanation": "<b>Các trách nhiệm chính của tầng Giao vận (Transport Layer) bao gồm:</b><br />- <b>A. Đáp ứng yêu cầu về độ tin cậy:</b> Cung cấp các cơ chế truyền dữ liệu tin cậy (như TCP) hoặc không tin cậy (như UDP) tùy theo ứng dụng.<br />- <b>B. Ghép kênh (Multiplexing):</b> Cho phép nhiều ứng dụng trên cùng một máy chủ sử dụng mạng đồng thời bằng cách sử dụng các số hiệu cổng (port number).<br />- <b>C. Nhận dạng ứng dụng:</b> Sử dụng số hiệu cổng để xác định ứng dụng hoặc dịch vụ đích trên máy chủ nhận.<br /><br />Các lựa chọn khác:<br />- D (Định tuyến gói tin) là chức năng của tầng Mạng (Network Layer).<br />- E (Định dạng dữ liệu) là chức năng của tầng Trình diễn (Presentation Layer).<br />- F (Phát hiện lỗi trong frame) là chức năng của tầng Liên kết dữ liệu (Data Link Layer).",
+        "difficulty": "medium",
+        "topic": "OSI Model",
+        "hints": [
+          "Tầng giao vận tập trung vào giao tiếp từ tiến trình đến tiến trình (process-to-process).",
+          "Hãy nghĩ về cách nhiều ứng dụng (trình duyệt, email) trên máy tính của bạn có thể sử dụng mạng cùng một lúc.",
+          "TCP và UDP là hai giao thức chính của tầng này."
+        ]
+      },
+      {
+        "id": 2,
+        "question": "To which TCP port group does the port 414 belong?",
+        "image": null,
+        "options": [
+          "A. Registered",
+          "B. well-known",
+          "C. private or dynamic",
+          "D. public"
+        ],
+        "correctAnswer": "B",
+        "explanation": "<b>Phân loại cổng TCP/UDP:</b><br />- <b>Well-known ports (Cổng nổi tiếng):</b> 0 - 1023. Đây là các cổng được gán cho các dịch vụ hệ thống phổ biến.<br />- <b>Registered ports (Cổng đã đăng ký):</b> 1024 - 49151.<br />- <b>Dynamic/Private ports (Cổng động hoặc riêng tư):</b> 49152 - 65535.<br /><br />Cổng 414 nằm trong dải 0-1023 nên nó thuộc nhóm <b>well-known</b>.",
+        "difficulty": "easy",
+        "topic": "TCP/IP Ports",
+        "hints": [
+          "Nhớ lại ba dải cổng chính được định nghĩa bởi IANA.",
+          "Dải cổng đầu tiên dành cho các dịch vụ hệ thống phổ biến nhất."
+        ]
+      },
+      {
+        "id": 3,
+        "question": "Which two fields are the same in a TCP and UDP header? (Choose two.)",
+        "image": null,
+        "options": [
+          "A. Control bits",
+          "B. Destination port number",
+          "C. Sequence number",
+          "D. Source port number",
+          "E. Well-known port number"
+        ],
+        "correctAnswer": "B, D",
+        "explanation": "Cả TCP header và UDP header đều chứa hai trường chung là <b>Source Port Number (Cổng nguồn)</b> và <b>Destination Port Number (Cổng đích)</b>. Các trường này cần thiết để tầng Giao vận có thể xác định ứng dụng gửi và nhận dữ liệu.<br /><br />- Sequence number và Control bits là các trường đặc trưng của TCP để đảm bảo việc truyền dữ liệu tin cậy.",
+        "difficulty": "easy",
+        "topic": "TCP/UDP Headers",
+        "hints": [
+          "Cả hai giao thức đều cần biết ứng dụng nào đã gửi gói tin và ứng dụng nào sẽ nhận nó.",
+          "UDP là một giao thức rất đơn giản, chỉ chứa các trường thiết yếu nhất."
+        ]
+      },
+      {
+        "id": 4,
+        "question": "What is the primary responsibility of the transport layer in the OSI model?",
+        "image": null,
+        "options": [
+          "A. Routing data packets between networks",
+          "B. Managing logical communications between applications on different hosts",
+          "C. Defining physical media and connections",
+          "D. Encrypting data before transmission"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Trách nhiệm chính của tầng Giao vận (Transport Layer) là <b>quản lý giao tiếp logic giữa các ứng dụng trên các máy chủ khác nhau (process-to-process communication)</b>.<br /><br />Các lựa chọn khác:<br />- A (Định tuyến) là của tầng Mạng (Network Layer).<br />- C (Định nghĩa phương tiện vật lý) là của tầng Vật lý (Physical Layer).<br />- D (Mã hóa dữ liệu) thường thuộc về tầng Trình diễn (Presentation Layer).",
+        "difficulty": "medium",
+        "topic": "OSI Model",
+        "hints": [
+          "Tầng này kết nối các ứng dụng, không phải các máy tính hay các mạng.",
+          "Hãy xem xét vai trò của TCP và UDP trong việc quản lý các phiên giao tiếp."
+        ]
+      },
+      {
+        "id": 5,
+        "question": "What is the auto-MDIX feature on a switch?",
+        "image": null,
+        "options": [
+          "A. the automatic configuration of an interface for 10/100/1000 Mb/s operation",
+          "B. the automatic configuration of an interface for a straight-through or a crossover Ethernet cable connection",
+          "C. the automatic configuration of full-duplex operation over a single Ethernet copper or optical cable",
+          "D. the ability to turn a switch interface on or off accordingly if an active connection is detected"
+        ],
+        "correctAnswer": "B",
+        "explanation": "<b>Auto-MDIX (Automatic Medium-Dependent Interface Crossover)</b> là một tính năng trên các thiết bị mạng như switch cho phép nó tự động phát hiện loại cáp Ethernet (cáp thẳng - straight-through hay cáp chéo - crossover) được kết nối và tự động cấu hình cổng để giao tiếp phù hợp.<br /><br />Điều này giúp loại bỏ sự cần thiết phải sử dụng đúng loại cáp (thẳng hoặc chéo) cho các kết nối cụ thể, làm cho việc cài đặt mạng trở nên đơn giản hơn.",
+        "difficulty": "medium",
+        "topic": "Switching Concepts",
+        "hints": [
+          "Tính năng này liên quan đến việc xử lý các loại cáp vật lý.",
+          "Nó giúp đơn giản hóa việc kết nối các thiết bị mạng với nhau mà không cần lo lắng về việc sử dụng cáp thẳng hay cáp chéo."
+        ]
+      }
+    ]
+}
