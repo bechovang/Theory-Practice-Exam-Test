@@ -1,978 +1,1017 @@
 {
-    "examId": "nwc-de1",
-    "title": "NWC204 - SU25 - RETAKE ",
-    "description": "Practice exam covering fundamental networking concepts including the OSI model, TCP/IP, and switching.",
-    "questions": [
-      {
-        "id": 1,
-        "question": "What are three responsibilities of the transport layer? (Choose three.)",
-        "image": null,
-        "options": [
-          "A. meeting the reliability requirements of applications, if any",
-          "B. multiplexing multiple communication streams from many users or applications on the same network",
-          "C. identifying the applications and services on the client and server that should handle transmitted data",
-          "D. directing packets towards the destination network",
-          "E. formatting data into a compatible form for receipt by the destination devices",
-          "F. conducting error detection of the contents in frames"
-        ],
-        "correctAnswer": "A, B, C",
-        "explanation": "<b>Các trách nhiệm chính của tầng Giao vận (Transport Layer) bao gồm:</b><br />- <b>A. Đáp ứng yêu cầu về độ tin cậy:</b> Cung cấp các cơ chế truyền dữ liệu tin cậy (như TCP) hoặc không tin cậy (như UDP) tùy theo ứng dụng.<br />- <b>B. Ghép kênh (Multiplexing):</b> Cho phép nhiều ứng dụng trên cùng một máy chủ sử dụng mạng đồng thời bằng cách sử dụng các số hiệu cổng (port number).<br />- <b>C. Nhận dạng ứng dụng:</b> Sử dụng số hiệu cổng để xác định ứng dụng hoặc dịch vụ đích trên máy chủ nhận.<br /><br />Các lựa chọn khác:<br />- D (Định tuyến gói tin) là chức năng của tầng Mạng (Network Layer).<br />- E (Định dạng dữ liệu) là chức năng của tầng Trình diễn (Presentation Layer).<br />- F (Phát hiện lỗi trong frame) là chức năng của tầng Liên kết dữ liệu (Data Link Layer).",
-        "difficulty": "medium",
-        "topic": "OSI Model",
-        "hints": [
-          "Tầng giao vận tập trung vào giao tiếp từ tiến trình đến tiến trình (process-to-process).",
-          "Hãy nghĩ về cách nhiều ứng dụng (trình duyệt, email) trên máy tính của bạn có thể sử dụng mạng cùng một lúc.",
-          "TCP và UDP là hai giao thức chính của tầng này."
-        ]
-      },
-      {
-        "id": 2,
-        "question": "To which TCP port group does the port 414 belong?",
-        "image": null,
-        "options": [
-          "A. Registered",
-          "B. well-known",
-          "C. private or dynamic",
-          "D. public"
-        ],
-        "correctAnswer": "B",
-        "explanation": "<b>Phân loại cổng TCP/UDP:</b><br />- <b>Well-known ports (Cổng nổi tiếng):</b> 0 - 1023. Đây là các cổng được gán cho các dịch vụ hệ thống phổ biến.<br />- <b>Registered ports (Cổng đã đăng ký):</b> 1024 - 49151.<br />- <b>Dynamic/Private ports (Cổng động hoặc riêng tư):</b> 49152 - 65535.<br /><br />Cổng 414 nằm trong dải 0-1023 nên nó thuộc nhóm <b>well-known</b>.",
-        "difficulty": "easy",
-        "topic": "TCP/IP Ports",
-        "hints": [
-          "Nhớ lại ba dải cổng chính được định nghĩa bởi IANA.",
-          "Dải cổng đầu tiên dành cho các dịch vụ hệ thống phổ biến nhất."
-        ]
-      },
-      {
-        "id": 3,
-        "question": "Which two fields are the same in a TCP and UDP header? (Choose two.)",
-        "image": null,
-        "options": [
-          "A. Control bits",
-          "B. Destination port number",
-          "C. Sequence number",
-          "D. Source port number",
-          "E. Well-known port number"
-        ],
-        "correctAnswer": "B, D",
-        "explanation": "Cả TCP header và UDP header đều chứa hai trường chung là <b>Source Port Number (Cổng nguồn)</b> và <b>Destination Port Number (Cổng đích)</b>. Các trường này cần thiết để tầng Giao vận có thể xác định ứng dụng gửi và nhận dữ liệu.<br /><br />- Sequence number và Control bits là các trường đặc trưng của TCP để đảm bảo việc truyền dữ liệu tin cậy.",
-        "difficulty": "easy",
-        "topic": "TCP/UDP Headers",
-        "hints": [
-          "Cả hai giao thức đều cần biết ứng dụng nào đã gửi gói tin và ứng dụng nào sẽ nhận nó.",
-          "UDP là một giao thức rất đơn giản, chỉ chứa các trường thiết yếu nhất."
-        ]
-      },
-      {
-        "id": 4,
-        "question": "What is the primary responsibility of the transport layer in the OSI model?",
-        "image": null,
-        "options": [
-          "A. Routing data packets between networks",
-          "B. Managing logical communications between applications on different hosts",
-          "C. Defining physical media and connections",
-          "D. Encrypting data before transmission"
-        ],
-        "correctAnswer": "B",
-        "explanation": "Trách nhiệm chính của tầng Giao vận (Transport Layer) là <b>quản lý giao tiếp logic giữa các ứng dụng trên các máy chủ khác nhau (process-to-process communication)</b>.<br /><br />Các lựa chọn khác:<br />- A (Định tuyến) là của tầng Mạng (Network Layer).<br />- C (Định nghĩa phương tiện vật lý) là của tầng Vật lý (Physical Layer).<br />- D (Mã hóa dữ liệu) thường thuộc về tầng Trình diễn (Presentation Layer).",
-        "difficulty": "medium",
-        "topic": "OSI Model",
-        "hints": [
-          "Tầng này kết nối các ứng dụng, không phải các máy tính hay các mạng.",
-          "Hãy xem xét vai trò của TCP và UDP trong việc quản lý các phiên giao tiếp."
-        ]
-      },
-      {
-        "id": 5,
-        "question": "What is the auto-MDIX feature on a switch?",
-        "image": null,
-        "options": [
-          "A. the automatic configuration of an interface for 10/100/1000 Mb/s operation",
-          "B. the automatic configuration of an interface for a straight-through or a crossover Ethernet cable connection",
-          "C. the automatic configuration of full-duplex operation over a single Ethernet copper or optical cable",
-          "D. the ability to turn a switch interface on or off accordingly if an active connection is detected"
-        ],
-        "correctAnswer": "B",
-        "explanation": "<b>Auto-MDIX (Automatic Medium-Dependent Interface Crossover)</b> là một tính năng trên các thiết bị mạng như switch cho phép nó tự động phát hiện loại cáp Ethernet (cáp thẳng - straight-through hay cáp chéo - crossover) được kết nối và tự động cấu hình cổng để giao tiếp phù hợp.<br /><br />Điều này giúp loại bỏ sự cần thiết phải sử dụng đúng loại cáp (thẳng hoặc chéo) cho các kết nối cụ thể, làm cho việc cài đặt mạng trở nên đơn giản hơn.",
-        "difficulty": "medium",
-        "topic": "Switching Concepts",
-        "hints": [
-          "Tính năng này liên quan đến việc xử lý các loại cáp vật lý.",
-          "Nó giúp đơn giản hóa việc kết nối các thiết bị mạng với nhau mà không cần lo lắng về việc sử dụng cáp thẳng hay cáp chéo."
-        ]
-      },
-      {
-        "id": 6,
-        "question": "The IEEE 802 LAN/MAN data link layer consists of which two sublayers? (Choose two.)",
-        "image": null,
-        "options": [
-          "A. Network Control Protocol",
-          "B. Logical Link Control",
-          "C. Media Access Control",
-          "D. Link Control Protocol"
-        ],
-        "correctAnswer": "B, C",
-        "explanation": "Tầng Liên kết dữ liệu (Data Link Layer) theo chuẩn IEEE 802 được chia thành hai tầng con (sublayers):<br />- <b>Logical Link Control (LLC):</b> Tầng con phía trên, chịu trách nhiệm giao tiếp với tầng Mạng (Network Layer). Nó xử lý việc xác định giao thức tầng trên và đóng gói dữ liệu.<br />- <b>Media Access Control (MAC):</b> Tầng con phía dưới, chịu trách nhiệm điều khiển truy cập vào phương tiện truyền vật lý và thực hiện địa chỉ vật lý (địa chỉ MAC).",
-        "difficulty": "easy",
-        "topic": "OSI Model",
-        "hints": [
-          "Tầng 2 được chia nhỏ để xử lý cả logic và truy cập vật lý.",
-          "Một tầng con liên quan đến địa chỉ vật lý, tầng con còn lại liên quan đến giao tiếp với tầng 3."
-        ]
-      },
-      {
-        "id": 7,
-        "question": "Which statement describes a characteristic of the frame header fields of the data link layer?",
-        "image": null,
-        "options": [
-          "A. They all include the flow control and logical connection fields.",
-          "B. Ethernet frame header fields contain Layer 3 source and destination addresses.",
-          "C. They vary depending on protocols.",
-          "D. They include information on user applications."
-        ],
-        "correctAnswer": "C",
-        "explanation": "Cấu trúc và các trường trong phần header của một frame ở tầng Liên kết dữ liệu <b>thay đổi tùy thuộc vào giao thức cụ thể</b> đang được sử dụng. Ví dụ, header của frame Ethernet khác với header của frame PPP (Point-to-Point Protocol) hoặc Frame Relay.<br /><br />- A là sai vì không phải tất cả các header đều có trường điều khiển luồng.<br />- B là sai vì header Ethernet chứa địa chỉ MAC (Layer 2), không phải địa chỉ IP (Layer 3).<br />- D là sai vì thông tin ứng dụng người dùng được xử lý ở các tầng cao hơn.",
-        "difficulty": "medium",
-        "topic": "Data Link Layer",
-        "hints": [
-          "Hãy so sánh cấu trúc frame của Ethernet và một giao thức WAN như PPP.",
-          "Mỗi giao thức Layer 2 có các yêu cầu riêng về thông tin điều khiển."
-        ]
-      },
-      {
-        "id": 8,
-        "question": "What are two services performed by the data link layer of the OSI model? (Choose two.)",
-        "image": null,
-        "options": [
-          "A. It fragments data packets into the MTU size.",
-          "B. It determines the path to forward packets.",
-          "C. It accepts Layer 3 packets and encapsulates them into frames.",
-          "D. It provides media access control and performs error detection.",
-          "E. It monitors the Layer 2 communication by building a MAC address table."
-        ],
-        "correctAnswer": "C, D",
-        "explanation": "Tầng Liên kết dữ liệu (Data Link Layer) thực hiện hai chức năng chính:<br />- <b>C. Nhận các gói tin (packet) từ Tầng 3 và đóng gói chúng thành các khung (frame):</b> Đây là quá trình encapsulation, thêm header và trailer của Layer 2 vào packet của Layer 3.<br />- <b>D. Cung cấp kiểm soát truy cập phương tiện (media access control) và phát hiện lỗi:</b> Nó quản lý cách các thiết bị truy cập vào đường truyền vật lý (ví dụ: CSMA/CD trong Ethernet) và kiểm tra xem frame có bị lỗi trong quá trình truyền hay không (thường bằng trường FCS - Frame Check Sequence).<br /><br />- A (Phân mảnh gói tin) là chức năng của tầng Mạng (Layer 3).<br />- B (Xác định đường đi) là chức năng của tầng Mạng (Layer 3).<br />- E (Xây dựng bảng địa chỉ MAC) là một chức năng cụ thể của thiết bị switch ở Layer 2, không phải là một dịch vụ cốt lõi của tầng này trong mô hình OSI.",
-        "difficulty": "medium",
-        "topic": "OSI Model",
-        "hints": [
-          "Tầng này hoạt động như một cầu nối giữa phần mềm (tầng mạng) và phần cứng (tầng vật lý).",
-          "Nó chịu trách nhiệm chuẩn bị dữ liệu để truyền đi trên một đoạn mạng cục bộ."
-        ]
-      },
-      {
-        "id": 9,
-        "question": "What method can be used by two computers to ensure that packets are not dropped because too much data is being sent too quickly?",
-        "image": null,
-        "options": [
-          "A. encapsulation",
-          "B. flow control",
-          "C. access method",
-          "D. response timeout"
-        ],
-        "correctAnswer": "B",
-        "explanation": "<b>Flow control (Điều khiển luồng)</b> là cơ chế được sử dụng để quản lý tốc độ truyền dữ liệu giữa hai thiết bị. Nó đảm bảo rằng thiết bị gửi không truyền dữ liệu nhanh hơn khả năng xử lý của thiết bị nhận, do đó ngăn chặn việc các gói tin bị loại bỏ (dropped) do bộ đệm (buffer) của bên nhận bị đầy.",
-        "difficulty": "easy",
-        "topic": "Data Transmission",
-        "hints": [
-          "Đây là một cơ chế quản lý tốc độ truyền.",
-          "Hãy nghĩ về cách một vòi nước có thể được điều chỉnh để không làm tràn một cái xô."
-        ]
-      },
-      {
-        "id": 10,
-        "question": "Which PDU is processed when a host computer is de-encapsulating a message at the transport layer of the TCP/IP model?",
-        "image": null,
-        "options": [
-          "A. Bits",
-          "B. Frame",
-          "C. Packet",
-          "D. Segment"
-        ],
-        "correctAnswer": "D",
-        "explanation": "Đơn vị dữ liệu giao thức (PDU - Protocol Data Unit) ở tầng Giao vận (Transport Layer) được gọi là <b>Segment</b> (đối với TCP) hoặc Datagram (đối với UDP).<br /><br />Trong quá trình gỡ bỏ đóng gói (de-encapsulation), khi dữ liệu đi từ tầng dưới lên, tầng Giao vận sẽ nhận một Packet từ tầng Mạng, gỡ bỏ phần header IP, và xử lý phần dữ liệu còn lại, chính là Segment.",
-        "difficulty": "easy",
-        "topic": "TCP/IP Model",
-        "hints": [
-          "Hãy nhớ tên PDU của các tầng: Segment (Layer 4), Packet (Layer 3), Frame (Layer 2), Bits (Layer 1).",
-          "Gỡ bỏ đóng gói là quá trình di chuyển lên các tầng của mô hình TCP/IP."
-        ]
-      },
-      {
-        "id": 11,
-        "question": "A web client is receiving a response for a web page from a web server. From the perspective of the client, what is the correct order of the protocol stack that is used to decode the received transmission?",
-        "image": null,
-        "options": [
-          "A. Ethernet, IP, TCP, HTTP",
-          "B. HTTP, TCP, IP, Ethernet",
-          "C. Ethernet, TCP, IP, HTTP",
-          "D. HTTP, Ethernet, IP, TCP"
-        ],
-        "correctAnswer": "A",
-        "explanation": "Khi một máy khách nhận dữ liệu, quá trình được gọi là gỡ bỏ đóng gói (de-encapsulation), diễn ra từ tầng thấp nhất lên tầng cao nhất.<br />Thứ tự giải mã sẽ là:<br />1. <b>Ethernet (Layer 2):</b> Xử lý frame nhận được từ tầng vật lý.<br />2. <b>IP (Layer 3):</b> Gỡ bỏ header Ethernet để xử lý packet IP.<br />3. <b>TCP (Layer 4):</b> Gỡ bỏ header IP để xử lý segment TCP.<br />4. <b>HTTP (Layer 7):</b> Gỡ bỏ header TCP để đọc dữ liệu HTTP của trang web.",
-        "difficulty": "medium",
-        "topic": "TCP/IP Model",
-        "hints": [
-          "Quá trình giải mã (decoding) hoặc gỡ bỏ đóng gói (de-encapsulation) diễn ra từ dưới lên trong chồng giao thức.",
-          "Hãy nghĩ về thứ tự từ lớp vật lý (cáp mạng) đi lên lớp ứng dụng (trình duyệt)."
-        ]
-      },
-      {
-        "id": 12,
-        "question": "This is a function of the OSI session layer.",
-        "image": null,
-        "options": [
-          "A. compress and decompress data",
-          "B. provide an interface between applications",
-          "C. format data for the application layer",
-          "D. exchange of information to initiate dialog between peers"
-        ],
-        "correctAnswer": "D",
-        "explanation": "Chức năng chính của tầng Phiên (Session Layer) là thiết lập, quản lý và kết thúc các phiên (dialogs) giao tiếp giữa các ứng dụng. Do đó, việc <b>trao đổi thông tin để khởi tạo cuộc đối thoại giữa các bên</b> là chức năng của tầng này.<br /><br />- A và C (nén và định dạng dữ liệu) là chức năng của tầng Trình diễn (Presentation Layer).<br />- B (cung cấp giao diện cho ứng dụng) là chức năng của tầng Ứng dụng (Application Layer).",
-        "difficulty": "medium",
-        "topic": "OSI Model",
-        "hints": [
-          "Tên của tầng ('Session') đã gợi ý chức năng chính của nó.",
-          "Tầng này chịu trách nhiệm quản lý toàn bộ 'cuộc hội thoại' giữa hai ứng dụng."
-        ]
-      },
-      {
-        "id": 13,
-        "question": "Which IPv6 address type is used for communication within a single network segment and cannot be routed?",
-        "image": null,
-        "options": [
-          "A. Global Unicast Address (GUA)",
-          "B. Link-Local Address (LLA)",
-          "C. Unique-Local Address (ULA)",
-          "D. Multicast Address"
-        ],
-        "correctAnswer": "B",
-        "explanation": "<b>Link-Local Address (LLA)</b> là loại địa chỉ IPv6 được thiết kế để sử dụng cho giao tiếp chỉ trong một phân đoạn mạng cục bộ (local link) duy nhất. Các router không chuyển tiếp (route) các gói tin có địa chỉ LLA. Chúng thường bắt đầu bằng `fe80::`.",
-        "difficulty": "easy",
-        "topic": "IPv6 Addressing",
-        "hints": [
-          "Cụm từ khóa là 'trong một phân đoạn mạng' và 'không thể định tuyến'.",
-          "Loại địa chỉ này tự động được cấu hình trên mọi giao diện IPv6."
-        ]
-      },
-      {
-        "id": 14,
-        "question": "Which field in an IPv6 GUA is used for subnetting?",
-        "image": null,
-        "options": [
-          "A. Prefix",
-          "B. Network",
-          "C. Global routing prefix",
-          "D. Subnet ID",
-          "E. Interface ID"
-        ],
-        "correctAnswer": "D",
-        "explanation": "Một địa chỉ IPv6 Global Unicast Address (GUA) tiêu chuẩn được chia thành ba phần:<br />- <b>Global Routing Prefix</b> (thường là 48 bit đầu tiên): Được cung cấp bởi nhà mạng.<br />- <b>Subnet ID</b> (thường là 16 bit tiếp theo): Trường này được sử dụng bởi quản trị viên mạng để tạo ra các mạng con (subnet) trong mạng nội bộ.<br />- <b>Interface ID</b> (64 bit cuối): Định danh cho một thiết bị cụ thể trong mạng con.",
-        "difficulty": "medium",
-        "topic": "IPv6 Subnetting",
-        "hints": [
-          "Hãy nhớ lại cấu trúc của một địa chỉ IPv6 GUA.",
-          "Phần nào của địa chỉ được dành riêng cho quản trị viên mạng để tổ chức mạng nội bộ của họ?"
-        ]
-      },
-      {
-        "id": 15,
-        "question": "Which statement is correct about network protocols?",
-        "image": null,
-        "options": [
-          "A. Network protocols define the type of hardware that is used and how it is mounted in racks.",
-          "B. They define how messages are exchanged between the source and the destination.",
-          "C. They all function in the network access layer of TCP/IP.",
-          "D. They are only required for exchange of messages between devices on remote networks."
-        ],
-        "correctAnswer": "B",
-        "explanation": "Định nghĩa cơ bản nhất của một giao thức mạng là một tập hợp các quy tắc. Cụ thể, <b>chúng định nghĩa cách các thông điệp được trao đổi giữa nguồn và đích</b>. Điều này bao gồm định dạng thông điệp, thứ tự, và các quy trình xử lý lỗi.<br /><br />- A mô tả các tiêu chuẩn vật lý, không phải giao thức.<br />- C là sai, vì các giao thức hoạt động ở tất cả các tầng (HTTP, TCP, IP, Ethernet).<br />- D là sai, giao thức cũng cần thiết cho giao tiếp trong cùng một mạng cục bộ.",
-        "difficulty": "easy",
-        "topic": "Networking Fundamentals",
-        "hints": [
-          "Từ 'protocol' có nghĩa là gì trong ngữ cảnh chung? Nó là một bộ quy tắc cho việc giao tiếp.",
-          "Hãy xem xét các ví dụ như HTTP, IP, TCP. Chúng làm gì?"
-        ]
-      },
-      {
-        "id": 16,
-        "question": "What is the prefix length of an IPv6 address that is typically used for a single subnet?",
-        "image": null,
-        "options": [
-          "A. /32",
-          "B. /48",
-          "C. /64",
-          "D. /128"
-        ],
-        "correctAnswer": "C",
-        "explanation": "Theo thông lệ và tiêu chuẩn, một mạng con (subnet) IPv6 duy nhất thường sử dụng độ dài tiền tố (prefix length) là <b>/64</b>.<br /><br />Điều này chia địa chỉ 128-bit thành hai phần bằng nhau:<br />- <b>64 bit đầu tiên</b> cho phần mạng (Network Prefix).<br />- <b>64 bit cuối cùng</b> cho phần định danh giao diện (Interface ID).<br />Sử dụng /64 giúp đơn giản hóa việc quản lý địa chỉ và cho phép các tính năng như tự động cấu hình địa chỉ không trạng thái (SLAAC) hoạt động hiệu quả.",
-        "difficulty": "easy",
-        "topic": "IPv6 Subnetting",
-        "hints": [
-          "Một địa chỉ IPv6 có tổng cộng 128 bit.",
-          "Tiêu chuẩn chia địa chỉ này thành hai nửa: một cho mạng và một cho thiết bị."
-        ]
-      },
-      {
-        "id": 17,
-        "question": "What is used in the EUI-64 process to create an IPv6 interface ID on an IPv6 enabled interface?",
-        "image": null,
-        "options": [
-          "A. the MAC address of the IPv6 enabled interface",
-          "B. a randomly generated 64-bit hexadecimal address",
-          "C. an IPv6 address that is provided by a DHCPv6 server",
-          "D. an IPv4 address that is configured on the interface"
-        ],
-        "correctAnswer": "A",
-        "explanation": "Quy trình <b>EUI-64 (Extended Unique Identifier-64)</b> sử dụng <b>địa chỉ MAC 48-bit</b> của giao diện mạng để tạo ra một Interface ID 64-bit.<br /><br />Quá trình này bao gồm:<br />1. Lấy địa chỉ MAC 48-bit.<br />2. Chèn giá trị `FFFE` vào giữa địa chỉ MAC.<br />3. Đảo ngược bit thứ 7 (bit Universal/Local) của địa chỉ MAC ban đầu.",
-        "difficulty": "medium",
-        "topic": "IPv6 Addressing",
-        "hints": [
-          "Tính năng này cho phép một thiết bị tự động tạo ra phần host của địa chỉ IPv6.",
-          "Nó dựa trên một định danh đã có sẵn và duy nhất trên card mạng."
-        ]
-      },
-      {
-        "id": 18,
-        "question": "Which of the following techniques use native IPv6 connectivity?",
-        "image": null,
-        "options": [
-          "A. Dual stack",
-          "B. Tunneling",
-          "C. Translation",
-          "D. All of the above"
-        ],
-        "correctAnswer": "A",
-        "explanation": "<b>Dual stack (Chồng giao thức kép)</b> là kỹ thuật cho phép một thiết bị hoặc một mạng chạy đồng thời cả hai chồng giao thức IPv4 và IPv6. Điều này cho phép nó giao tiếp trực tiếp (native) với cả hai loại mạng mà không cần cơ chế chuyển đổi.<br /><br />- <b>Tunneling (Đường hầm):</b> Đóng gói gói tin IPv6 bên trong gói tin IPv4 để đi qua mạng IPv4. Đây là một cơ chế chuyển tiếp, không phải là kết nối gốc.<br />- <b>Translation (Biên dịch):</b> Dịch địa chỉ và header giữa IPv6 và IPv4 (ví dụ: NAT64). Đây là cơ chế chuyển đổi.",
-        "difficulty": "medium",
-        "topic": "IPv6 Transition Mechanisms",
-        "hints": [
-          "Kết nối 'native' có nghĩa là giao tiếp trực tiếp mà không cần đóng gói hay dịch.",
-          "Hãy nghĩ xem kỹ thuật nào cho phép một thiết bị 'nói' được cả hai 'ngôn ngữ' IPv4 và IPv6 một cách tự nhiên."
-        ]
-      },
-      {
-        "id": 19,
-        "question": "What property of ARP causes cached IP-to-MAC mappings to remain in memory longer?",
-        "image": null,
-        "options": [
-          "A. Entries in an ARP table are time-stamped and are purged after the timeout expires.",
-          "B. A static IP-to-MAC address entry can be entered manually into an ARP table.",
-          "C. The type field 0x806 appears in the header of the Ethernet frame.",
-          "D. The port-to-MAC address table on a switch has the same entries as the ARP table on the switch."
-        ],
-        "correctAnswer": "B",
-        "explanation": "Bảng ARP thường chứa các mục nhập động (dynamic entries) được học tự động và sẽ hết hạn sau một khoảng thời gian. Tuy nhiên, một quản trị viên có thể <b>nhập một mục nhập tĩnh (static entry) thủ công vào bảng ARP</b>. Các mục nhập tĩnh này không có thời gian chờ và sẽ tồn tại trong bộ nhớ cache cho đến khi hệ thống được khởi động lại hoặc mục nhập bị xóa thủ công, do đó chúng tồn tại lâu hơn nhiều so với các mục nhập động.",
-        "difficulty": "medium",
-        "topic": "ARP",
-        "hints": [
-          "Câu hỏi đang hỏi về cách làm cho một ánh xạ tồn tại 'lâu hơn' so với bình thường.",
-          "So sánh giữa việc học tự động (có thời gian chờ) và cấu hình thủ công (không có thời gian chờ)."
-        ]
-      },
-      {
-        "id": 20,
-        "question": "Which two types of IPv6 messages are used in place of ARP for address resolution? (Choose 2)",
-        "image": null,
-        "options": [
-          "A. anycast",
-          "B. broadcast",
-          "C. echo reply",
-          "D. echo request",
-          "E. neighbor solicitation",
-          "F. neighbor advertisement"
-        ],
-        "correctAnswer": "E, F",
-        "explanation": "IPv6 không sử dụng ARP. Thay vào đó, nó sử dụng <b>Neighbor Discovery Protocol (NDP)</b>, là một phần của ICMPv6, để thực hiện phân giải địa chỉ. Hai loại thông điệp chính được sử dụng là:<br /><br />- <b>Neighbor Solicitation (NS - Yêu cầu hàng xóm):</b> Tương tự như một ARP Request. Một host gửi thông điệp NS để hỏi 'Ai có địa chỉ IP này? Hãy cho tôi biết địa chỉ MAC của bạn.'<br />- <b>Neighbor Advertisement (NA - Quảng bá hàng xóm):</b> Tương tự như một ARP Reply. Host có địa chỉ IP được hỏi sẽ trả lời bằng một thông điệp NA, chứa địa chỉ MAC của nó.",
-        "difficulty": "medium",
-        "topic": "IPv6 / NDP",
-        "hints": [
-          "IPv6 thay thế chức năng của ARP bằng một giao thức mới.",
-          "Hãy nghĩ về một quy trình hỏi và trả lời để tìm địa chỉ vật lý từ một địa chỉ logic."
-        ]
-      },
-      {
-        "id": 21,
-        "question": "What is the aim of an ARP spoofing attack?",
-        "image": null,
-        "options": [
-          "A. to flood the network with ARP reply broadcasts",
-          "B. to fill switch MAC address tables with bogus addresses",
-          "C. to associate IP addresses to the wrong MAC address",
-          "D. to overwhelm network hosts with ARP requests"
-        ],
-        "correctAnswer": "C",
-        "explanation": "Mục tiêu chính của một cuộc tấn công giả mạo ARP (ARP spoofing), còn được gọi là ARP poisoning, là <b>liên kết địa chỉ IP của một thiết bị hợp lệ (như default gateway) với địa chỉ MAC sai (cụ thể là địa chỉ MAC của kẻ tấn công)</b> trong bảng ARP của các nạn nhân. Điều này khiến các nạn nhân gửi lưu lượng mạng của họ đến kẻ tấn công thay vì đích thực sự, cho phép kẻ tấn công nghe lén hoặc thay đổi dữ liệu (tấn công Man-in-the-Middle).",
-        "difficulty": "medium",
-        "topic": "Security",
-        "hints": [
-          "Cuộc tấn công này lạm dụng cách hoạt động của giao thức ARP.",
-          "Kẻ tấn công muốn xen vào giữa cuộc trò chuyện của hai thiết bị khác."
-        ]
-      },
-      {
-        "id": 22,
-        "question": "Which of the following is the name for all computers connected to a network that participate in sending and receiving data directly in network communication?",
-        "image": null,
-        "options": [
-          "A. Servers",
-          "B. Intermediary devices",
-          "C. Hosts",
-          "D. Media"
-        ],
-        "correctAnswer": "C",
-        "explanation": "Thuật ngữ <b>Host (hoặc end device - thiết bị đầu cuối)</b> được dùng để chỉ tất cả các máy tính hoặc thiết bị (như PC, smartphone, máy in mạng) được kết nối vào mạng và tham gia trực tiếp vào việc gửi và nhận dữ liệu. Máy chủ (Server) là một loại host, nhưng không phải tất cả host đều là máy chủ.<br /><br />- <b>Intermediary devices (Thiết bị trung gian):</b> như router, switch, dùng để kết nối các host và chuyển tiếp dữ liệu.<br />- <b>Media (Phương tiện truyền):</b> như cáp đồng, cáp quang, sóng không dây.",
-        "difficulty": "easy",
-        "topic": "Networking Fundamentals",
-        "hints": [
-          "Đây là thuật ngữ chung cho bất kỳ thiết bị nào là điểm bắt đầu hoặc điểm kết thúc của một luồng dữ liệu.",
-          "Cả máy khách (client) và máy chủ (server) đều là ví dụ của thuật ngữ này."
-        ]
-      },
-      {
-        "id": 23,
-        "question": "What type of network traffic requires QoS?",
-        "image": null,
-        "options": [
-          "A. email",
-          "B. on-line purchasing",
-          "C. video conferencing",
-          "D. wiki"
-        ],
-        "correctAnswer": "C",
-        "explanation": "<b>Video conferencing (Hội nghị truyền hình)</b> yêu cầu Chất lượng dịch vụ (QoS - Quality of Service) vì nó là lưu lượng thời gian thực, rất nhạy cảm với độ trễ (delay), jitter (biến thiên độ trễ) và mất gói tin. QoS đảm bảo rằng các gói tin video và âm thanh được ưu tiên xử lý và chuyển tiếp qua mạng để duy trì chất lượng cuộc gọi.<br /><br />Các loại lưu lượng khác như email, web (wiki, mua sắm trực tuyến) không phải là thời gian thực và có thể chịu được độ trễ cao hơn mà không ảnh hưởng nhiều đến trải nghiệm người dùng.",
-        "difficulty": "easy",
-        "topic": "QoS",
-        "hints": [
-          "Hãy xem xét ứng dụng nào sẽ trở nên vô dụng nếu dữ liệu bị trễ hoặc đến không theo thứ tự.",
-          "QoS ưu tiên các loại lưu lượng nhạy cảm với thời gian."
-        ]
-      },
-      {
-        "id": 24,
-        "question": "An employee at a branch office is creating a quote for a customer. In order to do this, the employee needs to access confidential pricing information from internal servers at the Head Office. What type of network would the employee access?",
-        "image": null,
-        "options": [
-          "A. an intranet",
-          "B. the Internet",
-          "C. an extranet",
-          "D. a local area network"
-        ],
-        "correctAnswer": "A",
-        "explanation": "<b>Intranet</b> là một mạng máy tính riêng tư, chỉ dành cho nhân viên trong một tổ chức truy cập. Vì nhân viên cần truy cập thông tin định giá bí mật trên các máy chủ nội bộ, họ đang sử dụng mạng intranet của công ty.<br /><br />- <b>Internet:</b> Mạng công cộng toàn cầu.<br />- <b>Extranet:</b> Một phần của intranet được mở rộng cho các đối tác bên ngoài (như nhà cung cấp, khách hàng) truy cập có kiểm soát.<br />- <b>Local area network (LAN):</b> Mạng cục bộ tại văn phòng chi nhánh, nhưng tài nguyên lại ở trụ sở chính, nên intranet là thuật ngữ mô tả toàn bộ mạng riêng của công ty.",
-        "difficulty": "easy",
-        "topic": "Network Types",
-        "hints": [
-          "Từ khóa là 'internal servers' (máy chủ nội bộ) và 'confidential' (bí mật).",
-          "Mạng này chỉ dành cho người bên trong tổ chức sử dụng."
-        ]
-      },
-      {
-        "id": 25,
-        "question": "Where are IPv4 address to Layer 2 Ethernet address mappings maintained on a host computer?",
-        "image": null,
-        "options": [
-          "A. neighbor table",
-          "B. ARP cache",
-          "C. routing table",
-          "D. MAC address table"
-        ],
-        "correctAnswer": "B",
-        "explanation": "Các ánh xạ giữa địa chỉ IPv4 (Layer 3) và địa chỉ Ethernet (Layer 2, hay địa chỉ MAC) được duy trì trong <b>bộ đệm ARP (ARP cache)</b>, đôi khi còn được gọi là bảng ARP (ARP table), trên một máy tính chủ.<br /><br />- <b>Neighbor table:</b> Là khái niệm tương đương với ARP cache nhưng dành cho IPv6.<br />- <b>Routing table (Bảng định tuyến):</b> Lưu trữ các đường đi đến các mạng khác.<br />- <b>MAC address table (Bảng địa chỉ MAC):</b> Được sử dụng bởi các thiết bị switch để ánh xạ cổng switch tới địa chỉ MAC của các thiết bị kết nối.",
-        "difficulty": "easy",
-        "topic": "ARP",
-        "hints": [
-          "Giao thức nào chịu trách nhiệm cho việc ánh xạ này? Tên của bộ đệm thường trùng với tên giao thức.",
-          "Câu hỏi này đặc biệt đề cập đến IPv4."
-        ]
-      },
-      {
-        "id": 26,
-        "question": "What are two actions performed by a Cisco switch? (Choose two.)",
-        "image": null,
-        "options": [
-          "A. building a routing table that is based on the first IP address in the frame header",
-          "B. using the source MAC addresses of frames to build and maintain a MAC address table",
-          "C. forwarding frames with unknown destination IP addresses to the default gateway",
-          "D. utilizing the MAC address table to forward frames via the destination MAC address",
-          "E. examining the destination MAC address to add new entries to the MAC address table"
-        ],
-        "correctAnswer": "B, D",
-        "explanation": "Một switch Layer 2 thực hiện hai chức năng chính:<br />- <b>B. Xây dựng bảng địa chỉ MAC:</b> Switch học địa chỉ MAC bằng cách kiểm tra trường <b>địa chỉ MAC nguồn</b> của các frame đi vào mỗi cổng và ghi lại ánh xạ giữa MAC và cổng đó.<br />- <b>D. Chuyển tiếp frame:</b> Khi một frame đến, switch tra cứu <b>địa chỉ MAC đích</b> trong bảng MAC của nó để xác định cổng cần chuyển frame ra. Nếu không tìm thấy, nó sẽ flood frame ra tất cả các cổng khác.",
-        "difficulty": "medium",
-        "topic": "Switching",
-        "hints": [
-          "Switch học từ đâu (source) và chuyển đến đâu (destination).",
-          "Switch hoạt động ở Layer 2 và chỉ quan tâm đến địa chỉ MAC, không phải IP."
-        ]
-      },
-      {
-        "id": 27,
-        "question": "A Layer 2 switch is used to switch incoming frames from a 1000BASE-T port to a port connected to a 100Base-T network. Which method of memory buffering would work best for this task?",
-        "image": null,
-        "options": [
-          "A. port-based buffering",
-          "B. level 1 cache buffering",
-          "C. shared memory buffering",
-          "D. fixed configuration buffering"
-        ],
-        "correctAnswer": "C",
-        "explanation": "Khi chuyển mạch giữa các cổng có tốc độ khác nhau (1000 Mbps xuống 100 Mbps), <b>bộ đệm bộ nhớ chia sẻ (shared memory buffering)</b> là hiệu quả nhất. Nó cho phép switch lưu trữ các frame từ cổng tốc độ cao vào một bộ đệm chung lớn và sau đó gửi chúng đi qua cổng tốc độ thấp hơn khi có thể. Điều này ngăn ngừa mất gói tin do tắc nghẽn tạm thời trên cổng chậm.",
-        "difficulty": "hard",
-        "topic": "Switching",
-        "hints": [
-          "Đây là trường hợp chuyển mạch không đối xứng (asymmetric switching).",
-          "Phương pháp nào linh hoạt nhất để xử lý tình trạng một cổng chậm hơn nhiều so với cổng khác?"
-        ]
-      },
-      {
-        "id": 28,
-        "question": "Refer to the exhibit. What is the destination MAC address of the Ethernet frame as it leaves the web server if the final destination is PC1?",
-        "image": "28.jpg",
-        "options": [
-          "A. 00-60-2F-3A-07-AA",
-          "B. 00-60-2F-3A-07-BB",
-          "C. 00-60-2F-3A-07-CC",
-          "D. 00-60-2F-3A-07-DD"
-        ],
-        "correctAnswer": "B",
-        "explanation": "Khi Web Server (192.168.5.10) muốn gửi dữ liệu đến PC1 (192.168.1.50), nó nhận ra PC1 nằm trên một mạng khác. Do đó, nó phải gửi frame đến default gateway của mình, là cổng Fa0/0 của router. Địa chỉ MAC đích của frame sẽ là địa chỉ MAC của cổng gateway đó.<br /><br />- <b>IP Đích cuối cùng:</b> 192.168.1.50 (PC1)<br />- <b>MAC Đích của chặng này (hop):</b> 00-60-2F-3A-07-BB (Router Fa0/0)",
-        "difficulty": "medium",
-        "topic": "IP Routing / ARP",
-        "hints": [
-          "Địa chỉ MAC chỉ có ý nghĩa trong mạng cục bộ (local network).",
-          "Để gửi dữ liệu ra ngoài mạng của mình, một host phải gửi nó đến đâu?"
-        ]
-      },
-      {
-        "id": 29,
-        "question": "A network administrator is testing network connectivity by issuing the ping command on a router. Which symbol will be displayed to indicate that a time expired during the wait for an ICMP echo reply message?",
-        "image": null,
-        "options": [
-          "A. $",
-          "B. !",
-          "C. .",
-          "D. U"
-        ],
-        "correctAnswer": "C",
-        "explanation": "Trong Cisco IOS, kết quả của lệnh `ping` được biểu thị bằng các ký hiệu:<br />- <b>! (dấu chấm than):</b> Nhận được phản hồi thành công (ICMP echo reply).<br />- <b>. (dấu chấm):</b> Hết thời gian chờ phản hồi (request timed out).<br />- <b>U (chữ U):</b> Đích không thể đến được (destination unreachable).",
-        "difficulty": "easy",
-        "topic": "Troubleshooting",
-        "hints": [
-          "Mỗi ký hiệu trong đầu ra của lệnh ping trên thiết bị Cisco đều có một ý nghĩa cụ thể.",
-          "Hãy nghĩ về ký hiệu nào thể hiện sự chờ đợi không thành công."
-        ]
-      },
-      {
-        "id": 30,
-        "question": "Which protocol is used by the traceroute command to send and receive echo-requests and echo-replies?",
-        "image": null,
-        "options": [
-          "A. SNMP",
-          "B. ICMP",
-          "C. Telnet",
-          "D. TCP"
-        ],
-        "correctAnswer": "B",
-        "explanation": "Lệnh `traceroute` (hoặc `tracert` trên Windows) hoạt động bằng cách gửi các gói tin với giá trị Time-To-Live (TTL) tăng dần. Khi mỗi router trên đường đi nhận được một gói tin và giảm TTL xuống 0, nó sẽ gửi lại một thông báo lỗi <b>ICMP 'Time Exceeded'</b>. Bằng cách này, `traceroute` xác định được từng chặng (hop) trên đường đi đến đích. Nhiều phiên bản cũng sử dụng ICMP echo-request.",
-        "difficulty": "easy",
-        "topic": "Troubleshooting / ICMP",
-        "hints": [
-          "Lệnh này liên quan đến việc kiểm tra kết nối và đường đi, giống như lệnh `ping`.",
-          "Hãy nghĩ đến giao thức cốt lõi cho các thông điệp điều khiển và lỗi trên Internet."
-        ]
-      },
-      {
-        "id": 31,
-        "question": "A technician uses the ping 127.0.0.1 command. What is the technician testing?",
-        "image": null,
-        "options": [
-          "A. the TCP/IP stack on a network host",
-          "B. connectivity between two adjacent Cisco devices",
-          "C. connectivity between a PC and the default gateway",
-          "D. connectivity between two PCs on the same network",
-          "E. physical connectivity of a particular PC and the network"
-        ],
-        "correctAnswer": "A",
-        "explanation": "Địa chỉ <b>127.0.0.1</b> là địa chỉ loopback (vòng lặp). Việc ping địa chỉ này sẽ kiểm tra xem <b>chồng giao thức TCP/IP trên chính máy chủ đó</b> có được cài đặt và hoạt động chính xác hay không. Lệnh này không gửi bất kỳ lưu lượng nào ra khỏi card mạng vật lý.",
-        "difficulty": "easy",
-        "topic": "Troubleshooting",
-        "hints": [
-          "Địa chỉ IP này có một tên đặc biệt: 'localhost'.",
-          "Thao tác này kiểm tra phần mềm mạng của máy tính mà không cần kết nối mạng bên ngoài."
-        ]
-      },
-      {
-        "id": 32,
-        "question": "Which type of UTP cable is used to connect a PC to a switch port?",
-        "image": null,
-        "options": [
-          "A. Console",
-          "B. Rollover",
-          "C. Crossover",
-          "D. Straight-through"
-        ],
-        "correctAnswer": "D",
-        "explanation": "Để kết nối các thiết bị khác loại, chẳng hạn như PC (DTE) và switch (DCE), chúng ta sử dụng <b>cáp thẳng (straight-through)</b>.<br /><br />- <b>Cáp chéo (Crossover):</b> Dùng để kết nối các thiết bị cùng loại (ví dụ: PC-PC, switch-switch).<br />- <b>Cáp console/rollover:</b> Dùng cho việc quản lý thiết bị qua cổng console.",
-        "difficulty": "easy",
-        "topic": "Cabling",
-        "hints": [
-          "Có một quy tắc chung về việc kết nối các thiết bị 'giống nhau' và 'khác nhau'.",
-          "Hãy xem xét PC và Switch là hai loại thiết bị khác nhau."
-        ]
-      },
-      {
-        "id": 33,
-        "question": "A network administrator is measuring the transfer of bits across the company backbone for a mission-critical financial application. The administrator notices that the network throughput appears lower than the bandwidth expected. Which three factors could influence the differences in throughput? (Choose three.)",
-        "image": null,
-        "options": [
-          "A. the amount of traffic that is currently crossing the network",
-          "B. the sophistication of the encapsulation method applied to the data",
-          "C. the type of traffic that is crossing the network",
-          "D. the latency that is created by the number of network devices that the data is crossing",
-          "E. the bandwidth of the WAN connection to the Internet",
-          "F. the reliability of the gigabit Ethernet infrastructure of the backbone"
-        ],
-        "correctAnswer": "A, C, D",
-        "explanation": "Thông lượng (Throughput - tốc độ thực tế) luôn thấp hơn Băng thông (Bandwidth - tốc độ lý thuyết). Các yếu tố ảnh hưởng đến thông lượng bao gồm:<br />- <b>A. Lượng lưu lượng hiện có (tắc nghẽn):</b> Càng nhiều người dùng, thông lượng cho mỗi người càng giảm.<br />- <b>C. Loại lưu lượng:</b> Lưu lượng có overhead cao (ví dụ: video streaming) sẽ có goodput thấp hơn.<br />- <b>D. Độ trễ (Latency):</b> Thời gian để dữ liệu đi qua các thiết bị mạng. Càng nhiều thiết bị, độ trễ càng cao và thông lượng càng giảm.",
-        "difficulty": "hard",
-        "topic": "Network Performance",
-        "hints": [
-          "Hãy phân biệt giữa tốc độ lý thuyết (bandwidth) và tốc độ thực tế (throughput).",
-          "Những yếu tố nào trong thế giới thực làm chậm quá trình truyền dữ liệu?"
-        ]
-      },
-      {
-        "id": 34,
-        "question": "Which of these is the name for the capacity of a medium to carry data?",
-        "image": null,
-        "options": [
-          "A. Bandwidth",
-          "B. Throughput",
-          "C. Goodput"
-        ],
-        "correctAnswer": "A",
-        "explanation": "<b>Bandwidth (Băng thông)</b> là thuật ngữ chỉ dung lượng tối đa, hay tốc độ truyền dữ liệu lý thuyết, của một phương tiện truyền dẫn. Nó được đo bằng bit trên giây (bps).<br /><br />- <b>Throughput (Thông lượng):</b> Là tốc độ truyền dữ liệu thực tế đo được.<br />- <b>Goodput:</b> Là thông lượng trừ đi phần dữ liệu overhead của giao thức.",
-        "difficulty": "easy",
-        "topic": "Network Performance",
-        "hints": [
-          "Đây là con số lý thuyết, không phải con số đo lường thực tế.",
-          "Hãy nghĩ về nó như tốc độ tối đa của một con đường cao tốc."
-        ]
-      },
-      {
-        "id": 35,
-        "question": "A technician is configuring a router to allow for all forms of management access. As part of each different type of access, the technician is trying to type the command login. Which configuration mode should be entered to do this task?",
-        "image": null,
-        "options": [
-          "A. user executive mode",
-          "B. global configuration mode",
-          "C. any line configuration mode",
-          "D. privileged EXEC mode"
-        ],
-        "correctAnswer": "C",
-        "explanation": "Lệnh `login` được sử dụng để yêu cầu xác thực mật khẩu khi truy cập vào một đường (line) quản lý. Để cấu hình một đường cụ thể, kỹ thuật viên phải vào chế độ cấu hình đường đó, ví dụ `line console 0` hoặc `line vty 0 4`. Đây được gọi chung là <b>chế độ cấu hình đường (line configuration mode)</b>.",
-        "difficulty": "medium",
-        "topic": "Cisco IOS Configuration",
-        "hints": [
-          "Lệnh này áp dụng cho các cổng truy cập như console hoặc VTY (telnet/ssh).",
-          "Để cấu hình một thứ gì đó, bạn phải vào chế độ cấu hình của chính thứ đó."
-        ]
-      },
-      {
-        "id": 36,
-        "question": "The global configuration command ip default-gateway 172.16.100.1 is applied to a switch. What is the effect of this command?",
-        "image": null,
-        "options": [
-          "A. The switch will have a management interface with the address 172.16.100.1.",
-          "B. The switch can be remotely managed from a host on another network.",
-          "C. The switch can communicate with other hosts on the 172.16.100.0 network.",
-          "D. The switch is limited to sending and receiving frames to and from the gateway 172.16.100.1."
-        ],
-        "correctAnswer": "B",
-        "explanation": "Lệnh `ip default-gateway [địa chỉ IP]` trên switch Layer 2 được sử dụng để chỉ định địa chỉ gateway cho chính switch. Điều này cần thiết để lưu lượng quản lý (management traffic) bắt nguồn từ switch (ví dụ: ping, Telnet, SSH) có thể đi đến các mạng khác. Do đó, nó cho phép <b>switch được quản lý từ xa từ một host ở mạng khác</b>.",
-        "difficulty": "medium",
-        "topic": "Switch Configuration",
-        "hints": [
-          "Lệnh này không ảnh hưởng đến việc chuyển tiếp frame của người dùng.",
-          "Nó chỉ dành cho lưu lượng bắt nguồn từ chính switch, ví dụ như khi bạn muốn SSH vào switch từ xa."
-        ]
-      },
-      {
-        "id": 37,
-        "question": "Which three commands are used to set up secure access to a router through a connection to the console interface? (Choose three.)",
-        "image": null,
-        "options": [
-          "A. interface fastethernet 0/0",
-          "B. line vty 0 4",
-          "C. line console 0",
-          "D. enable secret cisco",
-          "E. login",
-          "F. password cisco"
-        ],
-        "correctAnswer": "C, E, F",
-        "explanation": "Để thiết lập mật khẩu cho cổng console, bạn cần thực hiện ba bước theo thứ tự:<br />1. <b>`line console 0` (C):</b> Vào chế độ cấu hình của cổng console.<br />2. <b>`password cisco` (F):</b> Đặt mật khẩu.<br />3. <b>`login` (E):</b> Yêu cầu hệ thống kiểm tra mật khẩu này khi có kết nối.",
-        "difficulty": "medium",
-        "topic": "Cisco IOS Configuration",
-        "hints": [
-          "Bạn cần vào đúng 'đường' (line) để cấu hình nó.",
-          "Đặt mật khẩu không thôi là chưa đủ, bạn phải ra lệnh cho thiết bị sử dụng nó."
-        ]
-      },
-      {
-        "id": 38,
-        "question": "Which two functions are primary functions of a router? (Choose two.)",
-        "image": null,
-        "options": [
-          "A. packet forwarding",
-          "B. Microsegmentation",
-          "C. domain name resolution",
-          "D. path selection",
-          "E. flow control"
-        ],
-        "correctAnswer": "A, D",
-        "explanation": "Hai chức năng chính và cơ bản nhất của một router là:<br />- <b>D. Path selection (Lựa chọn đường đi):</b> Router sử dụng bảng định tuyến (routing table) để tìm ra đường đi tốt nhất đến một mạng đích.<br />- <b>A. Packet forwarding (Chuyển tiếp gói tin):</b> Sau khi đã chọn được đường đi, router sẽ chuyển gói tin từ cổng vào đến cổng ra tương ứng để gói tin tiếp tục hành trình.",
-        "difficulty": "easy",
-        "topic": "Routing",
-        "hints": [
-          "Tên của thiết bị ('router') đã gợi ý chức năng chính của nó.",
-          "Nó phải quyết định đi đường nào, sau đó thực hiện việc đi đường đó."
-        ]
-      },
-      {
-        "id": 39,
-        "question": "Which type of IPv4 address is used to send a packet to all hosts in a specific network?",
-        "image": null,
-        "options": [
-          "A. Unicast",
-          "B. Multicast",
-          "C. Broadcast",
-          "D. Anycast"
-        ],
-        "correctAnswer": "C",
-        "explanation": "Địa chỉ <b>Broadcast</b> được sử dụng để gửi một gói tin đến tất cả các host trong cùng một miền quảng bá (broadcast domain) hoặc mạng con. Trong IPv4, đây là địa chỉ IP cuối cùng của một dải mạng (ví dụ: 192.168.1.255 cho mạng 192.168.1.0/24).",
-        "difficulty": "easy",
-        "topic": "IPv4 Addressing",
-        "hints": [
-          "Hãy nghĩ về việc 'phát thanh' một thông báo cho tất cả mọi người cùng nghe.",
-          "Unicast là 1-tới-1, Multicast là 1-tới-nhóm."
-        ]
-      },
-      {
-        "id": 40,
-        "question": "Which command can be used on a Windows machine to display the current IP address and subnet mask?",
-        "image": null,
-        "options": [
-          "A. ping",
-          "B. netstat",
-          "C. ipconfig",
-          "D. tracert"
-        ],
-        "correctAnswer": "C",
-        "explanation": "Trên hệ điều hành Windows, lệnh <b>`ipconfig`</b> được sử dụng trong Command Prompt để hiển thị thông tin cấu hình IP hiện tại của máy tính, bao gồm địa chỉ IP, subnet mask và default gateway.",
-        "difficulty": "easy",
-        "topic": "Troubleshooting",
-        "hints": [
-          "Lệnh này là viết tắt của 'IP Configuration'.",
-          "Trên Linux hoặc macOS, lệnh tương đương là `ifconfig` hoặc `ip addr`."
-        ]
-      },
-      {
-        "id": 41,
-        "question": "What is the loopback address used for in IPv4 networking?",
-        "image": null,
-        "options": [
-          "A. To route packets to a different network",
-          "B. To test if the TCP/IP stack is functioning correctly",
-          "C. To identify the default gateway",
-          "D. To assign a dynamic IP address"
-        ],
-        "correctAnswer": "B",
-        "explanation": "Địa chỉ loopback (dải 127.0.0.0/8, phổ biến nhất là 127.0.0.1) được sử dụng để <b>kiểm tra xem chồng giao thức TCP/IP trên máy chủ cục bộ có được cài đặt và hoạt động chính xác hay không</b>. Gói tin gửi đến địa chỉ này sẽ được xử lý hoàn toàn bên trong hệ điều hành mà không đi ra card mạng vật lý.",
-        "difficulty": "easy",
-        "topic": "IPv4 Addressing",
-        "hints": [
-          "Đây là một công cụ chẩn đoán phần mềm mạng trên chính máy tính đó.",
-          "Nó còn được gọi là 'localhost'."
-        ]
-      },
-      {
-        "id": 42,
-        "question": "How many usable IP addresses are available on the 192.168.1.0/27 network?",
-        "image": null,
-        "options": [
-          "A. 254",
-          "B. 30",
-          "C. 256",
-          "D. 16",
-          "E. 62",
-          "F. 32"
-        ],
-        "correctAnswer": "B",
-        "explanation": "<b>Cách tính:</b><br />1. Một địa chỉ IP có 32 bit. Prefix `/27` có nghĩa là 27 bit dành cho phần mạng.<br />2. Số bit còn lại cho phần host là: \\( 32 - 27 = 5 \\) bit.<br />3. Tổng số địa chỉ trong mạng con này là: \\( 2^5 = 32 \\).<br />4. Trong một mạng, luôn có 2 địa chỉ không thể gán cho host: địa chỉ mạng (đầu tiên) và địa chỉ broadcast (cuối cùng).<br />5. Số địa chỉ khả dụng (usable) là: \\( 32 - 2 = 30 \\).",
-        "difficulty": "medium",
-        "topic": "IP Subnetting",
-        "hints": [
-          "Công thức tính số host khả dụng là \\( 2^h - 2 \\), trong đó \\( h \\) là số bit của phần host.",
-          "Số bit host = 32 - độ dài prefix."
-        ]
-      },
-      {
-        "id": 43,
-        "question": "Which access method would be the most appropriate in-band access to the IOS over a network connection?",
-        "image": null,
-        "options": [
-          "A. Console",
-          "B. Telnet/SSH",
-          "C. Aux"
-        ],
-        "correctAnswer": "B",
-        "explanation": "Truy cập <b>in-band</b> có nghĩa là quản lý thiết bị thông qua mạng, sử dụng cùng băng thông với lưu lượng dữ liệu thông thường. <b>Telnet và SSH</b> là hai giao thức chính cho việc truy cập in-band.<br /><br />Truy cập qua cổng Console và Aux được gọi là truy cập <b>out-of-band</b>.",
-        "difficulty": "easy",
-        "topic": "Device Management",
-        "hints": [
-          "'In-band' có nghĩa là 'qua mạng'.",
-          "Console là kết nối trực tiếp, không qua mạng."
-        ]
-      },
-      {
-        "id": 44,
-        "question": "Which command is used to secure access to privileged EXEC mode on a switch?",
-        "image": null,
-        "options": [
-          "A. enable class",
-          "B. secret class",
-          "C. enable secret cisco@12345",
-          "D. service password-encryption"
-        ],
-        "correctAnswer": "C",
-        "explanation": "Để bảo vệ chế độ privileged EXEC (chế độ cho phép cấu hình), lệnh được khuyến nghị sử dụng là `enable secret`. Lệnh này tạo ra một mật khẩu được mã hóa mạnh bằng thuật toán MD5. Lựa chọn <b>`enable secret cisco@12345`</b> là một ví dụ cụ thể và chính xác của việc thực thi lệnh này.<br /><br />- `service password-encryption` chỉ mã hóa yếu các mật khẩu dạng văn bản thuần (plaintext) khác, không phải là lệnh để đặt mật khẩu cho privileged mode.",
-        "difficulty": "medium",
-        "topic": "Cisco IOS Security",
-        "hints": [
-          "Mật khẩu này được yêu cầu khi bạn gõ lệnh `enable`.",
-          "Hãy tìm lệnh trực tiếp đặt mật khẩu cho chế độ này một cách an toàn nhất."
-        ]
-      },
-      {
-        "id": 45,
-        "question": "Passwords can be used to restrict access to all or parts of the Cisco IOS. Select the modes and interfaces that can be protected with passwords. (Choose three.)",
-        "image": null,
-        "options": [
-          "A. VTY interface",
-          "B. console interface",
-          "C. Ethernet interface",
-          "D. boot IOS mode",
-          "E. privileged EXEC mode",
-          "F. router configuration mode"
-        ],
-        "correctAnswer": "A, B, E",
-        "explanation": "Trong Cisco IOS, mật khẩu có thể được đặt để bảo vệ các điểm truy cập và các cấp độ đặc quyền chính sau:<br />- <b>A. VTY interface:</b> Các đường truy cập ảo cho Telnet/SSH.<br />- <b>B. Console interface:</b> Cổng giao tiếp vật lý để quản lý.<br />- <b>E. Privileged EXEC mode:</b> Cấp độ đặc quyền cao nhất (được bảo vệ bằng lệnh `enable secret` hoặc `enable password`).",
-        "difficulty": "medium",
-        "topic": "Cisco IOS Security",
-        "hints": [
-          "Hãy nghĩ về những 'cánh cửa' khác nhau để vào một thiết bị mạng và các 'cấp độ' quyền lực bên trong nó.",
-          "Bạn có thể bảo vệ lối vào vật lý, lối vào từ xa, và quyền truy cập cao nhất."
-        ]
-      },
-      {
-        "id": 46,
-        "question": "Why would a Layer 2 switch need an IP address?",
-        "image": null,
-        "options": [
-          "A. to enable the switch to send broadcast frames to attached PCs",
-          "B. to enable the switch to function as a default gateway",
-          "C. to enable the switch to be managed remotely",
-          "D. to enable the switch to receive frames from attached PCs"
-        ],
-        "correctAnswer": "C",
-        "explanation": "Chức năng chính của switch Layer 2 là chuyển tiếp các frame dựa trên địa chỉ MAC và nó không cần địa chỉ IP để làm việc đó. Tuy nhiên, để <b>cho phép switch được quản lý từ xa</b> thông qua mạng (ví dụ: sử dụng Telnet, SSH, hoặc SNMP), nó cần có một địa chỉ IP trên một giao diện quản lý ảo (SVI - Switched Virtual Interface).",
-        "difficulty": "easy",
-        "topic": "Switch Configuration",
-        "hints": [
-          "Địa chỉ IP này không dùng cho việc chuyển tiếp dữ liệu của người dùng.",
-          "Hãy nghĩ về cách một quản trị viên có thể truy cập vào switch mà không cần dùng cáp console."
-        ]
-      },
-      {
-        "id": 47,
-        "question": "What will happen if the default gateway address is incorrectly configured on a host?",
-        "image": null,
-        "options": [
-          "A. The host cannot communicate with other hosts in the local network.",
-          "B. The switch will not forward packets initiated by the host.",
-          "C. The host will have to use ARP to determine the correct address of the default gateway.",
-          "D. The host cannot communicate with hosts in other networks.",
-          "E. A ping from the host to 127.0.0.1 would not be successful."
-        ],
-        "correctAnswer": "D",
-        "explanation": "Default gateway là địa chỉ của router mà host sử dụng để gửi các gói tin đến các mạng khác. Nếu địa chỉ này bị cấu hình sai, host vẫn có thể giao tiếp bình thường với các thiết bị trong cùng mạng cục bộ (local network), nhưng <b>sẽ không thể giao tiếp với các host ở các mạng khác</b> vì nó không biết gửi gói tin đi đâu.",
-        "difficulty": "easy",
-        "topic": "IP Configuration",
-        "hints": [
-          "Default gateway là 'cửa ngõ' để đi ra ngoài mạng cục bộ.",
-          "Giao tiếp trong mạng cục bộ không cần đến gateway."
-        ]
-      },
-      {
-        "id": 48,
-        "question": "Why is NAT not needed in IPv6?",
-        "image": null,
-        "options": [
-          "A. Because IPv6 has integrated security, there is no need to hide the IPv6 addresses of internal networks.",
-          "B. Any bost or user can get a public IPv6 network address because the number of available IPv6 addresses is extremely large.",
-          "C. The problems that are induced by NAT applications are solved because the IPv6 header improves packet handling by intermediate routers.",
-          "D. The end-to-end connectivity problems that are caused by NAT are solved because the number of routes increases with the number of nodes that are connected to the Internet."
-        ],
-        "correctAnswer": "B",
-        "explanation": "Lý do chính mà NAT được tạo ra cho IPv4 là để giải quyết tình trạng cạn kiệt địa chỉ IP công cộng. Trong IPv6, không gian địa chỉ là cực kỳ lớn (\\(2^{128}\\)), đủ để <b>mỗi host hoặc người dùng có thể nhận được một địa chỉ IPv6 công cộng duy nhất</b>. Điều này loại bỏ nhu cầu sử dụng NAT để ánh xạ nhiều địa chỉ riêng thành một địa chỉ công cộng.",
-        "difficulty": "medium",
-        "topic": "IPv6 / NAT",
-        "hints": [
-          "Hãy nhớ lại lý do chính cho sự ra đời của NAT.",
-          "So sánh số lượng địa chỉ có sẵn giữa IPv4 và IPv6."
-        ]
-      },
-      {
-        "id": 49,
-        "question": "What are the two most commonly referenced fields in an IPv4 packet header that indicate where the packet is coming from and where it is going? (Choose two.)",
-        "image": null,
-        "options": [
-          "A. Destination IP address",
-          "B. Protocol",
-          "C. Time to live",
-          "D. Differentiated Service (DS)",
-          "E. Source IP address"
-        ],
-        "correctAnswer": "A, E",
-        "explanation": "Mục đích cơ bản nhất của một gói tin IP là để định tuyến dữ liệu từ một nguồn đến một đích. Do đó, hai trường quan trọng và được tham chiếu thường xuyên nhất trong header của gói tin IPv4 là <b>Source IP address (Địa chỉ IP nguồn)</b> và <b>Destination IP address (Địa chỉ IP đích)</b>. Các router sử dụng địa chỉ IP đích để đưa ra quyết định định tuyến.",
-        "difficulty": "easy",
-        "topic": "IPv4 Header",
-        "hints": [
-          "Hãy nghĩ về thông tin cơ bản nhất cần có trên một phong bì thư.",
-          "Thông tin nào giúp các router biết phải gửi gói tin đi đâu?"
-        ]
-      },
-      {
-        "id": 50,
-        "question": "What are two potential network problems that can result from ARP operation? (Choose two.)",
-        "image": null,
-        "options": [
-          "A. Manually configuring static ARP associations could facilitate ARP poisoning or MAC address spoofing.",
-          "B. On large networks with low bandwidth, multiple ARP broadcasts could cause data communication delays.",
-          "C. Network attackers could manipulate MAC address and IP address mappings in ARP messages with the intent of intercepting network traffic.",
-          "D. Large numbers of ARP request broadcasts could cause the host MAC address table to overflow and prevent the host from communicating on the network.",
-          "E. Multiple ARP replies result in the switch MAC address-table containing entries that match the MAC addresses of hosts that are connected to the relevant switch port."
-        ],
-        "correctAnswer": "B, C",
-        "explanation": "Hoạt động của ARP có thể dẫn đến hai vấn đề chính:<br />- <b>Vấn đề về hiệu năng (B):</b> Các yêu cầu ARP (ARP request) là các gói tin broadcast. Trên các mạng lớn có nhiều host, một số lượng lớn các broadcast này có thể tiêu tốn băng thông và gây ra độ trễ, đặc biệt là trên các đường truyền có băng thông thấp.<br />- <b>Vấn đề về bảo mật (C):</b> Giao thức ARP không có cơ chế xác thực. Kẻ tấn công có thể gửi các gói tin ARP giả mạo (ARP spoofing/poisoning) để đánh lừa các host khác, khiến chúng liên kết sai địa chỉ IP với địa chỉ MAC. Điều này cho phép kẻ tấn công thực hiện các cuộc tấn công xen giữa (Man-in-the-Middle).",
-        "difficulty": "medium",
-        "topic": "ARP / Security",
-        "hints": [
-          "Hãy xem xét các vấn đề về hiệu năng và bảo mật liên quan đến ARP.",
-          "ARP requests là broadcast, và bản chất của ARP dựa trên sự tin tưởng."
-        ]
-      }
-  
-    ]
+  "examId": "nwc-de1",
+  "title": "NWC204 - SU25 - RETAKE ",
+  "description": "Practice exam covering fundamental networking concepts including the OSI model, TCP/IP, and switching.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What are three responsibilities of the transport layer? (Choose three.)",
+      "image": null,
+      "options": [
+        "A. meeting the reliability requirements of applications, if any",
+        "B. multiplexing multiple communication streams from many users or applications on the same network",
+        "C. identifying the applications and services on the client and server that should handle transmitted data",
+        "D. directing packets towards the destination network",
+        "E. formatting data into a compatible form for receipt by the destination devices",
+        "F. conducting error detection of the contents in frames"
+      ],
+      "correctAnswer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "<b>Các trách nhiệm chính của tầng Giao vận (Transport Layer) bao gồm:</b><br />- <b>A. Đáp ứng yêu cầu về độ tin cậy:</b> Cung cấp các cơ chế truyền dữ liệu tin cậy (như TCP) hoặc không tin cậy (như UDP) tùy theo ứng dụng.<br />- <b>B. Ghép kênh (Multiplexing):</b> Cho phép nhiều ứng dụng trên cùng một máy chủ sử dụng mạng đồng thời bằng cách sử dụng các số hiệu cổng (port number).<br />- <b>C. Nhận dạng ứng dụng:</b> Sử dụng số hiệu cổng để xác định ứng dụng hoặc dịch vụ đích trên máy chủ nhận.<br /><br />Các lựa chọn khác:<br />- D (Định tuyến gói tin) là chức năng của tầng Mạng (Network Layer).<br />- E (Định dạng dữ liệu) là chức năng của tầng Trình diễn (Presentation Layer).<br />- F (Phát hiện lỗi trong frame) là chức năng của tầng Liên kết dữ liệu (Data Link Layer).",
+      "difficulty": "medium",
+      "topic": "OSI Model",
+      "hints": [
+        "Tầng giao vận tập trung vào giao tiếp từ tiến trình đến tiến trình (process-to-process).",
+        "Hãy nghĩ về cách nhiều ứng dụng (trình duyệt, email) trên máy tính của bạn có thể sử dụng mạng cùng một lúc.",
+        "TCP và UDP là hai giao thức chính của tầng này."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "To which TCP port group does the port 414 belong?",
+      "image": null,
+      "options": [
+        "A. Registered",
+        "B. well-known",
+        "C. private or dynamic",
+        "D. public"
+      ],
+      "correctAnswer": "B",
+      "explanation": "<b>Phân loại cổng TCP/UDP:</b><br />- <b>Well-known ports (Cổng nổi tiếng):</b> 0 - 1023. Đây là các cổng được gán cho các dịch vụ hệ thống phổ biến.<br />- <b>Registered ports (Cổng đã đăng ký):</b> 1024 - 49151.<br />- <b>Dynamic/Private ports (Cổng động hoặc riêng tư):</b> 49152 - 65535.<br /><br />Cổng 414 nằm trong dải 0-1023 nên nó thuộc nhóm <b>well-known</b>.",
+      "difficulty": "easy",
+      "topic": "TCP/IP Ports",
+      "hints": [
+        "Nhớ lại ba dải cổng chính được định nghĩa bởi IANA.",
+        "Dải cổng đầu tiên dành cho các dịch vụ hệ thống phổ biến nhất."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Which two fields are the same in a TCP and UDP header? (Choose two.)",
+      "image": null,
+      "options": [
+        "A. Control bits",
+        "B. Destination port number",
+        "C. Sequence number",
+        "D. Source port number",
+        "E. Well-known port number"
+      ],
+      "correctAnswer": [
+        "B",
+        "D"
+      ],
+      "explanation": "Cả TCP header và UDP header đều chứa hai trường chung là <b>Source Port Number (Cổng nguồn)</b> và <b>Destination Port Number (Cổng đích)</b>. Các trường này cần thiết để tầng Giao vận có thể xác định ứng dụng gửi và nhận dữ liệu.<br /><br />- Sequence number và Control bits là các trường đặc trưng của TCP để đảm bảo việc truyền dữ liệu tin cậy.",
+      "difficulty": "easy",
+      "topic": "TCP/UDP Headers",
+      "hints": [
+        "Cả hai giao thức đều cần biết ứng dụng nào đã gửi gói tin và ứng dụng nào sẽ nhận nó.",
+        "UDP là một giao thức rất đơn giản, chỉ chứa các trường thiết yếu nhất."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "What is the primary responsibility of the transport layer in the OSI model?",
+      "image": null,
+      "options": [
+        "A. Routing data packets between networks",
+        "B. Managing logical communications between applications on different hosts",
+        "C. Defining physical media and connections",
+        "D. Encrypting data before transmission"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Trách nhiệm chính của tầng Giao vận (Transport Layer) là <b>quản lý giao tiếp logic giữa các ứng dụng trên các máy chủ khác nhau (process-to-process communication)</b>.<br /><br />Các lựa chọn khác:<br />- A (Định tuyến) là của tầng Mạng (Network Layer).<br />- C (Định nghĩa phương tiện vật lý) là của tầng Vật lý (Physical Layer).<br />- D (Mã hóa dữ liệu) thường thuộc về tầng Trình diễn (Presentation Layer).",
+      "difficulty": "medium",
+      "topic": "OSI Model",
+      "hints": [
+        "Tầng này kết nối các ứng dụng, không phải các máy tính hay các mạng.",
+        "Hãy xem xét vai trò của TCP và UDP trong việc quản lý các phiên giao tiếp."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "What is the auto-MDIX feature on a switch?",
+      "image": null,
+      "options": [
+        "A. the automatic configuration of an interface for 10/100/1000 Mb/s operation",
+        "B. the automatic configuration of an interface for a straight-through or a crossover Ethernet cable connection",
+        "C. the automatic configuration of full-duplex operation over a single Ethernet copper or optical cable",
+        "D. the ability to turn a switch interface on or off accordingly if an active connection is detected"
+      ],
+      "correctAnswer": "B",
+      "explanation": "<b>Auto-MDIX (Automatic Medium-Dependent Interface Crossover)</b> là một tính năng trên các thiết bị mạng như switch cho phép nó tự động phát hiện loại cáp Ethernet (cáp thẳng - straight-through hay cáp chéo - crossover) được kết nối và tự động cấu hình cổng để giao tiếp phù hợp.<br /><br />Điều này giúp loại bỏ sự cần thiết phải sử dụng đúng loại cáp (thẳng hoặc chéo) cho các kết nối cụ thể, làm cho việc cài đặt mạng trở nên đơn giản hơn.",
+      "difficulty": "medium",
+      "topic": "Switching Concepts",
+      "hints": [
+        "Tính năng này liên quan đến việc xử lý các loại cáp vật lý.",
+        "Nó giúp đơn giản hóa việc kết nối các thiết bị mạng với nhau mà không cần lo lắng về việc sử dụng cáp thẳng hay cáp chéo."
+      ]
+    },
+    {
+      "id": 6,
+      "question": "The IEEE 802 LAN/MAN data link layer consists of which two sublayers? (Choose two.)",
+      "image": null,
+      "options": [
+        "A. Network Control Protocol",
+        "B. Logical Link Control",
+        "C. Media Access Control",
+        "D. Link Control Protocol"
+      ],
+      "correctAnswer": [
+        "B",
+        "C"
+      ],
+      "explanation": "Tầng Liên kết dữ liệu (Data Link Layer) theo chuẩn IEEE 802 được chia thành hai tầng con (sublayers):<br />- <b>Logical Link Control (LLC):</b> Tầng con phía trên, chịu trách nhiệm giao tiếp với tầng Mạng (Network Layer). Nó xử lý việc xác định giao thức tầng trên và đóng gói dữ liệu.<br />- <b>Media Access Control (MAC):</b> Tầng con phía dưới, chịu trách nhiệm điều khiển truy cập vào phương tiện truyền vật lý và thực hiện địa chỉ vật lý (địa chỉ MAC).",
+      "difficulty": "easy",
+      "topic": "OSI Model",
+      "hints": [
+        "Tầng 2 được chia nhỏ để xử lý cả logic và truy cập vật lý.",
+        "Một tầng con liên quan đến địa chỉ vật lý, tầng con còn lại liên quan đến giao tiếp với tầng 3."
+      ]
+    },
+    {
+      "id": 7,
+      "question": "Which statement describes a characteristic of the frame header fields of the data link layer?",
+      "image": null,
+      "options": [
+        "A. They all include the flow control and logical connection fields.",
+        "B. Ethernet frame header fields contain Layer 3 source and destination addresses.",
+        "C. They vary depending on protocols.",
+        "D. They include information on user applications."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Cấu trúc và các trường trong phần header của một frame ở tầng Liên kết dữ liệu <b>thay đổi tùy thuộc vào giao thức cụ thể</b> đang được sử dụng. Ví dụ, header của frame Ethernet khác với header của frame PPP (Point-to-Point Protocol) hoặc Frame Relay.<br /><br />- A là sai vì không phải tất cả các header đều có trường điều khiển luồng.<br />- B là sai vì header Ethernet chứa địa chỉ MAC (Layer 2), không phải địa chỉ IP (Layer 3).<br />- D là sai vì thông tin ứng dụng người dùng được xử lý ở các tầng cao hơn.",
+      "difficulty": "medium",
+      "topic": "Data Link Layer",
+      "hints": [
+        "Hãy so sánh cấu trúc frame của Ethernet và một giao thức WAN như PPP.",
+        "Mỗi giao thức Layer 2 có các yêu cầu riêng về thông tin điều khiển."
+      ]
+    },
+    {
+      "id": 8,
+      "question": "What are two services performed by the data link layer of the OSI model? (Choose two.)",
+      "image": null,
+      "options": [
+        "A. It fragments data packets into the MTU size.",
+        "B. It determines the path to forward packets.",
+        "C. It accepts Layer 3 packets and encapsulates them into frames.",
+        "D. It provides media access control and performs error detection.",
+        "E. It monitors the Layer 2 communication by building a MAC address table."
+      ],
+      "correctAnswer": [
+        "C",
+        "D"
+      ],
+      "explanation": "Tầng Liên kết dữ liệu (Data Link Layer) thực hiện hai chức năng chính:<br />- <b>C. Nhận các gói tin (packet) từ Tầng 3 và đóng gói chúng thành các khung (frame):</b> Đây là quá trình encapsulation, thêm header và trailer của Layer 2 vào packet của Layer 3.<br />- <b>D. Cung cấp kiểm soát truy cập phương tiện (media access control) và phát hiện lỗi:</b> Nó quản lý cách các thiết bị truy cập vào đường truyền vật lý (ví dụ: CSMA/CD trong Ethernet) và kiểm tra xem frame có bị lỗi trong quá trình truyền hay không (thường bằng trường FCS - Frame Check Sequence).<br /><br />- A (Phân mảnh gói tin) là chức năng của tầng Mạng (Layer 3).<br />- B (Xác định đường đi) là chức năng của tầng Mạng (Layer 3).<br />- E (Xây dựng bảng địa chỉ MAC) là một chức năng cụ thể của thiết bị switch ở Layer 2, không phải là một dịch vụ cốt lõi của tầng này trong mô hình OSI.",
+      "difficulty": "medium",
+      "topic": "OSI Model",
+      "hints": [
+        "Tầng này hoạt động như một cầu nối giữa phần mềm (tầng mạng) và phần cứng (tầng vật lý).",
+        "Nó chịu trách nhiệm chuẩn bị dữ liệu để truyền đi trên một đoạn mạng cục bộ."
+      ]
+    },
+    {
+      "id": 9,
+      "question": "What method can be used by two computers to ensure that packets are not dropped because too much data is being sent too quickly?",
+      "image": null,
+      "options": [
+        "A. encapsulation",
+        "B. flow control",
+        "C. access method",
+        "D. response timeout"
+      ],
+      "correctAnswer": "B",
+      "explanation": "<b>Flow control (Điều khiển luồng)</b> là cơ chế được sử dụng để quản lý tốc độ truyền dữ liệu giữa hai thiết bị. Nó đảm bảo rằng thiết bị gửi không truyền dữ liệu nhanh hơn khả năng xử lý của thiết bị nhận, do đó ngăn chặn việc các gói tin bị loại bỏ (dropped) do bộ đệm (buffer) của bên nhận bị đầy.",
+      "difficulty": "easy",
+      "topic": "Data Transmission",
+      "hints": [
+        "Đây là một cơ chế quản lý tốc độ truyền.",
+        "Hãy nghĩ về cách một vòi nước có thể được điều chỉnh để không làm tràn một cái xô."
+      ]
+    },
+    {
+      "id": 10,
+      "question": "Which PDU is processed when a host computer is de-encapsulating a message at the transport layer of the TCP/IP model?",
+      "image": null,
+      "options": [
+        "A. Bits",
+        "B. Frame",
+        "C. Packet",
+        "D. Segment"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Đơn vị dữ liệu giao thức (PDU - Protocol Data Unit) ở tầng Giao vận (Transport Layer) được gọi là <b>Segment</b> (đối với TCP) hoặc Datagram (đối với UDP).<br /><br />Trong quá trình gỡ bỏ đóng gói (de-encapsulation), khi dữ liệu đi từ tầng dưới lên, tầng Giao vận sẽ nhận một Packet từ tầng Mạng, gỡ bỏ phần header IP, và xử lý phần dữ liệu còn lại, chính là Segment.",
+      "difficulty": "easy",
+      "topic": "TCP/IP Model",
+      "hints": [
+        "Hãy nhớ tên PDU của các tầng: Segment (Layer 4), Packet (Layer 3), Frame (Layer 2), Bits (Layer 1).",
+        "Gỡ bỏ đóng gói là quá trình di chuyển lên các tầng của mô hình TCP/IP."
+      ]
+    },
+    {
+      "id": 11,
+      "question": "A web client is receiving a response for a web page from a web server. From the perspective of the client, what is the correct order of the protocol stack that is used to decode the received transmission?",
+      "image": null,
+      "options": [
+        "A. Ethernet, IP, TCP, HTTP",
+        "B. HTTP, TCP, IP, Ethernet",
+        "C. Ethernet, TCP, IP, HTTP",
+        "D. HTTP, Ethernet, IP, TCP"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Khi một máy khách nhận dữ liệu, quá trình được gọi là gỡ bỏ đóng gói (de-encapsulation), diễn ra từ tầng thấp nhất lên tầng cao nhất.<br />Thứ tự giải mã sẽ là:<br />1. <b>Ethernet (Layer 2):</b> Xử lý frame nhận được từ tầng vật lý.<br />2. <b>IP (Layer 3):</b> Gỡ bỏ header Ethernet để xử lý packet IP.<br />3. <b>TCP (Layer 4):</b> Gỡ bỏ header IP để xử lý segment TCP.<br />4. <b>HTTP (Layer 7):</b> Gỡ bỏ header TCP để đọc dữ liệu HTTP của trang web.",
+      "difficulty": "medium",
+      "topic": "TCP/IP Model",
+      "hints": [
+        "Quá trình giải mã (decoding) hoặc gỡ bỏ đóng gói (de-encapsulation) diễn ra từ dưới lên trong chồng giao thức.",
+        "Hãy nghĩ về thứ tự từ lớp vật lý (cáp mạng) đi lên lớp ứng dụng (trình duyệt)."
+      ]
+    },
+    {
+      "id": 12,
+      "question": "This is a function of the OSI session layer.",
+      "image": null,
+      "options": [
+        "A. compress and decompress data",
+        "B. provide an interface between applications",
+        "C. format data for the application layer",
+        "D. exchange of information to initiate dialog between peers"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Chức năng chính của tầng Phiên (Session Layer) là thiết lập, quản lý và kết thúc các phiên (dialogs) giao tiếp giữa các ứng dụng. Do đó, việc <b>trao đổi thông tin để khởi tạo cuộc đối thoại giữa các bên</b> là chức năng của tầng này.<br /><br />- A và C (nén và định dạng dữ liệu) là chức năng của tầng Trình diễn (Presentation Layer).<br />- B (cung cấp giao diện cho ứng dụng) là chức năng của tầng Ứng dụng (Application Layer).",
+      "difficulty": "medium",
+      "topic": "OSI Model",
+      "hints": [
+        "Tên của tầng ('Session') đã gợi ý chức năng chính của nó.",
+        "Tầng này chịu trách nhiệm quản lý toàn bộ 'cuộc hội thoại' giữa hai ứng dụng."
+      ]
+    },
+    {
+      "id": 13,
+      "question": "Which IPv6 address type is used for communication within a single network segment and cannot be routed?",
+      "image": null,
+      "options": [
+        "A. Global Unicast Address (GUA)",
+        "B. Link-Local Address (LLA)",
+        "C. Unique-Local Address (ULA)",
+        "D. Multicast Address"
+      ],
+      "correctAnswer": "B",
+      "explanation": "<b>Link-Local Address (LLA)</b> là loại địa chỉ IPv6 được thiết kế để sử dụng cho giao tiếp chỉ trong một phân đoạn mạng cục bộ (local link) duy nhất. Các router không chuyển tiếp (route) các gói tin có địa chỉ LLA. Chúng thường bắt đầu bằng `fe80::`.",
+      "difficulty": "easy",
+      "topic": "IPv6 Addressing",
+      "hints": [
+        "Cụm từ khóa là 'trong một phân đoạn mạng' và 'không thể định tuyến'.",
+        "Loại địa chỉ này tự động được cấu hình trên mọi giao diện IPv6."
+      ]
+    },
+    {
+      "id": 14,
+      "question": "Which field in an IPv6 GUA is used for subnetting?",
+      "image": null,
+      "options": [
+        "A. Prefix",
+        "B. Network",
+        "C. Global routing prefix",
+        "D. Subnet ID",
+        "E. Interface ID"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Một địa chỉ IPv6 Global Unicast Address (GUA) tiêu chuẩn được chia thành ba phần:<br />- <b>Global Routing Prefix</b> (thường là 48 bit đầu tiên): Được cung cấp bởi nhà mạng.<br />- <b>Subnet ID</b> (thường là 16 bit tiếp theo): Trường này được sử dụng bởi quản trị viên mạng để tạo ra các mạng con (subnet) trong mạng nội bộ.<br />- <b>Interface ID</b> (64 bit cuối): Định danh cho một thiết bị cụ thể trong mạng con.",
+      "difficulty": "medium",
+      "topic": "IPv6 Subnetting",
+      "hints": [
+        "Hãy nhớ lại cấu trúc của một địa chỉ IPv6 GUA.",
+        "Phần nào của địa chỉ được dành riêng cho quản trị viên mạng để tổ chức mạng nội bộ của họ?"
+      ]
+    },
+    {
+      "id": 15,
+      "question": "Which statement is correct about network protocols?",
+      "image": null,
+      "options": [
+        "A. Network protocols define the type of hardware that is used and how it is mounted in racks.",
+        "B. They define how messages are exchanged between the source and the destination.",
+        "C. They all function in the network access layer of TCP/IP.",
+        "D. They are only required for exchange of messages between devices on remote networks."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Định nghĩa cơ bản nhất của một giao thức mạng là một tập hợp các quy tắc. Cụ thể, <b>chúng định nghĩa cách các thông điệp được trao đổi giữa nguồn và đích</b>. Điều này bao gồm định dạng thông điệp, thứ tự, và các quy trình xử lý lỗi.<br /><br />- A mô tả các tiêu chuẩn vật lý, không phải giao thức.<br />- C là sai, vì các giao thức hoạt động ở tất cả các tầng (HTTP, TCP, IP, Ethernet).<br />- D là sai, giao thức cũng cần thiết cho giao tiếp trong cùng một mạng cục bộ.",
+      "difficulty": "easy",
+      "topic": "Networking Fundamentals",
+      "hints": [
+        "Từ 'protocol' có nghĩa là gì trong ngữ cảnh chung? Nó là một bộ quy tắc cho việc giao tiếp.",
+        "Hãy xem xét các ví dụ như HTTP, IP, TCP. Chúng làm gì?"
+      ]
+    },
+    {
+      "id": 16,
+      "question": "What is the prefix length of an IPv6 address that is typically used for a single subnet?",
+      "image": null,
+      "options": [
+        "A. /32",
+        "B. /48",
+        "C. /64",
+        "D. /128"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Theo thông lệ và tiêu chuẩn, một mạng con (subnet) IPv6 duy nhất thường sử dụng độ dài tiền tố (prefix length) là <b>/64</b>.<br /><br />Điều này chia địa chỉ 128-bit thành hai phần bằng nhau:<br />- <b>64 bit đầu tiên</b> cho phần mạng (Network Prefix).<br />- <b>64 bit cuối cùng</b> cho phần định danh giao diện (Interface ID).<br />Sử dụng /64 giúp đơn giản hóa việc quản lý địa chỉ và cho phép các tính năng như tự động cấu hình địa chỉ không trạng thái (SLAAC) hoạt động hiệu quả.",
+      "difficulty": "easy",
+      "topic": "IPv6 Subnetting",
+      "hints": [
+        "Một địa chỉ IPv6 có tổng cộng 128 bit.",
+        "Tiêu chuẩn chia địa chỉ này thành hai nửa: một cho mạng và một cho thiết bị."
+      ]
+    },
+    {
+      "id": 17,
+      "question": "What is used in the EUI-64 process to create an IPv6 interface ID on an IPv6 enabled interface?",
+      "image": null,
+      "options": [
+        "A. the MAC address of the IPv6 enabled interface",
+        "B. a randomly generated 64-bit hexadecimal address",
+        "C. an IPv6 address that is provided by a DHCPv6 server",
+        "D. an IPv4 address that is configured on the interface"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Quy trình <b>EUI-64 (Extended Unique Identifier-64)</b> sử dụng <b>địa chỉ MAC 48-bit</b> của giao diện mạng để tạo ra một Interface ID 64-bit.<br /><br />Quá trình này bao gồm:<br />1. Lấy địa chỉ MAC 48-bit.<br />2. Chèn giá trị `FFFE` vào giữa địa chỉ MAC.<br />3. Đảo ngược bit thứ 7 (bit Universal/Local) của địa chỉ MAC ban đầu.",
+      "difficulty": "medium",
+      "topic": "IPv6 Addressing",
+      "hints": [
+        "Tính năng này cho phép một thiết bị tự động tạo ra phần host của địa chỉ IPv6.",
+        "Nó dựa trên một định danh đã có sẵn và duy nhất trên card mạng."
+      ]
+    },
+    {
+      "id": 18,
+      "question": "Which of the following techniques use native IPv6 connectivity?",
+      "image": null,
+      "options": [
+        "A. Dual stack",
+        "B. Tunneling",
+        "C. Translation",
+        "D. All of the above"
+      ],
+      "correctAnswer": "A",
+      "explanation": "<b>Dual stack (Chồng giao thức kép)</b> là kỹ thuật cho phép một thiết bị hoặc một mạng chạy đồng thời cả hai chồng giao thức IPv4 và IPv6. Điều này cho phép nó giao tiếp trực tiếp (native) với cả hai loại mạng mà không cần cơ chế chuyển đổi.<br /><br />- <b>Tunneling (Đường hầm):</b> Đóng gói gói tin IPv6 bên trong gói tin IPv4 để đi qua mạng IPv4. Đây là một cơ chế chuyển tiếp, không phải là kết nối gốc.<br />- <b>Translation (Biên dịch):</b> Dịch địa chỉ và header giữa IPv6 và IPv4 (ví dụ: NAT64). Đây là cơ chế chuyển đổi.",
+      "difficulty": "medium",
+      "topic": "IPv6 Transition Mechanisms",
+      "hints": [
+        "Kết nối 'native' có nghĩa là giao tiếp trực tiếp mà không cần đóng gói hay dịch.",
+        "Hãy nghĩ xem kỹ thuật nào cho phép một thiết bị 'nói' được cả hai 'ngôn ngữ' IPv4 và IPv6 một cách tự nhiên."
+      ]
+    },
+    {
+      "id": 19,
+      "question": "What property of ARP causes cached IP-to-MAC mappings to remain in memory longer?",
+      "image": null,
+      "options": [
+        "A. Entries in an ARP table are time-stamped and are purged after the timeout expires.",
+        "B. A static IP-to-MAC address entry can be entered manually into an ARP table.",
+        "C. The type field 0x806 appears in the header of the Ethernet frame.",
+        "D. The port-to-MAC address table on a switch has the same entries as the ARP table on the switch."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Bảng ARP thường chứa các mục nhập động (dynamic entries) được học tự động và sẽ hết hạn sau một khoảng thời gian. Tuy nhiên, một quản trị viên có thể <b>nhập một mục nhập tĩnh (static entry) thủ công vào bảng ARP</b>. Các mục nhập tĩnh này không có thời gian chờ và sẽ tồn tại trong bộ nhớ cache cho đến khi hệ thống được khởi động lại hoặc mục nhập bị xóa thủ công, do đó chúng tồn tại lâu hơn nhiều so với các mục nhập động.",
+      "difficulty": "medium",
+      "topic": "ARP",
+      "hints": [
+        "Câu hỏi đang hỏi về cách làm cho một ánh xạ tồn tại 'lâu hơn' so với bình thường.",
+        "So sánh giữa việc học tự động (có thời gian chờ) và cấu hình thủ công (không có thời gian chờ)."
+      ]
+    },
+    {
+      "id": 20,
+      "question": "Which two types of IPv6 messages are used in place of ARP for address resolution? (Choose 2)",
+      "image": null,
+      "options": [
+        "A. anycast",
+        "B. broadcast",
+        "C. echo reply",
+        "D. echo request",
+        "E. neighbor solicitation",
+        "F. neighbor advertisement"
+      ],
+      "correctAnswer": [
+        "E",
+        "F"
+      ],
+      "explanation": "IPv6 không sử dụng ARP. Thay vào đó, nó sử dụng <b>Neighbor Discovery Protocol (NDP)</b>, là một phần của ICMPv6, để thực hiện phân giải địa chỉ. Hai loại thông điệp chính được sử dụng là:<br /><br />- <b>Neighbor Solicitation (NS - Yêu cầu hàng xóm):</b> Tương tự như một ARP Request. Một host gửi thông điệp NS để hỏi 'Ai có địa chỉ IP này? Hãy cho tôi biết địa chỉ MAC của bạn.'<br />- <b>Neighbor Advertisement (NA - Quảng bá hàng xóm):</b> Tương tự như một ARP Reply. Host có địa chỉ IP được hỏi sẽ trả lời bằng một thông điệp NA, chứa địa chỉ MAC của nó.",
+      "difficulty": "medium",
+      "topic": "IPv6 / NDP",
+      "hints": [
+        "IPv6 thay thế chức năng của ARP bằng một giao thức mới.",
+        "Hãy nghĩ về một quy trình hỏi và trả lời để tìm địa chỉ vật lý từ một địa chỉ logic."
+      ]
+    },
+    {
+      "id": 21,
+      "question": "What is the aim of an ARP spoofing attack?",
+      "image": null,
+      "options": [
+        "A. to flood the network with ARP reply broadcasts",
+        "B. to fill switch MAC address tables with bogus addresses",
+        "C. to associate IP addresses to the wrong MAC address",
+        "D. to overwhelm network hosts with ARP requests"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Mục tiêu chính của một cuộc tấn công giả mạo ARP (ARP spoofing), còn được gọi là ARP poisoning, là <b>liên kết địa chỉ IP của một thiết bị hợp lệ (như default gateway) với địa chỉ MAC sai (cụ thể là địa chỉ MAC của kẻ tấn công)</b> trong bảng ARP của các nạn nhân. Điều này khiến các nạn nhân gửi lưu lượng mạng của họ đến kẻ tấn công thay vì đích thực sự, cho phép kẻ tấn công nghe lén hoặc thay đổi dữ liệu (tấn công Man-in-the-Middle).",
+      "difficulty": "medium",
+      "topic": "Security",
+      "hints": [
+        "Cuộc tấn công này lạm dụng cách hoạt động của giao thức ARP.",
+        "Kẻ tấn công muốn xen vào giữa cuộc trò chuyện của hai thiết bị khác."
+      ]
+    },
+    {
+      "id": 22,
+      "question": "Which of the following is the name for all computers connected to a network that participate in sending and receiving data directly in network communication?",
+      "image": null,
+      "options": [
+        "A. Servers",
+        "B. Intermediary devices",
+        "C. Hosts",
+        "D. Media"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Thuật ngữ <b>Host (hoặc end device - thiết bị đầu cuối)</b> được dùng để chỉ tất cả các máy tính hoặc thiết bị (như PC, smartphone, máy in mạng) được kết nối vào mạng và tham gia trực tiếp vào việc gửi và nhận dữ liệu. Máy chủ (Server) là một loại host, nhưng không phải tất cả host đều là máy chủ.<br /><br />- <b>Intermediary devices (Thiết bị trung gian):</b> như router, switch, dùng để kết nối các host và chuyển tiếp dữ liệu.<br />- <b>Media (Phương tiện truyền):</b> như cáp đồng, cáp quang, sóng không dây.",
+      "difficulty": "easy",
+      "topic": "Networking Fundamentals",
+      "hints": [
+        "Đây là thuật ngữ chung cho bất kỳ thiết bị nào là điểm bắt đầu hoặc điểm kết thúc của một luồng dữ liệu.",
+        "Cả máy khách (client) và máy chủ (server) đều là ví dụ của thuật ngữ này."
+      ]
+    },
+    {
+      "id": 23,
+      "question": "What type of network traffic requires QoS?",
+      "image": null,
+      "options": [
+        "A. email",
+        "B. on-line purchasing",
+        "C. video conferencing",
+        "D. wiki"
+      ],
+      "correctAnswer": "C",
+      "explanation": "<b>Video conferencing (Hội nghị truyền hình)</b> yêu cầu Chất lượng dịch vụ (QoS - Quality of Service) vì nó là lưu lượng thời gian thực, rất nhạy cảm với độ trễ (delay), jitter (biến thiên độ trễ) và mất gói tin. QoS đảm bảo rằng các gói tin video và âm thanh được ưu tiên xử lý và chuyển tiếp qua mạng để duy trì chất lượng cuộc gọi.<br /><br />Các loại lưu lượng khác như email, web (wiki, mua sắm trực tuyến) không phải là thời gian thực và có thể chịu được độ trễ cao hơn mà không ảnh hưởng nhiều đến trải nghiệm người dùng.",
+      "difficulty": "easy",
+      "topic": "QoS",
+      "hints": [
+        "Hãy xem xét ứng dụng nào sẽ trở nên vô dụng nếu dữ liệu bị trễ hoặc đến không theo thứ tự.",
+        "QoS ưu tiên các loại lưu lượng nhạy cảm với thời gian."
+      ]
+    },
+    {
+      "id": 24,
+      "question": "An employee at a branch office is creating a quote for a customer. In order to do this, the employee needs to access confidential pricing information from internal servers at the Head Office. What type of network would the employee access?",
+      "image": null,
+      "options": [
+        "A. an intranet",
+        "B. the Internet",
+        "C. an extranet",
+        "D. a local area network"
+      ],
+      "correctAnswer": "A",
+      "explanation": "<b>Intranet</b> là một mạng máy tính riêng tư, chỉ dành cho nhân viên trong một tổ chức truy cập. Vì nhân viên cần truy cập thông tin định giá bí mật trên các máy chủ nội bộ, họ đang sử dụng mạng intranet của công ty.<br /><br />- <b>Internet:</b> Mạng công cộng toàn cầu.<br />- <b>Extranet:</b> Một phần của intranet được mở rộng cho các đối tác bên ngoài (như nhà cung cấp, khách hàng) truy cập có kiểm soát.<br />- <b>Local area network (LAN):</b> Mạng cục bộ tại văn phòng chi nhánh, nhưng tài nguyên lại ở trụ sở chính, nên intranet là thuật ngữ mô tả toàn bộ mạng riêng của công ty.",
+      "difficulty": "easy",
+      "topic": "Network Types",
+      "hints": [
+        "Từ khóa là 'internal servers' (máy chủ nội bộ) và 'confidential' (bí mật).",
+        "Mạng này chỉ dành cho người bên trong tổ chức sử dụng."
+      ]
+    },
+    {
+      "id": 25,
+      "question": "Where are IPv4 address to Layer 2 Ethernet address mappings maintained on a host computer?",
+      "image": null,
+      "options": [
+        "A. neighbor table",
+        "B. ARP cache",
+        "C. routing table",
+        "D. MAC address table"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Các ánh xạ giữa địa chỉ IPv4 (Layer 3) và địa chỉ Ethernet (Layer 2, hay địa chỉ MAC) được duy trì trong <b>bộ đệm ARP (ARP cache)</b>, đôi khi còn được gọi là bảng ARP (ARP table), trên một máy tính chủ.<br /><br />- <b>Neighbor table:</b> Là khái niệm tương đương với ARP cache nhưng dành cho IPv6.<br />- <b>Routing table (Bảng định tuyến):</b> Lưu trữ các đường đi đến các mạng khác.<br />- <b>MAC address table (Bảng địa chỉ MAC):</b> Được sử dụng bởi các thiết bị switch để ánh xạ cổng switch tới địa chỉ MAC của các thiết bị kết nối.",
+      "difficulty": "easy",
+      "topic": "ARP",
+      "hints": [
+        "Giao thức nào chịu trách nhiệm cho việc ánh xạ này? Tên của bộ đệm thường trùng với tên giao thức.",
+        "Câu hỏi này đặc biệt đề cập đến IPv4."
+      ]
+    },
+    {
+      "id": 26,
+      "question": "What are two actions performed by a Cisco switch? (Choose two.)",
+      "image": null,
+      "options": [
+        "A. building a routing table that is based on the first IP address in the frame header",
+        "B. using the source MAC addresses of frames to build and maintain a MAC address table",
+        "C. forwarding frames with unknown destination IP addresses to the default gateway",
+        "D. utilizing the MAC address table to forward frames via the destination MAC address",
+        "E. examining the destination MAC address to add new entries to the MAC address table"
+      ],
+      "correctAnswer": [
+        "B",
+        "D"
+      ],
+      "explanation": "Một switch Layer 2 thực hiện hai chức năng chính:<br />- <b>B. Xây dựng bảng địa chỉ MAC:</b> Switch học địa chỉ MAC bằng cách kiểm tra trường <b>địa chỉ MAC nguồn</b> của các frame đi vào mỗi cổng và ghi lại ánh xạ giữa MAC và cổng đó.<br />- <b>D. Chuyển tiếp frame:</b> Khi một frame đến, switch tra cứu <b>địa chỉ MAC đích</b> trong bảng MAC của nó để xác định cổng cần chuyển frame ra. Nếu không tìm thấy, nó sẽ flood frame ra tất cả các cổng khác.",
+      "difficulty": "medium",
+      "topic": "Switching",
+      "hints": [
+        "Switch học từ đâu (source) và chuyển đến đâu (destination).",
+        "Switch hoạt động ở Layer 2 và chỉ quan tâm đến địa chỉ MAC, không phải IP."
+      ]
+    },
+    {
+      "id": 27,
+      "question": "A Layer 2 switch is used to switch incoming frames from a 1000BASE-T port to a port connected to a 100Base-T network. Which method of memory buffering would work best for this task?",
+      "image": null,
+      "options": [
+        "A. port-based buffering",
+        "B. level 1 cache buffering",
+        "C. shared memory buffering",
+        "D. fixed configuration buffering"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Khi chuyển mạch giữa các cổng có tốc độ khác nhau (1000 Mbps xuống 100 Mbps), <b>bộ đệm bộ nhớ chia sẻ (shared memory buffering)</b> là hiệu quả nhất. Nó cho phép switch lưu trữ các frame từ cổng tốc độ cao vào một bộ đệm chung lớn và sau đó gửi chúng đi qua cổng tốc độ thấp hơn khi có thể. Điều này ngăn ngừa mất gói tin do tắc nghẽn tạm thời trên cổng chậm.",
+      "difficulty": "hard",
+      "topic": "Switching",
+      "hints": [
+        "Đây là trường hợp chuyển mạch không đối xứng (asymmetric switching).",
+        "Phương pháp nào linh hoạt nhất để xử lý tình trạng một cổng chậm hơn nhiều so với cổng khác?"
+      ]
+    },
+    {
+      "id": 28,
+      "question": "Refer to the exhibit. What is the destination MAC address of the Ethernet frame as it leaves the web server if the final destination is PC1?",
+      "image": "28.jpg",
+      "options": [
+        "A. 00-60-2F-3A-07-AA",
+        "B. 00-60-2F-3A-07-BB",
+        "C. 00-60-2F-3A-07-CC",
+        "D. 00-60-2F-3A-07-DD"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Khi Web Server (192.168.5.10) muốn gửi dữ liệu đến PC1 (192.168.1.50), nó nhận ra PC1 nằm trên một mạng khác. Do đó, nó phải gửi frame đến default gateway của mình, là cổng Fa0/0 của router. Địa chỉ MAC đích của frame sẽ là địa chỉ MAC của cổng gateway đó.<br /><br />- <b>IP Đích cuối cùng:</b> 192.168.1.50 (PC1)<br />- <b>MAC Đích của chặng này (hop):</b> 00-60-2F-3A-07-BB (Router Fa0/0)",
+      "difficulty": "medium",
+      "topic": "IP Routing / ARP",
+      "hints": [
+        "Địa chỉ MAC chỉ có ý nghĩa trong mạng cục bộ (local network).",
+        "Để gửi dữ liệu ra ngoài mạng của mình, một host phải gửi nó đến đâu?"
+      ]
+    },
+    {
+      "id": 29,
+      "question": "A network administrator is testing network connectivity by issuing the ping command on a router. Which symbol will be displayed to indicate that a time expired during the wait for an ICMP echo reply message?",
+      "image": null,
+      "options": [
+        "A. $",
+        "B. !",
+        "C. .",
+        "D. U"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Trong Cisco IOS, kết quả của lệnh `ping` được biểu thị bằng các ký hiệu:<br />- <b>! (dấu chấm than):</b> Nhận được phản hồi thành công (ICMP echo reply).<br />- <b>. (dấu chấm):</b> Hết thời gian chờ phản hồi (request timed out).<br />- <b>U (chữ U):</b> Đích không thể đến được (destination unreachable).",
+      "difficulty": "easy",
+      "topic": "Troubleshooting",
+      "hints": [
+        "Mỗi ký hiệu trong đầu ra của lệnh ping trên thiết bị Cisco đều có một ý nghĩa cụ thể.",
+        "Hãy nghĩ về ký hiệu nào thể hiện sự chờ đợi không thành công."
+      ]
+    },
+    {
+      "id": 30,
+      "question": "Which protocol is used by the traceroute command to send and receive echo-requests and echo-replies?",
+      "image": null,
+      "options": [
+        "A. SNMP",
+        "B. ICMP",
+        "C. Telnet",
+        "D. TCP"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Lệnh `traceroute` (hoặc `tracert` trên Windows) hoạt động bằng cách gửi các gói tin với giá trị Time-To-Live (TTL) tăng dần. Khi mỗi router trên đường đi nhận được một gói tin và giảm TTL xuống 0, nó sẽ gửi lại một thông báo lỗi <b>ICMP 'Time Exceeded'</b>. Bằng cách này, `traceroute` xác định được từng chặng (hop) trên đường đi đến đích. Nhiều phiên bản cũng sử dụng ICMP echo-request.",
+      "difficulty": "easy",
+      "topic": "Troubleshooting / ICMP",
+      "hints": [
+        "Lệnh này liên quan đến việc kiểm tra kết nối và đường đi, giống như lệnh `ping`.",
+        "Hãy nghĩ đến giao thức cốt lõi cho các thông điệp điều khiển và lỗi trên Internet."
+      ]
+    },
+    {
+      "id": 31,
+      "question": "A technician uses the ping 127.0.0.1 command. What is the technician testing?",
+      "image": null,
+      "options": [
+        "A. the TCP/IP stack on a network host",
+        "B. connectivity between two adjacent Cisco devices",
+        "C. connectivity between a PC and the default gateway",
+        "D. connectivity between two PCs on the same network",
+        "E. physical connectivity of a particular PC and the network"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Địa chỉ <b>127.0.0.1</b> là địa chỉ loopback (vòng lặp). Việc ping địa chỉ này sẽ kiểm tra xem <b>chồng giao thức TCP/IP trên chính máy chủ đó</b> có được cài đặt và hoạt động chính xác hay không. Lệnh này không gửi bất kỳ lưu lượng nào ra khỏi card mạng vật lý.",
+      "difficulty": "easy",
+      "topic": "Troubleshooting",
+      "hints": [
+        "Địa chỉ IP này có một tên đặc biệt: 'localhost'.",
+        "Thao tác này kiểm tra phần mềm mạng của máy tính mà không cần kết nối mạng bên ngoài."
+      ]
+    },
+    {
+      "id": 32,
+      "question": "Which type of UTP cable is used to connect a PC to a switch port?",
+      "image": null,
+      "options": [
+        "A. Console",
+        "B. Rollover",
+        "C. Crossover",
+        "D. Straight-through"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Để kết nối các thiết bị khác loại, chẳng hạn như PC (DTE) và switch (DCE), chúng ta sử dụng <b>cáp thẳng (straight-through)</b>.<br /><br />- <b>Cáp chéo (Crossover):</b> Dùng để kết nối các thiết bị cùng loại (ví dụ: PC-PC, switch-switch).<br />- <b>Cáp console/rollover:</b> Dùng cho việc quản lý thiết bị qua cổng console.",
+      "difficulty": "easy",
+      "topic": "Cabling",
+      "hints": [
+        "Có một quy tắc chung về việc kết nối các thiết bị 'giống nhau' và 'khác nhau'.",
+        "Hãy xem xét PC và Switch là hai loại thiết bị khác nhau."
+      ]
+    },
+    {
+      "id": 33,
+      "question": "A network administrator is measuring the transfer of bits across the company backbone for a mission-critical financial application. The administrator notices that the network throughput appears lower than the bandwidth expected. Which three factors could influence the differences in throughput? (Choose three.)",
+      "image": null,
+      "options": [
+        "A. the amount of traffic that is currently crossing the network",
+        "B. the sophistication of the encapsulation method applied to the data",
+        "C. the type of traffic that is crossing the network",
+        "D. the latency that is created by the number of network devices that the data is crossing",
+        "E. the bandwidth of the WAN connection to the Internet",
+        "F. the reliability of the gigabit Ethernet infrastructure of the backbone"
+      ],
+      "correctAnswer": [
+        "A",
+        "C",
+        "D"
+      ],
+      "explanation": "Thông lượng (Throughput - tốc độ thực tế) luôn thấp hơn Băng thông (Bandwidth - tốc độ lý thuyết). Các yếu tố ảnh hưởng đến thông lượng bao gồm:<br />- <b>A. Lượng lưu lượng hiện có (tắc nghẽn):</b> Càng nhiều người dùng, thông lượng cho mỗi người càng giảm.<br />- <b>C. Loại lưu lượng:</b> Lưu lượng có overhead cao (ví dụ: video streaming) sẽ có goodput thấp hơn.<br />- <b>D. Độ trễ (Latency):</b> Thời gian để dữ liệu đi qua các thiết bị mạng. Càng nhiều thiết bị, độ trễ càng cao và thông lượng càng giảm.",
+      "difficulty": "hard",
+      "topic": "Network Performance",
+      "hints": [
+        "Hãy phân biệt giữa tốc độ lý thuyết (bandwidth) và tốc độ thực tế (throughput).",
+        "Những yếu tố nào trong thế giới thực làm chậm quá trình truyền dữ liệu?"
+      ]
+    },
+    {
+      "id": 34,
+      "question": "Which of these is the name for the capacity of a medium to carry data?",
+      "image": null,
+      "options": [
+        "A. Bandwidth",
+        "B. Throughput",
+        "C. Goodput"
+      ],
+      "correctAnswer": "A",
+      "explanation": "<b>Bandwidth (Băng thông)</b> là thuật ngữ chỉ dung lượng tối đa, hay tốc độ truyền dữ liệu lý thuyết, của một phương tiện truyền dẫn. Nó được đo bằng bit trên giây (bps).<br /><br />- <b>Throughput (Thông lượng):</b> Là tốc độ truyền dữ liệu thực tế đo được.<br />- <b>Goodput:</b> Là thông lượng trừ đi phần dữ liệu overhead của giao thức.",
+      "difficulty": "easy",
+      "topic": "Network Performance",
+      "hints": [
+        "Đây là con số lý thuyết, không phải con số đo lường thực tế.",
+        "Hãy nghĩ về nó như tốc độ tối đa của một con đường cao tốc."
+      ]
+    },
+    {
+      "id": 35,
+      "question": "A technician is configuring a router to allow for all forms of management access. As part of each different type of access, the technician is trying to type the command login. Which configuration mode should be entered to do this task?",
+      "image": null,
+      "options": [
+        "A. user executive mode",
+        "B. global configuration mode",
+        "C. any line configuration mode",
+        "D. privileged EXEC mode"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Lệnh `login` được sử dụng để yêu cầu xác thực mật khẩu khi truy cập vào một đường (line) quản lý. Để cấu hình một đường cụ thể, kỹ thuật viên phải vào chế độ cấu hình đường đó, ví dụ `line console 0` hoặc `line vty 0 4`. Đây được gọi chung là <b>chế độ cấu hình đường (line configuration mode)</b>.",
+      "difficulty": "medium",
+      "topic": "Cisco IOS Configuration",
+      "hints": [
+        "Lệnh này áp dụng cho các cổng truy cập như console hoặc VTY (telnet/ssh).",
+        "Để cấu hình một thứ gì đó, bạn phải vào chế độ cấu hình của chính thứ đó."
+      ]
+    },
+    {
+      "id": 36,
+      "question": "The global configuration command ip default-gateway 172.16.100.1 is applied to a switch. What is the effect of this command?",
+      "image": null,
+      "options": [
+        "A. The switch will have a management interface with the address 172.16.100.1.",
+        "B. The switch can be remotely managed from a host on another network.",
+        "C. The switch can communicate with other hosts on the 172.16.100.0 network.",
+        "D. The switch is limited to sending and receiving frames to and from the gateway 172.16.100.1."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Lệnh `ip default-gateway [địa chỉ IP]` trên switch Layer 2 được sử dụng để chỉ định địa chỉ gateway cho chính switch. Điều này cần thiết để lưu lượng quản lý (management traffic) bắt nguồn từ switch (ví dụ: ping, Telnet, SSH) có thể đi đến các mạng khác. Do đó, nó cho phép <b>switch được quản lý từ xa từ một host ở mạng khác</b>.",
+      "difficulty": "medium",
+      "topic": "Switch Configuration",
+      "hints": [
+        "Lệnh này không ảnh hưởng đến việc chuyển tiếp frame của người dùng.",
+        "Nó chỉ dành cho lưu lượng bắt nguồn từ chính switch, ví dụ như khi bạn muốn SSH vào switch từ xa."
+      ]
+    },
+    {
+      "id": 37,
+      "question": "Which three commands are used to set up secure access to a router through a connection to the console interface? (Choose three.)",
+      "image": null,
+      "options": [
+        "A. interface fastethernet 0/0",
+        "B. line vty 0 4",
+        "C. line console 0",
+        "D. enable secret cisco",
+        "E. login",
+        "F. password cisco"
+      ],
+      "correctAnswer": [
+        "C",
+        "E",
+        "F"
+      ],
+      "explanation": "Để thiết lập mật khẩu cho cổng console, bạn cần thực hiện ba bước theo thứ tự:<br />1. <b>`line console 0` (C):</b> Vào chế độ cấu hình của cổng console.<br />2. <b>`password cisco` (F):</b> Đặt mật khẩu.<br />3. <b>`login` (E):</b> Yêu cầu hệ thống kiểm tra mật khẩu này khi có kết nối.",
+      "difficulty": "medium",
+      "topic": "Cisco IOS Configuration",
+      "hints": [
+        "Bạn cần vào đúng 'đường' (line) để cấu hình nó.",
+        "Đặt mật khẩu không thôi là chưa đủ, bạn phải ra lệnh cho thiết bị sử dụng nó."
+      ]
+    },
+    {
+      "id": 38,
+      "question": "Which two functions are primary functions of a router? (Choose two.)",
+      "image": null,
+      "options": [
+        "A. packet forwarding",
+        "B. Microsegmentation",
+        "C. domain name resolution",
+        "D. path selection",
+        "E. flow control"
+      ],
+      "correctAnswer": [
+        "A",
+        "D"
+      ],
+      "explanation": "Hai chức năng chính và cơ bản nhất của một router là:<br />- <b>D. Path selection (Lựa chọn đường đi):</b> Router sử dụng bảng định tuyến (routing table) để tìm ra đường đi tốt nhất đến một mạng đích.<br />- <b>A. Packet forwarding (Chuyển tiếp gói tin):</b> Sau khi đã chọn được đường đi, router sẽ chuyển gói tin từ cổng vào đến cổng ra tương ứng để gói tin tiếp tục hành trình.",
+      "difficulty": "easy",
+      "topic": "Routing",
+      "hints": [
+        "Tên của thiết bị ('router') đã gợi ý chức năng chính của nó.",
+        "Nó phải quyết định đi đường nào, sau đó thực hiện việc đi đường đó."
+      ]
+    },
+    {
+      "id": 39,
+      "question": "Which type of IPv4 address is used to send a packet to all hosts in a specific network?",
+      "image": null,
+      "options": [
+        "A. Unicast",
+        "B. Multicast",
+        "C. Broadcast",
+        "D. Anycast"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Địa chỉ <b>Broadcast</b> được sử dụng để gửi một gói tin đến tất cả các host trong cùng một miền quảng bá (broadcast domain) hoặc mạng con. Trong IPv4, đây là địa chỉ IP cuối cùng của một dải mạng (ví dụ: 192.168.1.255 cho mạng 192.168.1.0/24).",
+      "difficulty": "easy",
+      "topic": "IPv4 Addressing",
+      "hints": [
+        "Hãy nghĩ về việc 'phát thanh' một thông báo cho tất cả mọi người cùng nghe.",
+        "Unicast là 1-tới-1, Multicast là 1-tới-nhóm."
+      ]
+    },
+    {
+      "id": 40,
+      "question": "Which command can be used on a Windows machine to display the current IP address and subnet mask?",
+      "image": null,
+      "options": [
+        "A. ping",
+        "B. netstat",
+        "C. ipconfig",
+        "D. tracert"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Trên hệ điều hành Windows, lệnh <b>`ipconfig`</b> được sử dụng trong Command Prompt để hiển thị thông tin cấu hình IP hiện tại của máy tính, bao gồm địa chỉ IP, subnet mask và default gateway.",
+      "difficulty": "easy",
+      "topic": "Troubleshooting",
+      "hints": [
+        "Lệnh này là viết tắt của 'IP Configuration'.",
+        "Trên Linux hoặc macOS, lệnh tương đương là `ifconfig` hoặc `ip addr`."
+      ]
+    },
+    {
+      "id": 41,
+      "question": "What is the loopback address used for in IPv4 networking?",
+      "image": null,
+      "options": [
+        "A. To route packets to a different network",
+        "B. To test if the TCP/IP stack is functioning correctly",
+        "C. To identify the default gateway",
+        "D. To assign a dynamic IP address"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Địa chỉ loopback (dải 127.0.0.0/8, phổ biến nhất là 127.0.0.1) được sử dụng để <b>kiểm tra xem chồng giao thức TCP/IP trên máy chủ cục bộ có được cài đặt và hoạt động chính xác hay không</b>. Gói tin gửi đến địa chỉ này sẽ được xử lý hoàn toàn bên trong hệ điều hành mà không đi ra card mạng vật lý.",
+      "difficulty": "easy",
+      "topic": "IPv4 Addressing",
+      "hints": [
+        "Đây là một công cụ chẩn đoán phần mềm mạng trên chính máy tính đó.",
+        "Nó còn được gọi là 'localhost'."
+      ]
+    },
+    {
+      "id": 42,
+      "question": "How many usable IP addresses are available on the 192.168.1.0/27 network?",
+      "image": null,
+      "options": [
+        "A. 254",
+        "B. 30",
+        "C. 256",
+        "D. 16",
+        "E. 62",
+        "F. 32"
+      ],
+      "correctAnswer": "B",
+      "explanation": "<b>Cách tính:</b><br />1. Một địa chỉ IP có 32 bit. Prefix `/27` có nghĩa là 27 bit dành cho phần mạng.<br />2. Số bit còn lại cho phần host là: \\( 32 - 27 = 5 \\) bit.<br />3. Tổng số địa chỉ trong mạng con này là: \\( 2^5 = 32 \\).<br />4. Trong một mạng, luôn có 2 địa chỉ không thể gán cho host: địa chỉ mạng (đầu tiên) và địa chỉ broadcast (cuối cùng).<br />5. Số địa chỉ khả dụng (usable) là: \\( 32 - 2 = 30 \\).",
+      "difficulty": "medium",
+      "topic": "IP Subnetting",
+      "hints": [
+        "Công thức tính số host khả dụng là \\( 2^h - 2 \\), trong đó \\( h \\) là số bit của phần host.",
+        "Số bit host = 32 - độ dài prefix."
+      ]
+    },
+    {
+      "id": 43,
+      "question": "Which access method would be the most appropriate in-band access to the IOS over a network connection?",
+      "image": null,
+      "options": [
+        "A. Console",
+        "B. Telnet/SSH",
+        "C. Aux"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Truy cập <b>in-band</b> có nghĩa là quản lý thiết bị thông qua mạng, sử dụng cùng băng thông với lưu lượng dữ liệu thông thường. <b>Telnet và SSH</b> là hai giao thức chính cho việc truy cập in-band.<br /><br />Truy cập qua cổng Console và Aux được gọi là truy cập <b>out-of-band</b>.",
+      "difficulty": "easy",
+      "topic": "Device Management",
+      "hints": [
+        "'In-band' có nghĩa là 'qua mạng'.",
+        "Console là kết nối trực tiếp, không qua mạng."
+      ]
+    },
+    {
+      "id": 44,
+      "question": "Which command is used to secure access to privileged EXEC mode on a switch?",
+      "image": null,
+      "options": [
+        "A. enable class",
+        "B. secret class",
+        "C. enable secret cisco@12345",
+        "D. service password-encryption"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Để bảo vệ chế độ privileged EXEC (chế độ cho phép cấu hình), lệnh được khuyến nghị sử dụng là `enable secret`. Lệnh này tạo ra một mật khẩu được mã hóa mạnh bằng thuật toán MD5. Lựa chọn <b>`enable secret cisco@12345`</b> là một ví dụ cụ thể và chính xác của việc thực thi lệnh này.<br /><br />- `service password-encryption` chỉ mã hóa yếu các mật khẩu dạng văn bản thuần (plaintext) khác, không phải là lệnh để đặt mật khẩu cho privileged mode.",
+      "difficulty": "medium",
+      "topic": "Cisco IOS Security",
+      "hints": [
+        "Mật khẩu này được yêu cầu khi bạn gõ lệnh `enable`.",
+        "Hãy tìm lệnh trực tiếp đặt mật khẩu cho chế độ này một cách an toàn nhất."
+      ]
+    },
+    {
+      "id": 45,
+      "question": "Passwords can be used to restrict access to all or parts of the Cisco IOS. Select the modes and interfaces that can be protected with passwords. (Choose three.)",
+      "image": null,
+      "options": [
+        "A. VTY interface",
+        "B. console interface",
+        "C. Ethernet interface",
+        "D. boot IOS mode",
+        "E. privileged EXEC mode",
+        "F. router configuration mode"
+      ],
+      "correctAnswer": [
+        "A",
+        "B",
+        "E"
+      ],
+      "explanation": "Trong Cisco IOS, mật khẩu có thể được đặt để bảo vệ các điểm truy cập và các cấp độ đặc quyền chính sau:<br />- <b>A. VTY interface:</b> Các đường truy cập ảo cho Telnet/SSH.<br />- <b>B. Console interface:</b> Cổng giao tiếp vật lý để quản lý.<br />- <b>E. Privileged EXEC mode:</b> Cấp độ đặc quyền cao nhất (được bảo vệ bằng lệnh `enable secret` hoặc `enable password`).",
+      "difficulty": "medium",
+      "topic": "Cisco IOS Security",
+      "hints": [
+        "Hãy nghĩ về những 'cánh cửa' khác nhau để vào một thiết bị mạng và các 'cấp độ' quyền lực bên trong nó.",
+        "Bạn có thể bảo vệ lối vào vật lý, lối vào từ xa, và quyền truy cập cao nhất."
+      ]
+    },
+    {
+      "id": 46,
+      "question": "Why would a Layer 2 switch need an IP address?",
+      "image": null,
+      "options": [
+        "A. to enable the switch to send broadcast frames to attached PCs",
+        "B. to enable the switch to function as a default gateway",
+        "C. to enable the switch to be managed remotely",
+        "D. to enable the switch to receive frames from attached PCs"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Chức năng chính của switch Layer 2 là chuyển tiếp các frame dựa trên địa chỉ MAC và nó không cần địa chỉ IP để làm việc đó. Tuy nhiên, để <b>cho phép switch được quản lý từ xa</b> thông qua mạng (ví dụ: sử dụng Telnet, SSH, hoặc SNMP), nó cần có một địa chỉ IP trên một giao diện quản lý ảo (SVI - Switched Virtual Interface).",
+      "difficulty": "easy",
+      "topic": "Switch Configuration",
+      "hints": [
+        "Địa chỉ IP này không dùng cho việc chuyển tiếp dữ liệu của người dùng.",
+        "Hãy nghĩ về cách một quản trị viên có thể truy cập vào switch mà không cần dùng cáp console."
+      ]
+    },
+    {
+      "id": 47,
+      "question": "What will happen if the default gateway address is incorrectly configured on a host?",
+      "image": null,
+      "options": [
+        "A. The host cannot communicate with other hosts in the local network.",
+        "B. The switch will not forward packets initiated by the host.",
+        "C. The host will have to use ARP to determine the correct address of the default gateway.",
+        "D. The host cannot communicate with hosts in other networks.",
+        "E. A ping from the host to 127.0.0.1 would not be successful."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Default gateway là địa chỉ của router mà host sử dụng để gửi các gói tin đến các mạng khác. Nếu địa chỉ này bị cấu hình sai, host vẫn có thể giao tiếp bình thường với các thiết bị trong cùng mạng cục bộ (local network), nhưng <b>sẽ không thể giao tiếp với các host ở các mạng khác</b> vì nó không biết gửi gói tin đi đâu.",
+      "difficulty": "easy",
+      "topic": "IP Configuration",
+      "hints": [
+        "Default gateway là 'cửa ngõ' để đi ra ngoài mạng cục bộ.",
+        "Giao tiếp trong mạng cục bộ không cần đến gateway."
+      ]
+    },
+    {
+      "id": 48,
+      "question": "Why is NAT not needed in IPv6?",
+      "image": null,
+      "options": [
+        "A. Because IPv6 has integrated security, there is no need to hide the IPv6 addresses of internal networks.",
+        "B. Any bost or user can get a public IPv6 network address because the number of available IPv6 addresses is extremely large.",
+        "C. The problems that are induced by NAT applications are solved because the IPv6 header improves packet handling by intermediate routers.",
+        "D. The end-to-end connectivity problems that are caused by NAT are solved because the number of routes increases with the number of nodes that are connected to the Internet."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Lý do chính mà NAT được tạo ra cho IPv4 là để giải quyết tình trạng cạn kiệt địa chỉ IP công cộng. Trong IPv6, không gian địa chỉ là cực kỳ lớn (\\(2^{128}\\)), đủ để <b>mỗi host hoặc người dùng có thể nhận được một địa chỉ IPv6 công cộng duy nhất</b>. Điều này loại bỏ nhu cầu sử dụng NAT để ánh xạ nhiều địa chỉ riêng thành một địa chỉ công cộng.",
+      "difficulty": "medium",
+      "topic": "IPv6 / NAT",
+      "hints": [
+        "Hãy nhớ lại lý do chính cho sự ra đời của NAT.",
+        "So sánh số lượng địa chỉ có sẵn giữa IPv4 và IPv6."
+      ]
+    },
+    {
+      "id": 49,
+      "question": "What are the two most commonly referenced fields in an IPv4 packet header that indicate where the packet is coming from and where it is going? (Choose two.)",
+      "image": null,
+      "options": [
+        "A. Destination IP address",
+        "B. Protocol",
+        "C. Time to live",
+        "D. Differentiated Service (DS)",
+        "E. Source IP address"
+      ],
+      "correctAnswer": [
+        "A",
+        "E"
+      ],
+      "explanation": "Mục đích cơ bản nhất của một gói tin IP là để định tuyến dữ liệu từ một nguồn đến một đích. Do đó, hai trường quan trọng và được tham chiếu thường xuyên nhất trong header của gói tin IPv4 là <b>Source IP address (Địa chỉ IP nguồn)</b> và <b>Destination IP address (Địa chỉ IP đích)</b>. Các router sử dụng địa chỉ IP đích để đưa ra quyết định định tuyến.",
+      "difficulty": "easy",
+      "topic": "IPv4 Header",
+      "hints": [
+        "Hãy nghĩ về thông tin cơ bản nhất cần có trên một phong bì thư.",
+        "Thông tin nào giúp các router biết phải gửi gói tin đi đâu?"
+      ]
+    },
+    {
+      "id": 50,
+      "question": "What are two potential network problems that can result from ARP operation? (Choose two.)",
+      "image": null,
+      "options": [
+        "A. Manually configuring static ARP associations could facilitate ARP poisoning or MAC address spoofing.",
+        "B. On large networks with low bandwidth, multiple ARP broadcasts could cause data communication delays.",
+        "C. Network attackers could manipulate MAC address and IP address mappings in ARP messages with the intent of intercepting network traffic.",
+        "D. Large numbers of ARP request broadcasts could cause the host MAC address table to overflow and prevent the host from communicating on the network.",
+        "E. Multiple ARP replies result in the switch MAC address-table containing entries that match the MAC addresses of hosts that are connected to the relevant switch port."
+      ],
+      "correctAnswer": [
+        "B",
+        "C"
+      ],
+      "explanation": "Hoạt động của ARP có thể dẫn đến hai vấn đề chính:<br />- <b>Vấn đề về hiệu năng (B):</b> Các yêu cầu ARP (ARP request) là các gói tin broadcast. Trên các mạng lớn có nhiều host, một số lượng lớn các broadcast này có thể tiêu tốn băng thông và gây ra độ trễ, đặc biệt là trên các đường truyền có băng thông thấp.<br />- <b>Vấn đề về bảo mật (C):</b> Giao thức ARP không có cơ chế xác thực. Kẻ tấn công có thể gửi các gói tin ARP giả mạo (ARP spoofing/poisoning) để đánh lừa các host khác, khiến chúng liên kết sai địa chỉ IP với địa chỉ MAC. Điều này cho phép kẻ tấn công thực hiện các cuộc tấn công xen giữa (Man-in-the-Middle).",
+      "difficulty": "medium",
+      "topic": "ARP / Security",
+      "hints": [
+        "Hãy xem xét các vấn đề về hiệu năng và bảo mật liên quan đến ARP.",
+        "ARP requests là broadcast, và bản chất của ARP dựa trên sự tin tưởng."
+      ]
+    }
+  ]
 }
